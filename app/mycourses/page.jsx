@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import ContainerCards from "@/components/ContainerCards"
 
-export default function CoursePage() {
+export default function MyCoursesPage() {
 
     const nextLesson = [
         {
@@ -203,6 +203,7 @@ export default function CoursePage() {
                     <ContainerCards key={4} title={"Student are viewing"} link={"See all"} array={recommended} />
                 </div>
             </section>
+            
         </main>
     )
 }
