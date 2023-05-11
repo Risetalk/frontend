@@ -1,32 +1,33 @@
 import Image from 'next/image'
-import teacher from '../public/student.jpg'
+import teacher from '../public/teacherdetail.png'
 
 export default function TeacherDetail() {
     return (
         <section className='bg-[#222129] text-white'>
-            <div>
-                <h2></h2>
-                <div>
-                    <Image src={teacher} alt="teacher" width={400} height={450}/>
-                    <div>
-                        <h3>Savannah Nguyen</h3>
-                        <span>tanya.hill@example.com</span>
-                        <p>
+            <div className='bg-red-500 h-[200px] w-[100%]'></div>
+            <div className='relative w-[85%] pt-[2.75rem] pb-[2.5rem] mx-[auto]'>
+                <h2 className='font-medium text-[1.875rem] leading-[2.813rem] text-[#FFFFFF] mt-[3.125rem]'>What our students have to say</h2>
+                <div className=' flex justify-center gap-x-[5rem] pt-[2.5rem] pl-[6.875rem] pb-[3.5rem] mt-[5.625rem] w-[100%] mx-[auto] bg-[#FFFFFFBD] rounded-[2.5rem]'>
+                    <Image src={teacher} alt="teacher" width={500} height={450} />
+                    <div className=' flex flex-col justify-center w-[60%]'>
+                        <h3 className='font-bold text-[1.875rem] leading-[2.813rem] text-[#252641]'>Savannah Nguyen</h3>
+                        <span className='font-medium text-[1.5rem] leading-[2.25rem] text-[#252641] mt-[1.875rem] mb-[1.25rem]'>tanya.hill@example.com</span>
+                        <p className='font-normal text-[1.125rem] leading-8 text-[#222129] mb-[0.75rem] w-[80%]'>
                             Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor <br />
                             Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor <br />
                             Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor <br />
                         </p>
-                        <div>
-                            <div>iconX</div>
-                            <div>iconX</div>
-                            <div>iconX</div>
+                        <div className='flex gap-x-[1.875rem]'>
+                            <div className='bg-[#f0713D] w-[30px] h-[30px] rounded-full'></div>
+                            <div className='bg-[#f0713D] w-[30px] h-[30px] rounded-full'></div>
+                            <div className='bg-[#f0713D] w-[30px] h-[30px] rounded-full'></div>
                         </div>
                     </div>
-                    <div>
-                        <div>img.teacher</div>
-                        <div>img.teacher</div>
-                        <div>img.teacher</div>
-                        <div>img.teacher</div>
+                    <div className='absolute right-[3rem] bottom-[6rem] flex flex-col gap-[1.563rem]'>
+                        <div className='bg-[#f0713D] w-[60px] h-[60px] rounded-full'></div>
+                        <div className='bg-[#f0713D] w-[60px] h-[60px] rounded-full'></div>
+                        <div className='bg-[#f0713D] w-[60px] h-[60px] rounded-full'></div>
+                        <div className='bg-[#f0713D] w-[60px] h-[60px] rounded-full'></div>
                     </div>
                 </div>
             </div>
