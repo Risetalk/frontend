@@ -26,8 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci --production
-    - run: npm run build --if-present
     # - run: npm test
     # - run: pm2 reload 0
     - name: Install dependencies
@@ -39,3 +37,4 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    - run: npm run build --if-present
