@@ -125,8 +125,8 @@ export default function MyCoursesPage() {
     ]
 
     return (
-        <>
-            <Navigation />
+     
+            
             <main className="bg-white">
                 <section className="bg-[#22212920]  pb-[5.625rem] pt-[3.125rem]">
                     <header className="flex justify-between flex-wrap w-[87%] mx-[auto]">
@@ -209,6 +209,6 @@ export default function MyCoursesPage() {
                 </section>
 
             </main>
-        </>
+        
     )
 }
