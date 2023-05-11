@@ -1,6 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import ContainerCards from "@/components/ContainerCards"
+import Navigation from "../../components/NavBar";
+
 
 export default function MyCoursesPage() {
 
@@ -123,87 +125,90 @@ export default function MyCoursesPage() {
     ]
 
     return (
-        <main className="bg-white">
-            <section className="bg-[#22212920]  pb-[5.625rem] pt-[3.125rem]">
-                <header className="flex justify-between flex-wrap w-[87%] mx-[auto]">
-                    <div className="flex justify-between w-[100%] items-center mb-[3.125rem]">
-                        <h2 className="inline font-bold text-[1.85rem] leading-[3.375rem] text-[#252641]">Welcome back, ready for your next lesson?</h2>
-                        <Link href={`#`} className="font-bold text-[1.1rem] leading-[1.875rem] text-black">View history</Link>
+        <>
+            <Navigation />
+            <main className="bg-white">
+                <section className="bg-[#22212920]  pb-[5.625rem] pt-[3.125rem]">
+                    <header className="flex justify-between flex-wrap w-[87%] mx-[auto]">
+                        <div className="flex justify-between w-[100%] items-center mb-[3.125rem]">
+                            <h2 className="inline font-bold text-[1.85rem] leading-[3.375rem] text-[#252641]">Welcome back, ready for your next lesson?</h2>
+                            <Link href={`#`} className="font-bold text-[1.1rem] leading-[1.875rem] text-black">View history</Link>
+                        </div>
+                        <div className="flex justify-between w-[100%]">
+                            {
+                                nextLesson.map(lesson => {
+                                    return (
+                                        <article className="w-[32%] bg-white px-[1.313rem] pt-[1.188rem] text-[black] rounded-[1.25rem] h-fit" key={lesson.id}>
+                                            <Image className="w-[100%] h-[210px] object-cover rounded-[1.25rem]" src={lesson.imgLesson} alt={lesson.title} width={400} height={400} />
+                                            <h3 className="font-medium text-[1.25rem] leading-[2.7rem] mt-[0.75rem] mb-[0.55rem]">{lesson.title}</h3>
+                                            <div className="flex items-center  mb-[1.563rem] ">
+                                                <Image className="inline  bg-slate-500 h-[35px] w-[35px] object-cover object-top rounded-full" src={lesson.imgAuthor} alt={lesson.author} width={500} height={100} />
+                                                <span className="font-medium text-[1.2rem] leading-[1.688rem] ml-[0.938rem]">{lesson.author}</span>
+                                            </div>
+                                            <div className="h-[8px] border-2 bg-[#D9D9D9]">
+                                                <div className="h-[100%] bg-[#222129] w-[80%]"></div>
+                                            </div>
+                                            <span className="block font-semibold text-[0.7rem] leading-[1.313rem] text-[#00000080] w-[100%] text-end py-[0.75rem]">Lesson 5 of 7</span>
+                                        </article>
+                                    )
+                                })
+                            }
+                        </div>
+                    </header>
+                </section>
+
+                <section className="text-[black] pt-[3.7rem] pb-[6.25rem]">
+                    <div className="w-[87%] m-[auto]">
+                        <h2 className="font-semibold text-[#252641] text-[1.85rem] leading-[3.375rem] mb-[3rem]">Choice favourite course from top category</h2>
+                        <div className="flex flex-wrap justify-between gap-[3.6rem]">
+                            {
+                                category.map(cat => {
+                                    return (
+                                        <article className="w-[21%] flex flex-col items-center p-[1.875rem] px-[2rem] pb-[3.688rem] rounded-[1.25rem] shadow-2xl" key={cat.id}>
+                                            <div className="bg-[#662C2E4D] w-[30%] h-[65px]"></div>
+                                            <h3 className="font-semibold text-[1.6rem] leading-[2.813rem] mt-[1rem] mb-[1.4rem]">{cat.title}</h3>
+                                            <p className="font-normal text-[0.98rem] leading-[1.688rem] text-[#696984] text-center">{cat.description}</p>
+                                        </article>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
-                    <div className="flex justify-between w-[100%]">
-                        {
-                            nextLesson.map(lesson => {
-                                return (
-                                    <article className="w-[32%] bg-white px-[1.313rem] pt-[1.188rem] text-[black] rounded-[1.25rem] h-fit" key={lesson.id}>
-                                        <Image className="w-[100%] h-[210px] object-cover rounded-[1.25rem]" src={lesson.imgLesson} alt={lesson.title} width={400} height={400} />
-                                        <h3 className="font-medium text-[1.25rem] leading-[2.7rem] mt-[0.75rem] mb-[0.55rem]">{lesson.title}</h3>
-                                        <div className="flex items-center  mb-[1.563rem] ">
-                                            <Image className="inline  bg-slate-500 h-[35px] w-[35px] object-cover object-top rounded-full" src={lesson.imgAuthor} alt={lesson.author} width={500} height={100} />
-                                            <span className="font-medium text-[1.2rem] leading-[1.688rem] ml-[0.938rem]">{lesson.author}</span>
-                                        </div>
-                                        <div className="h-[8px] border-2 bg-[#D9D9D9]">
-                                            <div className="h-[100%] bg-[#222129] w-[80%]"></div>
-                                        </div>
-                                        <span className="block font-semibold text-[0.7rem] leading-[1.313rem] text-[#00000080] w-[100%] text-end py-[0.75rem]">Lesson 5 of 7</span>
-                                    </article>
-                                )
-                            })
-                        }
+                </section>
+
+                <section className="bg-[#22212921] pt-[6.063rem] pb-[13.313rem]">
+                    <div className="w-[87%]  m-[auto]">
+                        <ContainerCards key={1} title={"Recommended for you"} link={"See all"} array={recommended} />
                     </div>
-                </header>
-            </section>
+                </section>
 
-            <section className="text-[black] pt-[3.7rem] pb-[6.25rem]">
-                <div className="w-[87%] m-[auto]">
-                    <h2 className="font-semibold text-[#252641] text-[1.85rem] leading-[3.375rem] mb-[3rem]">Choice favourite course from top category</h2>
-                    <div className="flex flex-wrap justify-between gap-[3.6rem]">
-                        {
-                            category.map(cat => {
-                                return (
-                                    <article className="w-[21%] flex flex-col items-center p-[1.875rem] px-[2rem] pb-[3.688rem] rounded-[1.25rem] shadow-2xl" key={cat.id}>
-                                        <div className="bg-[#662C2E4D] w-[30%] h-[65px]"></div>
-                                        <h3 className="font-semibold text-[1.6rem] leading-[2.813rem] mt-[1rem] mb-[1.4rem]">{cat.title}</h3>
-                                        <p className="font-normal text-[0.98rem] leading-[1.688rem] text-[#696984] text-center">{cat.description}</p>
-                                    </article>
-                                )
-                            })
-                        }
+                <section className="pt-[6.063rem] pb-[6rem]">
+                    <div className="w-[87%]  m-[auto]">
+                        <ContainerCards key={2} title={"Get choice of your course"} link={"See all"} array={recommended} />
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section className="bg-[#22212921] pt-[6.063rem] pb-[13.313rem]">
-                <div className="w-[87%]  m-[auto]">
-                    <ContainerCards key={1} title={"Recommended for you"} link={"See all"} array={recommended} />
-                </div>
-            </section>
+                <section className="w-[90%] mx-[auto]">
+                    <div className="bg-[#222129] text-center pb-[5.188rem] mx-[auto] rounded-[2.313rem]">
+                        <h2 className="font-semibold text-[2rem] leading-[3.375rem] pt-[4.375rem]">Online coaching lessons for remote learning.</h2>
+                        <p className="font-normal text-[1.25rem] leading-[2.7rem] pt-[1.875rem] pb-[4.563rem] w-[70%] mx-[auto]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        <Link className="font-bold text-4 leading-[1.5rem] bg-[#F0713D] pt-[1rem] px-[2.5rem] pb-[1rem] rounded-[0.75rem] " href={`#`}>Start learning now</Link>
+                    </div>
+                </section>
 
-            <section className="pt-[6.063rem] pb-[6rem]">
-                <div className="w-[87%]  m-[auto]">
-                    <ContainerCards key={2} title={"Get choice of your course"} link={"See all"} array={recommended} />
-                </div>
-            </section>
+                <section className="pt-[6.063rem] pb-[6rem]">
+                    <div className="w-[87%]  m-[auto]">
+                        <ContainerCards key={3} title={"The course in personal development"} link={"See all"} array={recommended} />
+                    </div>
+                </section>
 
-            <section className="w-[90%] mx-[auto]">
-                <div className="bg-[#222129] text-center pb-[5.188rem] mx-[auto] rounded-[2.313rem]">
-                    <h2 className="font-semibold text-[2rem] leading-[3.375rem] pt-[4.375rem]">Online coaching lessons for remote learning.</h2>
-                    <p className="font-normal text-[1.25rem] leading-[2.7rem] pt-[1.875rem] pb-[4.563rem] w-[70%] mx-[auto]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                    <Link className="font-bold text-4 leading-[1.5rem] bg-[#F0713D] pt-[1rem] px-[2.5rem] pb-[1rem] rounded-[0.75rem] " href={`#`}>Start learning now</Link>
-                </div>
-            </section>
+                <section className="bg-[#22212921] pt-[4rem] pb-[13.313rem]">
+                    <div className="w-[87%]  m-[auto]">
+                        <ContainerCards key={4} title={"Student are viewing"} link={"See all"} array={recommended} />
+                    </div>
+                </section>
 
-            <section className="pt-[6.063rem] pb-[6rem]">
-                <div className="w-[87%]  m-[auto]">
-                    <ContainerCards key={3} title={"The course in personal development"} link={"See all"} array={recommended} />
-                </div>
-            </section>
-
-            <section className="bg-[#22212921] pt-[4rem] pb-[13.313rem]">
-                <div className="w-[87%]  m-[auto]">
-                    <ContainerCards key={4} title={"Student are viewing"} link={"See all"} array={recommended} />
-                </div>
-            </section>
-            
-        </main>
+            </main>
+        </>
     )
 }
