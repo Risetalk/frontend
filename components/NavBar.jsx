@@ -44,11 +44,12 @@ export default function NavBar() {
             </ul>
             <div>
               <button>
-                <img
+                <Image className="rounded-full" src={"https://source.unsplash.com/64x64/?person"} alt="logo" width={36} height={36}/>
+                {/* <img
                   className="h-8 w-8 rounded-full mr-2 "
                   src="https://source.unsplash.com/64x64/?person"
                   alt="User avatar"
-                />
+                /> */}
               </button>
             </div>
           </div>
