@@ -10,7 +10,7 @@ const navLinks = [
 
 export default function NavBar() {
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-10">
+    <nav className="bg-white shadow-lg  w-full z-10">
       <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-9 ">
         <div className="flex justify-between items-center py-3">
           <div>

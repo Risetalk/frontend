@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <div>
-        <section className="bg-gray-200 flex flex-row px-4 py-[6rem] pb-5">
+        <section className="bg-gray-200 flex flex-row px-4 py-[1rem] pb-5">
           <div className="max-w-6xl m-12 mx-auto w-[50%]">
             <div className="lg:w-2/3 mx-8 lg:mx-16 mr-15">
               <h2 className="text-xl text-[#000000] font-poppins leading-[5rem] ">
