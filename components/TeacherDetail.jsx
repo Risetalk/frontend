@@ -3,7 +3,7 @@ import teacher from '../public/teacherdetail.png'
 
 export default function TeacherDetail() {
     return (
-        <section className='bg-[#222129] text-white'>
+        <section className='bg-[#222129] text-white pt-[40px]'>
             <div className='relative w-[85%] pt-[2.75rem] pb-[2.5rem] mx-[auto]'>
                 <h2 className='font-medium text-[1.875rem] leading-[2.813rem] text-[#FFFFFF] mt-[3.125rem]'>What our students have to say</h2>
                 <div className=' flex justify-center gap-x-[5rem] pt-[2.5rem] pl-[6.875rem] pb-[3.5rem] mt-[5.625rem] w-[100%] mx-[auto] bg-[#FFFFFFBD] rounded-[2.5rem]'>
