@@ -53,7 +53,7 @@ export default function Prueba (){
     return(
         <div className="pt-[100px]">
             
-            <ContainerCreators array={offers}/>
+            <ContainerCreators/>
         </div>
     )
 }
