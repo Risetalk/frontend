@@ -1,7 +1,15 @@
 import Link from "next/link";
 import Creator from "./Creator";
 
-export default function ContainerCreators({ array }) {
+async function getCreators  () {
+    const res = await fetch("http://localhost:3000/creators.json");
+    const data = await res.json();
+    return data;
+    
+}
+
+export  default async function ContainerCreators() {
+    const creators = await getCreators()
     return (
         <section className="text-black pt-[5rem] pb-[8rem]">
             <div className="w-[85%] mx-[auto]">
@@ -12,11 +20,11 @@ export default function ContainerCreators({ array }) {
 
                 <div className="flex flex-wrap justify-between  gap-y-[2.5rem]">
                     {
-                        array.map(creator => {
+                        creators?.map(creator => {
                             return (
                                 <Creator key={creator.id}
-                                    title={creator.title} 
-                                    image={creator.image}
+                                    name={creator.name} 
+                                    img={creator?.img}
                                     description={creator.description}
                                     />
                             )

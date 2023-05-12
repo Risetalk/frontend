@@ -177,13 +177,13 @@ export default function MyCoursesPage() {
                 </section>
 
                 <section className="bg-[#22212921] pt-[6.063rem] pb-[13.313rem]">
-                    <div className="w-[87%]  m-[auto]">
+                    <div >
                         <ContainerCards key={1} title={"Recommended for you"} link={"See all"} array={recommended} />
                     </div>
                 </section>
 
                 <section className="pt-[6.063rem] pb-[6rem]">
-                    <div className="w-[87%]  m-[auto]">
+                    <div >
                         <ContainerCards key={2} title={"Get choice of your course"} link={"See all"} array={recommended} />
                     </div>
                 </section>
@@ -197,13 +197,13 @@ export default function MyCoursesPage() {
                 </section>
 
                 <section className="pt-[6.063rem] pb-[6rem]">
-                    <div className="w-[87%]  m-[auto]">
+                    <div >
                         <ContainerCards key={3} title={"The course in personal development"} link={"See all"} array={recommended} />
                     </div>
                 </section>
 
                 <section className="bg-[#22212921] pt-[4rem] pb-[13.313rem]">
-                    <div className="w-[87%]  m-[auto]">
+                    <div >
                         <ContainerCards key={4} title={"Student are viewing"} link={"See all"} array={recommended} />
                     </div>
                 </section>
