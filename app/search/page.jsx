@@ -6,6 +6,7 @@ import ContainerOffers from '@/components/ContainerOffers'
 import TeacherDetail from '@/components/TeacherDetail'
 import ContainerCards from '@/components/ContainerCards'
 import SearchCourses from '../../components/SearchCourses'
+import Selectors from '@/components/Selectors'
 export default function SearchPage () {
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -59,26 +60,8 @@ export default function SearchPage () {
             </form>
           </div>
         </div>
-
-        <div className='absolute bottom-[3rem] left-1/2 -translate-x-1/2 mb-4'>
-          <div className='flex justify-center'>
-            <button className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none'>
-              Category
-            </button>
-            <button className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none'>
-              Rating
-            </button>
-            <button className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none'>
-              A-Z
-            </button>
-            <button className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none'>
-              Language
-            </button>
-            <button className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none'>
-              Recents
-            </button>
-          </div>
-        </div>
+          <Selectors/>
+        
       </div>
       <SearchCourses />
       <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>
