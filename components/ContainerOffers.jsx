@@ -7,8 +7,9 @@ import { useState, useEffect } from "react";
 
 
 export default async function ContainerOffers() {
-
     const [offers, setOffers] = useState([]);
+
+
     useEffect(() => {
         const getOffers = async () => {
             try {
@@ -21,7 +22,9 @@ export default async function ContainerOffers() {
         };
 
         getOffers();
+        
     }, []);
+
 
     return (
         <section className="text-black w-[85%] mx-[auto] pt-[8.3rem] pb-[11rem]">
