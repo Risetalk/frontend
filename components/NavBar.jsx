@@ -3,9 +3,8 @@ import Image from "next/image";
 const navLinks = [
   { title: "Home", path: "/" },
   { title: "Courses", path: "/courses" },
-  { title: "Careers", path: "/careers" },
-  { title: "Blog", path: "/blog" },
   { title: "About Us", path: "/about" },
+
 ];
 
 export default function NavBar() {
