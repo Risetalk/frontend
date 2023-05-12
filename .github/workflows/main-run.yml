@@ -28,6 +28,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
+    - name: Off pm2 process
+      run: pm2 kill
 
     - name: Install dependencies
       run: npm ci --omit=dev
@@ -44,4 +47,4 @@ jobs:
       run: npm run build --if-present
 
     - name: Start Next.js
-      run: npm start  
+      run: pm2 start npm -- start
