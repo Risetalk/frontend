@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
-
+import SearchCourses from '../../components/SearchCourses';
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -76,6 +76,7 @@ export default function SearchPage() {
         </div>
       </div>
     </div>
+    <SearchCourses />
     </div>
   );
 }
