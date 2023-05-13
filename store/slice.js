@@ -1,24 +1,18 @@
-import { createSlice } from '@reduxjs/toolkit'
-
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-   
- 
-}
+  courses: [],
+};
 
 export const Slice = createSlice({
-    name: 'valores',
-    initialState:{
-    nombre: 'nombre',
-},
+  name: "courses",
+  initialState,
+  reducers: {
+    allCourses: (state, action) => {
+      state.courses = action.payload;
+    },
+  },
+});
 
-    reducers : {
-    guardarnombre: (state, action) => {
-        state.nombre = action.payload; 
-    }
-    }
-})
-
-
-
-export const { guardarnombre } = Slice.actions
+export const { allCourses } = Slice.actions;
+export default Slice.reducer;

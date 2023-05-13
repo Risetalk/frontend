@@ -1,8 +1,32 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import BlogList from "../components/BlogList.jsx";
 import CardsBlog from "../components/CardsBlog.jsx";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { allCourses } from "../store/slice";
+
 export default function Home() {
+  const courses = useSelector((state) => state.courses);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getAllCourses = async () => {
+      try {
+        const res = await fetch("http://localhost:3000/course.json");
+        const data = await res.json();
+
+        dispatch(allCourses(data));
+      } catch (error) {
+        console.error("Error fetching recommends:", error);
+      }
+    };
+
+    getAllCourses();
+  }, []);
+
   return (
     <div>
       <div>

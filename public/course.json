@@ -1,0 +1,104 @@
+[
+    {
+      "id": 1,
+      "title": "Python intermediate",
+      "description":"Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+      "tema": "Programacion",
+      "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "authorImg": "Group234.png",
+      "autor": "Sandra",
+      "price": "$19.99",
+      "duration": 3,
+      "offer": 15.99
+    },
+    {
+      "id": 2,
+      "title": "React Js + Express",
+      "description":
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+      "tema": "Programming",
+      "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "authorImg": "Group234.png",
+      "author": "Felipe",
+      "price": "$29.99",
+      "duration": 5,
+      "offer": 15.99
+    },
+    {
+        "id": 3,
+        "title": "Next Js + 13",
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+        "tema": "Programming",
+        "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "authorImg": "Group234.png",
+        "author": "Ricardo",
+        "price": "$29.99",
+        "duration": 3,
+        "offer": 15.99
+      },
+      {
+        "id": 4,
+        "title": "AWS certified solutions",
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+        "tema": "Programming",
+        "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "authorImg": "Group234.png",
+        "author": "Lina",
+        "price": "$29.99",
+        "duration": 2,
+        "offer": 15.99
+      },
+      {
+        "id": 5,
+        "title": "JavaScript ES6",
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+        "tema": "Programming",
+        "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "authorImg": "Group234.png",
+        "author": "Sarah",
+        "price": "$29.99",
+        "duration": 4,
+        "offer": 15.99
+      },
+      {
+        "id": 6,
+        "title": "Dart + Flutter",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+        "tema": "Programming",
+        "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "authorImg": "Group234.png",
+        "author": "Bryan",
+        "price": "$29.99",
+        "duration": 1,
+        "offer": 15.99
+      },
+      {
+        "id": 7,
+        "title": "Docker + Kubernetes",
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+        "tema": "Programming",
+        "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "authorImg": "Group234.png",
+        "author": "Hernan",
+        "price": "$29.99",
+        "duration": 3,
+        "offer": 15.99
+      },
+      {
+        "id": 8,
+        "title": "Solidity + Blockchain",
+        "description":
+          "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+        "tema": "Programming",
+        "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+        "authorImg": "Group234.png",
+        "author": "Sandra",
+        "price": "$29.99",
+        "duration": 2,
+        "offer": 15.99
+      }
+  ]
