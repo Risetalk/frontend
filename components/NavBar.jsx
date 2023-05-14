@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 const navLinks = [
   { title: "Home", path: "/" },
-  { title: "Courses", path: "/courses" },
+  { title: "Courses", path: "/mycourses" },
+  { title: "Buy", path: "/search"},
   { title: "About Us", path: "/about" },
 
 ];
