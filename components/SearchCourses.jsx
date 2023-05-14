@@ -1,26 +1,53 @@
 import CourseCard from "./CourseCard";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 export default function SearchCourses() {
   const courses = useSelector((state) => state.courses);
+  const pageSize = 4;
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const slicedCourses = courses?.filterCourses?.slice(0, 4);
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const slicedCourses = courses?.filterCourses?.slice(startIndex, endIndex);
+
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const totalPages = Math.ceil(courses?.filterCourses?.length / pageSize);
 
   return (
-    <div className="justify-between my-[3rem] mr-[8rem] ml-[6rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-      {slicedCourses?.map((course, index) => (
-        <CourseCard
-          key={index}
-          image={course?.image}
-          title={course?.title}
-          tema={course?.tema}
-          duration={course?.duration}
-          description={course?.description}
-          author={course?.author}
-          price={course?.price}
-          offer={course?.offer}
-        />
-      ))}
+    <div>
+      <div className="flex justify-center mt-4">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => onPageChange(index + 1)}
+            className={`mx-1 px-2 py-1 rounded ${
+              currentPage === index + 1
+                ? "bg-gray-500 text-white"
+                : "bg-gray-200 text-gray-600"
+            }`}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
+      <div className="justify-between my-[2rem] mr-[8rem] ml-[6rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+        {slicedCourses?.map((course, index) => (
+          <CourseCard
+            key={index}
+            image={course?.image}
+            title={course?.title}
+            tema={course?.tema}
+            duration={course?.duration}
+            description={course?.description}
+            author={course?.author}
+            price={course?.price}
+            offer={course?.offer}
+          />
+        ))}
+      </div>
     </div>
   );
 }
