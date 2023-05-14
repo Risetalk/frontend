@@ -17,8 +17,8 @@ export default function Home() {
       try {
         const res = await fetch("http://localhost:3000/course.json");
         const data = await res.json();
-
         dispatch(allCourses(data));
+        
       } catch (error) {
         console.error("Error fetching recommends:", error);
       }

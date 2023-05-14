@@ -60,7 +60,7 @@ export default function SearchPage () {
             </form>
           </div>
         </div>
-          <Selectors/>
+          <Selectors />
         
       </div>
       <SearchCourses />
