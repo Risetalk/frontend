@@ -10,7 +10,6 @@ export default function ContainerCards({ title, link }) {
 
   const path = usePathname()
 
-  console.log(path);
 
   const [recommends, setRecommends] = useState([]);
 

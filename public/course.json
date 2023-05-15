@@ -13,7 +13,7 @@
       "raiting": 8,
       "languaje":"spanish",
       "category":"programming",
-      "buy": true
+      "buy": false
     },
     {
       "id": 2,
@@ -130,7 +130,8 @@
         "offer": 15.99,
         "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
       },
       {
         "id": 9,
@@ -145,7 +146,8 @@
         "offer": 15.99,
         "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
       },
       {
         "id": 10,
@@ -161,7 +163,8 @@
         "offer": 15.99,
         "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
       },
       {
           "id": 11,
@@ -177,7 +180,8 @@
           "offer": 15.99,
           "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
         },
         {
           "id": 12,
@@ -193,7 +197,8 @@
           "offer": 15.99,
           "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
         },
         {
           "id": 13,
@@ -209,7 +214,8 @@
           "offer": 15.99,
           "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": true
         },
         {
           "id": 14,
@@ -224,7 +230,8 @@
           "offer": 15.99,
           "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
         },
         {
           "id": 15,
@@ -240,7 +247,8 @@
           "offer": 15.99,
           "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
         },
         {
           "id": 16,
@@ -256,6 +264,7 @@
           "offer": 15.99,
           "raiting": 8,
       "languaje":"spanish",
-      "category":"programming"
+      "category":"programming",
+      "buy": false
         }
   ]

@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   courses: [],
   filterCourses: [],
+  myCourses:[],
   coursesBuy:[],
   access: false,
   reset: false,
@@ -21,9 +22,14 @@ export const Slice = createSlice({
       state.filterCourses = state.courses
     },
 
-    allBuy: (state,action)=>{
-      state.coursesBuy = state.courses.filter(course=>{
+    allMyCourses: (state,action)=>{
+      state.myCourses = state.courses.filter(course=>{
         return course.buy === true
+      })
+    },
+    allBuyCourses: (state,action)=>{
+      state.coursesBuy = state.courses.filter(course=>{
+        return course.buy === false
       })
     },
     filterCoursesCategory: (state, action) => {
@@ -84,5 +90,5 @@ export const Slice = createSlice({
   },
 });
 
-export const { allCourses,allBuy, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess, searchCourses, resetPage } = Slice.actions;
+export const { allCourses,allMyCourses,allBuyCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess, searchCourses, resetPage } = Slice.actions;
 export default Slice.reducer;
