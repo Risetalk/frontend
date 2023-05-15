@@ -16,13 +16,13 @@ export default function SearchCourses() {
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const slicedCourses = courses?.filterCourses?.slice(startIndex, endIndex);
+  const slicedCourses = courses?.coursesBuy?.slice(startIndex, endIndex);
 
   const onPageChange = (page) => {
     setCurrentPage(page);
   };
 
-  const totalPages = Math.ceil(courses?.filterCourses?.length / pageSize);
+  const totalPages = Math.ceil(courses?.coursesBuy?.length / pageSize);
 
   useEffect(()=>{
     

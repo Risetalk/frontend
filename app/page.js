@@ -5,13 +5,12 @@ import BlogList from "../components/BlogList.jsx";
 import CardsBlog from "../components/CardsBlog.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { allBuy, allCourses } from "../store/slice";
+import { allMyCourses , allCourses, allBuyCourses } from "@/store/slice.js";
 import { usePathname, useRouter } from "next/navigation.js";
 
 
 
 export default function Home() {
-  const pathname = usePathname()
 
   const courses = useSelector((state) => state.courses);
   const router = useRouter()
@@ -19,11 +18,6 @@ export default function Home() {
 
   const dispatch = useDispatch();
 
-  // useEffect(()=>{
-  //   if(!courses.access && pathname !== "/login" && pathname !== "/register"){
-  //     router.push('/login')
-  //   }
-  // },[courses.access])
 
   useEffect(() => {
     const getAllCourses = async () => {
@@ -31,7 +25,8 @@ export default function Home() {
         const res = await fetch("http://localhost:3000/course.json");
         const data = await res.json();
         dispatch(allCourses(data));
-        dispatch(allBuy())
+        dispatch(allMyCourses())
+        dispatch(allBuyCourses())
         
       } catch (error) {
         console.error("Error fetching recommends:", error);

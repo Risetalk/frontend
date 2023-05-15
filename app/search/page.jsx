@@ -24,7 +24,6 @@ export default function SearchPage() {
 
   const handleSubmit = e => {
     console.log(e.target.value);
-
   }
 
   return (
