@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   courses: [],
   filterCourses: [],
+  coursesBuy:[],
   access: false,
   reset: false,
 };
@@ -18,6 +19,12 @@ export const Slice = createSlice({
     allCourses: (state, action) => {
       state.courses = action.payload;
       state.filterCourses = state.courses
+    },
+
+    allBuy: (state,action)=>{
+      state.coursesBuy = state.courses.filter(course=>{
+        return course.buy === true
+      })
     },
     filterCoursesCategory: (state, action) => {
       if (action.payload === "all") {
@@ -77,5 +84,5 @@ export const Slice = createSlice({
   },
 });
 
-export const { allCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess, searchCourses, resetPage } = Slice.actions;
+export const { allCourses,allBuy, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess, searchCourses, resetPage } = Slice.actions;
 export default Slice.reducer;
