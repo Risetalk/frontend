@@ -6,11 +6,24 @@ import CardsBlog from "../components/CardsBlog.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allCourses } from "../store/slice";
+import { usePathname, useRouter } from "next/navigation.js";
+
+
 
 export default function Home() {
+  const pathname = usePathname()
+
   const courses = useSelector((state) => state.courses);
+  const router = useRouter()
+
 
   const dispatch = useDispatch();
+
+  useEffect(()=>{
+    if(!courses.access && pathname !== "/login" && pathname !== "/register"){
+      router.push('/login')
+    }
+  },[courses.access])
 
   useEffect(() => {
     const getAllCourses = async () => {

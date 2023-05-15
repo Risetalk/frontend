@@ -4,7 +4,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Course from "./Course";
 
+import { usePathname } from "next/navigation";
+
 export default function ContainerCards({ title, link }) {
+
+  const path = usePathname()
+
+  console.log(path);
+
   const [recommends, setRecommends] = useState([]);
 
   useEffect(() => {
@@ -24,11 +31,11 @@ export default function ContainerCards({ title, link }) {
   return (
     <section className="w-[87%] m-[auto]">
       <div className="flex justify-between w-[100%] items-center mb-[2.7rem]">
-        <h2 className="inline font-medium text-[1.65rem] leading-[2.813rem] text-[black]">
+        <h2 className={`inline font-medium text-[1.65rem] leading-[2.813rem]   ${path === "/search" ? 'text-orange-400' : 'text-black'}`}>
           {title}
         </h2>
         <Link href={`#`}>
-          <span className="font-bold text-[1rem] text-[#222129]">{link}</span>
+          <span className={`font-bold text-[1rem] ${path === "/search" ? 'text-orange-400' : 'text-[#222129]'} `}>{link}</span>
         </Link>
       </div>
 

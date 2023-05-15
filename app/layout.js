@@ -7,6 +7,8 @@ import "../theme/globals.css";
 import { Inter } from "next/font/google";
 import { store } from "../store/store";
 
+import { usePathname } from "next/navigation";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -15,13 +17,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  const path = usePathname()
   return (
     <html lang="en">
       <body className={inter.className}>
         <Provider store={store}>
-          <Navigation />
+          {
+            (path !== "/login" && path !== '/mycourses/id') && <Navigation />
+          }
           {children}
-          <Footer />
+          {
+            path !== "/login" && <Footer />
+          }
         </Provider>
       </body>
     </html>
