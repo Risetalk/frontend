@@ -45,9 +45,10 @@ export default function BestTeachers() {
         }
       ];
   return (
+    <div className=' p-40'>
     <div className=' w-3/4'>
     <h1 className=' font-bold text-[1.6rem] leading-[2.6rem] text-[#000000]'>Course Creation Form</h1>
-    <h2>Best Teachers</h2>
+    <h2 className=' font-medium text-[1.6rem] leading-[2.6rem] text-[#687684]'>Best Teachers</h2>
     <div className=' flex flex-row gap-x-[50px] '>
       {users.map((teacher) => {
         return (
@@ -55,7 +56,7 @@ export default function BestTeachers() {
           <div className=' flex flex-row '>
               <div className='flex flex-col items-center'>
                   <div>
-                      <img src={teacher.profile_image} alt="Teacher" className='rounded-full' />
+                      <img src={teacher.profile_image} alt="Teacher" className='rounded-full w-12' />
                   </div>
                   <h3 className='text-black text-center'>{teacher.name}</h3>
               </div>
@@ -63,6 +64,7 @@ export default function BestTeachers() {
         )
       })}
     </div>
+  </div>
   </div>
   )
 }
