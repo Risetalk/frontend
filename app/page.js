@@ -19,11 +19,11 @@ export default function Home() {
 
   const dispatch = useDispatch();
 
-  useEffect(()=>{
-    if(!courses.access && pathname !== "/login" && pathname !== "/register"){
-      router.push('/login')
-    }
-  },[courses.access])
+  // useEffect(()=>{
+  //   if(!courses.access && pathname !== "/login" && pathname !== "/register"){
+  //     router.push('/login')
+  //   }
+  // },[courses.access])
 
   useEffect(() => {
     const getAllCourses = async () => {
