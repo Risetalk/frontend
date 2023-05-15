@@ -4,6 +4,7 @@ const initialState = {
   courses: [],
   filterCourses: [],
   access: false,
+  reset: false,
 };
 
 export const Slice = createSlice({
@@ -63,8 +64,18 @@ export const Slice = createSlice({
       }
     },
 
+    searchCourses:(state, action) => {
+      state.filterCourses = state.courses.filter(course=> {
+        return course.title.toLowerCase().includes(action.payload)})
+    },
+
+    resetPage:(state, action)=>{
+      if(state.reset){state.reset = false}else{state.reset = true}
+      
+    }
+
   },
 });
 
-export const { allCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess } = Slice.actions;
+export const { allCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess, searchCourses, resetPage } = Slice.actions;
 export default Slice.reducer;
