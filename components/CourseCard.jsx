@@ -1,10 +1,12 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function CourseCard({id, title, image, tema, duration, description, author,price,offer}) {
+    
     return (
         <div className="">
             <article
-                className=" ml-[2rem] pt-4 px-6 bg-[white] pb-12  rounded-[1.25rem]  shadow-2xl"
+                className=" ml-[2rem] pt-4 px-6 bg-[white] pb-12  rounded-[1.25rem]  shadow-2xl "
                 key={id}>
                 <Image
                     className="rounded-[1.25rem] h-[200px] object-cover w-[100%]"
@@ -33,9 +35,9 @@ export default function CourseCard({id, title, image, tema, duration, descriptio
                         {duration} Month
                     </span>
                 </div>
-                <h3 className="font-medium text-[1.3rem] leading-[1.9rem] text-[#252641] mb-[1.2rem]">
+                <Link href={`search/${id}`} className="font-medium text-[1.3rem] leading-[1.9rem] text-[#252641] mb-[1.2rem]">
                     {title}
-                </h3>
+                </Link>
                 <p className="font-normal text-[1rem] leading-[1.6rem] text-[#696984] mb-[1.063rem]">
                     {description}
                 </p>

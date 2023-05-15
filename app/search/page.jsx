@@ -6,17 +6,25 @@ import ContainerOffers from '@/components/ContainerOffers'
 import TeacherDetail from '@/components/TeacherDetail'
 import ContainerCards from '@/components/ContainerCards'
 import SearchCourses from '../../components/SearchCourses'
-import Selectors from '@/components/Selectors'
-export default function SearchPage () {
-  const [searchTerm, setSearchTerm] = useState('')
 
-  const handleChange = e => {
-    setSearchTerm(e.target.value)
+import Selectors from '@/components/Selectors'
+import { resetPage, searchCourses } from '@/store/slice'
+import { useDispatch } from 'react-redux'
+export default function SearchPage() {
+
+  const dispatch = useDispatch();
+
+  const handleChange = (event) => {
+    const value = event.target.value
+    const newValue = value.toLowerCase()
+    console.log(newValue);
+    dispatch(searchCourses(newValue))
+    dispatch(resetPage())
   }
 
   const handleSubmit = e => {
-    e.preventDefault()
-    console.log('Search term:', searchTerm)
+    console.log(e.target.value);
+
   }
 
   return (
@@ -31,7 +39,7 @@ export default function SearchPage () {
         />
 
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-[65rem] mx-auto bg-white rounded-full shadow-lg z-10'>
-          <div className='flex items-center w-full px-4 py-[1rem]'>
+          <div className='flex items-center w-full px-4 py-[1rem] text-black'>
             <span className='mr-4 text-gray-600'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -47,21 +55,11 @@ export default function SearchPage () {
                 <line x1='21' y1='21' x2='16.65' y2='16.65' />
               </svg>
             </span>
-            <form onSubmit={handleSubmit}>
-              <input
-                type='text'
-                placeholder='Search your favorite course'
-                value={searchTerm}
-                onChange={handleChange}
-                className={`w-[24rem] bg-transparent outline-none ${
-                  searchTerm ? 'text-black' : ''
-                }`}
-              />
-            </form>
+            <input type="text" placeholder='Search your favourite course' onChange={handleChange} className='block w-[90%] text-black outline-none' />
           </div>
         </div>
-          <Selectors />
-        
+        <Selectors />
+
       </div>
       <SearchCourses />
       <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>

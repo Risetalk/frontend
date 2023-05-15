@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje } from "@/store/slice";
+import { filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje, resetPage } from "@/store/slice";
 import { useState } from "react";
 
 
@@ -18,6 +18,7 @@ export default function Selectors() {
                     <select className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none' defaultValue={"category"}
                     onChange={(event)=>{
                         dispatch(filterCoursesCategory(event.target.value))
+                        dispatch(resetPage())
                     }}
                     >
                         <option value="category" disabled >Category</option>
@@ -54,6 +55,7 @@ export default function Selectors() {
                     <select className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none' defaultValue={"languaje"}
                     onChange={(event)=>{
                         dispatch(filterCoursesLanguaje(event.target.value))
+                        dispatch(resetPage())
                     }}
                     >
                         <option value="languaje" disabled>Languaje</option>
