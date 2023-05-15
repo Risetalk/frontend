@@ -4,7 +4,7 @@ const navLinks = [
   { title: "Home", path: "/" },
   { title: "Courses", path: "/mycourses" },
   { title: "Buy", path: "/search"},
-  { title: "About Us", path: "/about" },
+  { title: "Create", path: "/create" },
 
 ];
 
