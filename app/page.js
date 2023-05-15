@@ -5,7 +5,7 @@ import BlogList from "../components/BlogList.jsx";
 import CardsBlog from "../components/CardsBlog.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { allCourses } from "../store/slice";
+import { allBuy, allCourses } from "../store/slice";
 import { usePathname, useRouter } from "next/navigation.js";
 
 
@@ -31,6 +31,7 @@ export default function Home() {
         const res = await fetch("http://localhost:3000/course.json");
         const data = await res.json();
         dispatch(allCourses(data));
+        dispatch(allBuy())
         
       } catch (error) {
         console.error("Error fetching recommends:", error);
