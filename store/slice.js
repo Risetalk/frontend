@@ -2,9 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   courses: [],
+  coursesCard: [],
+  coursesCardRecommend: [],
+  coursesCardChoice: [],
+  coursesCardDevelop: [],
+  coursesCardStudents: [],
   filterCourses: [],
-  myCourses:[],
-  coursesBuy:[],
+  myCourses: [],
+  coursesBuy: [],
+  myCategories: [],
+  coursesRecommend: [],
   access: false,
   reset: false,
 };
@@ -19,18 +26,19 @@ export const Slice = createSlice({
     },
     allCourses: (state, action) => {
       state.courses = action.payload;
-      state.filterCourses = state.courses
+
     },
 
-    allMyCourses: (state,action)=>{
-      state.myCourses = state.courses.filter(course=>{
+    allMyCourses: (state, action) => {
+      state.myCourses = state.courses.filter(course => {
         return course.buy === true
       })
     },
-    allBuyCourses: (state,action)=>{
-      state.coursesBuy = state.courses.filter(course=>{
+    allBuyCourses: (state, action) => {
+      state.coursesBuy = state.courses.filter(course => {
         return course.buy === false
       })
+      state.filterCourses = [...state.coursesBuy]
     },
     filterCoursesCategory: (state, action) => {
       if (action.payload === "all") {
@@ -77,18 +85,65 @@ export const Slice = createSlice({
       }
     },
 
-    searchCourses:(state, action) => {
-      state.filterCourses = state.courses.filter(course=> {
-        return course.title.toLowerCase().includes(action.payload)})
+    searchCourses: (state, action) => {
+      state.filterCourses = state.courses.filter(course => {
+        return course.title.toLowerCase().includes(action.payload)
+      })
     },
 
-    resetPage:(state, action)=>{
-      if(state.reset){state.reset = false}else{state.reset = true}
-      
-    }
+    resetPage: (state, action) => {
+      if (state.reset) { state.reset = false } else { state.reset = true }
+
+    },
+    getMyCategories: (state, action) => {
+      let categoriesSet = new Set();
+      for (const course of state.myCourses) {
+        categoriesSet.add(course.category)
+      }
+      state.myCategories = [...categoriesSet]
+    },
+
+    getCoursesRecommended: (state, action) => {
+      for (const course of state.coursesBuy) {
+        state.myCategories.includes(course.category) && state.coursesRecommend.push(course)
+      }
+    },
+
+    getCoursesCard: (state, action) => {
+        state.coursesCardRecommend = state.coursesBuy.filter( course => {
+          if(state.myCategories.includes(course.category)) return course
+          
+        })
+
+        state.coursesCardChoice = [...state.coursesBuy];
+        
+        state.coursesCardDevelop = state.coursesBuy.filter(course=>{
+          if(course.category === "Development")return course
+        }
+      )
+
+        state.coursesCardStudents = [...state.coursesBuy.sort((a, b) => {        
+            return a.raiting < b.raiting
+        })
+        ]
+        // for (const course of state.coursesBuy) {
+        //   state.myCategories.includes(course.category) && state.coursesCardRecommend.push(course)
+        // }
+      // } else if (action.payload === "The course in personal development") {
+      //   for (const course of state.coursesBuy) {
+      //     course.category === "Development" && state.coursesCardDevelop.push(course)
+      //   }
+      // } else {
+      //   for (const course of state.coursesBuy) {
+      //     state.coursesCard.push(course)
+      //   }
+      // }
+    },
+
+
 
   },
 });
 
-export const { allCourses,allMyCourses,allBuyCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje,loginAccess, searchCourses, resetPage } = Slice.actions;
+export const { allCourses, getCoursesCard, allMyCourses, allBuyCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje, loginAccess, searchCourses, resetPage, getMyCategories, getCoursesRecommended } = Slice.actions;
 export default Slice.reducer;

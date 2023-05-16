@@ -5,7 +5,7 @@ import BlogList from "../components/BlogList.jsx";
 import CardsBlog from "../components/CardsBlog.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { allMyCourses , allCourses, allBuyCourses } from "@/store/slice.js";
+import { allMyCourses , allCourses, allBuyCourses, getMyCategories, getCoursesRecommended } from "@/store/slice.js";
 import { usePathname, useRouter } from "next/navigation.js";
 
 
@@ -27,6 +27,8 @@ export default function Home() {
         dispatch(allCourses(data));
         dispatch(allMyCourses())
         dispatch(allBuyCourses())
+        dispatch(getMyCategories())
+        
         
       } catch (error) {
         console.error("Error fetching recommends:", error);
