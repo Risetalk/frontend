@@ -1,5 +1,6 @@
 'use client'
 
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Course from "./Course";
@@ -8,7 +9,15 @@ import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { getCoursesRecommended, getCoursesCard } from "@/store/slice";
 
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+
+
 export default function ContainerCards({ title, link }) {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once: true})
 
   const courses = useSelector(state => state.courses)
 
@@ -56,7 +65,10 @@ export default function ContainerCards({ title, link }) {
   }, []);
 
   return (
-    <section className="w-[87%] m-[auto]">
+    <motion.section ref={ref} className="w-[87%] m-[auto]"
+    animate={isInView ? {opacity: 1, y:0} : {opacity: 0, y:100}}
+    transition={{duration: 1}}
+    >
       <div className="flex justify-between w-[100%] items-center mb-[2.7rem]">
         <h2 className={`inline font-medium text-[1.65rem] leading-[2.813rem]   ${path === "/search" ? 'text-orange-400' : 'text-black'}`}>
           {title}
@@ -132,7 +144,7 @@ export default function ContainerCards({ title, link }) {
         }
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 

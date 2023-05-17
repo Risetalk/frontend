@@ -1,5 +1,10 @@
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
+
 export default function Categories(){
 
+    const ref = useRef()
+    const isInView = useInView(ref,{once: true})
     const category = [
         {
             id: "1",
@@ -45,10 +50,16 @@ export default function Categories(){
 
     return (
         <section>
-            <section className="text-[black] pt-[3.7rem] pb-[6.25rem]">
+            <section className="text-[black] pt-[3.7rem] pb-[6.25rem]"
+            
+            >
                     <div className="w-[87%] m-[auto]">
                         <h2 className="font-semibold text-[#252641] text-[1.85rem] leading-[3.375rem] mb-[3rem]">Choice favourite course from top category</h2>
-                        <div className="flex flex-wrap justify-between gap-[3.6rem]">
+                        <motion.div ref={ref} className="flex flex-wrap justify-between gap-[3.6rem]"
+                        initial={{opacity: 0}}
+                        animate={isInView ? {opacity: 1} : {opacity: 0}}
+                        transition={{duration: 1}}
+                        >
                             {
                                 category.map(cat => {
                                     return (
@@ -60,7 +71,7 @@ export default function Categories(){
                                     )
                                 })
                             }
-                        </div>
+                        </motion.div>
                     </div>
                 </section>
         </section>
