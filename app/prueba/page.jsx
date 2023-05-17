@@ -1,6 +1,7 @@
 import TeacherDetail from "@/components/TeacherDetail"
 import ContainerOffers from "@/components/ContainerOffers"
 import ContainerCreators from "@/components/ContainerCreators-"
+import MyContent from "@/components/MyContent"
 
 
 
@@ -51,9 +52,9 @@ export default function Prueba (){
         },
     ]
     return(
-        <div className="pt-[100px]">
+        <div className="pt-[100px] text-black bg-white">
             
-            <ContainerCreators/>
+            <MyContent/>
         </div>
     )
 }
