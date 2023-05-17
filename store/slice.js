@@ -12,7 +12,7 @@ const initialState = {
   coursesBuy: [],
   myCategories: [],
   coursesRecommend: [],
-  access: false,
+  access: true,
   reset: false,
 };
 
