@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Provider store={store}>
           {
-            (path !== "/login" && path !== '/mycourses/id') && <Navigation />
+            (path !== "/login" && path !== '/mycourses/id' && path !== "/prueba") && <Navigation />
           }
           {children}
           {
