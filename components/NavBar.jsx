@@ -90,7 +90,7 @@ export default function NavBar() {
                 
 
               :
-              <Link className="text-[#5B5B5B]" href={'/login'}>Login / Register</Link>
+              <Link className="text-[#5B5B5B]" href={'/login'}>Login</Link>
 
               }
             </div>
