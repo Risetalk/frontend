@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MyContent from "./MyContent";
 import UploadVideo from "./UploadVideo";
 import Image from "next/image";
+import DropdownCategory from "./DropdownCategory";
+import DropdownLanguaje from "./DropdownLanguaje";
 
 function CreateCourse({ professors, onPost }) {
   const [courseTitle, setCourseTitle] = useState("");
@@ -27,7 +29,7 @@ function CreateCourse({ professors, onPost }) {
   };
 
   return (
-    <div>
+    <div className="border-r border-gray-350">
       <h1 className="font-bold font-roboto text-xl md:text-3xl mb-[2rem] mt-[2rem] pl-[1.5rem]">
         Create a course
       </h1>
@@ -44,8 +46,8 @@ function CreateCourse({ professors, onPost }) {
             <Image
               src={professor.image}
               alt={professor.name}
-              width="58"
-              height="58"
+              width="59"
+              height="59"
               className="rounded-full"
             />
             <p className="text-xs text-[#687684]">{professor.name}</p>
@@ -54,36 +56,53 @@ function CreateCourse({ professors, onPost }) {
       </div>
       <div className="relative">
         <input
-          className="border border-gray-300 rounded px-2 py-[3rem] w-full h-[8rem] font-roboto font-normal text-xl pl-[1.5rem] first-letter:text-base text-[black]"
+          className="border border-gray-300 rounded px-10 py-[5rem] w-[50rem] h-[6.9rem] font-roboto font-normal text-xl text-[black] "
           placeholder="Write title..."
           onChange={(e) => setCourseTitle(e.target.value)}
         />
 
         <div className="flex justify-between p-[2rem]">
-          <input
-            type="text"
-            placeholder="Paste image URL"
-            value={imageUrl}
-            onChange={(e) => setImageUrl(e.target.value)}
-            className="rounded-full  px-[4rem]  w-[16.5rem] h-[5rem] mb-2 mr-[5rem]  bg-[#687684] text-white font-bold placeholder"
-            style={{ color: " #FFFFFF" }}
-          />
+          <button className="flex items-center w-[18rem] h-[6rem] bg-[#687684] font-bold text-white rounded-full mb-2 mr-2">
+            <span className="flex items-center">
+              <Image
+                src="/dateR.png"
+                alt="Imagen"
+                className="w-[62px] h-[62px] mr-4 ml-[1rem] "
+                width={60}
+                height={60}
+              />
+            </span>
+            Upload a image
+          </button>
 
-          <button className="w-[16.5rem] h-[5rem] bg-[#687684] font-bold text-white rounded-full">
-            Date Released
+          <button className="flex items-center w-[18rem] h-[6rem] bg-[#687684] font-bold text-white rounded-full mb-2 mr-2">
+            <span className="flex items-center">
+              <Image
+                src="/EllipseRele.png"
+                alt="Imagen"
+                className="w-[62px] h-[62px] mr-4 ml-[1rem] "
+                width={60}
+                height={60}
+              />
+            </span>
+            Date released
           </button>
         </div>
       </div>
 
       <div className="relative">
         <input
-          className="mb-2 border text-xl border-gray-300 rounded px-2 py-[6rem] pl-[1rem]  w-full h-[8rem]"
+          className="mb-2 border text-xl border-gray-300 rounded px-2 py-[5rem] pl-[1rem]  w-full h-[8rem]"
           placeholder="
           Write a description..."
           onChange={(e) => setCourseDescription(e.target.value)}
         />
+        <div className="flex justify-between p-[2rem]">
+          <DropdownCategory /> <DropdownLanguaje />
+        </div>
+
         <input
-          className="mb-2 border border-gray-300 rounded px-2 py-[1rem] w-full h-[2rem] pl-[1.5rem] text-xl"
+          className="mb-2 border border-gray-300 rounded px-2 py-[3rem] w-full h-[2rem] pl-[1.5rem] text-xl"
           placeholder="How much does it cost?"
           onChange={(e) => setCourseCost(e.target.value)}
         />
