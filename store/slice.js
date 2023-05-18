@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  user:[],
   courses: [],
   coursesCard: [],
   coursesCardRecommend: [],
@@ -21,6 +22,9 @@ export const Slice = createSlice({
   initialState,
 
   reducers: {
+    addUser:(state,action)=>{
+      state.user = action.payload;
+    },
     loginAccess: (state, action) => {
       state.access = action.payload;
     },
@@ -145,5 +149,5 @@ export const Slice = createSlice({
   },
 });
 
-export const { allCourses, getCoursesCard, allMyCourses, allBuyCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje, loginAccess, searchCourses, resetPage, getMyCategories, getCoursesRecommended } = Slice.actions;
+export const { addUser, allCourses, getCoursesCard, allMyCourses, allBuyCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje, loginAccess, searchCourses, resetPage, getMyCategories, getCoursesRecommended } = Slice.actions;
 export default Slice.reducer;
