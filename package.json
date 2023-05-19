@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@typebot.io/js": "^0.0.53",
+    "@typebot.io/react": "^0.0.53",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "eslint": "8.40.0",
