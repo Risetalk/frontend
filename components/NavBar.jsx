@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { loginAccess } from "@/store/slice";
+import { motion } from "framer-motion";
 
 
 const navLinks = [
@@ -27,7 +28,11 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="relative bg-white shadow-lg  w-full z-10 ">
+    <motion.nav className="relative bg-white shadow-lg  w-full z-10 "
+    initial={{opacity:0 , y:0}}
+    animate={{opacity:1, y:0}}
+    transition={{duration:1}}
+    >
       {
                   active && courses.access
                   ? 
@@ -97,6 +102,6 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

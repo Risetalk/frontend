@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Card = ({ image, name, title, description, link }) => {
   return (
@@ -29,6 +31,10 @@ const Card = ({ image, name, title, description, link }) => {
 };
 
 export default function CardsBlog() {
+
+  const ref = useRef()
+  const isInView = useInView(ref, { once: true })
+
   const cards = [
     {
       image: "/card1.png",
@@ -49,8 +55,13 @@ export default function CardsBlog() {
       link: "https://example.com/card2",
     },
   ];
+
   return (
-    <div>
+    <motion.div
+      ref={ref}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
+      transition={{ duration: 1 }}
+    >
       <div className="bg-gray-200 p-6 mt-[4rem] ">
         <h1 className="mt-10 text-3xl ml-[5rem] leading-[66px]  font-extrabold font-poppins text-[#262F30] py-1">
           Related Blog
@@ -61,6 +72,6 @@ export default function CardsBlog() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
