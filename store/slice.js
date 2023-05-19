@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user:[],
+  user: [],
   courses: [],
   coursesCard: [],
   coursesCardRecommend: [],
@@ -15,6 +15,7 @@ const initialState = {
   coursesRecommend: [],
   access: true,
   reset: false,
+  id: "",
 };
 
 export const Slice = createSlice({
@@ -22,117 +23,124 @@ export const Slice = createSlice({
   initialState,
 
   reducers: {
-    addUser:(state,action)=>{
+    addUser: (state, action) => {
       state.user = action.payload;
+    },
+    addId: (state, action) => {
+      state.id = action.payload;
     },
     loginAccess: (state, action) => {
       state.access = action.payload;
     },
     allCourses: (state, action) => {
       state.courses = action.payload;
-
     },
 
     allMyCourses: (state, action) => {
-      state.myCourses = state.courses.filter(course => {
-        return course.buy === true
-      })
+      state.myCourses = state.courses.filter((course) => {
+        return course.buy === true;
+      });
     },
     allBuyCourses: (state, action) => {
-      state.coursesBuy = state.courses.filter(course => {
-        return course.buy === false
-      })
-      state.filterCourses = [...state.coursesBuy]
+      state.coursesBuy = state.courses.filter((course) => {
+        return course.buy === false;
+      });
+      state.filterCourses = [...state.coursesBuy];
     },
     filterCoursesCategory: (state, action) => {
       if (action.payload === "all") {
-        state.filterCourses = state.courses
+        state.filterCourses = state.courses;
       } else {
-        state.filterCourses = [...state.courses.filter(course => {
-
-          return course.category === action.payload
-        })]
+        state.filterCourses = [
+          ...state.courses.filter((course) => {
+            return course.category === action.payload;
+          }),
+        ];
       }
     },
     filterCoursesRaiting: (state, action) => {
-      state.filterCourses = [...state.filterCourses.sort((a, b) => {
-        if (action.payload === "min") {
-          return a.raiting > b.raiting
-        }
-        else if (action.payload === "max") {
-          return a.raiting < b.raiting
-        }
-      })
-      ]
+      state.filterCourses = [
+        ...state.filterCourses.sort((a, b) => {
+          if (action.payload === "min") {
+            return a.raiting > b.raiting;
+          } else if (action.payload === "max") {
+            return a.raiting < b.raiting;
+          }
+        }),
+      ];
     },
 
     filterCoursesOrder: (state, action) => {
-      state.filterCourses = [...state.filterCourses.sort((a, b) => {
-        if (action.payload === "a-z") {
-          return a.title > b.title
-        }
-        else if (action.payload === "z-a") {
-          return a.title < b.title
-        }
-      })
-      ]
+      state.filterCourses = [
+        ...state.filterCourses.sort((a, b) => {
+          if (action.payload === "a-z") {
+            return a.title > b.title;
+          } else if (action.payload === "z-a") {
+            return a.title < b.title;
+          }
+        }),
+      ];
     },
 
     filterCoursesLanguaje: (state, action) => {
       if (action.payload === "all") {
-        state.filterCourses = state.courses
+        state.filterCourses = state.courses;
       } else {
-        state.filterCourses = [...state.courses.filter(course => {
-
-          return course.languaje === action.payload
-        })]
+        state.filterCourses = [
+          ...state.courses.filter((course) => {
+            return course.languaje === action.payload;
+          }),
+        ];
       }
     },
 
     searchCourses: (state, action) => {
-      state.filterCourses = state.courses.filter(course => {
-        return course.title.toLowerCase().includes(action.payload)
-      })
+      state.filterCourses = state.courses.filter((course) => {
+        return course.title.toLowerCase().includes(action.payload);
+      });
     },
 
     resetPage: (state, action) => {
-      if (state.reset) { state.reset = false } else { state.reset = true }
-
+      if (state.reset) {
+        state.reset = false;
+      } else {
+        state.reset = true;
+      }
     },
     getMyCategories: (state, action) => {
       let categoriesSet = new Set();
       for (const course of state.myCourses) {
-        categoriesSet.add(course.category)
+        categoriesSet.add(course.category);
       }
-      state.myCategories = [...categoriesSet]
+      state.myCategories = [...categoriesSet];
     },
 
     getCoursesRecommended: (state, action) => {
       for (const course of state.coursesBuy) {
-        state.myCategories.includes(course.category) && state.coursesRecommend.push(course)
+        state.myCategories.includes(course.category) &&
+          state.coursesRecommend.push(course);
       }
     },
 
     getCoursesCard: (state, action) => {
-        state.coursesCardRecommend = state.coursesBuy.filter( course => {
-          if(state.myCategories.includes(course.category)) return course
-          
-        })
+      state.coursesCardRecommend = state.coursesBuy.filter((course) => {
+        if (state.myCategories.includes(course.category)) return course;
+      });
 
-        state.coursesCardChoice = [...state.coursesBuy];
-        
-        state.coursesCardDevelop = state.coursesBuy.filter(course=>{
-          if(course.category === "Development")return course
-        }
-      )
+      state.coursesCardChoice = [...state.coursesBuy];
 
-        state.coursesCardStudents = [...state.coursesBuy.sort((a, b) => {        
-            return a.raiting < b.raiting
-        })
-        ]
-        // for (const course of state.coursesBuy) {
-        //   state.myCategories.includes(course.category) && state.coursesCardRecommend.push(course)
-        // }
+      state.coursesCardDevelop = state.coursesBuy.filter((course) => {
+        if (course.category === "Development") return course;
+      });
+
+      state.coursesCardStudents = [
+        ...state.coursesBuy.sort((a, b) => {
+          return a.raiting < b.raiting;
+        }),
+      ];
+      // for (const course of state.coursesBuy) {
+      //   state.myCategories.includes(course.category) && state.coursesCardRecommend.push(course)
+      // }
       // } else if (action.payload === "The course in personal development") {
       //   for (const course of state.coursesBuy) {
       //     course.category === "Development" && state.coursesCardDevelop.push(course)
@@ -143,11 +151,24 @@ export const Slice = createSlice({
       //   }
       // }
     },
-
-
-
   },
 });
 
-export const { addUser, allCourses, getCoursesCard, allMyCourses, allBuyCourses, filterCoursesCategory, filterCoursesRaiting, filterCoursesOrder, filterCoursesLanguaje, loginAccess, searchCourses, resetPage, getMyCategories, getCoursesRecommended } = Slice.actions;
+export const {
+  addUser,
+  allCourses,
+  getCoursesCard,
+  allMyCourses,
+  allBuyCourses,
+  filterCoursesCategory,
+  filterCoursesRaiting,
+  filterCoursesOrder,
+  filterCoursesLanguaje,
+  loginAccess,
+  searchCourses,
+  resetPage,
+  getMyCategories,
+  getCoursesRecommended,
+  addId,
+} = Slice.actions;
 export default Slice.reducer;
