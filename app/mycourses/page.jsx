@@ -40,7 +40,7 @@ export default function MyCoursesPage() {
                 </div>
             </section>
 
-            <section className="w-[90%] mx-[auto]">
+            <section className="w-[90%] mx-[auto] text-white">
                 <div className="bg-[#222129] text-center pb-[5.188rem] mx-[auto] rounded-[2.313rem]">
                     <h2 className="font-semibold text-[2rem] leading-[3.375rem] pt-[4.375rem]">Online coaching lessons for remote learning.</h2>
                     <p className="font-normal text-[1.25rem] leading-[2.7rem] pt-[1.875rem] pb-[4.563rem] w-[70%] mx-[auto]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing elit, sed do eiusmod tempor</p>

@@ -54,7 +54,7 @@ export default function Prueba (){
     ]
     return(
         <div className="pt-[100px] text-black bg-white">
-            
+            <MyContent/>
             <Register/>
         </div>
     )
