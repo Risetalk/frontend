@@ -121,7 +121,7 @@ export default  function Login() {
                             <input type="checkbox" name="" id="" className="mr-[0.5rem]"/>
                             Remember me
                         </div>
-                        <Link href={"#"}>Forgot Password?</Link>
+                        <Link href={"/login/forgetpassword"}>Forgot Password?</Link>
                     </div>
 
                     <div className="flex w-[100%] justify-end ">

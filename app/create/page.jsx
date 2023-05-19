@@ -114,9 +114,9 @@ function Form() {
             />
           )}
           {showUploadVideo && <UploadVideo uploadedCourse={uploadedCourse} />}
-          {showMyContent && ( <MyContent professors={professors} userId={userId} uploadedCourse={uploadedCourse}
+          {showMyContent && <MyContent professors={professors} userId={userId} uploadedCourse={uploadedCourse}
             />
-          )}
+          }
           
         </div>
 
