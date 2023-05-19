@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Provider store={store}>
           {
-            (path !== "/login" && path !== '/mycourses/id' && path !== "/register" && path !== "/prueba" ) && <Navigation />
+            (!path.includes("login") && path !== '/mycourses/id' && !path.includes("register") && path !== "/prueba" ) && <Navigation />
           }
           {children}
           {
-            (path !== "/login" && path !== "/register") && <Footer />
+            (!path.includes("login") && !path.includes("register")) && <Footer />
           }
         </Provider>
       </body>
