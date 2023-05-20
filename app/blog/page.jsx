@@ -1,16 +1,18 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+import CardsBlog from "@/components/CardsBlog";
 
 const blog = [
   {
     id: 1,
-    title: "Why Swift UI Should Be on the Radar of Every Mobile Developer",
+    title: "Unleashing the Power of IoT: Connecting Devices for a Smarter World",
     paragraph1:
-      "TOTC is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.",
+      "The Internet of Things (IoT) has opened up a world of possibilities where devices connect and collaborate with each other to create a smarter and more efficient environment. From household appliances and mobile devices to industrial sensors and autonomous vehicles, IoT is transforming the way we interact with technology. By unleashing the power of IoT, we can harness real-time data and utilize advanced analytics to make more informed decisions and improve people's quality of life.",
     paragraph2:
-      "TOTC is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place",
+      "IoT connectivity allows us to control and monitor our devices from anywhere, providing convenience and efficiency. Imagine turning on the lights in your home before you arrive, adjusting the temperature from your phone, or receiving real-time alerts about the status of your appliances. Additionally, in industrial settings, IoT enables remote monitoring of machinery, predictive maintenance, and process optimization, which can reduce costs and enhance productivity.",
     paragraph3:
-      "TOTC is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.",
+      "However, along with the benefits of IoT, challenges arise in terms of security and privacy. By connecting devices to the network, the risk of cyber-attacks and exposure of sensitive data increases. It is crucial to implement robust security measures such as data encryption, strong authentication, and regular firmware updates to safeguard the integrity of IoT systems. Additionally, appropriate regulation is required to ensure user privacy and responsible use of IoT technology.",
     contentTipe: "affordable,  Stunning, making madbrawns",
     writenBy: "Sandra",
     authorImg: "sandra",
@@ -35,13 +37,13 @@ export default function Blog() {
             <h1 className="text-4xl font-semibold leading-tight text-center font-poppins">
               {item.title}
             </h1>
-            <p className="text-lg font-normal mt-[1rem] leading-relaxed text-left font-poppins">
+            <p className="text-lg font-normal  py-[2rem] leading-relaxed text-left font-poppins">
               {item.paragraph1}
             </p>
-            <p className="text-lg font-normal mt-[1rem] leading-relaxed text-left font-poppins">
+            <p className="text-lg font-normal  py-[1rem]  leading-relaxed text-left font-poppins">
               {item.paragraph2}
             </p>
-            <p className="text-lg font-normal mt-[1rem] leading-relaxed text-left font-poppins">
+            <p className="text-lg font-normal py-[1rem]  leading-relaxed text-left font-poppins">
               {item.paragraph3}
             </p>
 
@@ -75,6 +77,7 @@ export default function Blog() {
                   {item.writenBy}
                 </p>
               </div>
+              
             </div>
             <button className="flex-1 mt-[1rem] ml-[80rem] w border border-[#F0713D] text-[#F0713D] rounded-lg px-9 py-2 ">
               Follow
@@ -82,6 +85,9 @@ export default function Blog() {
           </div>
         ))}
       </div>
+      <div>
+  <CardsBlog />
+</div>
     </div>
   );
 }
