@@ -18,25 +18,27 @@ export default function Register() {
     const courses = useSelector(state => state.courses)
     const router = useRouter()
 
+    // const [messageRegister, setMessageRegister] = useState(false)
+    const [message, setMessage] = useState('no')
+
     const [register, setRegister] = useState(
         {
             first_name: "",
             last_name: "",
             user_name: "",
             email: "",
+            password: "",
             date_birth: "",
-            about_me: "",
-            password: ""
         }
     )
     const [errors, setErrors] = useState(
         {
             first_name: "no",
             last_name: "no",
-            email: "no",
             user_name: "no",
+            email: "no",
+            password: "no",
             date_birth: "no",
-            password: "no"
         }
     )
 
@@ -52,19 +54,39 @@ export default function Register() {
     }
 
 
-    const handleOnSubmit = (event) => {
-        console.log(register);
+    const handleOnSubmit = async (event) => {
+        // console.log(register);
+        
+        const getDataRegister = async () => {
+            try {
+                const response = await axios.post("http://localhost:3001/user/register", register);
+                const message = response.data
+                console.log(message.message);
+                setMessage(message.message)
+                // setMessageRegister(true)
+            } catch (error) {
+                console.error("Error getting data:", error);
+            }
+        };
+
+        getDataRegister();
+        
         event.preventDefault()
-
-
-        axios.post('http://localhost:3001/user', register)
-            .then(response => { dispatch(addUser(response.data)) })
-
+        // const res = await axios.post('http://localhost:3001/register', register)
+        // console.log(res);
+        // .then(response => { dispatch(addUser(response.data)) })
     }
 
 
     return (
-        <div className="flex text-black  py-[0.5rem] h-[100vh]">
+        <div className="relative flex text-black  py-[0.5rem] h-[100vh]">
+            {
+                message !== 'no'
+                ? <div className="absolute w-[100%] h-[100vh]">
+                    <span>{message}</span>
+                </div>
+                : <></>
+            }
             <motion.div className="w-[50%]"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -126,7 +148,7 @@ export default function Register() {
                                 <input onChange={handleRegister} name="email" type="text" placeholder="Enter you Email" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
                                 {
                                     errors.email === "no"
-                                        ? <div className= "h-[1.6rem] "></div>
+                                        ? <div className="h-[1.6rem] "></div>
                                         : <div className="h-[1.6rem] ">
                                             <span className="text-[#F87171]">{`*${errors.email}`}</span>
                                         </div>
@@ -182,7 +204,7 @@ export default function Register() {
                             <input type="checkbox" name="" id="" className="mr-[0.5rem]" />
                             Remember me
                         </div>
-                        <Link href={"/forgetpassword"}>Forgot Password?</Link>
+                        <Link href={"/login/forgetpassword"}>Forgot Password?</Link>
                     </div>
 
                     <div className="flex w-[100%] justify-end ">
