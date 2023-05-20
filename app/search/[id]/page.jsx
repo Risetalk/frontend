@@ -1,8 +1,12 @@
 import Image from "next/image"
-import star from "../../../public/star-ico.png"
 import Link from "next/link"
-import SubSection from "@/components/SubSection"
 import ContainerCards from "@/components/ContainerCards"
+import globe from '../../../public/globe.png'
+import window from '../../../public/window.png'
+import file from '../../../public/file.png'
+import analitics from '../../../public/analitics.png'
+import linkedin from '../../../public/linkedin.png'
+import github from '../../../public/github.png'
 
 export default function BuyCourseDetail() {
 
@@ -105,102 +109,57 @@ export default function BuyCourseDetail() {
 
             <section className="flex pb-[6.25rem]">
                 <div className="w-[60%] mt-[5rem] ">
-                    <div className="w-[80%]  mx-[auto]">
-                        <ul className="flex justify-between mb-[5.188rem]">
-                            <li className="py-4 px-[3.125rem] bg-[#0000001A] rounded-[0.75rem]">Overview</li>
-                            <li className="py-4 px-[3.125rem] bg-[#0000001A] rounded-[0.75rem]">Overview</li>
-                            <li className="py-4 px-[3.125rem] bg-[#0000001A] rounded-[0.75rem]">Overview</li>
-                            <li className="py-4 px-[3.125rem] bg-[#0000001A] rounded-[0.75rem]">Overview</li>
-                        </ul>
-
-                        <div className="bg-[#CCD5DEB8] pt-[3.125rem] pb-[2rem] rounded-[1.25rem]">
-                            <div>
-                                <div className="flex w-[90%] mx-[auto] gap-x-8">
-                                    <div className="text-black py-[1.5rem] px-[3rem] bg-[#FFFFFF] rounded-[1.25rem] text-center">
-                                        <h2 className="font-semibold text-[1.875rem] leading-[2.813rem] text-[#00000080]">4 out of 5</h2>
-
-                                        <ul className="flex justify-center gap-x-[0.2rem] my-[1rem]">
-                                            <li><Image className="text-black" src={star} alt="star-icon" width={22} height={60} /></li>
-                                            <li><Image className="text-black" src={star} alt="star-icon" width={22} height={60} /></li>
-                                            <li><Image className="text-black" src={star} alt="star-icon" width={22} height={60} /></li>
-                                            <li><Image className="text-black" src={star} alt="star-icon" width={22} height={60} /></li>
-                                            <li><Image className="text-black" src={star} alt="star-icon" width={22} height={60} /></li>
-                                        </ul>
-                                        <span className="font-normal text-[1.25rem] leading-[1.875rem] text-[#00000080]">Top Raiting</span>
-                                    </div>
-
-                                    <ul className="flex flex-col justify-between text-black">
-                                        <li className="font-normal text-[1.25rem] leading-[1.875rem] text-[#00000080]">5 Stars</li>
-                                        <li className="font-normal text-[1.25rem] leading-[1.875rem] text-[#00000080]">4 Stars</li>
-                                        <li className="font-normal text-[1.25rem] leading-[1.875rem] text-[#00000080]">3 Stars</li>
-                                        <li className="font-normal text-[1.25rem] leading-[1.875rem] text-[#00000080]">2 Stars</li>
-                                        <li className="font-normal text-[1.25rem] leading-[1.875rem] text-[#00000080]">1 Stars</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="text-black mt-[2.6rem] w-[90%] mx-[auto] ">
-                                {
-                                    reviews.map(rew => {
-                                        return (
-                                            <article key={rew.id} className="pt-[1.5rem]" >
-                                                <div className="flex justify-between items-end">
-                                                    <div className="flex items-end gap-x-[0.75rem]">
-                                                        <Image className="w-[70px] h-[70px] rounded-full object-cover object-top" src={rew.imgAuthor} width={400} height={400} alt="img-author" />
-                                                        <div>
-                                                            <span className="font-medium text-[1.125rem] leading-[1.688] text-[#000000]">{rew.author}</span>
-                                                            <div>Stars</div>
-                                                        </div>
-                                                    </div>
-                                                    <span className="font-medium text-0.875rem] leading-[1.583rem] text-[#696984]">{rew.time} Month</span>
-                                                </div>
-
-                                                <p className="font-normal text-[1.125rem] mt-[1.5rem] leading-[2.25rem] text-[#696984]">{rew.comment}</p>
-                                                {
-                                                    rew.id < reviews.length
-                                                        ? <hr className="mt-[1.438rem] bg-[#696984] h-[2px]" />
-                                                        : <></>
-                                                }
-                                            </article>
-                                        )
-                                    })
-                                }
-                            </div>
-                        </div>
-
+                    <div className="w-[80%] mx-[auto]">
+                        <h1 className="font-black text-[4rem] text-[#262F30] mb-[1.25rem]">Title Course</h1>
+                        <p className="font-normal text-[1.25rem] leading-[1.8rem] p-[2rem] bg-[#FFF966B8] rounded-[2.6rem]">A React course is designed to teach students or developers how to build modern, interactive web applications using React.js, a popular JavaScript library for building user interfaces. The course typically covers the fundamental concepts and techniques of React, including component-based architecture, state management, routing, and handling user events.
+                            In a React course, students usually start by learning the basics of JavaScript and HTML/CSS if they are not already familiar with these languages.  A React course is designed to teach students or developers how to build modern, interactive web applications using React.js, a popular JavaScript library for building user interfaces.
+                        </p>
                     </div>
                 </div>
 
                 <div className="w-[40%]">
-                    <article>
 
-                        <div className="text-black w-[60%] pt-4">
-                            <div className="flex items-center justify-between mb-[1.875rem]">
-                                <span className="font-semibold text-[2.4rem] leading-[4.219rem]">$49.65</span>
-                                <span className="font-semibold text-[1.4rem] leading-[2.625rem] text-[#00000080] line-through">$99.99</span>
-                                <span className="font-semibold text-[1.4rem] leading-[2.625rem] text-[#00000080]">40% off</span>
+                    <div className="w-[50%] mx-[auto]">
+                        <article className="h-[200px]">
+
+                        </article>
+                        <article className="flex flex-col gap-y-[1rem] py-[1.6rem] border-y-2 border-[#696984]">
+                            <h3 className="font-semibold text-[2rem] leading-[2.6rem] text-[#000000]">Info</h3>
+                            <div className="flex items-center gap-x-[0.4rem]">
+                                <Image src={globe} alt='globe-ico' width={25} height={25} />
+                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">Leguaje</span>
                             </div>
-                            <p className="font-semibold text-[1.125rem] leading-[1.875rem] text-[#222129] text-center mb-[2.188rem]">11 hour left at this price</p>
-                            <Link className="block font-bold text-[1.25rem] leading-[1.875rem] text-center text-[#FFFFFF] py-[1.125rem] w-full bg-[#222129] rounded-[0.75rem]" href={`#`}>Buy Now</Link>
-                        </div>
-                    </article>
+                            <div className="flex items-center gap-x-[0.4rem]">
+                                <Image src={window} alt='window-ico' width={25} height={25} />
+                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">Date</span>
+                            </div>
+                            <div className="flex items-center gap-x-[0.4rem]">
+                                <Image src={file} alt='file-ico' width={25} height={25} />
+                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">Programming</span>
+                            </div>
+                            <div className="flex items-center gap-x-[0.4rem]">
+                                <Image src={analitics} alt='analitics-ico' width={25} height={25} />
+                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">lessons</span>
+                            </div>
+                        </article >
+                        
+                        <article className="py-[1.6rem]">
+                            <h3 className="font-semibold text-[2rem] leading-[2.6rem] text-[#000000]">Find us at</h3>
+                            <div className="flex pt-[1.6rem] gap-x-[0.6rem]">
+                                <Image src={linkedin} alt="linkedin-ico" width={35} height={35}/>
+                                <Image src={github} alt="github-ico" width={35} height={35}/>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article>
-
-                        <div className="text-black w-[60%] text-center align-center">
-                            <SubSection title="This Course included" />
-                            <SubSection title="Training 5 or more people" />
-                            <SubSection title="Share this course" />
-                        </div>
-                    </article>
-                </div>
+                </div>  
 
             </section>
 
             <section className="bg-[#22212921] pt-[4rem] pb-[13.313rem]">
-                <div className="w-[87%]  m-[auto]">
+                
                     <ContainerCards key={5} title={"Marketing Articles"} link={"See all"} array={recommended} />
-                </div>
+                
             </section>
 
             <section className="text-[black]">
@@ -225,7 +184,7 @@ export default function BuyCourseDetail() {
             </section>
 
             <section>
-                                
+
             </section>
         </main>
     )
