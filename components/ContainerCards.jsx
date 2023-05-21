@@ -70,7 +70,7 @@ export default function ContainerCards({ title, link }) {
     transition={{duration: 1}}
     >
       <div className="flex justify-between w-[100%] items-center mb-[2.7rem]">
-        <h2 className={`inline font-medium text-[1.65rem] leading-[2.813rem]   ${path === "/search" ? 'text-orange-400' : 'text-black'}`}>
+        <h2 className={`inline font-medium text-[1.65rem] leading-[2.813rem]   ${path === "/" ? 'text-orange-400' : 'text-black'}`}>
           {title}
         </h2>
         <Link href={`#`}>

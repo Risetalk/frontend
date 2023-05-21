@@ -61,13 +61,13 @@ export default function SearchPage() {
 
       </div>
       <SearchCourses />
-      <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>
+      {/* <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>
         <ContainerCards
           key={1}
           title={'Recommended for you'}
           link={'See all'}
         />
-      </div>
+      </div> */}
       <ContainerCreators />
       <TeacherDetail />
     </div>

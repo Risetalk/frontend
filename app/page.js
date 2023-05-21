@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BlogList from "../components/BlogList.jsx";
 import CardsBlog from "../components/CardsBlog.jsx";
+import ContainerCards from "../components/ContainerCards.jsx";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allMyCourses , allCourses, allBuyCourses, getMyCategories, getCoursesRecommended } from "@/store/slice.js";
@@ -42,7 +43,7 @@ export default function Home() {
   return (
     <div>
       <div>
-        <section className="bg-gray-200 flex flex-row px-4 py-[1rem] pb-5">
+        <section className=" flex flex-row px-4 py-[1rem] pb-5">
           <div className="max-w-6xl m-12 mx-auto w-[50%]">
             <div className="lg:w-2/3 mx-8 lg:mx-16 mr-15 ">
               <motion.div
@@ -51,18 +52,16 @@ export default function Home() {
               transition={{duration: 1}}
               >
                 <h2 className="text-xl text-[#000000] font-poppins leading-[5rem] ">
-                  By themadbrains in ispiration
+             
                 </h2>
                 
                 <h1 className="mt-10 text-4xl leading-[66px] font-extrabold tracking-tight font-poppins text-[#262F30]">
-                  Why Swift UI Should Be on the Radar of Every Mobile Developer
+                Unlock Your Potential and Expand Your Horizons with our Online Courses
                 </h1>
                 
                 <div className="h-1 w-20 rounded-full mt-8 pb-2"></div>
                 <p className="text-lg font-normal font-poppins text-[#000000] leading-[43.2px] tracking-[2%]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempos Lorem ipsum dolor sitamet, consectetur adipiscing
-                  elit, sed do eiusmod tempor
+                Learn at your own pace and on your own terms, with a flexible and adaptable learning experience.
                 </p>
               </motion.div>
 
@@ -74,7 +73,7 @@ export default function Home() {
               >
                 <Link
                   className="px-[2.5rem] py-[1.25rem]  text-white leading-[1.5rem] bg-orange-500 rounded-lg  font-poppins"
-                  href="/courses">
+                  href="/search">
                   Start learning Now
                 </Link>
                 <div className="ml-6"></div>
@@ -88,7 +87,7 @@ export default function Home() {
           >
             <Image
               className="object-right-top w-[100%]"
-              src="/Group40.png"
+              src="/HomeImage.png"
               alt="Example Image"
               width={719}
               height={382}
@@ -98,6 +97,18 @@ export default function Home() {
       </div>
       <BlogList />
       <CardsBlog />
+      <section className="pt-[6.063rem] pb-[6rem]">
+                <div >
+                    <ContainerCards key={2} title={"Get choice of your course"} link={"See all"} />
+                </div>
+            </section>
+      <div className='pt-[3rem] pb-[5.5rem]  bg-[#222129] tex-white'>
+        <ContainerCards
+          key={1}
+          title={'Recommended for you'}
+          link={'See all'}
+        />
+      </div>
     </div>
   );
 }
