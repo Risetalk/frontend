@@ -113,8 +113,8 @@ export default function CardsBlog() {
       ref={ref}
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 150 }}
       transition={{ duration: 1 }}>
-      <div className="bg-gray-200 p-6 mt-[4rem] ">
-        <h1 className="mt-10 text-3xl ml-[5rem] leading-[66px]  font-extrabold font-poppins text-[#262F30] py-1">
+      <div className="bg-[#222129] p-6 mt-[4rem] ">
+        <h1 className="mt-10 text-3xl ml-[5rem] leading-[66px]  font-extrabold font-poppins text-white py-1">
           Related Blog
         </h1>
         <div className="grid grid-cols-2 gap-[1rem] ">

@@ -150,7 +150,7 @@
       "buy": false
       },
       {
-        "id": 8,
+        "id": 10,
         "title": "React Js Native",
         "description":
           "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
@@ -185,7 +185,7 @@
         },
         {
           "id": 12,
-          "title": "AWS certified solutions Basic",
+          "title": "AWS certified solutions",
           "description":
             "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
           "tema": "Programming",
@@ -266,5 +266,122 @@
       "languaje":"spanish",
       "category":"Development",
       "buy": false
+        },
+        {
+          "id": 17,
+          "title": "AWS certified solutions",
+          "description":
+            "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programming",
+          "image": "https://s3-alpha-sig.figma.com/img/fdef/c79c/730373d7cdf2879163a0ccfae3637f16?Expires=1685318400&Signature=aD4pB~1dbC4AUUmdTqF1NphWjJFquYRQDGanEc9RYBaNg8tBQ~N7QibRT7IXmRcSjiSKHXA~sIir~eze2KvWCVKskY-FtEiOC7ZjkpFQ2QS3bhlW9YIvhcvtVOOrADo7zydE3UBNS67PLfeYtOeRQvhIP~SHPVt046ujjB5cQzY6-7V9c9HNJdSB4TKEPQjkTVSr8gVWtsNbdElSP-YwN9lqUiiCLB~mfLcAiNpN~Bg8LaYxqDQeDk6dOwSWFa61RDhbblUYimomX2VNGBuPgxBttFeTSthWpLApQCKW~B5NjKUW9niGEvMoiOmldQi6WEFnnZn3SSsdZSFBS4ckTg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Lina",
+          "price": "$29.99",
+          "duration": 2,
+          "offer": 15.99,
+          "raiting": 6,
+        "languaje":"french",
+        "category":"Development",
+        "buy": false
+        },
+        {
+          "id": 18,
+          "title": "AWS certified solutions",
+          "description":
+            "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programming",
+          "image": "https://s3-alpha-sig.figma.com/img/fdef/c79c/730373d7cdf2879163a0ccfae3637f16?Expires=1685318400&Signature=aD4pB~1dbC4AUUmdTqF1NphWjJFquYRQDGanEc9RYBaNg8tBQ~N7QibRT7IXmRcSjiSKHXA~sIir~eze2KvWCVKskY-FtEiOC7ZjkpFQ2QS3bhlW9YIvhcvtVOOrADo7zydE3UBNS67PLfeYtOeRQvhIP~SHPVt046ujjB5cQzY6-7V9c9HNJdSB4TKEPQjkTVSr8gVWtsNbdElSP-YwN9lqUiiCLB~mfLcAiNpN~Bg8LaYxqDQeDk6dOwSWFa61RDhbblUYimomX2VNGBuPgxBttFeTSthWpLApQCKW~B5NjKUW9niGEvMoiOmldQi6WEFnnZn3SSsdZSFBS4ckTg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Lina",
+          "price": "$29.99",
+          "duration": 2,
+          "offer": 15.99,
+          "raiting": 6,
+        "languaje":"french",
+        "category":"Development",
+        "buy": false
+        },
+        {
+          "id": 19,
+          "title": "AWS certified solutions",
+          "description":
+            "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programming",
+          "image": "https://s3-alpha-sig.figma.com/img/fdef/c79c/730373d7cdf2879163a0ccfae3637f16?Expires=1685318400&Signature=aD4pB~1dbC4AUUmdTqF1NphWjJFquYRQDGanEc9RYBaNg8tBQ~N7QibRT7IXmRcSjiSKHXA~sIir~eze2KvWCVKskY-FtEiOC7ZjkpFQ2QS3bhlW9YIvhcvtVOOrADo7zydE3UBNS67PLfeYtOeRQvhIP~SHPVt046ujjB5cQzY6-7V9c9HNJdSB4TKEPQjkTVSr8gVWtsNbdElSP-YwN9lqUiiCLB~mfLcAiNpN~Bg8LaYxqDQeDk6dOwSWFa61RDhbblUYimomX2VNGBuPgxBttFeTSthWpLApQCKW~B5NjKUW9niGEvMoiOmldQi6WEFnnZn3SSsdZSFBS4ckTg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Lina",
+          "price": "$29.99",
+          "duration": 2,
+          "offer": 15.99,
+          "raiting": 6,
+        "languaje":"french",
+        "category":"Development",
+        "buy": false
+        },
+        {
+          "id": 20,
+          "title": "AWS certified solutions",
+          "description":
+            "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programming",
+          "image": "https://s3-alpha-sig.figma.com/img/fdef/c79c/730373d7cdf2879163a0ccfae3637f16?Expires=1685318400&Signature=aD4pB~1dbC4AUUmdTqF1NphWjJFquYRQDGanEc9RYBaNg8tBQ~N7QibRT7IXmRcSjiSKHXA~sIir~eze2KvWCVKskY-FtEiOC7ZjkpFQ2QS3bhlW9YIvhcvtVOOrADo7zydE3UBNS67PLfeYtOeRQvhIP~SHPVt046ujjB5cQzY6-7V9c9HNJdSB4TKEPQjkTVSr8gVWtsNbdElSP-YwN9lqUiiCLB~mfLcAiNpN~Bg8LaYxqDQeDk6dOwSWFa61RDhbblUYimomX2VNGBuPgxBttFeTSthWpLApQCKW~B5NjKUW9niGEvMoiOmldQi6WEFnnZn3SSsdZSFBS4ckTg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Lina",
+          "price": "$29.99",
+          "duration": 2,
+          "offer": 15.99,
+          "raiting": 6,
+        "languaje":"french",
+        "category":"Development",
+        "buy": false
+        },
+        {
+          "id": 21,
+          "title": "AWS certified solutions",
+          "description":
+            "Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programming",
+          "image": "https://s3-alpha-sig.figma.com/img/fdef/c79c/730373d7cdf2879163a0ccfae3637f16?Expires=1685318400&Signature=aD4pB~1dbC4AUUmdTqF1NphWjJFquYRQDGanEc9RYBaNg8tBQ~N7QibRT7IXmRcSjiSKHXA~sIir~eze2KvWCVKskY-FtEiOC7ZjkpFQ2QS3bhlW9YIvhcvtVOOrADo7zydE3UBNS67PLfeYtOeRQvhIP~SHPVt046ujjB5cQzY6-7V9c9HNJdSB4TKEPQjkTVSr8gVWtsNbdElSP-YwN9lqUiiCLB~mfLcAiNpN~Bg8LaYxqDQeDk6dOwSWFa61RDhbblUYimomX2VNGBuPgxBttFeTSthWpLApQCKW~B5NjKUW9niGEvMoiOmldQi6WEFnnZn3SSsdZSFBS4ckTg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Lina",
+          "price": "$29.99",
+          "duration": 2,
+          "offer": 15.99,
+          "raiting": 6,
+        "languaje":"french",
+        "category":"Development",
+        "buy": false
+        },
+        {
+          "id": 22,
+          "title": "Python intermediate",
+          "description":"Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programacion",
+          "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Sandra",
+          "price": "$19.99",
+          "duration": 3,
+          "offer": 15.99,
+          "raiting": 8,
+          "languaje":"spanish",
+          "category":"programming",
+          "buy": true
+        },
+        {
+          "id": 23,
+          "title": "Python intermediate",
+          "description":"Lorem ipsum dolor sit amet consectetur adipiscing elit neque nibh, ac per euismod eget.",
+          "tema": "Programacion",
+          "image": "https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "authorImg": "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+          "author": "Sandra",
+          "price": "$19.99",
+          "duration": 3,
+          "offer": 15.99,
+          "raiting": 8,
+          "languaje":"spanish",
+          "category":"programming",
+          "buy": true
         }
   ]
