@@ -10,7 +10,7 @@ export default function BlogList() {
   return (
     <div>
       <motion.div
-        className="pt-[4rem] items-center justify-center flex flex-col"
+        className="items-center justify-center flex flex-col"
         ref={ref}>
         <section className=" bg-[#222129]   px-[1rem] py-[0.5rem] w-[1500px] rounded-[118px]">
           <div className="px-[3rem] py-[1rem]">
