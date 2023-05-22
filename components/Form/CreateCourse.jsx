@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from "react";
-import MyContent from "./MyContent";
-import UploadVideo from "./UploadVideo";
+import { useSelector, useDispatch } from "react-redux";
+import { postCreateCourse } from "@/store/slice";
+// import MyContent from "./AddVideo";
+// import UploadVideo from "./UploadVideo";
 import Image from "next/image";
 
 import axios from "axios";
 
-function CreateCourse({ professors }) {
-  
+function CreateCourse({ professors, steps, handleStep2 }) {
+
+  const createCourses = useSelector(state=> state.courses)
+  const dispatch = useDispatch()
+
   const [dataCourses, setDataCourses] = useState({
     title: "",
     description: "",
     price: "",
     language: "",
     background_image: "",
+    lessons:[],
   });
 
   const handleDataCourses = (e) => {
@@ -22,21 +28,26 @@ function CreateCourse({ professors }) {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
 
-    axios
-      .post(
-        "http://localhost:3001/courses?id=cb3f526f-3c9e-45db-851f-d6da5f70c7b4",
-        dataCourses
-      )
-      .then((response) => {
-        console.log("Course created:", response.data);
-        // Realizar acciones adicionales después de crear el curso, si es necesario
-      })
-      .catch((error) => {
-        console.error("Error creating course:", error);
-      });
+    event.preventDefault()
+    
+    dispatch(postCreateCourse(dataCourses))
+    handleStep2()
+    // const createCourse = async () => {
+    //   try {
+    //     const response = await axios.post("http://localhost:3001/courses?id=dab72acf-1f09-4612-be63-eaa1cee1c15f", dataCourses);
+    //     console.log(response);
+    //     handleStep2()
+
+    //   } catch (error) {
+    //     console.error("Error getting data:", error);
+    //   }
+    // };
+
+    // createCourse();
+
+    // event.preventDefault()
   };
 
   return (
@@ -64,14 +75,12 @@ function CreateCourse({ professors }) {
               />
               <p className="text-xs text-[#687684]">{professor.name}</p>
             </div>
-                    
+
           ))}
-                
+
         </div>
         <hr />
         <div className="relative  ">
-          <div className="flex justify-between">
-          
             <div className="flex items-center w-[100%] h-[8rem] text-black  mb-2 mr-2 ">
               <Image
                 src="/Write.png"
@@ -80,8 +89,7 @@ function CreateCourse({ professors }) {
                 width={60}
                 height={60}
               />
-
-              <hr className="border-l-slate-500" />
+      
               <input
                 className=" w-[80%] py-[2rem] text-xl "
                 placeholder="Write title..."
@@ -90,9 +98,9 @@ function CreateCourse({ professors }) {
                 onChange={handleDataCourses}
               />
             </div>
-          </div>
+            
           <hr className="border-l-slate-500" />
-          <div className="flex justify-between">
+
             <div className="flex items-center w-[100%] h-[8rem]  text-black  mb-2 mr-2 ">
               <Image
                 src="/dateR.png"
@@ -109,10 +117,9 @@ function CreateCourse({ professors }) {
                 onChange={handleDataCourses}
               />
             </div>
-          </div>
+
           <hr className="border-l-slate-500" />
 
-          <div className="flex justify-between ">
             <div className="flex items-center w-[100%] h-[8rem] text-gray-400  mb-2 mr-2">
               <Image
                 src="/Write.png"
@@ -129,8 +136,8 @@ function CreateCourse({ professors }) {
                 onChange={handleDataCourses}
               />
             </div>
-          </div>
         </div>
+
         <hr className="border-l-slate-500" />
 
         <div className="flex justify-around p-[3rem]">
@@ -146,7 +153,7 @@ function CreateCourse({ professors }) {
               name="language"
               onChange={handleDataCourses}
               className="flex items-center text-center w-[18rem] h-[100%] bg-[#687684] pl-[3.5rem]  text-white rounded-full mr-[9rem]">
-              <option className="items-center" selected>
+              <option className="items-center" disabled>
                 Choose a language
               </option>
               <option value="spanish">Spanish</option>
@@ -167,7 +174,7 @@ function CreateCourse({ professors }) {
               name="category"
               onChange={handleDataCourses}
               className="flex items-center text-center w-[18rem] h-[5.9rem] bg-[#687684] pl-[3.5rem]  text-white rounded-full mr-2">
-              <option className="items-center" selected>
+              <option className="items-center" disabled>
                 Choose a Category
               </option>
               <option value="UX/UI">UX</option>
@@ -195,12 +202,12 @@ function CreateCourse({ professors }) {
             />
           </div>
         </div>
-      
+
 
         <div className="flex justify-end">
           <button
             className="bg-orange-500 text-white px-[2.5rem] py-2 m-6  rounded-full"
-            type="submit">
+          >
             Submit
           </button>
         </div>
