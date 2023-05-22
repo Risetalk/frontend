@@ -56,7 +56,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
         Create a course
       </h1>
       <form onSubmit={handleSubmit}>
-        <div className="relative">
+        {/* <div className="relative">
           <p className="pb-[1rem] h-[1rem] font-inter font-semibold text-lg text-18 leading-25 text-light flex items-center pl-[1.5rem] text-[#687684]">
             Best Teachers
           </p>
@@ -78,10 +78,10 @@ function CreateCourse({ professors, steps, handleStep2 }) {
 
           ))}
 
-        </div>
+        </div> */}
         <hr />
-        <div className="relative  ">
-            <div className="flex items-center w-[100%] h-[8rem] text-black  mb-2 mr-2 ">
+        <div className="relative  flex flex-col  gap-y-[0.8rem] py-[0.8rem]">
+            <div className="flex items-center w-[100%]  text-black   mr-2 ">
               <Image
                 src="/Write.png"
                 alt="Imagen"
@@ -91,7 +91,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
               />
       
               <input
-                className=" w-[80%] py-[2rem] text-xl "
+                className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
                 placeholder="Write title..."
                 htmlFor="courseTitle"
                 name="title"
@@ -101,7 +101,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
             
           <hr className="border-l-slate-500" />
 
-            <div className="flex items-center w-[100%] h-[8rem]  text-black  mb-2 mr-2 ">
+            <div className="flex items-center w-[100%]  text-black  mr-2 ">
               <Image
                 src="/dateR.png"
                 alt="Imagen"
@@ -110,7 +110,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
                 height={60}
               />
               <input
-                className="w-[80%] py-[2rem] text-xl"
+                className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
                 type="text"
                 name="background_image"
                 placeholder="image Url"
@@ -120,7 +120,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
 
           <hr className="border-l-slate-500" />
 
-            <div className="flex items-center w-[100%] h-[8rem] text-gray-400  mb-2 mr-2">
+            <div className="flex items-center w-[100%] text-gray-400  mr-2">
               <Image
                 src="/Write.png"
                 alt="Imagen"
@@ -128,8 +128,8 @@ function CreateCourse({ professors, steps, handleStep2 }) {
                 width={60}
                 height={60}
               />
-              <input
-                className="w-[80%] py-[2rem] text-xl "
+              <textarea
+                className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem] text-black"
                 htmlFor="courseDescription"
                 name="description"
                 placeholder="Write a description..."
@@ -140,7 +140,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
 
         <hr className="border-l-slate-500" />
 
-        <div className="flex justify-around p-[3rem]">
+        <div className="flex justify-around py-[0.8rem]">
           <div className="relative flex items-center">
             <Image
               src="/EllipseLangu.png"
@@ -152,8 +152,8 @@ function CreateCourse({ professors, steps, handleStep2 }) {
             <select
               name="language"
               onChange={handleDataCourses}
-              className="flex items-center text-center w-[18rem] h-[100%] bg-[#687684] pl-[3.5rem]  text-white rounded-full mr-[9rem]">
-              <option className="items-center" disabled>
+              className="flex items-center text-center  h-[100%] bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] mr-[9rem]">
+              <option className="items-center text-white" disabled>
                 Choose a language
               </option>
               <option value="spanish">Spanish</option>
@@ -173,8 +173,8 @@ function CreateCourse({ professors, steps, handleStep2 }) {
             <select
               name="category"
               onChange={handleDataCourses}
-              className="flex items-center text-center w-[18rem] h-[5.9rem] bg-[#687684] pl-[3.5rem]  text-white rounded-full mr-2">
-              <option className="items-center" disabled>
+              className="flex items-center text-center  py-[1.6rem] bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] mr-2">
+              <option className="items-center text-white" disabled>
                 Choose a Category
               </option>
               <option value="UX/UI">UX</option>
@@ -185,7 +185,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
         </div>
         <hr className="border-l-slate-500" />
         <div className="flex justify-between">
-          <div className="flex items-center w-[100%] h-[8rem]  text-black  mb-2 mr-2">
+          <div className="flex items-center w-[100%]  text-black  mr-2 py-[0.6rem]">
             <Image
               src="/HowIma.png"
               alt="Imagen"
@@ -194,7 +194,7 @@ function CreateCourse({ professors, steps, handleStep2 }) {
               height={60}
             />
             <input
-              className="w-[80%] py-[2rem] text-xl"
+              className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
               placeholder="How much does it cost?"
               htmlFor="price"
               name="price"

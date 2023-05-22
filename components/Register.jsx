@@ -29,6 +29,7 @@ export default function Register() {
             email: "",
             password: "",
             date_birth: "",
+            is_tutor:false,
         }
     )
     const [errors, setErrors] = useState(
@@ -41,6 +42,21 @@ export default function Register() {
             date_birth: "no",
         }
     )
+
+    const handleChecked = (event) =>{
+        const {checked} = event.target;
+        if(checked){
+            setRegister({
+                ...register,
+                is_tutor:true,
+            })
+        }else{
+            setRegister({
+                ...register,
+                is_tutor:false,
+            })
+        }
+    }
 
     const handleRegister = (event) => {
         setRegister({
@@ -56,22 +72,30 @@ export default function Register() {
 
     const handleOnSubmit = async (event) => {
         // console.log(register);
-        
-        const getDataRegister = async () => {
-            try {
-                const response = await axios.post("http://localhost:3001/user/register", register);
-                const message = response.data
-                console.log(message.message);
-                setMessage(message.message)
-                // setMessageRegister(true)
-            } catch (error) {
-                console.error("Error getting data:", error);
-            }
-        };
+        // const hasErrors = Object.values(errors).every(error => error === "No hay error")
 
-        getDataRegister();
+        // if (hasErrors ){
+
+            const getDataRegister = async () => {
+                try {
+                    const response = await axios.post("http://localhost:3001/user/register", register);
+                    const message =  response.data
+                    console.log(message.message);
+                    setMessage(message.message)
+                    // setMessageRegister(true)
+                } catch (error) {
+                    console.error("Error getting data:", error);
+                }
+            };
+    
+            getDataRegister();
+            
+            event.preventDefault()
+        // }else{
+        //     window.alert('Revisa  tus datos')
+        //     event.preventDefault()
+        // }
         
-        event.preventDefault()
         // const res = await axios.post('http://localhost:3001/register', register)
         // console.log(res);
         // .then(response => { dispatch(addUser(response.data)) })
@@ -82,8 +106,8 @@ export default function Register() {
         <div className="relative flex text-black  py-[0.5rem] h-[100vh]">
             {
                 message !== 'no'
-                ? <div className="absolute w-[100%] h-[100vh]">
-                    <span>{message}</span>
+                ? <div className="absolute  bg-green-500 rounded-[0.6rem] left-[15%] top-[10%]">
+                    <span className=" block font-semibold text-white py-[0.6rem] px-[1rem] rounded-[0.6rem]">{`${message}. Confirm the message we send to your email.`}</span>
                 </div>
                 : <></>
             }
@@ -199,12 +223,13 @@ export default function Register() {
 
                     </div>
 
-                    <div className="flex justify-between w-[100%] font-light text-[0.75rem] leading-[1.125rem] px-[0.4rem] mt-[1em]">
+                    <div className="flex justify-between w-[100%] font-normal text-[1.2rem] leading-[1.125rem] px-[0.4rem] mt-[1em]">
                         <div >
-                            <input type="checkbox" name="" id="" className="mr-[0.5rem]" />
-                            Remember me
+                            <input type="checkbox" name="is_tutor" id="" className="mr-[0.5rem]" 
+                            onChange={handleChecked}
+                            />
+                            count tutor
                         </div>
-                        <Link href={"/login/forgetpassword"}>Forgot Password?</Link>
                     </div>
 
                     <div className="flex w-[100%] justify-end ">

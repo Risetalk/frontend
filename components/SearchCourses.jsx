@@ -53,7 +53,7 @@ export default function SearchCourses() {
           <CourseCard
             id={course.id}
             key={index}
-            image={course?.image}
+            background_image={course?.background_image}
             title={course?.title}
             tema={course?.tema}
             duration={course?.duration}
