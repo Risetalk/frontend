@@ -1,6 +1,6 @@
 export default function MyCourse(){
     return (
-        <div className="py-[1.875rem] px-[1.25rem] w-[45%]">
+        <div className="py-[1.875rem] px-[1.25rem] w-[45%] bg-emerald-400">
             <div>
                 <span className="font-normal text-[0.8rem] leading-[1] py-[0.3rem] px-[0.625rem] rounded-[0.375rem] bg-[#CCD5DE] mr-[0.625rem]">Dogs</span>
                 <span className="font-normal text-[0.8rem] leading-[1] py-[0.3rem] px-[0.625rem] rounded-[0.375rem] bg-[#FFB56A]">Behance</span>

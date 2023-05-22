@@ -2,11 +2,16 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import MyContent from "@/components/Form/MyContent";
+import { useSelector, useDispatch } from "react-redux";
+import AddVideo from "../../components/Form/addVideo";
 import UploadVideo from "@/components/Form/UploadVideo";
 import CreateCourse from "@/components/Form/CreateCourse";
 import TeacherCard from "@/components/TeacherCard";
+
+import LessonVideo from "@/components/Form/LessonVideo";
+
 function Form() {
+
   const professors = [
     {
       id: 1,
@@ -61,6 +66,7 @@ function Form() {
       time: "08:00",
     },
   ];
+
   const userId = 1;
   const [showCreateCourse, setShowCreateCourse] = useState(true);
   const [showUploadVideo, setShowUploadVideo] = useState(false);
@@ -68,10 +74,21 @@ function Form() {
   const [uploadedCourse, setUploadedCourse] = useState(null);
   const [imageURL, setImageURL] = useState("");
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    setImageURL(URL.createObjectURL(file));
-  };
+  const createCourse = useSelector(state=> state.courses)
+  
+
+  const [steps, setSteps] = useState(
+    {
+      step1: false,
+      step2: false,
+      step3: false
+    }
+  )
+
+  // const handleImageChange = (event) => {
+  //   const file = event.target.files[0];
+  //   setImageURL(URL.createObjectURL(file));
+  // };
 
   const handleCreateCourseClick = () => {
     setShowCreateCourse(true);
@@ -91,19 +108,41 @@ function Form() {
     setShowMyContent(true);
   };
 
-  const handlePost = (courseData) => {
-    const courseWithImage = {
-      ...courseData,
-      imageUrl: imageURL || "",
-    };
+  const handleStep1 = () => {
+    setSteps({
+      step1: true,
+      step2: false,
+      step3: false
+    })
+  }
+  const handleStep2 = () => {
+    setSteps({
+      step1: true,
+      step2: true,
+      step3: false,
+    })
+  }
+  const handleStep3 = () => {
+    setSteps({
+      step1: true,
+      step2: true,
+      step3: true,
+    })
+  }
 
-    setUploadedCourse(courseWithImage);
-    handleUploadVideoClick();
-  };
+  // const handlePost = (courseData) => {
+  //   const courseWithImage = {
+  //     ...courseData,
+  //     imageUrl: imageURL || "",
+  //   };
+
+  //   setUploadedCourse(courseWithImage);
+  //   handleUploadVideoClick();
+  // };
 
   return (
-    <div className="flex text-black justify-between ">
-      <div className="w-1/4 p-[2rem] border-r border-gray-300 py-[3rem] pl-[6rem]">
+    <div className="flex text-black justify-between w-[100%]">
+      <div className="w-[25%] p-[2rem] border-r border-gray-300 py-[3rem] pl-[6rem] bg-violet-400">
         <div className="flex items-center justify-start mb-4">
           <Link href="/">
             <Image
@@ -115,25 +154,33 @@ function Form() {
             />
           </Link>
         </div>
-        <ul className="mb-4 py-[1rem]">
-          <li className="mb-[1rem]">
-            <span
-              className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000]"
-              onClick={handleCreateCourseClick}>
-              <Image
-                src="/Group.png"
-                alt="Image"
-                className="w-8 h-8"
-                width={28}
-                height={26.69}
-              />
-              <span className="ml-[1rem]">Create a course</span>
-            </span>
-          </li>
-          <li className="mb-[1rem]">
-            <span
-              className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000]"
-              onClick={handleUploadVideoClick}>
+
+        <div className="py-[1rem] flex flex-col gap-y-[1rem]">
+
+          <div
+            className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000] bg-blue-400 cursor-pointer"
+            onClick={handleCreateCourseClick}>
+            <Image
+              src="/Group.png"
+              alt="Image"
+              className="w-8 h-8"
+              width={28}
+              height={26.69}
+            />
+            <span className="ml-[1rem]">Create a course</span>
+          </div>
+
+
+          <div className="relative ">
+            {
+              steps.step2 === false
+                ? <span className="absolute w-[100%] h-[100%] "></span>
+                : <></>
+            }
+            <div
+              className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000] cursor-pointer"
+              onClick={handleUploadVideoClick}
+            >
               <Image
                 src="/Film.png"
                 alt="Image"
@@ -141,12 +188,18 @@ function Form() {
                 width={28}
                 height={26.69}
               />
-              <span className="ml-[1rem]"> Upload a video</span>
-            </span>
-          </li>
-          <li className="mb-[1rem]">
-            <span
-              className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000]"
+              <span className="ml-[1rem]"> Create Lesson</span>
+            </div>
+          </div>
+
+          <div className=" relative">
+            {
+              steps.step3 === false
+                ? <span className="absolute w-[100%] h-[100%]"></span>
+                : <></>
+            }
+            <div
+              className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000] cursor-pointer"
               onClick={handleMyContentClick}>
               <Image
                 src="/Color.png"
@@ -155,30 +208,46 @@ function Form() {
                 width={28}
                 height={26.69}
               />
-              <span className="ml-[1rem]"> My content</span>
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div>
-        {showCreateCourse && (
-          <CreateCourse
-            professors={professors}
-            onPost={handlePost}
-            handleImageChange={handleImageChange}
-          />
-        )}
-        {showUploadVideo && <UploadVideo uploadedCourse={uploadedCourse} />}
-        {showMyContent && (
-          <MyContent
-            professors={professors}
-            userId={userId}
-            uploadedCourse={uploadedCourse}
-          />
-        )}
+              <span className="ml-[1rem]"> Add video lesson</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div className="w-1/4 p-[1.5rem] border-r border-gray-300 ">
+      {/* ---------------------------------------------------------------------------------- */}
+
+      <div className="w-[50%]">
+
+        {
+          showCreateCourse && (
+            <CreateCourse
+              handleStep2={handleStep2}
+              steps={steps}
+              professors={professors}
+            // onPost={handlePost}
+            // handleImageChange={handleImageChange}
+            />
+          )}
+
+        {
+          showUploadVideo &&
+          <UploadVideo uploadedCourse={uploadedCourse} handleStep3={handleStep3} />
+        }
+
+        {
+          showMyContent &&
+          <LessonVideo
+            // professors={professors}
+            // userId={userId}
+            // uploadedCourse={uploadedCourse}
+          />
+        }
+      </div>
+
+
+
+      <div className="w-[25%] p-[1.5rem] border-r border-gray-300 ">
         <div className="mb-4">
           {professors.map((professor) => {
             if (professor.id === userId) {

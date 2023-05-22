@@ -16,6 +16,7 @@ const initialState = {
   access: true,
   reset: false,
   id: "",
+  createCourse: []
 };
 
 export const Slice = createSlice({
@@ -151,7 +152,53 @@ export const Slice = createSlice({
       //   }
       // }
     },
+
+    postCreateCourse: (state, action) => {
+      state.createCourse = action.payload;
+    },
+    createLesson: (state, action) => {
+      state.createCourse.lessons = (state.createCourse.lessons) ?
+          [...state.createCourse.lessons, action.payload]
+          : [action.payload
+          ]
+      // state.createCourse = {
+      //   ...state.createCourse,
+      //   lessons: (state.createCourse.lessons) ?
+      //     [...state.createCourse.lessons, action.payload]
+      //     : [action.payload
+      //     ]
+      // }
+    },
+    // createVideo:(state,action) =>{
+    //   state.createCourse.lessons.videos = (state.createCourse.lessons.videos) ?
+    //   [...state.createCourse.lessons.videos, action.payload]
+    //   : [action.payload]
+    // }
+    createVideo: (state, action) => {
+      console.log(action.payload);
+      const {titleLesson, videoData} = action.payload
+
+      console.log(titleLesson,videoData);
+
+      state.createCourse.lessons.forEach(lesson => {
+          if(lesson.title === titleLesson){
+            lesson.videos.push(videoData)
+          }
+      });
+      // const { title, videoData } = action.payload;
+      // console.log(`esto es el titulo de la lesson${title}`);
+      // console.log(`esto es la data del video ${videoData}`);
+
+
+      // Encuentra la lección en el array de lecciones
+    //   const lessonIndex = state.createCourse.lessons.findIndex((l) => l.title === titleLesson);
+    
+    //   if (lessonIndex !== -1) {
+    //     // Crea una copia del estado mutable
+    //     console.log(lessonIndex);
+    // }
   },
+}
 });
 
 export const {
@@ -170,5 +217,8 @@ export const {
   getMyCategories,
   getCoursesRecommended,
   addId,
+  postCreateCourse,
+  createLesson,
+  createVideo
 } = Slice.actions;
 export default Slice.reducer;

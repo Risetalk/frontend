@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 
 export default function BestTeachers() {
 
@@ -50,13 +51,13 @@ export default function BestTeachers() {
     <h1 className=' font-bold text-[1.6rem] leading-[2.6rem] text-[#000000]'>Course Creation Form</h1>
     <h2 className=' font-medium text-[1.6rem] leading-[2.6rem] text-[#687684]'>Best Teachers</h2>
     <div className=' flex flex-row gap-x-[50px] '>
-      {users.map((teacher) => {
+      {users.map((teacher,index) => {
         return (
           
-          <div className=' flex flex-row '>
+          <div className=' flex flex-row ' key={index}>
               <div className='flex flex-col items-center'>
                   <div>
-                      <img src={teacher.profile_image} alt="Teacher" className='rounded-full w-12' />
+                      <Image src={teacher.profile_image} alt="Teacher" className='rounded-full w-12' />
                   </div>
                   <h3 className='text-black text-center'>{teacher.name}</h3>
               </div>
