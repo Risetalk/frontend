@@ -11,7 +11,7 @@ export default function ResetPassword() {
   const router = useRouter();
   const path = usePathname();
  
-  
+  const [statePassword, setStatePassword] = useState('')
 
   const idPath = path.split('/').pop()
  
@@ -48,9 +48,10 @@ useEffect(() => {
     try {
       const {data} = await axios.post(`http://localhost:3001/user/olvide-password/${idPath}`, {password})
       console.log(data)
+      setStatePassword('ok')
     } catch (error) {
       console.log(error)
-
+      setStatePassword('error')
       
     }
   }

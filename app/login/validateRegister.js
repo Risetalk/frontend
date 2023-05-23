@@ -6,7 +6,6 @@ const validationRegister = (register) => {
         user_name: "no",
         email: "no",
         date_birth: "no",
-        about_me: "no",
         password: "no"
     };
 

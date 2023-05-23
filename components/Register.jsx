@@ -2,11 +2,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import validationRegister from "@/app/login/validateRegister"
-
 import axios from "axios"
-
 import { motion } from "framer-motion"
-
 import { useRouter } from "next/navigation"
 import { useDispatch, useSelector } from "react-redux"
 import { addUser } from "@/store/slice"
@@ -14,7 +11,7 @@ import { useState } from "react"
 
 
 export default function Register() {
-    const dispatch = useDispatch()
+
     const courses = useSelector(state => state.courses)
     const router = useRouter()
 
@@ -42,6 +39,7 @@ export default function Register() {
         }
     )
 
+
     const handleRegister = (event) => {
         setRegister({
             ...register,
@@ -53,28 +51,51 @@ export default function Register() {
         setErrors(validationRegister(register))
     }
 
+    const handleChecked = (event) => {
+        const { checked } = event.target;
+        checked
+            ? setRegister({
+                ...register,
+                is_tutor: true,
+            })
+            : setRegister({
+                ...register,
+                is_tutor: false
+            })
+    }
+
+    const clearRegister = () => {
+        setRegister({
+            first_name: "",
+            last_name: "",
+            user_name: "",
+            email: "",
+            password: "",
+            date_birth: "",
+        })
+    }
 
     const handleOnSubmit = async (event) => {
-        // console.log(register);
-        
-        const getDataRegister = async () => {
-            try {
-                const response = await axios.post("http://localhost:3001/user/register", register);
-                const message = response.data
-                console.log(message.message);
-                setMessage(message.message)
-                // setMessageRegister(true)
-            } catch (error) {
-                console.error("Error getting data:", error);
-            }
-        };
-
-        getDataRegister();
-        
         event.preventDefault()
-        // const res = await axios.post('http://localhost:3001/register', register)
-        // console.log(res);
-        // .then(response => { dispatch(addUser(response.data)) })
+        const hasErrors = Object.values(errors).every(error => error === "no")
+        if (hasErrors) {
+            const getDataRegister = async () => {
+                try {
+                    const response = await axios.post("http://localhost:3001/user/register", register);
+                    const message = response.data
+                    console.log(message.message);
+                    setMessage(message.message)
+                    clearRegister()
+                    // setMessageRegister(true)
+                } catch (error) {
+                    console.error("Error getting data:", error);
+                }
+            };
+            getDataRegister();
+        } else {
+            setMessage("error")
+            console.log('error de datos');
+        }
     }
 
 
@@ -82,10 +103,25 @@ export default function Register() {
         <div className="relative flex text-black  py-[0.5rem] h-[100vh]">
             {
                 message !== 'no'
-                ? <div className="absolute w-[100%] h-[100vh]">
-                    <span>{message}</span>
-                </div>
-                : <></>
+                    ?
+                    message === 'error'
+                        ?
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                            className="ml-[3rem] mt-[2rem] font-bold text-[1.2rem] bg-red-500 text-white absolute w-[fit-content] p-[1rem] rounded-[0.8rem]">
+                            <span>Error while sending your data. Check the data entered</span>
+                        </motion.div>
+                        :
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                            className="ml-[3rem] mt-[2rem] font-bold text-[1.2rem] bg-green-500 text-white absolute w-[fit-content] p-[1rem] rounded-[0.8rem]">
+                            <span>{`${message}. Please review the confirmation message we sent to your email.`}</span>
+                        </motion.div>
+                    : <></>
             }
             <motion.div className="w-[50%]"
                 initial={{ opacity: 0, x: -50 }}
@@ -103,7 +139,7 @@ export default function Register() {
                 <div className="flex flex-col items-center justify-between w-[70%] mx-[auto]  ">
                     <Image
                         onClick={() => { router.push('/') }}
-                        src={"https://s3-alpha-sig.figma.com/img/4912/c528/b482053e4d5d1d82d7eed9e4ea91dd17?Expires=1684713600&Signature=TtxwQiQQLKS0Zvwz0N4ZNMcW~ghCB6bdMNl5646YzRXetQwjegTZHXorXm59Ctbb2fVP8FLtG0TczcxN4uQuLBQjQI2G4cueIsMG3ncsBa1rIqOavXVL4oPDZ2f7oIbUaSdKZs8c8~nXvVFIOiludUnMUohRqNPxLMxADQBpeEtQSGbCgqhyJHS6CutKQVG~RPfDkGDY6MBalOpNh7cri7Pl8ZyJKJQCaUQ37eC8z-8JwJNRLQLVX6WHhbVep74kz8kIjP9ihYR0W3rFMA1kgqa--1zLN1mDAxDmoyJpbvHkkd~vxjhgjug1E5t9FW7ohCdf12dEKwBJur~Gq58PrA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"}
+                        src={"https://s3-alpha-sig.figma.com/img/4912/c528/b482053e4d5d1d82d7eed9e4ea91dd17?Expires=1685923200&Signature=bQ4vf5Y082FcVS1B7vbU2tdMUYDANSUu4XxsohDBFvSI94wLoe~uvY0mGd9Fd~Vck77GsGz76hPL0uXEj9XntjAb~zXNC2xwSf0nEnEDig8-xzkOyH~DpfxX9UHluna1Wq79mcq7czivvaF0Hf3B8hZAO3I9kwRDibzIX4paCkJ7pNCnFDbL0eg6dD-5zARCtbdmgnHiZDtGW1bgSRLE2AJX631U65eh9NmRCf8-8OuZexg9IlSD92W0xR8mkMnQT4ZbdlS8pnLyJK9ZfdXzvbesiqG-sK7cUZ5uWBmZ4gDsmAqGZImHIMlPORqzjOWn52hnVh1cEXu0XFkpWUMCGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"}
                         alt="img-logo"
                         width={300}
                         height={300}
@@ -119,7 +155,13 @@ export default function Register() {
                         <label className=" w-[48%]" htmlFor="">
                             First Name
                             <div>
-                                <input onChange={handleRegister} name="first_name" type="text" placeholder="Enter you First Name" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.2rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
+                                <input
+                                    onChange={handleRegister}
+                                    name="first_name"
+                                    value={register.first_name}
+                                    type="text"
+                                    placeholder="Enter you First Name"
+                                    className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.2rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
                                 {
                                     errors.first_name === "no"
                                         ? <div className=" h-[1.6rem] "></div>
@@ -132,7 +174,13 @@ export default function Register() {
                         <label className="w-[48%]" htmlFor="">
                             Last Name
                             <div>
-                                <input onChange={handleRegister} name="last_name" type="text" placeholder="Enter you Last Name" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.2rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
+                                <input
+                                    onChange={handleRegister}
+                                    name="last_name"
+                                    value={register.last_name}
+                                    type="text"
+                                    placeholder="Enter you Last Name"
+                                    className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.2rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
                                 {
                                     errors.last_name === "no"
                                         ? <div className="h-[1.6rem] "></div>
@@ -145,7 +193,13 @@ export default function Register() {
                         <label className="w-[100%]" htmlFor="">
                             Email
                             <div>
-                                <input onChange={handleRegister} name="email" type="text" placeholder="Enter you Email" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
+                                <input
+                                    onChange={handleRegister}
+                                    name="email"
+                                    value={register.email}
+                                    type="text"
+                                    placeholder="Enter you Email"
+                                    className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
                                 {
                                     errors.email === "no"
                                         ? <div className="h-[1.6rem] "></div>
@@ -158,7 +212,13 @@ export default function Register() {
                         <label className="w-[62%]" htmlFor="">
                             Username
                             <div>
-                                <input onChange={handleRegister} name="user_name" type="text" placeholder="Enter you Username" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.2rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
+                                <input
+                                    onChange={handleRegister}
+                                    name="user_name"
+                                    value={register.user_name}
+                                    type="text"
+                                    placeholder="Enter you Username"
+                                    className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.2rem] w-[100%] mt-[0.2rem] mb-[0.2rem]   border-2 border-[#222129]" />
                                 {
                                     errors.user_name === "no"
                                         ? <div className="h-[1.6rem] "></div>
@@ -172,7 +232,13 @@ export default function Register() {
                         <label className="w-[34%]" htmlFor="">
                             Date Birth
                             <div>
-                                <input onChange={handleRegister} name="date_birth" type="date" placeholder="Enter you Password" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem] border-2 border-[#222129]" />
+                                <input
+                                    onChange={handleRegister}
+                                    name="date_birth"
+                                    value={register.date_birth}
+                                    type="date"
+                                    placeholder="Enter you Password"
+                                    className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem] border-2 border-[#222129]" />
                                 {
                                     errors.date_birth === "no"
                                         ? <div className="h-[1.6rem] "></div>
@@ -186,7 +252,13 @@ export default function Register() {
                         <label className="w-[100%]" htmlFor="">
                             Password
                             <div>
-                                <input onChange={handleRegister} name="password" type="password" placeholder="Enter you Password" className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem] border-2 border-[#222129]" />
+                                <input
+                                    onChange={handleRegister}
+                                    name="password"
+                                    value={register.password}
+                                    type="password"
+                                    placeholder="Enter you Password"
+                                    className="font-light text-[0.9rem] leading-[1.3rem] py-[0.6rem] px-[1rem] rounded-[1.6rem] w-[100%] mt-[0.2rem] mb-[0.2rem] border-2 border-[#222129]" />
                                 {
                                     errors.password === "no"
                                         ? <div className="h-[1.6rem] "></div>
@@ -201,17 +273,20 @@ export default function Register() {
 
                     <div className="flex justify-between w-[100%] font-light text-[0.75rem] leading-[1.125rem] px-[0.4rem] mt-[1em]">
                         <div >
-                            <input type="checkbox" name="" id="" className="mr-[0.5rem]" />
-                            Remember me
+                            <input
+                                type="checkbox"
+                                name="is_tutor"
+                                className="mr-[0.5rem]"
+                                onChange={handleChecked} />
+                            Count tutor
                         </div>
-                        <Link href={"/login/forgetpassword"}>Forgot Password?</Link>
                     </div>
 
                     <div className="flex w-[100%] justify-end ">
 
                         <button
-                            className="font-normal text-[1.125rem] leading-[1.5rem] text-white py-[0.8rem]  px-[4.5rem] bg-[#222129] rounded-[2.25rem] mt-[2rem] "
                             onClick={handleError}
+                            className="font-normal text-[1.125rem] leading-[1.5rem] text-white py-[0.8rem]  px-[4.5rem] bg-[#222129] rounded-[2.25rem] mt-[2rem] "
                         >Register</button>
                     </div>
                 </div>
