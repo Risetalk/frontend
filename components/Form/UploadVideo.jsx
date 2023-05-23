@@ -28,9 +28,9 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
   //   setVideoFile(file);
   // };
 
-  
+
   const dispatch = useDispatch()
-  const course = useSelector(state=> state.courses)
+  const course = useSelector(state => state.courses)
 
   const [lessonData, setLesssonData] = useState({
     title: "",
@@ -39,13 +39,13 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
   })
 
   const [videoData, setVideoData] = useState({
-    title:"",
-    description:"",
-    video_url:""
+    title: "",
+    description: "",
+    video_url: ""
   })
 
 
-  const [titleLesson, setTitleLesson] =useState("");
+  const [titleLesson, setTitleLesson] = useState("");
 
   const [lessons, setLessons] = useState([])
 
@@ -65,27 +65,27 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
     })
   }
 
-  const handleInputVideo = (event)=>{
+  const handleInputVideo = (event) => {
     setVideoData({
       ...videoData,
       [event.target.name]: event.target.value
     })
   }
 
-// ----------------------------------------------------------------------------------------
+  // ----------------------------------------------------------------------------------------
   const handleCreateVideo = (event) => {
     event.preventDefault();
-    
+
     // Crear un objeto de video usando los datos del formulario
-  
+
     // Buscar la lección correspondiente en createCourse
     dispatch(createVideo({ titleLesson, videoData }));
-  
+
     // Verificar si se encontró la lección
-    
-  
+
+
     // Limpiar los datos del formulario
-    
+
   };
 
   // ----------------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
 
   return (
 
-    <div className="bg-green-400 p-[2rem]">
+    <div className="flex flex-col gap-y-[1rem] ">
       {/* {uploadedCourse && (
         <div
           className="max-w-md mx-auto rounded-lg overflow-hidden shadow-lg bg-cover bg-center"
@@ -150,7 +150,11 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
         </div>
       )} */}
 
-      <form className="flex flex-col  w-[100%]"
+      <h1 className="font-bold font-roboto text-xl md:text-3xl mb-[2rem] mt-[2rem] pl-[1.5rem] ">
+        Create lesson.
+      </h1>
+
+      <form className="flex flex-col  w-[100%] ml-[2rem]"
         onSubmit={handleOnSubmit}
       >
 
@@ -177,7 +181,7 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
             </textarea>
           </label>
 
-          
+
 
           <button
             className="bg-orange-500 hover:bg-orange-400 text-white font-bold w-[fit-content] py-2 px-4 rounded-[0.6rem]"
@@ -186,23 +190,24 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
             Add lesson
           </button>
         </div>
-        </form>
+      </form>
 
-        <section className="flex flex-wrap justify-between bg-yellow-400 w-[100%] py-[2rem] gap-[1rem] px-[3rem]">
+      {/* <section className="flex flex-wrap justify-between bg-yellow-400 w-[100%] py-[2rem] gap-[1rem] px-[3rem]">
           {
 
             course.createCourse.lessons?.map((lesson, index) => {
               return (
-                <div key={index} className="w-[46%] bg-red-400 p-[1rem] h-[200px] rounded-[1rem]">
-                  <h3 onClick={()=>{setTitleLesson(lesson.title)}}>{`${index + 1}. ${lesson.title} `}</h3>
-                  <p>{lesson.description}</p>
+                <div key={index} className="w-[46%] bg-red-400 p-[1rem] rounded-[1rem]">
+                  <h3 className="font-medium text-[1.4rem]"
+                  onClick={()=>{setTitleLesson(lesson.title)}}>{`${index + 1}. ${lesson.title} `}</h3>
+                  <p className="font-normal text-[1rem]">{lesson.description}</p>
                 </div>
               )
 
             })
           }
-        </section>
-          <h3>{titleLesson}</h3>
+        </section> */}
+      {/* <h3>{titleLesson}</h3>
 
         <form onSubmit={handleCreateVideo} action="">
         <label htmlFor="">
@@ -240,7 +245,7 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
           className="font-bold bg-orange-500 hover:bg-orange-400 w-[fit-content] text-white px-[2.5rem] py-2 m-6  rounded-full">
           Add video
         </button>
-      </form>
+      </form> */}
 
     </div>
   );

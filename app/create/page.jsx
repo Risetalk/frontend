@@ -142,7 +142,7 @@ function Form() {
 
   return (
     <div className="flex text-black justify-between w-[100%]">
-      <div className="w-[25%] p-[2rem] border-r border-gray-300 py-[3rem] pl-[6rem] bg-violet-400">
+      <div className="w-[25%]  border-r border-gray-300 ">
         <div className="flex items-center justify-start mb-4">
           <Link href="/">
             <Image
@@ -155,10 +155,10 @@ function Form() {
           </Link>
         </div>
 
-        <div className="py-[1rem] flex flex-col gap-y-[1rem]">
+        <div className="py-[1rem] flex flex-col gap-y-[1rem] w-[80%] mx-[auto]">
 
           <div
-            className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000] bg-blue-400 cursor-pointer"
+            className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000]  cursor-pointer"
             onClick={handleCreateCourseClick}>
             <Image
               src="/Group.png"
@@ -174,7 +174,8 @@ function Form() {
           <div className="relative ">
             {
               steps.step2 === false
-                ? <span className="absolute w-[100%] h-[100%] "></span>
+                ? <span className="absolute w-[100%] h-[100%] bg-white
+                "></span>
                 : <></>
             }
             <div
@@ -182,7 +183,7 @@ function Form() {
               onClick={handleUploadVideoClick}
             >
               <Image
-                src="/Film.png"
+                src="/Color.png"
                 alt="Image"
                 className="w-8 h-8"
                 width={28}
@@ -195,14 +196,14 @@ function Form() {
           <div className=" relative">
             {
               steps.step3 === false
-                ? <span className="absolute w-[100%] h-[100%]"></span>
+                ? <span className="absolute w-[100%] h-[100%] bg-white"></span>
                 : <></>
             }
             <div
               className="flex items-center text-[#687684] hover:font-bold text-base md:text-lg hover:text-[#000000] cursor-pointer"
               onClick={handleMyContentClick}>
               <Image
-                src="/Color.png"
+                src="/Film.png"
                 alt="Image"
                 className="w-8 h-8"
                 width={28}
@@ -256,7 +257,7 @@ function Form() {
             return null;
           })}
 
-          {professors.slice(1, 5).map((professor) => (
+          {/* {professors.slice(1, 5).map((professor) => (
             <div
               key={professor.id}
               className="relative flex items-center mb-[1rem]">
@@ -286,11 +287,11 @@ function Form() {
           ))}
           <button className="w-24 h-8 text-[#000000] text-center leading-4 text-xs rounded-[12px] font-medium bg-[#FFB56A]">
             Click Me
-          </button>
+          </button> */}
           <hr className=" my-4" />
-          <p className="text-sm text-[#687684]">Términos y Condiciones</p>
-          <p className="text-sm text-[#687684]">Ayuda Legal</p>
-          <p className="text-sm text-[#687684]">&copy; 2023 RiseTalk Inc.</p>
+          <p className="text-sm text-[#687684] cursor-pointer mb-[0.6rem]">Términos y Condiciones</p>
+          <p className="text-sm text-[#687684] cursor-pointer mb-[0.6rem]">Ayuda Legal</p>
+          <p className="text-sm text-[#687684] cursor-pointer mb-[0.6rem]">&copy; 2023 RiseTalk Inc.</p>
         </div>
       </div>
     </div>
