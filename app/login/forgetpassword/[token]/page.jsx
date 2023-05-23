@@ -3,24 +3,58 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { usePathname } from "next/navigation";
+import axios from 'axios';
 
 export default function ResetPassword() {
-  const [password, setPassword] = useState(false);
+  const [password, setPassword] = useState('');
   const router = useRouter();
+  const path = usePathname();
+ 
+  
 
-  const handlePassword = () => {
-    setPassword(true);
-  };
+  const idPath = path.split('/').pop()
+ 
+useEffect(() => {
+  const confirmToken = async () => {
+    try {
+      await axios.get(`http://localhost:3001/user/olvide-password/${idPath}`)
 
-  useEffect(() => {
-    if (password) {
-      const timer = setTimeout(() => {
-        router.push('/login');
-      }, 4000); 
-
-      return () => clearTimeout(timer); 
+    } catch (error) {
+      console.log(error)
+      
     }
-  }, [password, router]);
+    
+
+  }
+  confirmToken()
+
+},[])
+
+
+  // useEffect(() => {
+  //   if (password) {
+  //     const timer = setTimeout(() => {
+  //       router.push('/login');
+
+  //     }, 4000); 
+
+  //     return () => clearTimeout(timer); 
+  //   }
+  // }, [password, router]);
+
+  const handlerSubmmit = async (e) => {
+    e.preventDefault()
+    try {
+      const {data} = await axios.post(`http://localhost:3001/user/olvide-password/${idPath}`, {password})
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+
+      
+    }
+  }
+
 
   return (
     <>
@@ -37,17 +71,20 @@ export default function ResetPassword() {
         <div className="w-full px-[4rem] max-w-lg space-y-6 bg-gray-300 rounded-[25px] py-16">
           <h1 className="text-3xl font-bold text-center">Reset your password?</h1>
           <p className="text-center">Please, enter your new password.</p>
-          <form action="#" className="space-y-6 w-ful">
+          <form action="#" className="space-y-6 w-ful"
+          onSubmit={handlerSubmmit}>
             <input
               className="w-full px-4 py-2 border rounded-[4rem] focus:outline-none focus:ring focus:ring-primary-100"
               type="password"
+              value={password}
               name="password"
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="New password"
               required=""
             />
             <div className="pl-[6.9rem]">
               <button
-                onClick={handlePassword}
+               
                 type="submit"
                 className="w-[10rem] px-[1rem] py-2 font-medium rounded-[5rem] text-white bg-black transition-colors duration-200 bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
               >
