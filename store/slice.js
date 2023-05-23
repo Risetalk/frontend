@@ -16,7 +16,7 @@ const initialState = {
   access: true,
   reset: false,
   id: "",
-  createCourse: []
+  course: {}
 };
 
 export const Slice = createSlice({
@@ -154,11 +154,11 @@ export const Slice = createSlice({
     },
 
     postCreateCourse: (state, action) => {
-      state.createCourse = action.payload;
+      state.course = action.payload;
     },
     createLesson: (state, action) => {
-      state.createCourse.lessons = (state.createCourse.lessons) ?
-          [...state.createCourse.lessons, action.payload]
+      state.course.lessons = (state.course.lessons) ?
+          [...state.course.lessons, action.payload]
           : [action.payload
           ]
       // state.createCourse = {
@@ -180,7 +180,7 @@ export const Slice = createSlice({
 
       console.log(titleLesson,videoData);
 
-      state.createCourse.lessons.forEach(lesson => {
+      state.course.lessons.forEach(lesson => {
           if(lesson.title === titleLesson){
             lesson.videos.push(videoData)
           }

@@ -25,9 +25,10 @@ export default function RootLayout({ children }) {
           {!path.includes("login") &&
             path !== "/mycourses/id" &&
             !path.includes("register") &&
+            !path.includes("create") &&
             path !== "/prueba" && <Navigation />}
           {children}
-          {!path.includes("login") && !path.includes("register") && <Footer />}
+          {!path.includes("login") && !path.includes("register") &&  !path.includes("create") && <Footer />}
           {!path.includes("login") && !path.includes("register") && (
             <Bubble
               typebot="lead-generation-copy-70b2cnx"
