@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import ContainerCards from "@/components/ContainerCards"
@@ -7,9 +9,15 @@ import file from '../../../public/file.png'
 import analitics from '../../../public/analitics.png'
 import linkedin from '../../../public/linkedin.png'
 import github from '../../../public/github.png'
+import { useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
 
 export default function BuyCourseDetail() {
-
+    // const router = useRouter()
+    //  const idCourse  = router.query.id
+    const path = usePathname()
+    const idCourse = path.split('/').pop()
+    console.log(idCourse)
     const reviews = [
         {
             id: "1",
@@ -121,7 +129,7 @@ export default function BuyCourseDetail() {
 
                     <div className="w-[50%] mx-[auto]">
                         <article className="h-[200px]">
-
+                        <Link href={`checkout/${idCourse}`}><h1 className="text-black">Buy now</h1></Link>
                         </article>
                         <article className="flex flex-col gap-y-[1rem] py-[1.6rem] border-y-2 border-[#696984]">
                             <h3 className="font-semibold text-[2rem] leading-[2.6rem] text-[#000000]">Info</h3>
