@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { postCreateCourse } from "@/store/slice";
-// import MyContent from "./AddVideo";
-// import UploadVideo from "./UploadVideo";
 import Image from "next/image";
 
-import axios from "axios";
+function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 }) {
 
-function CreateCourse({ professors, steps, handleStep2 }) {
-
-  const createCourses = useSelector(state=> state.courses)
   const dispatch = useDispatch()
 
   const [dataCourses, setDataCourses] = useState({
@@ -18,36 +13,35 @@ function CreateCourse({ professors, steps, handleStep2 }) {
     price: "",
     language: "",
     background_image: "",
-    lessons:[],
+    lessons: [],
   });
+
+  const [next, setnext] = useState({
+    title: "no",
+    description: "no",
+    price: "no",
+    language: "no",
+    background_image: "no",
+  })
 
   const handleDataCourses = (e) => {
     setDataCourses({
       ...dataCourses,
       [e.target.name]: e.target.value,
     });
+    setnext({
+      ...next,
+      [e.target.name]: (e.target.value || 'no')
+    })
   };
 
   const handleSubmit = (event) => {
 
     event.preventDefault()
-    
+
     dispatch(postCreateCourse(dataCourses))
     handleStep2()
-    // const createCourse = async () => {
-    //   try {
-    //     const response = await axios.post("http://localhost:3001/courses?id=dab72acf-1f09-4612-be63-eaa1cee1c15f", dataCourses);
-    //     console.log(response);
-    //     handleStep2()
-
-    //   } catch (error) {
-    //     console.error("Error getting data:", error);
-    //   }
-    // };
-
-    // createCourse();
-
-    // event.preventDefault()
+    handleUploadVideoClick()
   };
 
   return (
@@ -77,70 +71,71 @@ function CreateCourse({ professors, steps, handleStep2 }) {
             </div>
 
           ))}
-
-        </div> */}
+            
+        </div> */
+        }
         <hr />
         <div className="relative  flex flex-col  gap-y-[0.8rem] py-[0.8rem]">
-            <div className="flex items-center w-[100%]  text-black   mr-2 ">
-              <Image
-                src="/Write.png"
-                alt="Imagen"
-                className="w-[62px] h-[62px] mr-4 ml-[1rem] "
-                width={60}
-                height={60}
-              />
-      
-              <input
-                className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
-                placeholder="Write title..."
-                htmlFor="courseTitle"
-                name="title"
-                onChange={handleDataCourses}
-              />
-            </div>
-            
-          <hr className="border-l-slate-500" />
+          <div className="flex items-center w-[100%]  text-black   mr-2 ">
+            <Image
+              src="/Write.png"
+              alt="Imagen"
+              className="w-[62px] h-[62px] mr-4 ml-[1rem] "
+              width={60}
+              height={60}
+            />
 
-            <div className="flex items-center w-[100%]  text-black  mr-2 ">
-              <Image
-                src="/dateR.png"
-                alt="Imagen"
-                className="w-[62px] h-[62px] mr-4 ml-[1rem] "
-                width={60}
-                height={60}
-              />
-              <input
-                className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
-                type="text"
-                name="background_image"
-                placeholder="image Url"
-                onChange={handleDataCourses}
-              />
-            </div>
+            <input
+              className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
+              placeholder="Write title..."
+              htmlFor="courseTitle"
+              name="title"
+              onChange={handleDataCourses}
+            />
+          </div>
 
           <hr className="border-l-slate-500" />
 
-            <div className="flex items-center w-[100%] text-gray-400  mr-2">
-              <Image
-                src="/Write.png"
-                alt="Imagen"
-                className="w-[62px] h-[62px] mr-4 ml-[1rem] "
-                width={60}
-                height={60}
-              />
-              <textarea
-                className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem] text-black"
-                htmlFor="courseDescription"
-                name="description"
-                placeholder="Write a description..."
-                onChange={handleDataCourses}
-              />
-            </div>
+          <div className="flex items-center w-[100%]  text-black  mr-2 ">
+            <Image
+              src="/dateR.png"
+              alt="Imagen"
+              className="w-[62px] h-[62px] mr-4 ml-[1rem] "
+              width={60}
+              height={60}
+            />
+            <input
+              className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem]"
+              type="text"
+              name="background_image"
+              placeholder="image Url"
+              onChange={handleDataCourses}
+            />
+          </div>
+
+          <hr className="border-l-slate-500" />
+
+          <div className="flex items-center w-[100%] text-gray-400  mr-2">
+            <Image
+              src="/Write.png"
+              alt="Imagen"
+              className="w-[62px] h-[62px] mr-4 ml-[1rem] "
+              width={60}
+              height={60}
+            />
+            <textarea
+              className=" w-[80%] py-[0.4rem] text-xl  pl-[1rem] rounded-[0.6rem] text-black"
+              htmlFor="courseDescription"
+              name="description"
+              placeholder="Write a description..."
+              onChange={handleDataCourses}
+            />
+          </div>
         </div>
 
         <hr className="border-l-slate-500" />
 
-        <div className="flex justify-around py-[0.8rem]">
+        <div className="flex  py-[0.8rem]">
           <div className="relative flex items-center">
             <Image
               src="/EllipseLangu.png"
@@ -150,19 +145,18 @@ function CreateCourse({ professors, steps, handleStep2 }) {
               height={60}
             />
             <select
+              defaultValue={'choose'}
               name="language"
               onChange={handleDataCourses}
-              className="flex items-center text-center  h-[100%] bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] mr-[9rem]">
-              <option className="items-center text-white" disabled>
-                Choose a language
-              </option>
+              className="flex items-center text-center h-[65px]  bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] ml-[1rem] w-[200px]">
+              <option className="items-center text-white" value="choose" disabled>Language</option>
               <option value="spanish">Spanish</option>
               <option value="english">English</option>
               <option value="french">French</option>
             </select>
           </div>
 
-          <div className="relative flex items-center">
+          {/* <div className="relative flex items-center">
             <Image
               src="/EllipseCate.png"
               alt="Imagen"
@@ -181,8 +175,10 @@ function CreateCourse({ professors, steps, handleStep2 }) {
               <option value="Bussines">Bussines</option>
               <option value="Programing">Programming</option>
             </select>
-          </div>
+          </div> */}
         </div>
+
+
         <hr className="border-l-slate-500" />
         <div className="flex justify-between">
           <div className="flex items-center w-[100%]  text-black  mr-2 py-[0.6rem]">
@@ -205,11 +201,19 @@ function CreateCourse({ professors, steps, handleStep2 }) {
 
 
         <div className="flex justify-end">
-          <button
-            className="bg-orange-500 text-white px-[2.5rem] py-2 m-6  rounded-full"
-          >
-            Submit
-          </button>
+          {
+            (next.title !== 'no' && next.background_image !== 'no' && next.description !== 'no' && next.language !== 'no' && next.price !== 'no')
+              ?
+              <button
+                className="bg-orange-500 text-white px-[2rem] py-2 m-6  rounded-[0.8rem]">
+                Submit
+              </button>
+              :
+              <span
+                className="bg-gray-400 text-white px-[2rem] py-2 m-6  rounded-[0.8rem] cursor-default">
+                Submit
+              </span>
+          }
         </div>
       </form>
     </div>
