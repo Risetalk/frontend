@@ -1,11 +1,11 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import axios from "axios";
+
 import { useSelector, useDispatch } from "react-redux";
 import { createLesson, createVideo } from "@/store/slice";
 
-function UploadVideo({ uploadedCourse, handleStep3 }) {
+function AddLesson({ uploadedCourse, handleStep3 }) {
   // const [videoFile, setVideoFile] = useState(null);
   // const router = useRouter();
 
@@ -30,18 +30,23 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
 
 
   const dispatch = useDispatch()
-  const course = useSelector(state => state.courses)
+  const courses = useSelector(state => state.courses)
 
   const [lessonData, setLesssonData] = useState({
     title: "",
     description: "",
-    videos: []
+    videos:[]
   })
 
   const [videoData, setVideoData] = useState({
     title: "",
     description: "",
     video_url: ""
+  })
+
+  const [addLesson, setAddLesson] = useState({
+    title:"no",
+    description:"no"
   })
 
 
@@ -54,7 +59,8 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
   const clear = () => {
     setLesssonData({
       title: "",
-      description: ""
+      description: "",
+      videos:[]
     })
   }
 
@@ -62,6 +68,10 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
     setLesssonData({
       ...lessonData,
       [event.target.name]: event.target.value
+    })
+    setAddLesson({
+      ...addLesson,
+      [event.target.name]: (event.target.value || 'no')
     })
   }
 
@@ -76,41 +86,21 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
   const handleCreateVideo = (event) => {
     event.preventDefault();
 
-    // Crear un objeto de video usando los datos del formulario
-
-    // Buscar la lección correspondiente en createCourse
     dispatch(createVideo({ titleLesson, videoData }));
 
-    // Verificar si se encontró la lección
 
-
-    // Limpiar los datos del formulario
 
   };
 
   // ----------------------------------------------------------------------------------------
   const handleOnSubmit = (event) => {
 
-    // try {
-    //   const createLesson = async () => {
-    //     const response = await axios.post("http://localhost:3001/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91", lessonData)
-    //     const data = await response.data
-    //     setAllLessons([
-    //       ...allLessons,
-    //       data
-    //     ])
-    //     console.log(response);
-    //     clear()
-    //     handleStep3()
-
-    //   }
-    //   createLesson()
-    // } catch (error) {
-    //   console.error("Error getting data:", error);
-    // }
-    dispatch(createLesson(lessonData))
-    handleStep3()
+    console.log(lessonData);
     event.preventDefault()
+    dispatch(createLesson(lessonData))
+    
+    handleStep3()
+    clear()
   }
 
   // useEffect(() => {
@@ -165,6 +155,7 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
             placeholder="Add Title for Lesson..."
             accept="video/*"
             name="title"
+            value={lessonData.title}
             onChange={handleInput}
             className="mb-4 border-4 block w-[50%] py-[0.6rem] px-[0.4rem] rounded-[0.6rem] "
           />
@@ -174,6 +165,7 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
           <label htmlFor="">
             Description:
             <textarea name="description" id="" cols="30" rows="5"
+              value={lessonData.description}
               placeholder="Add description of lesson..."
               className="border-4 block p-[1rem] w-[75%] rounded-[0.6rem]"
               onChange={handleInput}
@@ -181,32 +173,41 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
             </textarea>
           </label>
 
-
-
+          {
+            (lessonData.title.length > 0 && lessonData.description.length > 0)
+            ?
           <button
             className="bg-orange-500 hover:bg-orange-400 text-white font-bold w-[fit-content] py-2 px-4 rounded-[0.6rem]"
           // onClick={handleVideoUpload}
           >
             Add lesson
           </button>
+          :
+          <span
+          className="bg-gray-500 text-white font-bold w-[fit-content] py-2 px-4 rounded-[0.6rem] cursor-default">
+            Add lesson
+          </span>
+          }
+
         </div>
       </form>
 
-      {/* <section className="flex flex-wrap justify-between bg-yellow-400 w-[100%] py-[2rem] gap-[1rem] px-[3rem]">
+      <section className="flex flex-wrap justify-between  w-[100%] py-[2rem] gap-[1rem] px-[3rem]">
+        <h3 className="font-medium text-[1.4rem]  w-[100%]">Lessons:</h3>
           {
 
-            course.createCourse.lessons?.map((lesson, index) => {
+            courses.course.lessons?.map((lesson, index) => {
               return (
-                <div key={index} className="w-[46%] bg-red-400 p-[1rem] rounded-[1rem]">
+                <div key={index} className="text-white w-[46%] bg-orange-400 p-[1rem] rounded-[1rem] cursor-default shadow-md">
                   <h3 className="font-medium text-[1.4rem]"
                   onClick={()=>{setTitleLesson(lesson.title)}}>{`${index + 1}. ${lesson.title} `}</h3>
-                  <p className="font-normal text-[1rem]">{lesson.description}</p>
+                  
                 </div>
               )
 
             })
           }
-        </section> */}
+        </section>
       {/* <h3>{titleLesson}</h3>
 
         <form onSubmit={handleCreateVideo} action="">
@@ -251,5 +252,5 @@ function UploadVideo({ uploadedCourse, handleStep3 }) {
   );
 }
 
-export default UploadVideo;
+export default AddLesson;
 

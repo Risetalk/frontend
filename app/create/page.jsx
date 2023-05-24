@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import AddVideo from "../../components/Form/addVideo";
-import UploadVideo from "@/components/Form/UploadVideo";
+import AddLesson from "@/components/Form/AddLesson";
+import UploadVideo from "@/components/Form/AddLesson";
 import CreateCourse from "@/components/Form/CreateCourse";
 import TeacherCard from "@/components/TeacherCard";
 
@@ -74,8 +75,8 @@ function Form() {
   const [uploadedCourse, setUploadedCourse] = useState(null);
   const [imageURL, setImageURL] = useState("");
 
-  const createCourse = useSelector(state=> state.courses)
-  
+  const createCourse = useSelector(state => state.courses)
+
 
   const [steps, setSteps] = useState(
     {
@@ -219,13 +220,32 @@ function Form() {
       {/* ---------------------------------------------------------------------------------- */}
 
       <div className="w-[50%]">
+        <div className={`${!showCreateCourse ? "hidden" : "block"}`}>
+        <CreateCourse
+          handleStep2={handleStep2}
+          steps={steps}
+          professors={professors}
+          handleUploadVideoClick={handleUploadVideoClick} />
+        </div>
 
-        {
+        <div className={`${!showUploadVideo ? "hidden" : "block"}`}>
+          <AddLesson uploadedCourse={uploadedCourse} handleStep3={handleStep3} />
+        </div>
+
+        <div className={`${!showMyContent ? "hidden" : "block"}`}>
+        <LessonVideo
+          // professors={professors}
+          // userId={userId}
+          // uploadedCourse={uploadedCourse}
+          />
+        </div>
+        {/* {
           showCreateCourse && (
             <CreateCourse
               handleStep2={handleStep2}
               steps={steps}
               professors={professors}
+              handleUploadVideoClick={handleUploadVideoClick}
             // onPost={handlePost}
             // handleImageChange={handleImageChange}
             />
@@ -233,17 +253,17 @@ function Form() {
 
         {
           showUploadVideo &&
-          <UploadVideo uploadedCourse={uploadedCourse} handleStep3={handleStep3} />
+          <AddLesson uploadedCourse={uploadedCourse} handleStep3={handleStep3} />
         }
 
         {
           showMyContent &&
           <LessonVideo
-            // professors={professors}
-            // userId={userId}
-            // uploadedCourse={uploadedCourse}
+          // professors={professors}
+          // userId={userId}
+          // uploadedCourse={uploadedCourse}
           />
-        }
+        } */}
       </div>
 
 
