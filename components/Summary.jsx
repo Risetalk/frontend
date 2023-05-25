@@ -1,12 +1,14 @@
 'use client'
 
 import { useSelector } from "react-redux"
-import CheckOutPage from "./Stripe components/CheckoutPage"
+import CheckoutPage from "./Stripe components/CheckoutPage"
 import Image from "next/image"
 
 export default function Summary() {
-    const infoToBuyCourses = useSelector((state) => state.courses)
-    const dataMyCart = infoToBuyCourses.my_cart[0]
+
+    const infoToBuyCourses = useSelector((state) => state.courses);
+    const dataMyCart = infoToBuyCourses.my_cart[0];
+
     console.log(dataMyCart);
 
     const productos = [
@@ -27,7 +29,7 @@ export default function Summary() {
     ]
 
     return (
-        <article className="w-[35%] bg-[#002B5A20] rounded-[1.25rem] m-auto p-[1.8rem]">
+        <article className="w-[35%] bg-[#002B5A20] rounded-[1.25rem] m-auto mt-4 p-[1.8rem]">
             <h3 className="mb-[2rem]">Summary</h3>
             <div className="productos">
                 {/* {
@@ -77,7 +79,7 @@ export default function Summary() {
                         <span>{dataMyCart.price} $</span>
                     </li>
                     <li>
-                        <CheckOutPage course={dataMyCart} />
+                        <CheckoutPage course={dataMyCart} />
                     </li>
                 </ul>
             </div>

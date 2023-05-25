@@ -14,14 +14,12 @@ const stripePromise = loadStripe(
 
 
 
-//Traer el curso por el ID para luego mandarlo por PROPS a CheckoutForm
-const id = 'o1noj2n31o2312312';
 
-export default function CheckOutPage(course) {
-	console.log('this is from checkoutpage ' + course)
+export default function CheckOutPage({course}) {
+	
 	return (
 		<main>
-			<h1>{course.title}</h1>
+			
 			<section className="flex justify-around items-start px-[6.25rem] py-[2rem]">
 				<Elements stripe={stripePromise}>
 					<CheckoutForm curso={course} />
