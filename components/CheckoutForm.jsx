@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-const CheckoutForm = ({ curso }) => {
+const CheckoutForm = (curso) => {
 	//Esto me devuelve la conexion a stripe de esta manera
 	const stripe = useStripe();
 	//Esto me permite seleccionar los elementos que esten encerrados por Elements
@@ -32,9 +32,9 @@ const CheckoutForm = ({ curso }) => {
 				//Por lo que al precio hay que multiplicar por 100
 				//en mi caso cobrare 100 dolares por lo que seria;
 				//AQUI VA CURSO.PRICE * 100
-				amount: 1000 * 100,
+				amount: price * 100,
 				//AQUI VA EL CURSO.TITLE
-				description: 'Curso de Prueba',
+				description: title,
 			});
 
 			alert('Compra exitosa');
@@ -46,17 +46,17 @@ const CheckoutForm = ({ curso }) => {
 			alert('No se completo la compra');
 		}
 	};
+	console.log('this is from checkoutpage ' + curso)
 
 	return (
-		<div>
-			<h1>Comprando este curso Buenardo</h1>
-			<div>
-				<h3>Curso de Prueba</h3>
-				<h3>1000 usd</h3>
-			</div>
-			<form onSubmit={handleSubmit}>
+		<div className=' w-full'>
+			
+			
+			<form onSubmit={handleSubmit} className=' w-full'>
+				<h2 className=' text-black'>{curso.price}</h2>
 				<CardElement />
-				<button disabled={!stripe}>Comprar</button>
+				{!stripe ? (<h1>Loading</h1>) : <button>Buy</button>}
+				
 			</form>
 		</div>
 	);

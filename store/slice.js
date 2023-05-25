@@ -16,7 +16,14 @@ const initialState = {
   access: true,
   reset: false,
   id: "",
-  course: {}
+  course: {},
+  my_cart: [{
+    id: 1,
+    title: 'Dart for beginners',
+    price: 120,
+    background_image: 'https://th.bing.com/th/id/OIP._h8M3yKatoZqqd37GH3wNgHaEK?pid=ImgDet&rs=1',
+    description: 'This is a beginner guide to be a dart developer'
+  }]
 };
 
 export const Slice = createSlice({
