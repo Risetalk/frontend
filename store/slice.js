@@ -24,6 +24,10 @@ const initialState = {
     background_image: 'https://th.bing.com/th/id/OIP._h8M3yKatoZqqd37GH3wNgHaEK?pid=ImgDet&rs=1',
     description: 'This is a beginner guide to be a dart developer'
   }]
+
+  loggedIn: false,
+  user: null,
+
 };
 
 export const Slice = createSlice({
@@ -181,6 +185,8 @@ export const Slice = createSlice({
     //   [...state.createCourse.lessons.videos, action.payload]
     //   : [action.payload]
     // }
+
+
     createVideo: (state, action) => {
       console.log(action.payload);
       const {titleLesson, videoData} = action.payload
@@ -205,7 +211,19 @@ export const Slice = createSlice({
     //     console.log(lessonIndex);
     // }
   },
+
+  loginSuccess: (state, action) => {
+    state.loggedIn = true;
+    state.user = action.payload;
+  },
+  logoutSuccess: (state) => {
+    state.loggedIn = false;
+    state.user = null;
+  },
+
 }
+
+
 });
 
 export const {
@@ -226,6 +244,7 @@ export const {
   addId,
   postCreateCourse,
   createLesson,
-  createVideo
+  createVideo,
+  loginSuccess, logoutSuccess,
 } = Slice.actions;
 export default Slice.reducer;
