@@ -1,16 +1,20 @@
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
-export default function CourseCard({id, title, image, tema, duration, description, author,price,offer}) {
+export default function CourseCard({id, title, background_image, tema, duration, description, author,price,offer}) {
     
     return (
         <div className="">
-            <article
-                className=" ml-[2rem] pt-4 px-6 bg-[white] pb-12  rounded-[1.25rem]  shadow-2xl "
+            <motion.article
+                initial={{opacity:0 , y:200}}
+                animate={{opacity:1, y:0}}
+                transition={{duration:1, delay:0.5}}
+                className="flex flex-col justify-between pt-4 px-6 bg-[white] pb-4  rounded-[1.25rem]  shadow-2xl h-[500px]"
                 key={id}>
                 <Image
                     className="rounded-[1.25rem] h-[200px] object-cover w-[100%]"
-                    src="https://s3-alpha-sig.figma.com/img/85a2/d4de/f6c18daf5c07703727b43dd90a8b626b?Expires=1684713600&Signature=cIqtlkEG~vIIzl18CorFGibrIVbGubcANZC43c8DWYn6V5h5d314sHKb0-aTg8e66yG~uuIfzhv4Uy2J9BQxMmxIyMpvr5OBzOF~-JVrwJO~X4SOyNpO1-lAQW5i89eQAdDrnIBkIlcrkCdEayffA8FJ4Ks2JrgFb9fDMBXv6RzUsf0hDcULIK1egEXGO8TV6WZB5sqGycjrMimEz2mE5xW4fF5ApVxycgzYlr3g5NSAhPDrsEZVYcDeuM3pk2y6vczTs9BofWZg6SRh0Drc7DhBskIWCTNQbUeyMpfTBkcITJJrCQbEpshMVx4ki~wsSMwbGSxuzn2pjJQ-VPjswQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                    src={background_image}
                     alt={title || "img-course"}
                     width={300}
                     height={300}
@@ -38,7 +42,7 @@ export default function CourseCard({id, title, image, tema, duration, descriptio
                 <Link href={`search/${id}`} className="font-medium text-[1.3rem] leading-[1.9rem] text-[#252641] mb-[1.2rem]">
                     {title}
                 </Link>
-                <p className="font-normal text-[1rem] leading-[1.6rem] text-[#696984] mb-[1.063rem]">
+                <p className="font-normal text-[1rem] leading-[1.6rem] text-[#696984] mb-[1.063rem] h-[80px] overflow-y-scroll">
                     {description}
                 </p>
                 <div className="flex items-end justify-between">
@@ -57,7 +61,7 @@ export default function CourseCard({id, title, image, tema, duration, descriptio
                         </span>
                     </div>
                 </div>
-            </article>
+            </motion.article>
         </div>
     )
 }
