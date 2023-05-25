@@ -1,3 +1,4 @@
+import CheckOutPage from "./Stripe components/CheckoutPage"
 import Image from "next/image"
 
 export default function Summary() {
@@ -20,7 +21,7 @@ export default function Summary() {
     ]
 
     return (
-        <article className="w-[35%] bg-[#002B5A20] rounded-[1.25rem] p-[1.8rem]">
+        <article className="w-[35%] bg-[#002B5A20] rounded-[1.25rem] m-auto p-[1.8rem]">
             <h3 className="mb-[2rem]">Summary</h3>
             <div className="productos">
                 {
@@ -55,6 +56,9 @@ export default function Summary() {
                     <li className="flex justify-between py-[0.6rem] font-semibold text-[1rem] leading-[2rem] text-[#000000]">
                         <span>Total</span>
                         <span>$56.38</span>
+                    </li>
+                    <li>
+                        <CheckOutPage />
                     </li>
                 </ul>
             </div>
