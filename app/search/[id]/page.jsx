@@ -4,15 +4,27 @@ import Image from "next/image"
 import Link from "next/link"
 import ContainerCards from "@/components/ContainerCards"
 import globe from '../../../public/globe.png'
+import checked from '../../../public/doblecheck.png'
 import window from '../../../public/window.png'
 import file from '../../../public/file.png'
 import analitics from '../../../public/analitics.png'
 import linkedin from '../../../public/linkedin.png'
 import github from '../../../public/github.png'
+import vectorDown from '../../../public/vector-down.png'
+import vectorUp from '../../../public/vector-up.png'
 import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import axios from "axios"
 
 export default function BuyCourseDetail() {
     const path = usePathname();
+
+    const dispatch = useDispatch()
+
+    const courses = useSelector(state => state.courses)
+
+    const [courseDetail, setCourseDetail] = useState({});
 
     const idPath = path.split("/").pop();
     console.log(idPath);
@@ -108,68 +120,154 @@ export default function BuyCourseDetail() {
         },
     ]
 
+    useEffect(() => {
+        const getDataCourseID = async () => {
+            const response = await axios(`http://localhost:3001/courses/${idPath}`)
+            setCourseDetail(response.data.data);
+        }
+        getDataCourseID()
+    }, [])
+
+    console.log(courseDetail);
     return (
         <main className="bg-white">
-            <header>
-                <Image className="w-[100%] h-[450px] object-cover" src={"https://s3-alpha-sig.figma.com/img/d46b/8d8d/cd4a8bb14061e62f8b1a3811aec52f49?Expires=1684713600&Signature=SQNiB-MukkvU-eMQe5N8Rvarts29uopR5LJYY2E8gXPfJ0e1-w9LJVQCDjWcFR7xzz6uCurNLo5F6yInNLQx5qQdFMoImtP0fwepCWcmeJrUrjWMiUa~r1WljzUY4zqKZ05DAgkYEiwcyRBqT1ixKiG6Q6Exi1EesZ8VjKzpwvufgdNu4-ks7FmK2GE9PkJ4wbTxWJTc7l7ApxQa5wscOoPZUecy35WSywQLNyqhjfPknmbSVq9e3GIAb8EdooRtzBJHOyIZC2~fzloo2NIRLkIEOCX5ZGr4sHt9-3BQBz9e4B72hEHwt23yIMUoJEnD78FB~TS-FisIYEx~wLBsvw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"} width={1574} height={1212} alt="img-header" />
-            </header>
 
-            <section className="flex pb-[6.25rem]">
-                <div className="w-[60%] mt-[5rem] ">
-                    <div className="w-[80%] mx-[auto]">
-                        <h1 className="font-black text-[4rem] text-[#262F30] mb-[1.25rem]">Title Course</h1>
-                        <p className="font-normal text-[1.25rem] leading-[1.8rem] p-[2rem] bg-[#FFF966B8] rounded-[2.6rem]">A React course is designed to teach students or developers how to build modern, interactive web applications using React.js, a popular JavaScript library for building user interfaces. The course typically covers the fundamental concepts and techniques of React, including component-based architecture, state management, routing, and handling user events.
-                            In a React course, students usually start by learning the basics of JavaScript and HTML/CSS if they are not already familiar with these languages.  A React course is designed to teach students or developers how to build modern, interactive web applications using React.js, a popular JavaScript library for building user interfaces.
-                        </p>
+            <div className="">
+                <section className="flex justify-between w-[90%] mx-[auto] py-[2rem] gap-x-[2rem] mt-[2rem]">
+                    <div className="w-[75%] ">
+                        <div className="flex flex-col justify-around w-[100%] h-[100%]">
+                            <div className="flex items-center bg-[#F9662A] py-[0.5rem] px-[0.6rem] text-[white] w-[fit-content] rounded-[0.3rem]">
+                                <Image
+                                    src={courseDetail.course?.category.background_image} alt="category-ico" width={200} height={200}
+                                    className="w-[20px] h-[20px]"
+                                />
+                                <span>{courseDetail.course?.category.title}</span>
+                            </div>
+                            <h1 className="font-black text-[4rem] text-[#000000] mt-[1.4rem]">{courseDetail.course?.title}</h1>
+                            <div className="flex items-center justify-between gap-x-[1rem]  mt-[2.8rem] w-[85%] ">
+                                <div className="flex items-center  gap-x-[1rem] ">
+                                    <Image
+                                        src={courseDetail.user?.profile_picture} alt={'tutor'}
+                                        width={50} height={50}
+                                        className="rounded-full object-cover w-[50px] h-[50px]"
+                                    />
+                                    <span><strong className="text-[#7F7F7F]">By</strong> {courseDetail.user?.first_name} {courseDetail.user?.last_name}</span>
+                                </div>
+
+                                <div className="flex gap-x-[0.4rem]">
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#A09EAD]">Languaje</span>
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#222129]">{courseDetail.course?.language}</span>
+                                </div>
+
+                                <div className="flex gap-x-[0.6rem]">
+                                    <Image src={linkedin} alt="linkedin-ico" width={35} height={35} />
+                                    <Image src={github} alt="github-ico" width={35} height={35} />
+                                </div>
+                            </div>
+
+                            <div className="flex justify-between my-[3rem] w-[85%]">
+
+                                <div className="flex flex-col  gap-x-[0.4rem]">
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#A09EAD]">Last Update</span>
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#222129]">2023-03-26</span>
+                                </div>
+
+                                <div className="flex flex-col  gap-x-[0.4rem]">
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#A09EAD]">Lessons</span>
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#222129]">{courseDetail.course?.lessons.length}</span>
+                                </div>
+
+                                <div className="flex flex-col  gap-x-[0.4rem]">
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#A09EAD]">Category</span>
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#222129]">{courseDetail.course?.category.title}</span>
+                                </div>
+
+                                <div className="flex flex-col  gap-x-[0.4rem]">
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#A09EAD]">Last Update</span>
+                                    <span className="font-medium text-[1.25rem] leading-[1.9rem] text-[#222129]">2023-03-26</span>
+                                </div>
+
+                            </div>
+
+                            <div className="flex flex-col gap-y-[0.6rem] mb-[5rem]">
+                                <h2 className="font-medium text-[1.6rem] text-[#F9662A]">Description</h2>
+                                <p className="font-normal text-[1.25rem] leading-[1.8rem] text-[#00000080]">
+                                    {courseDetail.course?.description}
+                                </p>
+                            </div>
+
+                            <div>
+                                <h2 className=" font-medium text-[1.6rem] text-[#F9662A] mb-[1rem]">Lessons</h2>
+                                <div className="flex gap-x-[3rem] gap-y-[2rem]  px-[2rem]">
+                                    {
+                                        courseDetail.course?.lessons?.map((lesson, index) => {
+                                            return (
+                                                <div key={index + 1} className="flex items-center  py-[1.125rem] px-[1.4rem] border-[1px] border-[#222129] w-[fit-content] shadow-md">
+                                                    <Image src={vectorDown} alt="vector-down-ico" width={20} height={20} />
+                                                    <span className="font-normal  text-[0.75rem] leading-[1.125rem] w-[fit-content] py-[0.4rem] px-[0.8rem] rounded-[1rem]">{lesson.title}</span>
+                                    
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div className="w-[40%]">
+                    <div className="w-[25%] ">
 
-                    <div className="w-[50%] mx-[auto]">
-                        <article className="h-[200px]">
-                            <h2>price</h2>
-                            <Link href={`checkout/${idPath}`}>
-                            <button className=" bg-slate-200">checkout</button>
-                            </Link>
-                        </article>
-                        <article className="flex flex-col gap-y-[1rem] py-[1.6rem] border-y-2 border-[#696984]">
-                            <h3 className="font-semibold text-[2rem] leading-[2.6rem] text-[#000000]">Info</h3>
-                            <div className="flex items-center gap-x-[0.4rem]">
-                                <Image src={globe} alt='globe-ico' width={25} height={25} />
-                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">Leguaje</span>
-                            </div>
-                            <div className="flex items-center gap-x-[0.4rem]">
-                                <Image src={window} alt='window-ico' width={25} height={25} />
-                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">Date</span>
-                            </div>
-                            <div className="flex items-center gap-x-[0.4rem]">
-                                <Image src={file} alt='file-ico' width={25} height={25} />
-                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">Programming</span>
-                            </div>
-                            <div className="flex items-center gap-x-[0.4rem]">
-                                <Image src={analitics} alt='analitics-ico' width={25} height={25} />
-                                <span className="font-semibold text-[1.2rem] leading-[1.25rem] text-[#00000080]">lessons</span>
-                            </div>
-                        </article >
-                        
-                        <article className="py-[1.6rem]">
-                            <h3 className="font-semibold text-[2rem] leading-[2.6rem] text-[#000000]">Find us at</h3>
-                            <div className="flex pt-[1.6rem] gap-x-[0.6rem]">
-                                <Image src={linkedin} alt="linkedin-ico" width={35} height={35}/>
-                                <Image src={github} alt="github-ico" width={35} height={35}/>
-                            </div>
-                        </article>
+                        <div className="w-[100%] mx-[auto]  bg-[white] border-[#222129] border-[2px] h-[fit-content]">
+                            <Image
+                                src={courseDetail.course?.background_image} alt="img-course" width={500} height={300}
+                                
+                            />
+                            <article className="flex flex-col gap-y-[0.8rem] px-[2.4rem] pt-[1.6rem]">
+                                <h2 className="font-medium text-[1.4rem] leading-[2rem] text-[#A09EAD]">Material Includes</h2>
+                                <div className="flex items-center gap-x-[0.4rem]">
+                                    <Image src={checked} alt="checked-ico" width={25} height={10} />
+                                    <span className="text-[#7F7F7F]">30 Lessons</span>
+                                </div>
+                                <div className="flex items-center gap-x-[0.4rem]">
+                                    <Image src={checked} alt="checked-ico" width={25} height={10} />
+                                    <span className="text-[#7F7F7F]">20 Videos </span>
+                                </div>
+                                <div className="flex items-center gap-x-[0.4rem]">
+                                    <Image src={checked} alt="checked-ico" width={25} height={10} />
+                                    <span className="text-[#7F7F7F]">Access on Mobile on Desktop</span>
+                                </div>
+                                <div className="flex items-center gap-x-[0.4rem]">
+                                    <Image src={checked} alt="checked-ico" width={25} height={10} />
+                                    <span className="text-[#7F7F7F]">Full Lifetime Access</span>
+                                </div>
+                                <div className="flex items-center gap-x-[0.4rem]">
+                                    <Image src={checked} alt="checked-ico" width={25} height={10} />
+                                    <span className="text-[#7F7F7F]">Certificate of Completion</span>
+                                </div>
+                            </article >
+                            <article className="flex flex-col h-[fit-content] px-[2.4rem] py-[1.6rem]">
+                                <div className="flex items-center gap-x-[0.6rem]">
+                                    <span className="font-semibold text-[3rem] text-[#FF7A00] ">${courseDetail.course?.price}</span>
+                                </div>
+                                <div className="flex justify-between mt-[1.2rem]">
+
+                                    <Link href={'#'} className="w-[45%] text-center text-[1rem] text-[#F9662A] hover:bg-[#F9662A] hover:text-[white] font-semibold bg-[white] py-[0.6rem] rounded-[0.3rem] border-[2px] border-[#F9662A] shadow-md">Add to cart</Link>                                
+
+                                    <Link href={`checkout/${idPath}`} className="w-[45%] text-center text-[1rem] text-[#F9662A] hover:bg-[#F9662A] hover:text-[white] font-semibold bg-[white] py-[0.6rem] rounded-[0.3rem] border-[2px] border-[#F9662A] shadow-md">Buy Now</Link>
+
+                                </div>
+                            </article>
+                        </div>
+
                     </div>
 
-                </div>  
-
-            </section>
+                </section>
+            </div>
 
             <section className="bg-[#22212921] pt-[4rem] pb-[13.313rem]">
-                
-                    <ContainerCards key={5} title={"Marketing Articles"} link={"See all"} array={recommended} />
-                
+
+                <ContainerCards key={5} title={"Marketing Articles"} link={"See all"} array={recommended} />
+
             </section>
 
             <section className="text-[black]">
@@ -183,7 +281,7 @@ export default function BuyCourseDetail() {
                     <div className="w-[50%] flex justify-center">
                         <div className="relative">
                             <div className="z-20">
-                                <Image src={"https://s3-alpha-sig.figma.com/img/7a80/a7af/42c44b95173f6bb18529bebd58808a65?Expires=1684713600&Signature=kQwqNuKb3M4erJ2c1a8~Hq9alDbdtFRCCgy6zBW4oYB-~JQamYIDRrprlW20oMXwOBFTOCaLgVZKFIGdAAzAU88Ln-u~v09rqOYa2OSkES~EWeBUQFJLy0xwciJtPfRiJ3I0eRYmwmK2OZc7YYg-oIQLwodo3AWhyDZdi0m3-TNZ62AfRKV5h3n~W8EArTa~Z-mJCobgbV4UdPkIwSVAS3C6FEuUxGftPT1aAUBuvig-EoWyyDmOShsr~aUS8unkIVoUEQ85cjotlCFNZGEC~nzXhvFAb6gdPeC6FTmhV7VjYX5cSa0rq8DvZOgyf0UbwKPmc3UyYxjUJ6Pe8-uQKQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4 "} alt="imagen-section" width={600} height={300} />
+                                <Image src={"https://s3-alpha-sig.figma.com/img/7a80/a7af/42c44b95173f6bb18529bebd58808a65?Expires=1685923200&Signature=k3S2XBiavdR8IhbbcRWwS40dn0NSW2wVoY9-pb4SHRfLDNzrxcY67IrT-V~1vUjn~WQt42ZcZ91mBP2jWx3dFV1TbUbQfsYV1LjgXacDrRU7RfRCLaTEXUuGnr~KJrB-9K1IprTsw0prvgSZc51DJOVsJ5iMs06CFRnRVUnyLDJunl-K8f9nuOkV6cewXFCq5DQCZhBYeTooJw8KNyHEMPkHw9wjDKvYYkqn1L2mD3u5YbJbaUe2RTAfmB6cp-trEQttIJG1HBYVBlY5rGRC8y4bSrl3WahoKDBuq1A1TADITe-O6w69T6HWKeqkhrgwny5J1gCbnV9gcBCCOyT5Hw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"} alt="imagen-section" width={600} height={300} />
                             </div>
                             <div className="absolute bg-[#FF986F] h-[180px] w-[180px] rounded-[1.25rem] z-[1] bottom-[-20px] right-[-20px]"></div>
                             <div className="absolute bg-[#000] h-[180px] w-[180px] rounded-[1.25rem] z-[1] top-[-20px] left-[-20px]"></div>
