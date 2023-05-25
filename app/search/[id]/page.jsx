@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import ContainerCards from "@/components/ContainerCards"
@@ -7,8 +9,13 @@ import file from '../../../public/file.png'
 import analitics from '../../../public/analitics.png'
 import linkedin from '../../../public/linkedin.png'
 import github from '../../../public/github.png'
+import { usePathname } from "next/navigation"
 
 export default function BuyCourseDetail() {
+    const path = usePathname();
+
+    const idPath = path.split("/").pop();
+    console.log(idPath);
 
     const reviews = [
         {
@@ -121,7 +128,10 @@ export default function BuyCourseDetail() {
 
                     <div className="w-[50%] mx-[auto]">
                         <article className="h-[200px]">
-
+                            <h2>price</h2>
+                            <Link href={`checkout/${idPath}`}>
+                            <button className=" bg-slate-200">checkout</button>
+                            </Link>
                         </article>
                         <article className="flex flex-col gap-y-[1rem] py-[1.6rem] border-y-2 border-[#696984]">
                             <h3 className="font-semibold text-[2rem] leading-[2.6rem] text-[#000000]">Info</h3>
