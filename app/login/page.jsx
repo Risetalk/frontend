@@ -9,15 +9,11 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import validation from "./validation";
-import { GoogleLogin } from "react-google-login";
-import { gapi } from "gapi-script";
+
 import { loginAccess } from "@/store/slice";
+import LoginGoogle from "@/components/GoogleAuth/LoginGoogle";
 
 const Login = () => {
-  const [gapiLoaded, setGapiLoaded] = useState(false);
-  const clientId =
-    "234473629746-soigamg3hnt1n0gd6v192baikfqmgi2m.apps.googleusercontent.com";
-
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
   const router = useRouter();
@@ -71,40 +67,7 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    // if(courses.access){
-    //     router.push('/')
-    // }
-  }, [courses.access]);
-
-  useEffect(() => {
-    const start = () => {
-      gapi.load("client:auth2", () => {
-        gapi.auth2
-          .init({
-            clientId,
-          })
-          .then(() => {
-            setGapiLoaded(true);
-          });
-      });
-    };
-    if (typeof window !== "undefined") {
-      start();
-    }
-  }, []);
-
-  const responseSuccessGoogle = async (response) => {
-    // console.log(response)
-    await axios
-      .post("http://localhost:3001/user/googlelogin", {
-        tokenId: response.tokenObj.id_token,
-      })
-      .then((res) => {
-        console.log(res.data);
-      });
-  };
-  const responseErrorGoogle = (response) => {};
+  useEffect(() => {}, [courses.access]);
 
   return (
     <div>
@@ -154,7 +117,6 @@ const Login = () => {
               </Link>
             </div>
 
-            {/* <p className="font-normal text-[1rem] text-start leading-[1.5rem] text-[#5B5B5B] mb-[2.5rem]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> */}
             <div className="flex flex-col w-[100%]">
               <label htmlFor="">
                 Email
@@ -208,25 +170,15 @@ const Login = () => {
             <div className="flex w-[100%] justify-end mb-4">
               <button
                 onClick={() => {
-                  router.push("/mycourses");
+                  router.push("/");
                 }}
-                className="font-normal text-[1.125rem] leading-[1.5rem] text-white py-[0.8rem]  px-[4.5rem] bg-[#222129] rounded-[2.25rem] mt-[1.75rem]">
+                className="font-normal text-[1.125rem] leading-[1.5rem] text-white py-[0.8rem] px-[4.5rem] bg-[#222129] rounded-[2.25rem] mt-[1.75rem]">
                 Login
               </button>
             </div>
             <hr className=" w-[30rem] bg-gray-200" />
 
-            <div className=" leading-[2rem] px-[3rem] rounded-[4rem] bg-[#222129A6] m-[1rem] ">
-              <div className=" py-[1rem]">
-                <GoogleLogin
-                  clientId={clientId}
-                  buttonText="Login with Google"
-                  onSuccess={responseSuccessGoogle}
-                  onFailure={responseErrorGoogle}
-                  cookiePolicy={"single_host_origin"}
-                />
-              </div>
-            </div>
+            <LoginGoogle />
           </div>
         </form>
       </div>
