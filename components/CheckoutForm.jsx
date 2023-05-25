@@ -45,18 +45,22 @@ const CheckoutForm = ({ curso }) => {
 			alert('No se completo la compra: ', error.message);
 		}
 	};
-	console.log('this is from checkoutpage ' + curso);
+	
+
 
 	return (
-		<div className=" w-full">
-			<form onSubmit={handleSubmit} className=" w-full">
-				<CardElement />
+		<div className=" w-[100%]">
+			<form
+				onSubmit={handleSubmit}
+				className=" w-[100%] flex flex-col items-center"
+			>
+				<CardElement className="bg-white w-[100%] border-4 border-gray-300 rounded-[1rem] p-3" />
 				{!stripe ? (
-					<div class="flex justify-center items-center ">
-						<div class="border-t-4 border-b-4 border-gray-900 rounded-full w-12 h-12 animate-spin"></div>
+					<div className="flex justify-center items-center ">
+						<div className="border-t-4 border-b-4 border-gray-900 rounded-full w-12 h-12 animate-spin"></div>
 					</div>
 				) : (
-					<button class="bg-blue-500 ml-10 mt-4 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+					<button className="bg-[#FE7D03]  mt-4 hover:bg-[#f58d2b] text-white font-bold py-2 px-4 border border-[#FE7D03]-700 rounded">
 						$$$ BUY $$$
 					</button>
 				)}
@@ -66,3 +70,5 @@ const CheckoutForm = ({ curso }) => {
 };
 
 export default CheckoutForm;
+
+

@@ -20,7 +20,7 @@ export default function CheckOutPage({course}) {
 	return (
 		<main>
 			
-			<section className="flex justify-around items-start px-[6.25rem] py-[2rem]">
+			<section className="flex justify-around items-start">
 				<Elements stripe={stripePromise}>
 					<CheckoutForm curso={course} />
 				</Elements>
