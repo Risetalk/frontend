@@ -3,7 +3,6 @@ import axios from 'axios';
 
 //Importo lo necesario para usar stripe en el front
 
-
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
 const CheckoutForm = ({ curso }) => {
@@ -32,34 +31,44 @@ const CheckoutForm = ({ curso }) => {
 				//Por lo que al precio hay que multiplicar por 100
 				//en mi caso cobrare 100 dolares por lo que seria;
 				//AQUI VA CURSO.PRICE * 100
-				amount: 1000 * 100,
+				amount: curso.price * 100,
 				//AQUI VA EL CURSO.TITLE
-				description: 'Curso de Prueba',
+				description: curso.title,
 			});
 
-			alert('Compra exitosa');
+			alert(data.message);
 			//Esto es para limpiar el campo de las tarjetas
 			elements.getElement(CardElement).clear();
-			console.log(data);
+			
 		} catch (error) {
-			console.log(error.message);
-			alert('No se completo la compra');
+			
+			alert('No se completo la compra: ', error.message);
 		}
 	};
+	
+
 
 	return (
-		<div>
-			<h1>Comprando este curso Buenardo</h1>
-			<div>
-				<h3>Curso de Prueba</h3>
-				<h3>1000 usd</h3>
-			</div>
-			<form onSubmit={handleSubmit}>
-				<CardElement />
-				<button disabled={!stripe}>Comprar</button>
+		<div className=" w-[100%]">
+			<form
+				onSubmit={handleSubmit}
+				className=" w-[100%] flex flex-col items-center"
+			>
+				<CardElement className="bg-white w-[100%] border-4 border-gray-300 rounded-[1rem] p-3" />
+				{!stripe ? (
+					<div className="flex justify-center items-center ">
+						<div className="border-t-4 border-b-4 border-gray-900 rounded-full w-12 h-12 animate-spin"></div>
+					</div>
+				) : (
+					<button className="bg-[#FE7D03]  mt-4 hover:bg-[#f58d2b] text-white font-bold py-2 px-4 border border-[#FE7D03]-700 rounded">
+						$$$ BUY $$$
+					</button>
+				)}
 			</form>
 		</div>
 	);
 };
 
 export default CheckoutForm;
+
+
