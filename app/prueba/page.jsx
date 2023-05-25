@@ -1,8 +1,10 @@
+'use client'
 import TeacherDetail from "@/components/TeacherDetail"
 import ContainerOffers from "@/components/ContainerOffers"
 import ContainerCreators from "@/components/ContainerCreators-"
-import MyContent from "@/components/MyContent"
 import Register from "@/components/Register"
+import ScrollInfinite from "@/components/ScrollInfinite"
+import CargaDatos from "@/components/CargaDatos"
 
 
 
@@ -54,8 +56,9 @@ export default function Prueba (){
     ]
     return(
         <div className="pt-[100px] text-black bg-white">
-            <MyContent/>
-            <Register/>
+            
+            <ScrollInfinite/>
+            
         </div>
     )
 }

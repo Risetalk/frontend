@@ -10,6 +10,7 @@ import SearchCourses from '../../components/SearchCourses'
 import Selectors from '@/components/Selectors'
 import { resetPage, searchCourses } from '@/store/slice'
 import { useDispatch } from 'react-redux'
+import ScrollInfinite from '@/components/ScrollInfinite'
 export default function SearchPage() {
 
   const dispatch = useDispatch();
@@ -61,6 +62,8 @@ export default function SearchPage() {
 
       </div>
       <SearchCourses />
+      <ScrollInfinite/>
+
       {/* <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>
         <ContainerCards
           key={1}
