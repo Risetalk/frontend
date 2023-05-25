@@ -16,7 +16,7 @@ const initialState = {
   access: true,
   reset: false,
   id: "",
-  course: {}
+  course: {},
 };
 
 export const Slice = createSlice({
