@@ -1,7 +1,6 @@
 "use client";
 import { Bubble } from "@typebot.io/react";
 import { Standard } from "@typebot.io/react";
-
 import Navigation from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Provider } from "react-redux";
@@ -10,7 +9,7 @@ import { Inter } from "next/font/google";
 import { store } from "../store/store";
 import  ProvidersWrapper from './login/ProvidersWrapper'
 import { usePathname } from "next/navigation";
-// import { SessionProvider } from 'next-auth/react'
+import 'react-toastify/dist/ReactToastify.css';
 import { Session } from 'next-auth'
 
 const inter = Inter({ subsets: ["latin"] });
