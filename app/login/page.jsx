@@ -9,11 +9,11 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import validation from "./validation";
-
 import { loginAccess } from "@/store/slice";
 import LoginGoogle from "@/components/GoogleAuth/LoginGoogle";
 
 const Login = () => {
+
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
   const router = useRouter();
@@ -66,9 +66,9 @@ const Login = () => {
       window.alert("Error al ingresar datos");
     }
   };
-
+  
   useEffect(() => {}, [courses.access]);
-
+  
   return (
     <div>
       <div className="flex text-black  py-[0.5rem] h-[100vh]">
@@ -177,7 +177,6 @@ const Login = () => {
               </button>
             </div>
             <hr className=" w-[30rem] bg-gray-200" />
-
             <LoginGoogle />
           </div>
         </form>

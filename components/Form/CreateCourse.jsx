@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { postCreateCourse } from "@/store/slice";
 import Image from "next/image";
+import axios from "axios";
 
 function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 }) {
 
@@ -13,6 +14,7 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
     price: "",
     language: "",
     background_image: "",
+    categoryId:"",
     lessons: [],
   });
 
@@ -23,6 +25,8 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
     language: "no",
     background_image: "no",
   })
+
+  const [category, setCategory] = useState([])
 
   const handleDataCourses = (e) => {
     setDataCourses({
@@ -43,6 +47,17 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
     handleStep2()
     handleUploadVideoClick()
   };
+
+  useEffect(()=>{
+    const getCategory = async() =>{
+      const response = await axios('http://localhost:3001/category')
+      setCategory(response.data.result)
+    }
+    
+    
+    getCategory()
+  },[])
+
 
   return (
     <div className=" border-r border-gray-350">
@@ -135,7 +150,7 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
 
         <hr className="border-l-slate-500" />
 
-        <div className="flex  py-[0.8rem]">
+        <div className="flex  py-[0.8rem] justify-around">
           <div className="relative flex items-center">
             <Image
               src="/EllipseLangu.png"
@@ -156,7 +171,7 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
             </select>
           </div>
 
-          {/* <div className="relative flex items-center">
+          <div className="relative flex items-center">
             <Image
               src="/EllipseCate.png"
               alt="Imagen"
@@ -165,17 +180,20 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
               height={60}
             />
             <select
-              name="category"
+            defaultValue={'cat'}
+              name="categoryId"
               onChange={handleDataCourses}
-              className="flex items-center text-center  py-[1.6rem] bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] mr-2">
-              <option className="items-center text-white" disabled>
-                Choose a Category
-              </option>
-              <option value="UX/UI">UX</option>
-              <option value="Bussines">Bussines</option>
-              <option value="Programing">Programming</option>
+              className="flex items-center text-center h-[65px]  bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] ml-[1rem] w-[200px]">
+              <option className="items-center text-white"  value='cat'  disabled>Category</option>
+              {
+              category?.map(cat =>{
+                return (
+                  <option key={cat?.id} value={cat?.id}>{cat?.title}</option>
+                )
+              })
+              }
             </select>
-          </div> */}
+          </div>
         </div>
 
 
