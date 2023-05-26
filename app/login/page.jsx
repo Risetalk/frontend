@@ -9,14 +9,14 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import validation from "./validation";
-import { GoogleLogin } from "react-google-login";
-import { gapi } from "gapi-script";
+// import { GoogleLogin } from "react-google-login";
+// import { gapi } from "gapi-script";
 import { loginAccess } from "@/store/slice";
 
 const Login = () => {
-  const [gapiLoaded, setGapiLoaded] = useState(false);
-  const clientId =
-    "234473629746-soigamg3hnt1n0gd6v192baikfqmgi2m.apps.googleusercontent.com";
+  // const [gapiLoaded, setGapiLoaded] = useState(false);
+  // const clientId =
+  //   "234473629746-soigamg3hnt1n0gd6v192baikfqmgi2m.apps.googleusercontent.com";
 
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
@@ -77,34 +77,34 @@ const Login = () => {
     // }
   }, [courses.access]);
 
-  useEffect(() => {
-    const start = () => {
-      gapi.load("client:auth2", () => {
-        gapi.auth2
-          .init({
-            clientId,
-          })
-          .then(() => {
-            setGapiLoaded(true);
-          });
-      });
-    };
-    if (typeof window !== "undefined") {
-      start();
-    }
-  }, []);
+  // useEffect(() => {
+  //   const start = () => {
+  //     gapi.load("client:auth2", () => {
+  //       gapi.auth2
+  //         .init({
+  //           clientId,
+  //         })
+  //         .then(() => {
+  //           setGapiLoaded(true);
+  //         });
+  //     });
+  //   };
+  //   if (typeof window !== "undefined") {
+  //     start();
+  //   }
+  // }, []);
 
-  const responseSuccessGoogle = async (response) => {
-    // console.log(response)
-    await axios
-      .post("http://localhost:3001/user/googlelogin", {
-        tokenId: response.tokenObj.id_token,
-      })
-      .then((res) => {
-        console.log(res.data);
-      });
-  };
-  const responseErrorGoogle = (response) => {};
+  // const responseSuccessGoogle = async (response) => {
+  //   // console.log(response)
+  //   await axios
+  //     .post("http://localhost:3001/user/googlelogin", {
+  //       tokenId: response.tokenObj.id_token,
+  //     })
+  //     .then((res) => {
+  //       console.log(res.data);
+  //     });
+  // };
+  // const responseErrorGoogle = (response) => {};
 
   return (
     <div>
@@ -218,13 +218,13 @@ const Login = () => {
 
             <div className=" leading-[2rem] px-[3rem] rounded-[4rem] bg-[#222129A6] m-[1rem] ">
               <div className=" py-[1rem]">
-                <GoogleLogin
+                {/* <GoogleLogin
                   clientId={clientId}
                   buttonText="Login with Google"
                   onSuccess={responseSuccessGoogle}
                   onFailure={responseErrorGoogle}
                   cookiePolicy={"single_host_origin"}
-                />
+                /> */}
               </div>
             </div>
           </div>
