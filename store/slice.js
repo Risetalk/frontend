@@ -17,13 +17,7 @@ const initialState = {
   reset: false,
   id: "",
   course: {},
-  my_cart: [{
-    id: 1,
-    title: 'Dart for beginners',
-    price: 150,
-    background_image: 'https://th.bing.com/th/id/OIP._h8M3yKatoZqqd37GH3wNgHaEK?pid=ImgDet&rs=1',
-    description: 'This is a beginner guide to be a dart developer'
-  }],
+  my_cart: [],
   loggedIn: false,
   user: null,
 };
@@ -178,36 +172,15 @@ export const Slice = createSlice({
       //     ]
       // }
     },
-    // createVideo:(state,action) =>{
-    //   state.createCourse.lessons.videos = (state.createCourse.lessons.videos) ?
-    //   [...state.createCourse.lessons.videos, action.payload]
-    //   : [action.payload]
-    // }
-
 
     createVideo: (state, action) => {
-      console.log(action.payload);
       const {titleLesson, videoData} = action.payload
-
-      console.log(titleLesson,videoData);
-
+;
       state.course.lessons.forEach(lesson => {
           if(lesson.title === titleLesson){
             lesson.videos.push(videoData)
           }
       });
-      // const { title, videoData } = action.payload;
-      // console.log(`esto es el titulo de la lesson${title}`);
-      // console.log(`esto es la data del video ${videoData}`);
-
-
-      // Encuentra la lección en el array de lecciones
-    //   const lessonIndex = state.createCourse.lessons.findIndex((l) => l.title === titleLesson);
-    
-    //   if (lessonIndex !== -1) {
-    //     // Crea una copia del estado mutable
-    //     console.log(lessonIndex);
-    // }
   },
 
   loginSuccess: (state, action) => {
@@ -219,6 +192,10 @@ export const Slice = createSlice({
     state.user = null;
   },
 
+  addMyCart: (state,action) =>{
+    state.my_cart = action.payload;
+  }
+
 }
 
 
@@ -226,6 +203,7 @@ export const Slice = createSlice({
 
 export const {
   addUser,
+  addMyCart,
   allCourses,
   getCoursesCard,
   allMyCourses,
