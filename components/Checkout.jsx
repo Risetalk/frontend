@@ -1,8 +1,49 @@
+'use client';
+
 import Image from "next/image"
+import { CardElement, CardCvcElement, useStripe, useElements, CardNumberElement, CardExpiryElement } from '@stripe/react-stripe-js';
+
 
 export default function Checkout() {
+
+    const handleSubmit = async (event) => {
+		event.preventDefault();
+
+		try {
+			const { error, paymentMethod } = await stripe.createPaymentMethod({
+				type: 'card',
+				card: elements.getElement(CardElement),
+			});
+            
+
+			if (!paymentMethod) return alert(error.message);
+
+			console.log(paymentMethod);
+
+			const { id } = paymentMethod;
+			const { data } = await axios.post('http://localhost:3001/payment', {
+				id,
+				//Los pagos en dolares es en centavos
+				//Por lo que al precio hay que multiplicar por 100
+				//en mi caso cobrare 100 dolares por lo que seria;
+				//AQUI VA CURSO.PRICE * 100
+				amount: curso.price * 100,
+				//AQUI VA EL CURSO.TITLE
+				description: curso.title,
+			});
+
+			alert(data.message);
+			//Esto es para limpiar el campo de las tarjetas
+			elements.getElement(CardElement).clear();
+			
+		} catch (error) {
+			
+			alert('No se completo la compra: ', error.message);
+		}
+	};
     return (
-        <article className="flex flex-col p-[3.125rem] shadow-2xl w-[60%] rounded-[1.25rem]">
+        <form onSubmit={handleSubmit} className=" w-[60%]">
+        <article className="flex flex-col p-[3.125rem] shadow-2xl  rounded-[1.25rem]">
             <h2 className="font-semibold text-[2rem] leading-[3.375rem] text-[#252641]">Checkout</h2>
             <span className="font-semibold text-[1rem] leading-[1.688rem] text-[#5B5B5B] mt-[0.75rem]">Cart Type</span>
             <div className="flex gap-x-[1.6rem] mt-[2.2rem] mb-[5rem]">
@@ -25,7 +66,7 @@ export default function Checkout() {
                 </label>
                 <label htmlFor="">
                     <span className="block font-bold text-[1rem] leading-[1.688rem] text-[#5B5B5B] mb-[0.625rem]">Card Number</span>
-                    <input type="text" placeholder="Enter Card Number"
+                    <CardNumberElement type="text" placeholder="Enter Card Number"
                         className="font-normal text-[1rem] leading-[1.688rem] py-[1.063rem] px-[1.25rem] border-[1px] border-[#D9D9D9] rounded-[0.625rem]  w-[100%]"
                     />
                 </label>
@@ -33,13 +74,13 @@ export default function Checkout() {
                 <div className="flex justify-between gap-x-[2.25rem]">
                     <label className="inline-block w-[50%]" htmlFor="">
                         <span className="block font-bold text-[1rem] leading-[1.688rem] text-[#5B5B5B] mb-[0.625rem]">Expiration Date ( MM/YY )</span>
-                        <input type="text" placeholder="Enter Expiration Date"
+                        <CardExpiryElement type="text" placeholder="Enter Expiration Date"
                             className="font-normal text-[1rem] leading-[1.688rem] py-[1.063rem] px-[1.25rem] border-[1px] border-[#D9D9D9] rounded-[0.625rem] w-[100%]"
                         />
                     </label>
                     <label className="inline-block w-[50%]" htmlFor="">
                         <span className="block font-bold text-[1rem] leading-[1.688rem] text-[#5B5B5B] mb-[0.625rem]">CVC</span>
-                        <input type="text" placeholder="Enter CVC"
+                        <CardCvcElement type="text" placeholder="Enter CVC"
                             className="font-normal text-[1rem] leading-[1.688rem] py-[1.063rem] px-[1.25rem] border-[1px] border-[#D9D9D9] rounded-[0.625rem] w-[100%]"
                         />
                     </label>
@@ -53,5 +94,7 @@ export default function Checkout() {
 
             <button className="font-normal text-[1.625rem] leading-[2.438rem]  text-[#FFFFFF] text-center bg-[#222129] w-[100&] rounded-[0.75rem] py-[1.125rem]">Confirm Payment</button>
         </article>
+        </form>
+    
     )
 }

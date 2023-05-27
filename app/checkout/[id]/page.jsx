@@ -1,10 +1,15 @@
-import Summary from '@/components/Summary'
-import React from 'react'
+import GlobalStripe from "@/components/GlobalStripe";
+import Payment from "@/components/Stripe components/Payment";
+import Summary from "@/components/Summary";
+
 
 export default function page() {
+	
+
   return (
-	<div className=' m-auto'>
-	  <Summary/>
+	<div className='flex flex-row'>
+	
+		<Payment />
 	</div>
   )
 }

@@ -1,7 +1,7 @@
 'use client'
 
 import { useSelector } from "react-redux"
-import CheckoutPage from "./Stripe components/CheckoutPage"
+import CheckoutPage from "./Stripe components/Payment"
 import Image from "next/image"
 
 export default function Summary() {

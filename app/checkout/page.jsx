@@ -1,7 +1,7 @@
 'use client';
 import Checkout from '@/components/Checkout';
 import Summary from '@/components/Summary';
-import CheckoutForm from '@/components/CheckoutForm';
+import CheckoutForm from '@/components/Stripe components/CheckoutForm';
 
 //Esto es de Jesse
 
@@ -21,9 +21,9 @@ export default function CheckOutPage() {
 	return (
 		<main>
 			<section className="flex justify-around items-start px-[6.25rem] py-[2rem]">
-				{/* <Elements stripe={stripePromise}>
+			 
 					<CheckoutForm curso={id} />
-				</Elements> */}
+				
 			</section>
 		</main>
 	);

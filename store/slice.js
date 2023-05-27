@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
   user: [],
@@ -23,7 +23,7 @@ const initialState = {
     price: 150,
     background_image: 'https://th.bing.com/th/id/OIP._h8M3yKatoZqqd37GH3wNgHaEK?pid=ImgDet&rs=1',
     description: 'This is a beginner guide to be a dart developer'
-  }]
+  }],
 
   loggedIn: false,
   user: null,
