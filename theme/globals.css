@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+  /* Custom Fonts */
+
+  /* Poppins 400 Regular */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  }
+
+  /* Poppins 700 Bold */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  }
+
+  /* Quicksand 400 Regular */
+  @font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/Quicksand/Quicksand-Regular.ttf') format('truetype');
+  }
+
+  /* Quicksand 700 Bold */
+  @font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/Quicksand/Quicksand-Bold.ttf') format('truetype');
+  }
+
+}
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -20,4 +60,11 @@
 body {
   color: rgb(var(--foreground-rgb));
   color: black;
+}
+
+.colored-top-bar {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 0%, rgba(255, 104, 0, 1) 21%, rgba(255, 121, 0, 1) 46%, rgba(255, 229, 0, 1) 68%, rgba(255, 254, 0, 1) 100%);
+  height: 1vh;
+  width: 100%;
 }

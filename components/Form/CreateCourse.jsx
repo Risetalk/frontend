@@ -163,7 +163,7 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
               defaultValue={'choose'}
               name="language"
               onChange={handleDataCourses}
-              className="flex items-center text-center h-[65px]  bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] ml-[1rem] w-[200px]">
+              className="flex items-center text-center h-[65px] justify-center  bg-[#687684] pl-[3.5rem]  text-white rounded-[2rem] ml-[1rem] w-[200px]">
               <option className="items-center text-white" value="choose" disabled>Language</option>
               <option value="spanish">Spanish</option>
               <option value="english">English</option>

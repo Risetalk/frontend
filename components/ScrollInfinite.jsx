@@ -97,14 +97,16 @@ export default function ScrollInfinite() {
                     <CourseCard
                         id={course.id}
                         key={index}
-                        background_image={course?.background_image}
                         title={course?.title}
-                        tema={course?.tema}
-                        duration={course?.duration}
+                        background_image={course?.background_image}
                         description={course?.description}
-                        author={course?.author}
+                        categoryId={course?.categoryId}
+                        language={course?.language}
+                        createdAt={course?.createdAt}
+                        updatedAt={course?.updatedAt}
                         price={course?.price}
-                        offer={course?.offer}
+                        like={course?.like}
+                        
                     />
                 ))}
             </div>

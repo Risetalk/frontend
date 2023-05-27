@@ -30,7 +30,6 @@ export default function BuyCourseDetail() {
     const [vector, setVector] = useState(0)
 
     const idPath = path.split("/").pop();
-    console.log(idPath);
 
     const reviews = [
         {
@@ -128,11 +127,9 @@ export default function BuyCourseDetail() {
     }
 
     const handleVector = (index) => {
-        console.log(index);
         setVector(index)
     }
     const handleOutVector = (index) => {
-        console.log(index);
         setVector(0)
     }
 
@@ -156,12 +153,10 @@ export default function BuyCourseDetail() {
 
         dispatch(addMyCart(myCart))
     }, [courseDetail])
-    console.log({ courseDetail });
-    console.log(`Esto va para my cart${myCart}`);
     return (
         <main className="bg-white">
             <div className="">
-                <section className="flex justify-between w-[90%] mx-[auto] py-[2rem] gap-x-[2rem] mt-[2rem]">
+                <section className="flex justify-between w-[90%] mx-[auto] py-[7rem] gap-x-[2rem] ">
                     <div className="w-[75%] ">
                         <div className="flex flex-col justify-around w-[100%] h-[100%]">
                             <div className="flex gap-x-[1rem]">

@@ -30,6 +30,7 @@ export default function SearchCourses() {
       dispatch(resetPage())
       setCurrentPage(1);
     }
+    
   },[courses.reset])
 
   return (
