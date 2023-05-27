@@ -2,14 +2,48 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-export default function CourseCard({id, title, background_image, tema, duration, description, author,price,offer}) {
-    
+import { useRef, useEffect } from "react";
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
+
+import { createPortal } from 'react-dom';
+
+
+
+export default function CourseCard({ id, title, background_image, tema, duration, description, author, price, offer }) {
+
+    const cardRef = useRef(null);
+    const tooltipContentRef = useRef(null);
+
+    useEffect(() => {
+        if (cardRef.current && tooltipContentRef.current) {
+            tippy(cardRef.current, {
+                placement: "left",
+                content: tooltipContentRef.current,
+                allowHTML: true,
+                arrow: true
+            });
+        }
+    }, []);
+
+    const tooltipContent = (
+        <div className="text-white" ref={tooltipContentRef}>
+            <h2 className="font-bold text-[1.6rem]">{title}</h2>
+            <h3 className="text-[#F9662A]">$ {price}</h3>
+            <p className="font-normal ">{description}</p>
+        </div>
+    );
+
+
     return (
-        <div className="">
+        <div className="card" >
+            {createPortal(tooltipContent, document.body)}
             <motion.article
-                initial={{opacity:0 , y:200}}
-                animate={{opacity:1, y:0}}
-                transition={{duration:1, delay:0.5}}
+                ref={cardRef}
+                initial={{ opacity: 0, y: 200 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
                 className="flex flex-col justify-between pt-4 px-6 bg-[white] pb-4  rounded-[1.25rem]  shadow-2xl h-[500px]"
                 key={id}>
                 <Image
