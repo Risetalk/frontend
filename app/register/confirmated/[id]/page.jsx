@@ -1,5 +1,5 @@
 "use client";
-import Register from "@/components/Register";
+import Register from "@/components/Registrer/Register";
 import check from "../../../../public/check.png";
 import Image from "next/image";
 import Link from "next/link";
