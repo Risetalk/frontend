@@ -2,9 +2,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginAccess } from "@/store/slice";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useSession, signOut } from "next-auth/react";
 
 const navLinks = [
@@ -18,19 +18,56 @@ const navLinks = [
 
 export default function NavBar() {
   const { data: session, status } = useSession();
+  console.log(session);
+
   const courses = useSelector((state) => state.courses);
   const dispatch = useDispatch();
+  const [access, setAccess] = useState("false");
 
   const [active, setActive] = useState(false);
 
   const handleActive = () => {
     setActive(!active);
+    if (active) {
+      document.body.classList.remove("overflow-hidden");
+    }
+    if (!active) {
+      document.body.classList.add("overflow-hidden");
+    }
   };
 
-  const handleLogout = () => {
-    signOut();
-    dispatch(loginAccess(false));
+  const handleLogout = (event) => {
+    event.preventDefault();
+    if (session) {
+      signOut();
+    }
+    localStorage.removeItem("user");
+    localStorage.removeItem("access");
+    setAccess("false");
+    // signOut();
+    // dispatch(loginAccess(false));
   };
+
+  useEffect(() => {
+    const storeUser = localStorage.getItem("user");
+
+    if (storeUser || session) {
+      localStorage.setItem("access", "true");
+      const userData = JSON.parse(storeUser);
+    } else {
+      localStorage.setItem("access", "false");
+    }
+
+    const storeAccess = localStorage.getItem("access");
+    console.log(storeAccess);
+    if (storeAccess === "true") {
+      setAccess("true");
+    }
+  }, [session]);
+
+  useEffect(() => {
+    console.log(session);
+  }, []);
 
   return (
     // Animation Container
@@ -38,20 +75,28 @@ export default function NavBar() {
       className="fixed shadow-lg w-full z-10"
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-    >
-      {active && courses.access && session ? (
-        <div className="absolute text-black bg-white dark:bg-midnight-blue top-[100%] right-0 opacity-[0.9]">
-          <ul className="flex flex-col items-end gap-4 w-[220px] p-4">
-            <Link href={"/mycourses"}>My courses</Link>
-            <Link href={"/create"}>Create course</Link>
-            <Link href={"#"}>Options</Link>
-            <Link onClick={handleLogout} href={"#"}>
+      transition={{ duration: 1 }}>
+      {(session || access == "true") && (
+        <div className="absolute text-black bg-white dark:text-[white] dark:bg-midnight-blue top-[100%] right-0 opacity-[0.9]">
+          <ul
+            className={`flex flex-col items-end gap-4 w-[220px] p-4 ${
+              active ? "" : "hidden"
+            }`}>
+            <Link href={"/mycourses"} onClick={handleActive}>
+              My courses
+            </Link>
+            <Link href={"/create"} onClick={handleActive}>
+              Create course
+            </Link>
+            <Link href={"#"} onClick={handleActive}>
+              Options
+            </Link>
+            <Link href={"/"} onClick={handleLogout}>
               Logout
             </Link>
           </ul>
         </div>
-      ) : null}
+      )}
       <div className="flex flex-col bg-white dark:bg-midnight-blue  min-h-[4rem] ">
         <div className="colored-top-bar"></div>
         <div className="flex justify-between items-center px-8 py-3 ">
@@ -85,34 +130,36 @@ export default function NavBar() {
           </ul>
 
           <div>
-            {!courses.access ? (
+            {access == "true" ? (
               <>
-                <button className="flex items-center">
-                  <div >
+                <button
+                  className="flex items-center space-x-4 "
+                  onClick={handleActive}>
+                  <div>
                     {session ? (
                       <Image
                         onClick={handleActive}
-                        className="rounded-full"
+                        className="rounded-full w-[40px] h-[40px]"
                         src={session.user.image}
                         alt="profile picture"
-                        width={30}
-                        height={30}
+                        width={40}
+                        height={40}
                       />
                     ) : (
                       <Image
                         onClick={handleActive}
-                        className="rounded-full"
+                        className="rounded-full w-[40px] h-[40px]"
                         src={"https://source.unsplash.com/64x64/?person"}
                         alt="default profile picture"
-                        width={30}
-                        height={30}
+                        width={40}
+                        height={40}
                       />
                     )}
                   </div>
                   <div>
                     <Image
                       onClick={handleActive}
-                      className=""
+                      className={`rounded-full ${active ? "hidden" : ""}`}
                       src="/Pestaña.png"
                       alt="logo"
                       width={12}
@@ -128,8 +175,7 @@ export default function NavBar() {
                 </Link>
                 <Link
                   className="bg-burnt-orange ml-4 px-4 py-2 rounded-md text-white "
-                  href={"/login"}
-                >
+                  href={"/login"}>
                   Sign Up
                 </Link>
               </div>
@@ -140,4 +186,3 @@ export default function NavBar() {
     </motion.nav>
   );
 }
-
