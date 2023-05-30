@@ -26,7 +26,7 @@ const LoginGoogle = () => {
   } else {
     return (
       <div>
-        <div className="leading-[2rem] px-[3rem] rounded-[4rem] bg-gray-100 m-[1rem] shadow-md border border-gray-100 hover:bg-black hover:text-white">
+        <div className="leading-[2rem] px-[3rem] rounded-[4rem] bg-gray-100 m-[1rem]  border  hover:bg-black hover:text-white shadow-black shadow-sm border-1 border-gray-400">
           <div className="flex items-center py-[1rem]">
             <Image
               src="/google.png"
