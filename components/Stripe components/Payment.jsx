@@ -10,7 +10,7 @@ function Payment(props) {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    axios.get('http://localhost:5252/config')
+    axios.get('http://localhost:3001/payment/config')
       .then(async (response) => {
         const { publishableKey } = await response.data;
         // console.log(publishableKey);
@@ -22,7 +22,7 @@ function Payment(props) {
   }, []);
   
   useEffect(() => {
-    axios.post('http://localhost:5252/create-payment-intent', {})
+    axios.post('http://localhost:3001/payment/create-payment', {})
       .then(async (response) => {
         const { clientSecret } = await response.data;
         console.log(clientSecret);
