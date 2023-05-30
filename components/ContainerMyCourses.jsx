@@ -24,7 +24,7 @@ export default function ContainerMyCourses() {
 
   return (
     <section>
-      <section className="bg-[#22212920]  pb-[5.625rem] pt-[3.125rem]">
+      <section className="bg-[#22212920]  pb-[5.625rem] pt-[6.125rem]">
         <header className="flex justify-between flex-wrap w-[87%] mx-[auto]">
           <motion.div
             className="flex justify-between w-[100%] items-center mb-[3.125rem]"
