@@ -2,6 +2,8 @@
 import { useEffect, useState, useRef } from "react"
 import axios from "axios"
 import CourseCard from "./CourseCard";
+import { useDispatch, useSelector } from "react-redux";
+import { allCoursesDB } from "@/store/slice";
 
 
 export default function ScrollInfinite() {
@@ -9,6 +11,9 @@ export default function ScrollInfinite() {
     const [page, setPage] = useState(1)
     const [limit] = useState(8)
     const containerRef = useRef(null)
+    const dispatch = useDispatch()
+
+    const coursesDB = useSelector(state=> state.courses)
 
     useEffect(()=>{
         cargarCourses();
@@ -42,58 +47,64 @@ export default function ScrollInfinite() {
         //     });
     };
 
-    const handleScroll = () => {
-        const container = containerRef.current;
-        const scrollHeight = container.scrollHeight;
-        const scrollTop = container.scrollTop;
-        const clientHeight = container.clientHeight;
-
-        // if (scrollHeight - scrollTop === clientHeight) {
-        //     cargarCourses();
-        // }
-        if (scrollTop + clientHeight >= scrollHeight) {
-                    cargarCourses();
-                }
-    };
-
-    useEffect(() => {
-        const container = containerRef.current;
-        container.addEventListener("scroll", handleScroll);
-        return () => {
-            container.removeEventListener("scroll", handleScroll);
-        };
-    }, [page]);
+    useEffect(()=>{
+        dispatch(allCoursesDB(courses))
+    },[courses])
 
     // const handleScroll = () => {
+    //     const container = containerRef.current;
+    //     const scrollHeight = container.scrollHeight;
+    //     const scrollTop = container.scrollTop;
+    //     const clientHeight = container.clientHeight;
 
-    //     const scrollHeight = document.documentElement.scrollHeight;
-    //     const scrollTop = document.documentElement.scrollTop;
-    //     const clientHeight = document.documentElement.clientHeight;
-
-    //     console.log(`Este es el scroll Height ${scrollHeight}`);
-    //     console.log(`Este es el scroll scrollTop ${scrollTop}`);
-    //     console.log(`Este es el scroll clientHeight ${clientHeight}`);
-
+    //     // if (scrollHeight - scrollTop === clientHeight) {
+    //     //     cargarCourses();
+    //     // }
     //     if (scrollTop + clientHeight >= scrollHeight) {
-    //         cargarCourses();
-    //     }
+    //                 cargarCourses();
+    //             }
     // };
 
     // useEffect(() => {
-    //     window.addEventListener('scroll', handleScroll);
+    //     const container = containerRef.current;
+    //     container.addEventListener("scroll", handleScroll);
     //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     }
-    // }, [])
+    //         container.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, [page]);
+
+    const handleScroll = () => {
+
+        const scrollHeight = document.documentElement.scrollHeight;
+        const scrollTop = document.documentElement.scrollTop;
+        const clientHeight = document.documentElement.clientHeight;
+
+        console.log(`Este es el scroll Height ${scrollHeight}`);
+        console.log(`Este es el scroll scrollTop ${scrollTop}`);
+        console.log(`Este es el scroll clientHeight ${clientHeight}`);
+
+        if (scrollTop + clientHeight >= scrollHeight) {
+            cargarCourses();
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, [page])
 
 
 
     return (
         <div >
             <div 
-            ref={containerRef} style={{ overflowY: "scroll", height: "800px" }}
-            className="justify-between my-[2rem] w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-4 mx-[auto]">
-                {courses.map((course, index) => (
+            ref={containerRef}
+            //  style={{ overflowY: "scroll", height: "600px" }}
+            className="justify-between my-[2rem] w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[3rem] p-4 mx-[auto] pb-[2rem]">
+                {
+                coursesDB.filterCoursesDB?.map((course, index) => (
                     <CourseCard
                         id={course.id}
                         key={index}
@@ -108,7 +119,8 @@ export default function ScrollInfinite() {
                         like={course?.like}
                         
                     />
-                ))}
+                ))
+                }
             </div>
         </div>
     )

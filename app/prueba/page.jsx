@@ -2,11 +2,12 @@
 import TeacherDetail from "@/components/TeacherDetail"
 import ContainerOffers from "@/components/ContainerOffers"
 import ContainerCreators from "@/components/ContainerCreators-"
-import Register from "@/components/Register"
 import ScrollInfinite from "@/components/ScrollInfinite"
 import CargaDatos from "@/components/CargaDatos"
 import tippy from "tippy.js"
 import 'tippy.js/dist/tippy.css'; // optional for styling
+import Skeleton from "react-loading-skeleton"
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 
@@ -69,7 +70,7 @@ export default function Prueba() {
         <div className="pt-[100px] text-black bg-white">
             <div id="prueba" className="bg-red-400 cursor-pointer p-[1rem]"><h1>Hello</h1></div>
             <ScrollInfinite />
-
+            <h1><Skeleton enableAnimation/></h1>
         </div>
     )
 }
