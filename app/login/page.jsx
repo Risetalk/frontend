@@ -38,12 +38,13 @@ const Login = () => {
               className="h-[100%] w-[80%] object-cover object-right rounded-r-3xl"
             />
           </motion.div>
+
+          <div className="flex flex-col gap-y-[1rem]  justify-start w-[50%] ">
+
+         
           <Formik
-            initialValues={{
-              email: "",
-              password: "",
-            }}
-            validate={(values) => {
+          className="mb-4"
+            initialValues={{ email: "",password: "",}} validate={(values) => {
               const errors = {};
 
               if (!values.email) {
@@ -82,7 +83,7 @@ const Login = () => {
               }
             }}>
             {({ errors }) => (
-              <div className=" w-[50%] h-[100%]">
+              <div className=" w-[100%] h-[80%]">
                 <Form action="">
                   <div className="flex flex-col items-center justify-between w-[50%] mx-[auto]">
                     <Image
@@ -178,17 +179,20 @@ const Login = () => {
                       </div>
                     </div>
 
-                    <hr className=" w-[30rem] bg-gray-200" />
+                    <hr className=" w-full bg-gray-200" />
                   </div>
                 </Form>
-                <div className="fixed">
-                  <div className=" w-[58%] mt-[1.75rem] ml-[16rem] justify-end mb-[4rem]">
-                    <LoginGoogle />
-                  </div>
-                </div>
+              
               </div>
             )}
           </Formik>
+          
+          <div className="w-[fit-content] mx-[auto] mt-[2.75rem] ">
+          
+          <LoginGoogle />
+
+          </div>
+          </div>
         </div>
       </div>
 
