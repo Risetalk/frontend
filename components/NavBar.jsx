@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import { loginAccess } from "@/store/slice";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession, signOut } from "next-auth/react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 
 const navLinks = [
   { title: "Home", path: "/" },
@@ -16,17 +19,23 @@ const navLinks = [
   // { title: "Login", path: "/login" },
 ];
 
+
+
+
 export default function NavBar() {
   const { data: session, status } = useSession();
-  console.log(session);
 
   const courses = useSelector((state) => state.courses);
   const dispatch = useDispatch();
   const [access, setAccess] = useState("false");
 
   const [active, setActive] = useState(false);
+  const router = useRouter();
 
-  const handleActive = () => {
+
+
+  
+   const handleActive = () => {
     setActive(!active);
     if (active) {
       document.body.classList.remove("overflow-hidden");
@@ -36,16 +45,24 @@ export default function NavBar() {
     }
   };
 
-  const handleLogout = (event) => {
-    event.preventDefault();
-    if (session) {
-      signOut();
+  const handleLogout = async() => {
+
+    try {
+      await axios.post("/api/auth/logout");
+      router.push("/login");
+      // if (session) {
+      //   signOut();
+      // }
+      // localStorage.removeItem("user");
+      // localStorage.removeItem("access");
+      // setAccess("false");
+      // signOut();
+      // dispatch(loginAccess(false));
+      localStorage.clear("user")
+      session && signOut();
+    } catch (error) {
+      console.log(error.response.data);
     }
-    localStorage.removeItem("user");
-    localStorage.removeItem("access");
-    setAccess("false");
-    // signOut();
-    // dispatch(loginAccess(false));
   };
 
   useEffect(() => {
@@ -66,8 +83,18 @@ export default function NavBar() {
   }, [session]);
 
   useEffect(() => {
-    console.log(session);
-  }, []);
+    const google = async() => {
+      try {
+        await axios.post("/api/auth/loginGoogle", session);
+        const response = await axios.post("http://localhost:3001/user/googlelogin", session);
+        console.log(response.data);
+        localStorage.setItem("userGoogle", JSON.stringify(response.data));
+      } catch (error) {
+        console.log(error.response.data);
+      }
+    }
+    google()
+  }, [session]);
 
   return (
     // Animation Container
@@ -91,7 +118,7 @@ export default function NavBar() {
             <Link href={"#"} onClick={handleActive}>
               Options
             </Link>
-            <Link href={"/"} onClick={handleLogout}>
+            <Link href={"/login"} onClick={handleLogout}>
               Logout
             </Link>
           </ul>
