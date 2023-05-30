@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import Welcome from "@/components/GoogleAuth/Welcome";
 import { motion } from "framer-motion";
 
 export default function ContainerMyCourses() {
@@ -34,7 +33,7 @@ export default function ContainerMyCourses() {
             transition={{ duration: 1 }}>
             <h2 className="inline font-bold text-[1.85rem] leading-[3.375rem] text-[#252641]">
               {" "}
-              <Welcome />
+      Welcome back, ready for your next lesson? 
             </h2>
             <Link
               href={`#`}

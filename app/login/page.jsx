@@ -182,18 +182,13 @@ const Login = () => {
                     <hr className=" w-full bg-gray-200" />
                   </div>
                 </Form>
-                {/* <div className="fixed">
-                  <div className=" w-[58%] mt-[1.75rem] ml-[16rem] justify-end mb-[4rem]">
-                  <span className="font-normal text-[1rem] leading-[1.5rem]">
-                  Or Login with
-                </span>
-             
-                  </div>
-                </div> */}
+              
               </div>
             )}
           </Formik>
-          <div className="w-[fit-content] mx-[auto] ">
+          
+          <div className="w-[fit-content] mx-[auto] mt-[2.75rem] ">
+          
           <LoginGoogle />
 
           </div>
