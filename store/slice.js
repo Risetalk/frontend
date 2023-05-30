@@ -2,7 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: [],
+  coursesDB:[],
+  filterCoursesDB:[],
   courses: [],
+  categories:[],
   coursesCard: [],
   coursesCardRecommend: [],
   coursesCardChoice: [],
@@ -39,6 +42,10 @@ export const Slice = createSlice({
     allCourses: (state, action) => {
       state.courses = action.payload;
     },
+    allCoursesDB: (state,action)=>{
+      state.coursesDB = action.payload;
+      state.filterCoursesDB = action.payload;
+    },
 
     allMyCourses: (state, action) => {
       state.myCourses = state.courses.filter((course) => {
@@ -53,18 +60,18 @@ export const Slice = createSlice({
     },
     filterCoursesCategory: (state, action) => {
       if (action.payload === "all") {
-        state.filterCourses = state.courses;
+        state.filterCoursesDB = state.coursesDB;
       } else {
-        state.filterCourses = [
-          ...state.courses.filter((course) => {
-            return course.category === action.payload;
+        state.filterCoursesDB = [
+          ...state.coursesDB.filter((course) => {
+            return course.categoryId === action.payload;
           }),
         ];
       }
     },
     filterCoursesRaiting: (state, action) => {
-      state.filterCourses = [
-        ...state.filterCourses.sort((a, b) => {
+      state.filterCoursesDB = [
+        ...state.filterCoursesDB.sort((a, b) => {
           if (action.payload === "min") {
             return a.raiting > b.raiting;
           } else if (action.payload === "max") {
@@ -75,8 +82,8 @@ export const Slice = createSlice({
     },
 
     filterCoursesOrder: (state, action) => {
-      state.filterCourses = [
-        ...state.filterCourses.sort((a, b) => {
+      state.filterCoursesDB = [
+        ...state.coursesDB.sort((a, b) => {
           if (action.payload === "a-z") {
             return a.title > b.title;
           } else if (action.payload === "z-a") {
@@ -88,18 +95,18 @@ export const Slice = createSlice({
 
     filterCoursesLanguaje: (state, action) => {
       if (action.payload === "all") {
-        state.filterCourses = state.courses;
+        state.filterCoursesDB = state.coursesDB;
       } else {
-        state.filterCourses = [
-          ...state.courses.filter((course) => {
-            return course.languaje === action.payload;
+        state.filterCoursesDB = [
+          ...state.coursesDB.filter((course) => {
+            return course.language === action.payload;
           }),
         ];
       }
     },
 
     searchCourses: (state, action) => {
-      state.filterCourses = state.courses.filter((course) => {
+      state.filterCoursesDB = state.coursesDB.filter((course) => {
         return course.title.toLowerCase().includes(action.payload);
       });
     },
@@ -110,6 +117,9 @@ export const Slice = createSlice({
       } else {
         state.reset = true;
       }
+    },
+    getCategories: (state,action) =>{
+      state.categories = action.payload
     },
     getMyCategories: (state, action) => {
       let categoriesSet = new Set();
@@ -193,8 +203,9 @@ export const Slice = createSlice({
   },
 
   addMyCart: (state,action) =>{
-    state.my_cart = action.payload;
+    state.my_cart = [...state.my_cart,action.payload];
   }
+
 
 }
 
@@ -205,6 +216,7 @@ export const {
   addUser,
   addMyCart,
   allCourses,
+  allCoursesDB,
   getCoursesCard,
   allMyCourses,
   allBuyCourses,
@@ -215,6 +227,7 @@ export const {
   loginAccess,
   searchCourses,
   resetPage,
+  getCategories,
   getMyCategories,
   getCoursesRecommended,
   addId,

@@ -1,9 +1,7 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import ContainerCreators from '@/components/ContainerCreators-'
 import ContainerOffers from '@/components/ContainerOffers'
-import TeacherDetail from '@/components/TeacherDetail'
 import ContainerCards from '@/components/ContainerCards'
 import SearchCourses from '../../components/SearchCourses'
 
@@ -11,9 +9,17 @@ import Selectors from '@/components/Selectors'
 import { resetPage, searchCourses } from '@/store/slice'
 import { useDispatch } from 'react-redux'
 import ScrollInfinite from '@/components/ScrollInfinite'
+import { getCategories } from '@/store/slice'
+import axios from 'axios'
+
 export default function SearchPage() {
 
   const dispatch = useDispatch();
+
+  const addCategories = async() =>{
+    const {data} = await axios.get("http://localhost:3001/category")
+    dispatch(getCategories(data.result))
+}
 
   const handleChange = (event) => {
     const value = event.target.value
@@ -26,6 +32,10 @@ export default function SearchPage() {
   const handleSubmit = e => {
     console.log(e.target.value);
   }
+
+  useEffect(()=>{
+    addCategories()
+  },[])
 
   return (
     <div>
@@ -61,7 +71,7 @@ export default function SearchPage() {
         <Selectors />
 
       </div>
-      <SearchCourses />
+      
       <ScrollInfinite/>
 
       {/* <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>
@@ -71,8 +81,7 @@ export default function SearchPage() {
           link={'See all'}
         />
       </div> */}
-      <ContainerCreators />
-      <TeacherDetail />
+
     </div>
   )
 }

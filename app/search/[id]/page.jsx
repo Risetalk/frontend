@@ -133,6 +133,10 @@ export default function BuyCourseDetail() {
         setVector(0)
     }
 
+    const addToCart = () =>{
+        dispatch(addMyCart(myCart))
+    }
+
     useEffect(() => {
         const getDataCourseID = async () => {
             const response = await axios(`http://localhost:3001/courses/${idPath}`)
@@ -150,17 +154,18 @@ export default function BuyCourseDetail() {
             background_image: courseDetail?.course?.background_image,
             description: courseDetail?.course?.description
         })
+        console.log(courseDetail);
 
-        dispatch(addMyCart(myCart))
+        
     }, [courseDetail])
     return (
         <main className="bg-white">
             <div className="">
-                <section className="flex justify-between w-[90%] mx-[auto] py-[7rem] gap-x-[2rem] ">
-                    <div className="w-[75%] ">
+                <section className="flex justify-center w-[90%] mx-[auto] py-[7rem] gap-x-[2rem] ">
+                    <div className="w-[60%] ">
                         <div className="flex flex-col justify-around w-[100%] h-[100%]">
                             <div className="flex gap-x-[1rem]">
-                                <div className="flex items-center bg-[#F9662A] py-[0.5rem] px-[0.6rem] text-[white] w-[fit-content] rounded-[0.3rem]">
+                                <div className="flex items-center bg-[#F9662A] py-[0.5rem] px-[0.6rem] text-[white] w-[fit-content] rounded-[0.3rem] gap-x-[0.4rem]">
                                     <Image
                                         src={courseDetail.course?.category.background_image} alt="category-ico" width={200} height={200}
                                         className="w-[20px] h-[20px]"
@@ -169,16 +174,16 @@ export default function BuyCourseDetail() {
                                 </div>
                                 <div className="flex gap-x-[1rem]">
                                     <div className="flex items-center gap-x-[0.4rem]">
-                                        <Image className="w-[34px] h-[34px]" src={like} alt="like" width={50} height={50} />
-                                        <span className="font-bold text-[1.2rem] text-[#909090]">{courseDetail.course?.like}</span>
+                                        <Image className="w-[25px] h-[25px] cursor-pointer" src={like} alt="like" width={40} height={40} />
+                                        <span className="font-bold text-[1.2rem] text-[#909090] cursor-default">{courseDetail.course?.like}</span>
                                     </div>
                                     <div className="flex items-center gap-x-[0.4rem]">
-                                        <Image className="w-[34px] h-[34px]" src={dislike} alt="dislike" width={50} height={50} />
-                                        <span className="font-bold text-[1.2rem] text-[#909090]">{courseDetail.course?.dislike}</span>
+                                        <Image className="w-[25px] h-[25px] cursor-pointer" src={dislike} alt="dislike" width={40} height={40} />
+                                        <span className="font-bold text-[1.2rem] text-[#909090] cursor-default">{courseDetail.course?.dislike}</span>
                                     </div>
                                 </div>
                             </div>
-                            <h1 className="font-black text-[4rem] text-[#000000] mt-[1.4rem]">{courseDetail.course?.title}</h1>
+                            <h1 className="font-black text-[3rem] text-[#000000] mt-[1.4rem]">{courseDetail.course?.title}</h1>
                             <div className="flex items-center justify-between gap-x-[1rem]  mt-[2.8rem] w-[85%] ">
                                 <div className="flex items-center  gap-x-[1rem] ">
                                     <Image
@@ -225,7 +230,7 @@ export default function BuyCourseDetail() {
 
                             </div>
 
-                            <div className="flex flex-col gap-y-[0.6rem] mb-[5rem]">
+                            <div className="flex flex-col gap-y-[0.6rem] mb-[3rem]">
                                 <h2 className="font-medium text-[1.6rem] text-[#F9662A]">Description</h2>
                                 <p className="font-normal text-[1.25rem] leading-[1.8rem] text-[#00000080]">
                                     {courseDetail.course?.description}
@@ -234,7 +239,7 @@ export default function BuyCourseDetail() {
 
                             <div>
                                 <h2 className=" font-medium text-[1.6rem] text-[#F9662A] mb-[1rem]">Lessons</h2>
-                                <div className="flex gap-x-[3rem]  gap-y-[2rem]  px-[2rem] ">
+                                <div className="flex gap-x-[3rem]  gap-y-[2rem]   ">
                                     {
                                         courseDetail.course?.lessons?.map((lesson, index) => {
                                             return (
@@ -246,7 +251,7 @@ export default function BuyCourseDetail() {
                                                 <div className="absolute w-full top-[100%] bg-white opacity-0 transition-all duration-500 ease-in-out transform scale-y-0 origin-top group-hover:opacity-100 group-hover:scale-y-100">
                                                     <div className="flex flex-col justify-around p-[1rem] gap-y-[0.6rem] shadow-lg">
                                                         {
-                                                            lesson.videos.map((video, index) => {
+                                                            lesson.videos?.map((video, index) => {
                                                                 return (
 
                                                                     <div key={index + 1} className="border-[2px] border-[#F9662A] p-[0.6rem]">
@@ -315,7 +320,7 @@ export default function BuyCourseDetail() {
                                 </div>
                                 <div className="flex justify-between mt-[1.2rem]">
 
-                                    <Link href={'#'} className="w-[45%] text-center text-[1rem] text-[#F9662A] hover:bg-[#F9662A] hover:text-[white] font-semibold bg-[white] py-[0.6rem] rounded-[0.3rem] border-[2px] border-[#F9662A] shadow-md">Add to cart</Link>
+                                    <span onClick={addToCart} className="w-[45%] text-center text-[1rem] text-[#F9662A] hover:bg-[#F9662A] hover:text-[white] font-semibold bg-[white] py-[0.6rem] rounded-[0.3rem] border-[2px] border-[#F9662A] shadow-md">Add to cart</span>
 
                                     <Link
                                         onClick={getCheckout}
