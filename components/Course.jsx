@@ -18,7 +18,7 @@ export default function Course({img,title,tema,duration,description,imgAuthor,au
                                         <span className="font-medium text-[1rem] leading-[1.688rem] ml-[0.938rem]">{author}</span>
                                     </div>
                                     <div>
-                                        <span className="font-light italic line-through text-[1rem] leading-[1.688rem] mr-4 text-[#00000080]">${price}</span>
+                                        <span className="font-light italic line-through text-[1rem] leading-[1.688rem] mr-4 text-[#00000080]">{price}</span>
                                         <span className="font-bold text-[1.3rem] leading-[2.25rem] text-[#222129] ">${offer}</span>
                                     </div>
                                 </div>

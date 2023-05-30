@@ -1,60 +1,188 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { loginAccess } from "@/store/slice";
+import { motion, AnimatePresence } from "framer-motion";
+import { useSession, signOut } from "next-auth/react";
+
 const navLinks = [
   { title: "Home", path: "/" },
-  { title: "Courses", path: "/courses" },
-  { title: "Careers", path: "/careers" },
+  { title: "Courses", path: "/search" },
+  { title: "Careers", path: "/search" },
   { title: "Blog", path: "/blog" },
   { title: "About Us", path: "/about" },
+  // { title: "Login", path: "/login" },
 ];
 
 export default function NavBar() {
+  const { data: session, status } = useSession();
+  console.log(session);
+
+  const courses = useSelector((state) => state.courses);
+  const dispatch = useDispatch();
+  const [access, setAccess] = useState("false");
+
+  const [active, setActive] = useState(false);
+
+  const handleActive = () => {
+    setActive(!active);
+    if (active) {
+      document.body.classList.remove("overflow-hidden");
+    }
+    if (!active) {
+      document.body.classList.add("overflow-hidden");
+    }
+  };
+
+  const handleLogout = (event) => {
+    event.preventDefault();
+    if (session) {
+      signOut();
+    }
+    localStorage.removeItem("user");
+    localStorage.removeItem("access");
+    setAccess("false");
+    // signOut();
+    // dispatch(loginAccess(false));
+  };
+
+  useEffect(() => {
+    const storeUser = localStorage.getItem("user");
+
+    if (storeUser || session) {
+      localStorage.setItem("access", "true");
+      const userData = JSON.parse(storeUser);
+    } else {
+      localStorage.setItem("access", "false");
+    }
+
+    const storeAccess = localStorage.getItem("access");
+    console.log(storeAccess);
+    if (storeAccess === "true") {
+      setAccess("true");
+    }
+  }, [session]);
+
+  useEffect(() => {
+    console.log(session);
+  }, []);
+
   return (
-    <nav className="bg-white shadow-lg  w-full z-10">
-      <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-9 ">
-        <div className="flex justify-between items-center py-3">
+    // Animation Container
+    <motion.nav
+      className="fixed shadow-lg w-full z-10"
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}>
+      {(session || access == "true") && (
+        <div className="absolute text-black bg-white dark:text-[white] dark:bg-midnight-blue top-[100%] right-0 opacity-[0.9]">
+          <ul
+            className={`flex flex-col items-end gap-4 w-[220px] p-4 ${
+              active ? "" : "hidden"
+            }`}>
+            <Link href={"/mycourses"} onClick={handleActive}>
+              My courses
+            </Link>
+            <Link href={"/create"} onClick={handleActive}>
+              Create course
+            </Link>
+            <Link href={"#"} onClick={handleActive}>
+              Options
+            </Link>
+            <Link href={"/"} onClick={handleLogout}>
+              Logout
+            </Link>
+          </ul>
+        </div>
+      )}
+      <div className="flex flex-col bg-white dark:bg-midnight-blue  min-h-[4rem] ">
+        <div className="colored-top-bar"></div>
+        <div className="flex justify-between items-center px-8 py-3 ">
           <div>
-            <ul>
-              <li className="text-[#5B5B5B] hover:text-gray-400 font-family:Poppins; font-size:22px;  font-weight:400; m-5;  text-align:left; px-6">
-                <Link href="/">
-                  <Image
-                    className=" relative-block  top-2 left-24"
-                    src="/risetalkLogo.png"
-                    alt="Example Image"
-                    width={219}
-                    height={140}
-                  />
-                </Link>
-              </li>
-            </ul>
+            {/* Logo */}
+            <Link href="/">
+              <picture>
+                <source
+                  srcset="/images/principalLogoDark.png"
+                  media="(prefers-color-scheme: dark)"
+                />
+                <Image
+                  src="/images/principalLogo.png"
+                  alt="Example Image"
+                  width={180}
+                  height={120}
+                />
+              </picture>
+            </Link>
           </div>
-          <div
-            className="flex items-center py-1 w-[39rem] h-33px"
-            style={{ left: "1016px", top: "55px", borderRadius: "0px" }}>
-            <ul className="flex ">
-              {navLinks.map((element, index) => {
-                return (
-                  <Link key={index} href={element.path}>
-                    <li className="text-[#5B5B5B] hover:text-gray-400 font-poppins text-base font-normal leading-[33px] tracking-[0.02em] text-left px-6 py-2">
-                      {element.title}
-                    </li>
-                  </Link>
-                );
-              })}
-            </ul>
-            <div>
-              <button>
-                <Image className="rounded-full" src={"https://source.unsplash.com/64x64/?person"} alt="logo" width={36} height={36}/>
-                {/* <img
-                  className="h-8 w-8 rounded-full mr-2 "
-                  src="https://source.unsplash.com/64x64/?person"
-                  alt="User avatar"
-                /> */}
-              </button>
-            </div>
+          {/* Nav List */}
+
+          <ul className="flex gap-x-8">
+            {navLinks.map((element, index) => (
+              <Link key={index} href={element.path}>
+                <li className="text-midnight-shadow font-medium  hover:underline hover:text-burnt-orange text-base dark:text-white ">
+                  {element.title}
+                </li>
+              </Link>
+            ))}
+          </ul>
+
+          <div>
+            {access == "true" ? (
+              <>
+                <button
+                  className="flex items-center space-x-4 "
+                  onClick={handleActive}>
+                  <div>
+                    {session ? (
+                      <Image
+                        onClick={handleActive}
+                        className="rounded-full w-[40px] h-[40px]"
+                        src={session.user.image}
+                        alt="profile picture"
+                        width={40}
+                        height={40}
+                      />
+                    ) : (
+                      <Image
+                        onClick={handleActive}
+                        className="rounded-full w-[40px] h-[40px]"
+                        src={"https://source.unsplash.com/64x64/?person"}
+                        alt="default profile picture"
+                        width={40}
+                        height={40}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Image
+                      onClick={handleActive}
+                      className={`rounded-full ${active ? "hidden" : ""}`}
+                      src="/Pestaña.png"
+                      alt="logo"
+                      width={12}
+                      height={21}
+                    />
+                  </div>
+                </button>
+              </>
+            ) : (
+              <div>
+                <Link className="dark:text-white" href={"/login"}>
+                  Login
+                </Link>
+                <Link
+                  className="bg-burnt-orange ml-4 px-4 py-2 rounded-md text-white "
+                  href={"/login"}>
+                  Sign Up
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

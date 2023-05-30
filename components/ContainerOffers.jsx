@@ -1,8 +1,31 @@
-import Image from "next/image"
+'use client'
+
 import Link from "next/link"
 import Offer from "./Offer"
+import { useState, useEffect } from "react";
 
-export default function ContainerOffers({ array }) {
+
+
+export default async function ContainerOffers() {
+    const [offers, setOffers] = useState([]);
+
+
+    useEffect(() => {
+        const getOffers = async () => {
+            try {
+                const res = await fetch("http://localhost:3000/offers.json");
+                const data = await res.json();
+                setOffers(data);
+            } catch (error) {
+                console.error("Error fetching recommends:", error);
+            }
+        };
+
+        getOffers();
+        
+    }, []);
+
+
     return (
         <section className="text-black w-[85%] mx-[auto] pt-[8.3rem] pb-[11rem]">
             <div className="flex justify-between items-center mb-[4rem]">
@@ -12,14 +35,14 @@ export default function ContainerOffers({ array }) {
 
             <div className="flex justify-between">
                 {
-                    array.map(offer => {
+                    offers.map(offer => {
                         return (
                             <Offer key={offer.id}
-                                    title={offer.title}
-                                    description={offer.description}
-                                    image={offer.image}
-                                    offer={offer.offer}
-                                    />
+                                off={offer.off}
+                                title={offer.title}
+                                description={offer.description}
+                                img={offer.img}
+                            />
                         )
                     })
                 }
