@@ -20,9 +20,9 @@ function Payment(props) {
         // Handle error
       });
   }, []);
-  
+  const amount = 3000
   useEffect(() => {
-    axios.post('http://localhost:3001/payment/create-payment', {})
+    axios.post('http://localhost:3001/payment/create-payment', {amount})
       .then(async (response) => {
         const { clientSecret } = await response.data;
         console.log(clientSecret);

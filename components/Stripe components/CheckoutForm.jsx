@@ -27,6 +27,7 @@ export default function CheckoutForm() {
       },
       //redirect: 'if_required',
     })
+    //axios.post('http://localhost:3001/payment/create-payment', { amount: 3000 })
 
   // if(error){
   //   setMessage(error.message)
