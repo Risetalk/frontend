@@ -15,7 +15,8 @@ export default function loginHandler (req, res) {
         sameSite: "strict",
         maxAge: 1000 * 60 * 60 * 24 * 30,
         path: "/"
-    })
+    }) 
+    //
     res.setHeader("Set-Cookie", serialized);
     return res.json("login router")
     } catch (error) {
