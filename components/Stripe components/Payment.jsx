@@ -6,35 +6,30 @@ import CheckoutForm from "./CheckoutForm";
 import { Elements, PaymentElement } from "@stripe/react-stripe-js";
 
 function Payment(props) {
-  const [stripePromise, setStripePromise] = useState('pk_test_51N8lsLDcUyKcM4LIF5dll7ccQipSzmHbMILHzNn4GgGqgm1WBk8PFI0Bznh171t339AHcKrYZtCubakr5pJMX2kT00lGEXvWQl');
+  const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
-  
-  // useEffect(() => {
-  //   axios.get('http://localhost:3001/config')
-  //     .then(async (response) => {
-  //       const { publishableKey } = await response.data;
-  //       // console.log(publishableKey);
-  //     })
-  //     .catch((error) => {
-  //       // Handle error
-  //     });
-  // }, []);
-  
-  useEffect(() => {
-    axios.post('http://localhost:3001/payment/intent', {
 
-    // user_id ,  courses , amount, description , paymentMethod , currency 
-    })
+  useEffect(() => {
+    axios.get('http://localhost:5252/config')
       .then(async (response) => {
-        const info = await response.data;
-        console.log(info);
-        setClientSecret(info);
+        const { publishableKey } = await response.data;
+        // console.log(publishableKey);
+        setStripePromise(loadStripe(publishableKey));
       })
       .catch((error) => {
         // Handle error
-
-       console.log(error.message);
-        
+      });
+  }, []);
+  
+  useEffect(() => {
+    axios.post('http://localhost:5252/create-payment-intent', {})
+      .then(async (response) => {
+        const { clientSecret } = await response.data;
+        console.log(clientSecret);
+        setClientSecret(clientSecret);
+      })
+      .catch((error) => {
+        // Handle error
       });
   }, []);
   
