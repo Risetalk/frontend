@@ -31,10 +31,20 @@ export default function NavBar() {
   const [access, setAccess] = useState("false");
 
   const [active, setActive] = useState(false);
+
   const router = useRouter();
 
 
+  const getMyCourse = async (id) => {
+    try {
+      const { data } = await axios.get(`http://localhost:3001/purchased?id=${id}`)
+      localStorage.setItem('myCoursesPurchased', JSON.stringify(data))
 
+    } catch (error) {
+      console.log(error);
+    }
+    
+  }
 
   const handleActive = () => {
     setActive(!active);
@@ -70,11 +80,29 @@ export default function NavBar() {
     const storeUser = localStorage.getItem("user");
 
     if (storeUser || session) {
+
+      const userRegister = localStorage.getItem("user");
+      const userGoogle = localStorage.getItem("userGoogle");
+      let userFinal
+
+      if (userRegister) {
+        const parse = JSON.parse(userRegister)
+        userFinal = parse.id;
+
+      } else if (userGoogle) {
+        const parse = JSON.parse(userGoogle)
+        userFinal = parse.id;
+      }
+
+      getMyCourse(userFinal)
+
       localStorage.setItem("access", "true");
       const userData = JSON.parse(storeUser);
     } else {
       localStorage.setItem("access", "false");
     }
+
+
 
     const storeAccess = localStorage.getItem("access");
     console.log(storeAccess);
@@ -132,7 +160,7 @@ export default function NavBar() {
             <Link href="/">
               <picture>
                 <source
-                  srcset="/images/principalLogoDark.png"
+                  srcSet="/images/principalLogoDark.png"
                   media="(prefers-color-scheme: dark)"
                 />
                 <Image

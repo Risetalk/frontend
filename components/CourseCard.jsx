@@ -39,6 +39,13 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     //     </div>
     // );
     const getCheckout = () =>{
+        const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        const coursesPurchased = JSON.parse(myCoursesPurchased)
+        console.log(coursesPurchased);
+        const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
+        if(searchCoursePurchased){
+            return window.alert("Este curso ya esta comprado")
+        }
         dispatch(addMyCart(myCart))
         // localStorage.setItem("my_cart", JSON.stringify())
     }

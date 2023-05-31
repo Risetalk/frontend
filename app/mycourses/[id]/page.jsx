@@ -21,6 +21,7 @@ const CourseDetail = () => {
   const [videoIndex, setVideoIndex] = useState(0);
   const [titleVideo, setTitleVideo] = useState("");
   const [descVideo, setDescVideo] = useState("");
+  const [urlVideo,setUrlVideo] = useState("")
 
   const path = usePathname()
   const pathId = path.split('/').pop()
@@ -116,6 +117,7 @@ const CourseDetail = () => {
         setVideoIndex(index)
         setTitleVideo(v.title)
         setDescVideo(v.description)
+        setUrlVideo(v.url_video)
       }
     })
     // setSelectedVideo(video);
@@ -142,9 +144,26 @@ const CourseDetail = () => {
   };
 
 
+
   useEffect(() => {
+
+    const userRegister = localStorage.getItem("user");
+      const userGoogle = localStorage.getItem("userGoogle");
+      let userFinal
+
+      if (userRegister) {
+        const parse = JSON.parse(userRegister)
+        userFinal = parse.id;
+
+      } else if (userGoogle) {
+        const parse = JSON.parse(userGoogle)
+        userFinal = parse.id;
+      }
+
     const getMyCourseById = async () => {
-      const response = await axios(`http://localhost:3001/courses/${pathId}`)
+      const userId = userFinal
+      const courseId = pathId
+      const response = await axios.post(`http://localhost:3001/courses/view-course`,{ userId, courseId})
       setMyCourseData(response.data.data)
         setLoading(false);
     }
@@ -162,6 +181,7 @@ const CourseDetail = () => {
 
   }, [myCourseData])
 
+  console.log(myCourseData);
   console.log(videoIndex);
   console.log(selectedVideo);
   console.log(allVideos);
@@ -323,7 +343,7 @@ const CourseDetail = () => {
             <section className="bg-[white] pt-[4rem] pb-[3rem]">
               <div className="w-[90%] mx-[auto]">
                 <ReactPlayer
-                  url={"https://www.youtube.com/watch?v=qCHOtrDF0nY"}
+                  url={urlVideo}
                 />
                 {/* <video controls
                   className="w-[100%]">

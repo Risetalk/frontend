@@ -20,6 +20,8 @@ export default function LessonVideo() {
     })
 
 
+
+
     const courses = useSelector(state => state.courses)
 
 
@@ -57,13 +59,26 @@ export default function LessonVideo() {
 
     const handleSubmitCourseCreate = (event) => {
         event.preventDefault();
-        console.log(courses.course);
+
+        const userRegister = localStorage.getItem("user");
+        const userGoogle = localStorage.getItem("userGoogle");
+        let userFinal
+
+        if (userRegister) {
+            const parse = JSON.parse(userRegister)
+            userFinal = parse.id;
+
+        } else if (userGoogle) {
+            const parse = JSON.parse(userGoogle)
+            userFinal = parse.id;
+        }
+
         const createCourse = async () => {
             try {
                 const requestBody = {
                     course: courses.course
                 };
-                const response = await axios.post("http://localhost:3001/courses?id=127b6d0c-5cad-4034-b1f9-8e72913a9d46", requestBody);
+                const response = await axios.post(`http://localhost:3001/courses?id=${userFinal}`, requestBody);
                 console.log(response.data);
                 // setMessageRegister(true)
             } catch (error) {
@@ -102,9 +117,9 @@ export default function LessonVideo() {
     // }
 
 
-        
-        const notVideo = courses.course.lessons?.find(lesson => lesson.videos?.length === 0)
-    
+
+    const notVideo = courses.course.lessons?.find(lesson => lesson.videos?.length === 0)
+
 
     return (
         <div className="w-[100%]  pb-[2rem]">
@@ -204,29 +219,29 @@ export default function LessonVideo() {
                     >
                     </input>
                 </label>
-            {
-                (videoData.title.length > 0 && videoData.description.length > 0 && videoData.video_url.length > 0)
-                ?
-                <button
-                    className="font-bold bg-orange-500 hover:bg-orange-400 w-[fit-content] text-white px-[1rem] py-2 m-2  rounded-[0.6rem]">
-                    Add video
-                </button>
-                :
-                <span 
-                className="font-bold bg-gray-500  w-[fit-content] text-white px-[1rem] py-2 m-2  rounded-[0.6rem] cursor-default">
-                    Add video
-                </span>
-            }
+                {
+                    (videoData.title.length > 0 && videoData.description.length > 0 && videoData.video_url.length > 0)
+                        ?
+                        <button
+                            className="font-bold bg-orange-500 hover:bg-orange-400 w-[fit-content] text-white px-[1rem] py-2 m-2  rounded-[0.6rem]">
+                            Add video
+                        </button>
+                        :
+                        <span
+                            className="font-bold bg-gray-500  w-[fit-content] text-white px-[1rem] py-2 m-2  rounded-[0.6rem] cursor-default">
+                            Add video
+                        </span>
+                }
             </form>
             {
                 !notVideo
-                ?
-                <button
-                    onClick={handleSubmitCourseCreate}
-                    className="font-bold bg-orange-500 hover:bg-orange-400 w-[fit-content] text-white px-[1rem] py-2 ml-[1.4rem]  rounded-[0.6rem]">Create Course</button>
+                    ?
+                    <button
+                        onClick={handleSubmitCourseCreate}
+                        className="font-bold bg-orange-500 hover:bg-orange-400 w-[fit-content] text-white px-[1rem] py-2 ml-[1.4rem]  rounded-[0.6rem]">Create Course</button>
                     :
                     <span
-                    className="font-bold bg-gray-500 w-[fit-content] text-white px-[1rem] py-2 ml-[1.4rem]  rounded-[0.6rem] cursor-default">
+                        className="font-bold bg-gray-500 w-[fit-content] text-white px-[1rem] py-2 ml-[1.4rem]  rounded-[0.6rem] cursor-default">
                         Create Course
                     </span>
             }

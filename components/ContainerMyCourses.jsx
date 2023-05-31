@@ -6,34 +6,34 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-export default function ContainerMyCourses() {
-  const courses = useSelector((state) => state.courses);
+export default function ContainerMyCourses({myCourses}) {
+  
   const dispatch = useDispatch();
-  const [myCourses,setMyCourses] = useState([])
+  // const [myCourses,setMyCourses] = useState([])
 
-  const pageSize = 3;
-  const [currentPage, setCurrentPage] = useState(1);
+  // const pageSize = 3;
+  // const [currentPage, setCurrentPage] = useState(1);
 
-  const startIndex = (currentPage - 1) * pageSize;
-  const endIndex = startIndex + pageSize;
-  const slicedCourses = myCourses?.slice(startIndex, endIndex);
+  // const startIndex = (currentPage - 1) * pageSize;
+  // const endIndex = startIndex + pageSize;
+  // const slicedCourses = myCourses?.slice(startIndex, endIndex);
 
-  const onPageChange = (page) => {
-    setCurrentPage(page);
-  };
+  // const onPageChange = (page) => {
+  //   setCurrentPage(page);
+  // };
 
-  const totalPages = Math.ceil(myCourses.length / pageSize);
-
-
+  // const totalPages = Math.ceil(myCourses?.length / pageSize);
 
 
-  useEffect(()=>{
-    const addMyCourses = async() =>{
-      const response = await axios('http://localhost:3000/myCourses.json')
-      setMyCourses(response.data)
-    }
-    addMyCourses()
-  },[])
+
+
+  // useEffect(()=>{
+  //   const addMyCourses = async() =>{
+  //     const response = await axios('http://localhost:3000/myCourses.json')
+  //     setMyCourses(response.data)
+  //   }
+  //   addMyCourses()
+  // },[])
 
   console.log(myCourses);
   return (
@@ -56,50 +56,61 @@ export default function ContainerMyCourses() {
             </Link>
           </motion.div>
           <motion.div
-            className="flex justify-between w-[100%]"
+            className="flex justify-between w-[100%] flex-wrap gap-y-[1rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
-            {slicedCourses?.map((course,index) => {
-              return (
-                <article
-                  className="w-[32%] bg-white px-[1.313rem] pt-[1.188rem] text-[black] rounded-[1.25rem] h-fit"
-                  key={index}>
-                  <Image
-                    className="w-[100%] h-[210px] object-cover rounded-[1.25rem]"
-                    src={course.course.background_image}
-                    alt={course.course.title}
-                    width={400}
-                    height={400}
-                  />
 
-                  <Link href={`/mycourses/id`}>
-                    {" "}
-                    <h3 className="font-medium text-[1.25rem] leading-[2.7rem] mt-[0.75rem] mb-[0.55rem]">
-                      {course.course.title}
-                    </h3>
-                  </Link>
-                  <div className="flex items-center  mb-[1.563rem] ">
+            {
+              myCourses?.length !== 0
+              ?
+              myCourses?.map((course,index) => {
+                return (
+                  <article
+                    className="w-[32%] bg-white px-[1.313rem] pt-[1.188rem] text-[black] rounded-[1.25rem] h-fit"
+                    key={index}>
                     <Image
-                      className="inline  bg-slate-500 h-[35px] w-[35px] object-cover object-top rounded-full"
-                      src={course.authorImg}
-                      alt={course.author}
-                      width={500}
-                      height={100}
+                      className="w-[100%] h-[210px] object-cover rounded-[1.25rem]"
+                      src={course.background_image}
+                      alt={course.title}
+                      width={400}
+                      height={400}
                     />
-                    <span className="font-medium text-[1.2rem] leading-[1.688rem] ml-[0.938rem]">
-                      {course.author}
+  
+                    <Link href={`/mycourses/${course.id}`}>
+                      {" "}
+                      <h3 className="font-medium text-[1.25rem] leading-[2.7rem] mt-[0.75rem] mb-[0.55rem]">
+                        {course.title}
+                      </h3>
+                    </Link>
+                    <div className="flex items-center  mb-[1.563rem] ">
+                      {/* <Image
+                        className="inline  bg-slate-500 h-[35px] w-[35px] object-cover object-top rounded-full"
+                        src={course.authorImg}
+                        alt={course.author}
+                        width={500}
+                        height={100}
+                      /> */}
+                      {/* <span className="font-medium text-[1.2rem] leading-[1.688rem] ml-[0.938rem]">
+                        {course.author}
+                      </span> */}
+                    </div>
+                    <div className="h-[8px] border-2 bg-[#D9D9D9]">
+                      <div className="h-[100%] bg-[#222129] w-[80%]"></div>
+                    </div>
+                    <span className="block font-semibold text-[0.7rem] leading-[1.313rem] text-[#00000080] w-[100%] text-end py-[0.75rem]">
+                      Lesson 5 of 7
                     </span>
-                  </div>
-                  <div className="h-[8px] border-2 bg-[#D9D9D9]">
-                    <div className="h-[100%] bg-[#222129] w-[80%]"></div>
-                  </div>
-                  <span className="block font-semibold text-[0.7rem] leading-[1.313rem] text-[#00000080] w-[100%] text-end py-[0.75rem]">
-                    Lesson 5 of 7
-                  </span>
-                </article>
-              );
-            })}
+                  </article>
+                );
+              })
+
+              :
+
+              <h1>No tenes cursos comprados</h1>
+            }
+
+          
           </motion.div>
         </header>
       </section>
