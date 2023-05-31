@@ -11,6 +11,8 @@ import TeacherCard from "@/components/TeacherCard";
 
 import LessonVideo from "@/components/Form/LessonVideo";
 
+import { useSession, signOut } from "next-auth/react";
+
 function Form() {
 
   const professors = [
@@ -74,6 +76,24 @@ function Form() {
   const [showMyContent, setShowMyContent] = useState(false);
   const [uploadedCourse, setUploadedCourse] = useState(null);
   const [imageURL, setImageURL] = useState("");
+
+  const userRegister = localStorage.getItem("user");
+  const userGoogle = localStorage.getItem("userGoogle");
+
+  let userData
+
+  if(userRegister){
+    const user = localStorage.getItem('user') 
+    userData = JSON.parse(user)
+  }
+
+  if(userGoogle){
+    const user = localStorage.getItem('userGoogle')
+    userData = JSON.parse(user)
+    
+  }
+  
+  console.log(userData);
 
   const createCourse = useSelector(state => state.courses)
 
@@ -221,11 +241,11 @@ function Form() {
 
       <div className="w-[50%]">
         <div className={`${!showCreateCourse ? "hidden" : "block"}`}>
-        <CreateCourse
-          handleStep2={handleStep2}
-          steps={steps}
-          professors={professors}
-          handleUploadVideoClick={handleUploadVideoClick} />
+          <CreateCourse
+            handleStep2={handleStep2}
+            steps={steps}
+            professors={professors}
+            handleUploadVideoClick={handleUploadVideoClick} />
         </div>
 
         <div className={`${!showUploadVideo ? "hidden" : "block"}`}>
@@ -233,7 +253,7 @@ function Form() {
         </div>
 
         <div className={`${!showMyContent ? "hidden" : "block"}`}>
-        <LessonVideo
+          <LessonVideo
           // professors={professors}
           // userId={userId}
           // uploadedCourse={uploadedCourse}
@@ -269,13 +289,18 @@ function Form() {
 
 
       <div className="w-[25%] p-[1.5rem] border-r border-gray-300 ">
-        <div className="mb-4">
-          {professors.map((professor) => {
-            if (professor.id === userId) {
-              return <TeacherCard key={professor.id} professor={professor} />;
-            }
-            return null;
-          })}
+        <div className="mb-4 flex flex-col justify-center">
+          <Image src={userData.profile_picture} alt={userData.first_name} width={100} height={100}
+          className="rounded-full w-[80px] h-[80px] mx-[auto]"
+          />
+          <span className="text-center">{userData.user_name}</span>
+          <div className="flex gap-x-[0.4rem] mx-[auto] justify-center">
+            <span>{userData.first_name}</span>
+            <span>{userData.last_name}</span>
+          </div>
+          <span className="text-center">{userData.email}</span>
+
+
 
           {/* {professors.slice(1, 5).map((professor) => (
             <div

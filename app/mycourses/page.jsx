@@ -24,33 +24,37 @@ export default function MyCoursesPage() {
 
     const [myCourses, setMyCourses] = useState([]);
 
-    const getAllMyCourse = async (id) => {
-        try {
-            const { data } = await axios.get(`http://localhost:3001/purchased?id=${id}`)
-            if (data.error) {
-                return setMyCourses([])
-            }
-            setMyCourses(data);
-        } catch (error) {
-            console.log(error.message);
-        }
-    }
+    // const getAllMyCourse = async (id) => {
+    //     try {
+    //         const { data } = await axios.get(`http://localhost:3001/purchased?id=${id}`)
+    //         if (data.error) {
+    //             return setMyCourses([])
+    //         }
+    //         setMyCourses(data);
+    //     } catch (error) {
+    //         console.log(error.message);
+    //     }
+    // }
 
     useEffect(() => {
-        const userRegister = localStorage.getItem("user");
-        const userGoogle = localStorage.getItem("userGoogle");
-        let userFinal
 
-        if (userRegister) {
-            const parse = JSON.parse(userRegister)
-            userFinal = parse.id;
+        const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        const coursesPurchased = JSON.parse(myCoursesPurchased)
+        setMyCourses(coursesPurchased)
+        // const userRegister = localStorage.getItem("user");
+        // const userGoogle = localStorage.getItem("userGoogle");
+        // let userFinal
 
-        } else if (userGoogle) {
-            const parse = JSON.parse(userGoogle)
-            userFinal = parse.id;
-        }
+        // if (userRegister) {
+        //     const parse = JSON.parse(userRegister)
+        //     userFinal = parse.id;
 
-        getAllMyCourse(userFinal);
+        // } else if (userGoogle) {
+        //     const parse = JSON.parse(userGoogle)
+        //     userFinal = parse.id;
+        // }
+
+        // getAllMyCourse(userFinal);
     }, [])
 
     return (

@@ -14,9 +14,25 @@ export default function Completion() {
 
   
   const addCoursePurchased = async (myCourses) => {
+
+    const userRegister = localStorage.getItem("user");
+      const userGoogle = localStorage.getItem("userGoogle");
+      let userFinal
+
+      if (userRegister) {
+        const parse = JSON.parse(userRegister)
+        userFinal = parse.id;
+
+      } else if (userGoogle) {
+        const parse = JSON.parse(userGoogle)
+        userFinal = parse.id;
+      }
+
+
+
     myCourses.map(async (course) => {
       try {
-        const { data } = await axios.post(`http://localhost:3001/purchased?idUser=9a07e237-b772-43d2-81e3-9ca9a456c4ec&idCourse=${course.id}`)
+        const { data } = await axios.post(`http://localhost:3001/purchased?idUser=${userFinal}&idCourse=${course.id}`)
         console.log(data);
 
       } catch (error) {
@@ -30,6 +46,7 @@ export default function Completion() {
   }
   
   useEffect(() => {
+    
     
     // const userRegister = localStorage.getItem("user");
     // const userGoogle = localStorage.getItem("userGoogle");

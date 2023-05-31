@@ -10,7 +10,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import axios from "axios";
 import { addMyCart } from "@/store/slice"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 
 // id = { course.id }
 // key = { index }
@@ -29,7 +29,6 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     const [myCart, setMyCart] = useState({})
     const dispatch = useDispatch()
 
-    const getCart = useSelector(state=> state.courses.my_cart)
     // const ref = useRef(null)
 
     // const tooltipContent = (
@@ -39,50 +38,32 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     //         <p className="font-normal ">{description}</p>
     //     </div>
     // );
-
-    // const getCheckout = () => {
-    //     d(addMyCart(myCart))
-
-// }
-        // localStorage.setItem("my_cart", JSON.stringify())
-
-    const getCheckout = (event) => {
-        event.preventDefault()
-        console.log(event.target.value);
-        const courseSearch = getCart.find((c) => c.id === myCart.id);
-        if (courseSearch) {
-            window.alert("This course is already added to your cart.");
-        } else {
-            axios
-                .get("http://localhost:3001/purchased?id=9a07e237-b772-43d2-81e3-9ca9a456c4ec")
-                .then((response) => {
-                    const courseSearchPurchased = response.data.find((c) => c.id === myCart.id);
-                    if (courseSearchPurchased) {
-                        window.alert("This course you have already bought it.");
-                    } else {
-                        dispatch(addMyCart(myCart));
-                    }
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
+    const getCheckout = () =>{
+        const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        const coursesPurchased = JSON.parse(myCoursesPurchased)
+        console.log(coursesPurchased);
+        const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
+        if(searchCoursePurchased){
+            return window.alert("Este curso ya esta comprado")
         }
-    };
+        dispatch(addMyCart(myCart))
+        // localStorage.setItem("my_cart", JSON.stringify())
+    }
 
     useEffect(() => {
         setMyCart({
             id: id,
             title: title,
             price: price,
-            background_image: background_image,
-            description: description
+            background_image:background_image,
+            description:description
         })
     }, [])
 
     return (
         <div className="card" >
             <Tippy
-                interactive={true}
+            interactive={true}
                 placement="right"
                 content={
                     <div className="flex flex-col p-[1rem] gap-y-[1rem]">

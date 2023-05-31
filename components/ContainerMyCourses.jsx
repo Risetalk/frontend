@@ -77,7 +77,7 @@ export default function ContainerMyCourses({myCourses}) {
                       height={400}
                     />
   
-                    <Link href={`/mycourses/id`}>
+                    <Link href={`/mycourses/${course.id}`}>
                       {" "}
                       <h3 className="font-medium text-[1.25rem] leading-[2.7rem] mt-[0.75rem] mb-[0.55rem]">
                         {course.title}

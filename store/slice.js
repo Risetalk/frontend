@@ -206,11 +206,11 @@ export const Slice = createSlice({
       state.user = null;
     },
 
-    addMyCart:async (state, action) => {
-      // const courseSearch = state.my_cart.find((course) => course.id === action.payload.id)
-      // if (courseSearch) {
-      //   return window.alert('This course is already added to your cart.')
-      // } 
+    addMyCart: (state, action) => {
+      const courseSearch = state.my_cart.find((course) => course.id === action.payload.id)
+      if (courseSearch) {
+        return window.alert('This course is already added to your cart.')
+      } 
       //   // const coursePurchased = await axios.get('http://localhost:3001/purchased?id=9a07e237-b772-43d2-81e3-9ca9a456c4ec')
       //   // console.log(coursePurchased.data);
       //   // const courseSearchPurchased = coursePurchased.data.find((course)=>course.id === action.payload.id)
