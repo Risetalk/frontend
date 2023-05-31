@@ -25,7 +25,7 @@ export default function MyCoursesPage() {
     return (
         <main className=" bg-white ">
             <ContainerMyCourses />
-
+            
             <Categories />
 
             <section className="bg-[#22212921] pt-[6.063rem] pb-[13.313rem] ">

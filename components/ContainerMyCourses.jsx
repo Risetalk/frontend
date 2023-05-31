@@ -2,26 +2,40 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 
 export default function ContainerMyCourses() {
   const courses = useSelector((state) => state.courses);
   const dispatch = useDispatch();
+  const [myCourses,setMyCourses] = useState([])
 
   const pageSize = 3;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = startIndex + pageSize;
-  const slicedCourses = courses?.myCourses?.slice(startIndex, endIndex);
+  const slicedCourses = myCourses?.slice(startIndex, endIndex);
 
   const onPageChange = (page) => {
     setCurrentPage(page);
   };
 
-  const totalPages = Math.ceil(courses?.myCourses?.length / pageSize);
+  const totalPages = Math.ceil(myCourses.length / pageSize);
 
+
+
+
+  useEffect(()=>{
+    const addMyCourses = async() =>{
+      const response = await axios('http://localhost:3000/myCourses.json')
+      setMyCourses(response.data)
+    }
+    addMyCourses()
+  },[])
+
+  console.log(myCourses);
   return (
     <section>
       <section className="bg-[#22212920]  pb-[5.625rem] pt-[6.125rem]">
@@ -46,15 +60,15 @@ export default function ContainerMyCourses() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}>
-            {slicedCourses.map((course) => {
+            {slicedCourses?.map((course,index) => {
               return (
                 <article
                   className="w-[32%] bg-white px-[1.313rem] pt-[1.188rem] text-[black] rounded-[1.25rem] h-fit"
-                  key={course.id}>
+                  key={index}>
                   <Image
                     className="w-[100%] h-[210px] object-cover rounded-[1.25rem]"
-                    src={course.image}
-                    alt={course.title}
+                    src={course.course.background_image}
+                    alt={course.course.title}
                     width={400}
                     height={400}
                   />
@@ -62,7 +76,7 @@ export default function ContainerMyCourses() {
                   <Link href={`/mycourses/id`}>
                     {" "}
                     <h3 className="font-medium text-[1.25rem] leading-[2.7rem] mt-[0.75rem] mb-[0.55rem]">
-                      {course.title}
+                      {course.course.title}
                     </h3>
                   </Link>
                   <div className="flex items-center  mb-[1.563rem] ">

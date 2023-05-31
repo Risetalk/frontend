@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSession, signOut } from "next-auth/react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import cart from '../public/cart.png'
 
 
 const navLinks = [
@@ -34,8 +35,8 @@ export default function NavBar() {
 
 
 
-  
-   const handleActive = () => {
+
+  const handleActive = () => {
     setActive(!active);
     if (active) {
       document.body.classList.remove("overflow-hidden");
@@ -45,7 +46,7 @@ export default function NavBar() {
     }
   };
 
-  const handleLogout = async() => {
+  const handleLogout = async () => {
 
     try {
       await axios.post("/api/auth/logout");
@@ -83,7 +84,7 @@ export default function NavBar() {
   }, [session]);
 
   useEffect(() => {
-    const google = async() => {
+    const google = async () => {
       try {
         await axios.post("/api/auth/loginGoogle", session);
         const response = await axios.post("http://localhost:3001/user/googlelogin", session);
@@ -98,7 +99,7 @@ export default function NavBar() {
 
   return (
     // Animation Container
-    <motion.nav 
+    <motion.nav
       className="fixed shadow-lg w-full z-20"
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
@@ -106,9 +107,8 @@ export default function NavBar() {
       {(session || access == "true") && (
         <div className="absolute text-black bg-white dark:text-[white] dark:bg-midnight-blue top-[100%] right-0 opacity-[0.9]">
           <ul
-            className={`flex flex-col items-end gap-4 w-[220px] p-4 ${
-              active ? "" : "hidden"
-            }`}>
+            className={`flex flex-col items-end gap-4 w-[220px] p-4 ${active ? "" : "hidden"
+              }`}>
             <Link href={"/mycourses"} onClick={handleActive}>
               My courses
             </Link>
@@ -158,7 +158,12 @@ export default function NavBar() {
 
           <div>
             {access == "true" ? (
-              <>
+              <div className="flex gap-x-[1rem] items-center">
+                <Link href="/checkout">
+                  <Image
+                    className="h-[30px] w-[30px] cursor-pointer"
+                    src={cart} alt="ico-cart" width={50} height={50} />
+                </Link>
                 <button
                   className="flex items-center space-x-4 "
                   onClick={handleActive}>
@@ -194,7 +199,7 @@ export default function NavBar() {
                     />
                   </div>
                 </button>
-              </>
+              </div>
             ) : (
               <div>
                 <Link className="dark:text-white" href={"/login"}>

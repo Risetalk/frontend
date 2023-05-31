@@ -1,30 +1,20 @@
-'use client';
-import Checkout from '@/components/Checkout';
-import Summary from '@/components/Summary';
-import CheckoutForm from '@/components/CheckoutForm';
+import Payment from '@/components/Stripe components/Payment'
+import Summary from '@/components/Summary'
+import React from 'react'
 
-//Esto es de Jesse
-
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
-
-const stripePromise = loadStripe(
-	'pk_test_51N8lsLDcUyKcM4LIF5dll7ccQipSzmHbMILHzNn4GgGqgm1WBk8PFI0Bznh171t339AHcKrYZtCubakr5pJMX2kT00lGEXvWQl',
-);
-
-
-
-//Traer el curso por el ID para luego mandarlo por PROPS a CheckoutForm
-const id = 'o1noj2n31o2312312';
-
-export default function CheckOutPage() {
+export default function page() {
 	return (
-		<main>
-			<section className="flex justify-around items-start px-[6.25rem] py-[2rem]">
-				{/* <Elements stripe={stripePromise}>
-					<CheckoutForm curso={id} />
-				</Elements> */}
-			</section>
+		<main className=' pt-[6rem] h-[100vh]'>
+			<div className='flex justify-center items-center'>
+				<div className="w-[30%]">
+					<Payment />
+				
+				</div>
+				<div className="w-[40%]">
+					<Summary />
+				
+				</div>
+			</div>
 		</main>
-	);
+	)
 }
