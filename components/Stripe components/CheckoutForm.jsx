@@ -42,8 +42,8 @@ export default function CheckoutForm() {
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <PaymentElement />
-      <button className='bg-slate-500' disabled={isProcessing} id="submit">
-        <span id="button-text">
+      <button className="py-[0.4rem]  px-[0.8rem] text-white bg-[#F8662B] mt-[1rem] rounded-[0.8rem]" disabled={isProcessing} id="submit">
+        <span className="" id="button-text">
           {isProcessing ? "Processing ... " : "Pay now"}
         </span>
       </button >

@@ -40,6 +40,7 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     // );
     const getCheckout = () =>{
         dispatch(addMyCart(myCart))
+        // localStorage.setItem("my_cart", JSON.stringify())
     }
 
     useEffect(() => {
@@ -62,7 +63,7 @@ export default function CourseCard({ id, title, background_image, categoryId, la
                         <h3 className="font-bold text-[1.6rem]">{title}</h3>
                         <span className="text-[0.8rem]">Update last: {updatedAt ? updatedAt.slice(0, 10) : ""}</span>
                         <p className="font-medium text-[1rem]">{description}</p>
-                        <button onClick={getCheckout} className="font-bold text-[1.2rem] bg-[#F9662A] py-[0.6rem] w-[90%] mx-[auto] rounded-[0.6rem]">Add to carr</button>
+                        <button onClick={getCheckout} className="font-bold text-[1.2rem] bg-[#F9662A] py-[0.6rem] w-[90%] mx-[auto] rounded-[0.6rem]">Add to cart</button>
                     </div>
                 }
 

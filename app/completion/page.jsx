@@ -60,7 +60,7 @@ const [typedText, setTypedText] = useState("");
       </motion.h2>
             </div>
             <Link
-              href={"/search"}
+              href={"/mycourses"}
               className="font-normal text-[1rem] leading-[1.5rem] text-white py-[0.6rem]  px-[3.5rem] bg-[#222129A6] rounded-[2.25rem] mt-[2rem] ">
               Welcome
             </Link>

@@ -12,7 +12,7 @@ export default function Summary() {
     const dataMyCart = infoToBuyCourses.my_cart;
     const dispatch = useDispatch()
 
-    
+
 
     const totalPrice = dataMyCart.reduce(
         (accumulator, product) => accumulator + parseFloat(product.price),
@@ -34,9 +34,15 @@ export default function Summary() {
     //         imagaCourse: "https://s3-alpha-sig.figma.com/img/7a80/a7af/42c44b95173f6bb18529bebd58808a65?Expires=1685318400&Signature=E~pERGHZPO3qMDIY2T9HGeH2t0ktDgjORjbz1HCvPoniWK6llKtYmDsMtFQ1Nq4q4KlMS0g8OU1yL-hHmIM3XEzqcme1W0Qn7bDiQNF86rwNPNunYcSSqutiEHEfvAgfiqGVZrNQGaI~r3Y~BqHew2RbUnpXsXaTHnXbS2QvCpwGHvhCAm9gyxnRsFeHY7Pwwb477-aL0FiU9Dq5ynIV-IaEPyjuaF-xpMFWIiKd7mDqZPLR5qO7qTdvo~w83sxtJgM9ghRiseW9Mb-9yen-3VfJ9tMBpOgznJMLzu2C4FLrJkr5L0KRTyxkHta4CXqMjHZpBBLKonqGcknmESf7Bg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
     //     }
     // ]
-    useEffect(()=>{
+
+    useEffect(() => {
+        localStorage.setItem("dataMyCart", JSON.stringify(dataMyCart));
+    }, [dataMyCart]);
+
+    useEffect(() => {
         dispatch(addPay(totalPrice))
-    },[])
+
+    }, [])
 
     return (
 
@@ -65,7 +71,7 @@ export default function Summary() {
                             return (
                                 <div className="flex gap-x-[1.25rem] w-[ 100%] border-b-[0.5px] border-b-stone-400" key={index}>
                                     <div className="w-[30%] py-[0.6rem] ">
-                                        <Image  src={product.background_image} alt="img-product" width={400} height={200} />
+                                        <Image src={product.background_image} alt="img-product" width={400} height={200} />
                                     </div>
                                     <div className="">
                                         <h3 className="font-normal text-[0.8rem] leading-[2rem] text-[#000000]">{product.title}</h3>
