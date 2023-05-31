@@ -132,7 +132,7 @@ export default function NavBar() {
             <Link href="/">
               <picture>
                 <source
-                  srcset="/images/principalLogoDark.png"
+                  srcSet="/images/principalLogoDark.png"
                   media="(prefers-color-scheme: dark)"
                 />
                 <Image

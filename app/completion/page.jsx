@@ -10,12 +10,53 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Completion() {
-  const path = usePathname();
 
-  const idPath = path.split("/").pop();
 
-  console.log(idPath);
+  
+  const addCoursePurchased = async (myCourses) => {
+    myCourses.map(async (course) => {
+      try {
+        const { data } = await axios.post(`http://localhost:3001/purchased?idUser=9a07e237-b772-43d2-81e3-9ca9a456c4ec&idCourse=${course.id}`)
+        console.log(data);
+
+      } catch (error) {
+        console.log(error);
+      }
+    })
+  }
+
+  const handleClearLocal = () =>{
+    localStorage.removeItem('dataMyCart')
+  }
+  
   useEffect(() => {
+    
+    // const userRegister = localStorage.getItem("user");
+    // const userGoogle = localStorage.getItem("userGoogle");
+    // let userFinal 
+
+    //   if (userRegister) {
+
+    //     const parse = JSON.parse(userRegister);
+    //     console.log("entro al userRegister");
+    //     console.log(parse);
+    //     userFinal = parse.id
+
+    //   } else if (userGoogle) {
+    //     const parse = JSON.parse(userGoogle);
+    //     console.log("entro al userGoogle");
+    //     console.log(parse);
+    //     userFinal = parse.id
+    // }
+
+
+    const getMyCourses = localStorage.getItem("dataMyCart");
+    const myCourses = JSON.parse(getMyCourses)
+
+
+    console.log(myCourses);
+    addCoursePurchased(myCourses)
+
     let currentText = "";
     let index = 0;
     const typingInterval = setInterval(() => {
@@ -29,9 +70,13 @@ export default function Completion() {
     return () => {
       clearInterval(typingInterval);
     };
+
   }, []);
 
-const [typedText, setTypedText] = useState("");
+
+
+
+  const [typedText, setTypedText] = useState("");
   const sentence = "We hope you enjoy and make the most of your learning experience with us!";
 
   return (
@@ -48,18 +93,19 @@ const [typedText, setTypedText] = useState("");
                 height={70}
               />
 
-<h2 className="font-bold text-[#838383] mt-[1rem] text-center">
-        Your transaction has been processed successfully.
-      </h2>
-      <motion.h2
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="font-bold text-[#838383] mt-[1rem] text-center"
-      >
-        {typedText}
-      </motion.h2>
+              <h2 className="font-bold text-[#838383] mt-[1rem] text-center">
+                Your transaction has been processed successfully.
+              </h2>
+              <motion.h2
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="font-bold text-[#838383] mt-[1rem] text-center"
+              >
+                {typedText}
+              </motion.h2>
             </div>
             <Link
+            onClick={handleClearLocal}
               href={"/mycourses"}
               className="font-normal text-[1rem] leading-[1.5rem] text-white py-[0.6rem]  px-[3.5rem] bg-[#222129A6] rounded-[2.25rem] mt-[2rem] ">
               Welcome
@@ -67,7 +113,7 @@ const [typedText, setTypedText] = useState("");
           </div>
         </div>
       </div>
-    
+
     </main>
   );
 }

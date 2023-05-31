@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 import { PaymentElement } from "@stripe/react-stripe-js";
+import { useSelector } from "react-redux";
 
 export default function CheckoutForm() {
   const stripe = useStripe()
@@ -10,9 +11,15 @@ export default function CheckoutForm() {
 
   const [message, setMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
+  const myCart = useSelector(state => state.courses.my_cart);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    localStorage.setItem("dataMyCart", JSON.stringify(myCart));
+
+    console.log(myCart);
 
     if(!stripe || !elements){
       return;
