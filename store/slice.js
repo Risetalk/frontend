@@ -16,6 +16,7 @@ const initialState = {
   coursesBuy: [],
   myCategories: [],
   coursesRecommend: [],
+  postUser: [],
   access: true,
   reset: false,
   id: "",
@@ -209,8 +210,11 @@ export const Slice = createSlice({
 
   addPay: (state,action) => {
     state.totalPay = action.payload;
+  },
+  setPostUser: (state, action) =>{
+    state.postUser = action.payload
   }
-
+  
 }
 
 
@@ -240,5 +244,6 @@ export const {
   createVideo,
   loginSuccess, logoutSuccess,
   addPay,
+  setPostUser
 } = Slice.actions;
 export default Slice.reducer;
