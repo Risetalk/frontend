@@ -1,0 +1,1562 @@
+[
+	{
+		"course": {
+			"title": "Curso de JS ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/RqQ1d1qEWlE/maxresdefault.jpg",
+			"price": 1000,
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
+			"lessons": [
+				{
+					"title": "Introducción a JS 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a js video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a js video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a JS 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a js video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a js video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Css 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a js video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a js video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a js video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Java ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/NmfKKZ-ZXTg/maxresdefault.jpg",
+			"price": 800,
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
+			"lessons": [
+				{
+					"title": "Introducción a Java 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a java video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a java video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Java 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a java video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a java video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a java 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a java video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a java video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a java video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Python ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://oregoom.com/wp-content/uploads/2020/06/Basico-de-Python.jpg",
+			"price": 100,
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
+			"lessons": [
+				{
+					"title": "Introducción a Python 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Python video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Python video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Python 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Python video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Python video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a python 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Python video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Python video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Python video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de sql ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://d3puay5pkxu9s4.cloudfront.net/curso/4304/card_imagen.jpg",
+			"price": 900,
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
+			"lessons": [
+				{
+					"title": "Introducción a sql 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a sql video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a sql video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a sql 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a sql video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a sql video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a sql 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a sql video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a sql video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a sql video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de mysql ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://escuela.it/storage/course_images/imagen-curso-mysql-42.jpg",
+			"price": 700,
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
+			"lessons": [
+				{
+					"title": "Introducción a mysql 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a mysql video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a mysql video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a mysql 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a mysql video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a mysql video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a mysql 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a mysql video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a mysql video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a mysql video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de React ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://www.freecodecamp.org/espanol/news/content/images/2022/02/thumbnail-2.png",
+			"price": 1200,
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
+			"lessons": [
+				{
+					"title": "Introducción a React 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a React video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a React video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a React 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a React video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a React video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a React 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a React video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a React video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a React video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de React native ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://img-b.udemycdn.com/course/750x422/3883590_69e1_2.jpg",
+			"price": 600,
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
+			"lessons": [
+				{
+					"title": "Introducción a Ract native 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Ract native video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Ract native video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Ract native 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Ract native video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Ract native video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a react native 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Ract native video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Ract native video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Ract native video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Next js ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/Tn6QYliFBcs/maxresdefault.jpg",
+			"price": 100,
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
+			"lessons": [
+				{
+					"title": "Introducción a Next js 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Next js video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Next js video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Next js 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Next js video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Next js video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Next js 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Next js video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Next js video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Next js video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Angular ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/U4ejmeEals0/maxresdefault.jpg",
+			"price": 1400,
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
+			"lessons": [
+				{
+					"title": "Introducción a Angular 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Angular video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Angular video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Angular 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Angular video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Angular video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Angular 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Angular video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Angular video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Angular video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Vue js ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://dc722jrlp2zu8.cloudfront.net/media/fbads-vue-js.jpg",
+			"price": 900,
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
+			"lessons": [
+				{
+					"title": "Introducción a Vue js 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Vue js video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Vue js video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Vue js 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Vue js video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Vue js video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a vue js 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Vue js video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Vue js video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Vue js video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Dart ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/9e541efb-1c68-4252-ba2c-f57691a743a1.png",
+			"price": 850,
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
+			"lessons": [
+				{
+					"title": "Introducción a Dart 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Dart video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Dart video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Dart 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Dart video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Dart video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Dart 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Dart video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Dart video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Dart video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Postgresql ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/4c50ffbe-52c8-4ef9-98ae-4be787c663e0.png",
+			"price": 700,
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
+			"lessons": [
+				{
+					"title": "Introducción a Postgresql 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Postgresql video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Postgresql video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Postgresql 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Postgresql video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Postgresql video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Postgresql 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Postgresql video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Postgresql video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Postgresql video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Jquery ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://escuela.it/storage/course_images/imagen-curso-jquery-95.jpg",
+			"price": 500,
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
+			"lessons": [
+				{
+					"title": "Introducción a Jquery 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Jquery video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Jquery video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Jquery 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Jquery video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Jquery video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Jquery 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Jquery video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Jquery video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Jquery video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de HTML5 ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/rbuYtrNUxg4/maxresdefault.jpg",
+			"price": 500,
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
+			"lessons": [
+				{
+					"title": "Introducción a HTML5 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a HTML5 video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a HTML5 video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a HTML5 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a HTML5 video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a HTML5 video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a HTML5 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a HTML5 video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a HTML5 video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a HTML5 video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de CSS3 ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/OWKXEJN67FE/maxresdefault.jpg",
+			"price": 400,
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
+			"lessons": [
+				{
+					"title": "Introducción a CSS3 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a CSS3 video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a CSS3 video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a CSS3 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a CSS3 video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a CSS3 video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a CSS3 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a CSS3 video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a CSS3 video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a CSS3 video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Ajax ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/13728245-c59d-4f37-966d-eca63fc08248.png",
+			"price": 600,
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
+			"lessons": [
+				{
+					"title": "Introducción Ajax 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción Ajax video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción Ajax video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción Ajax 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción Ajax video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción Ajax video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción Ajax 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción Ajax video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción Ajax video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción Ajax video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Maria DB ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://www.agentur-kreativdenker.de/wp-content/uploads/2020/11/MariaDB.jpg",
+			"price": 800,
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
+			"lessons": [
+				{
+					"title": "Introducción a Maria DB 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Maria DB video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Maria DB video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Maria DB 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Maria DB video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Maria DB video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Maria DB 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Maria DB video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Maria DB video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Maria DB video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Redux ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://escuela.it/storage/course_images/curso-de-redux-47.jpg",
+			"price": 900,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a Redux 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Redux video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Redux 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Redux video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Redux 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Redux video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Redux toolkit ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/I7jaHPqef10/maxresdefault.jpg",
+			"price": 1000,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a Redux toolkit 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Redux toolkit video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux toolkit video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Redux toolkit 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Redux toolkit video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux toolkit video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Redux toolkit 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Redux toolkit video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux toolkit video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Redux toolkit video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Node js ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/3cc48fa0-8327-4561-aa04-dafc3b799909.png",
+			"price": 950,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a Node js 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Node js video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Node js video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Node js 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Node js video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Node js video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Node js 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Node js video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Node js video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Node js video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de C++ ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/2te-oJMz8_E/maxresdefault.jpg",
+			"price": 1200,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a C++ 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C++ video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C++ video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C++ 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C++ video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C++ video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C++ 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C++ video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C++ video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C++ video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de C# ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://dc722jrlp2zu8.cloudfront.net/media/facebook-ads-c-sharp-principiantes.jpg",
+			"price": 700,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a C# 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C# video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C# video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C# 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C# video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C# video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C# 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C# video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C# video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C# video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de C ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/rEsSxd0L4GI/maxresdefault.jpg",
+			"price": 600,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a C 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a C video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Pascal ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/LQrQV63iW9E/maxresdefault.jpg",
+			"price": 300,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a Pascal 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Pascal video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Pascal video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Pascal 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Pascal video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Pascal video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Pascal 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Pascal video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Pascal video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						},
+						{
+							"title": "Introducción a Pascal video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=8gGsz__sTSM"
+						}
+					]
+				}
+			]
+		}
+	}
+]

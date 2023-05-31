@@ -27,6 +27,7 @@ export default function CheckoutForm() {
       },
       //redirect: 'if_required',
     })
+    //axios.post('http://localhost:3001/payment/create-payment', { amount: 3000 })
 
   // if(error){
   //   setMessage(error.message)
@@ -41,11 +42,11 @@ export default function CheckoutForm() {
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <PaymentElement />
-      <button disabled={isProcessing} id="submit">
+      <button className='bg-slate-500' disabled={isProcessing} id="submit">
         <span id="button-text">
           {isProcessing ? "Processing ... " : "Pay now"}
         </span>
-      </button>
+      </button >
 
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}

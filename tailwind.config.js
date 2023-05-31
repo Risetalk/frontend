@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation:{
+        'pulse':'pulse 1s infinite'
+      },
+      transitionDuration:{
+        '100':'100ms',
+      },
       colors: {
         
         // Light Mode

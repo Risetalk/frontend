@@ -7,7 +7,7 @@ export default function Selectors() {
 
     const [searchTerm, setSearchTerm] = useState("");
 
-    const courses = useSelector(state => state.courses)
+    const categories = useSelector(state => state.courses.categories)
     const dispatch = useDispatch()
 
 
@@ -23,13 +23,38 @@ export default function Selectors() {
                     >
                         <option value="category" disabled >Category</option>
                         <option value="all" >All</option>
-                        <option value="programming" >Programming</option>
-                        <option value="desing" >Desing</option>
-                        <option value="development">Development</option>
-                        <option value="Business">Business</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="photography">Photography</option>
-                        <option value="acting">Acting</option>
+                        {categories.map((cat,index)=>{
+                            return <option value={cat.id} key={index}>{cat.title}</option>
+                        })}
+
+                        {/* <option value={categories.map(cat => {
+                            if( cat.title === "Data Science"){
+                                return cat.id
+                            }
+                        })} >Data Science</option> */}
+
+
+                        {/* <option value={categories.map(cat => {
+                            if( cat.title === "design"){
+                                console.log(cat.id);
+                                return cat.id
+                            }
+                        })}>Design</option>
+                        <option value={categories.map(cat => {
+                            if( cat.title === "Development"){
+                                return cat.id
+                            }
+                        })}>Development</option>
+                        <option value={categories.map(cat => {
+                            if( cat.title === "Business"){
+                                return cat.id
+                            }
+                        })}>Business</option>
+                        <option value={categories.map(cat => {
+                            if( cat.title === "Marketing"){
+                                return cat.id
+                            }
+                        })}>Marketing</option> */}
                     </select>
 
                     <select className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none' defaultValue={"raiting"}
@@ -64,9 +89,6 @@ export default function Selectors() {
                         <option value="french">French</option>
                     </select>
 
-                    <button className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none'>
-                        Recents
-                    </button>
                 </div>
             </div>
         </div>
