@@ -35,7 +35,7 @@ const [typedText, setTypedText] = useState("");
   const sentence = "We hope you enjoy and make the most of your learning experience with us!";
 
   return (
-    <main>
+    <main className="h-[100vh]">
       <div className="absolute w-[100%] h-[100vh] bg-[#00000090] flex items-center z-30">
         <div className="bg-[#222129] w-[40%] mx-[auto] h-[40%] mb-[10rem] rounded-[2rem] p-4">
           <div className="flex flex-col items-center justify-around bg-white h-[100%] pt-[1rem] pb-[2rem] rounded-[1rem]">

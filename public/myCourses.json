@@ -1,0 +1,457 @@
+[
+	{
+		"course": {
+			"title": "Curso de JS ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/RqQ1d1qEWlE/maxresdefault.jpg",
+			"price": 1000,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a JS 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a js video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=2SetvwBV-SU&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&ab_channel=jonmircha"
+						},
+						{
+							"title": "Introducción a js video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=BS5RX27VaAQ&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=2&ab_channel=jonmircha"
+						}
+					]
+				},
+				{
+					"title": "Introducción a JS 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a js video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=C5FXZ2ki13k&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=3&ab_channel=jonmircha"
+						},
+						{
+							"title": "Introducción a js video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=tmRa0_EvMoc&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=4&ab_channel=jonmircha"
+						}
+					]
+				},
+				{
+					"title": "Introducción a js 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a js video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=PIHZRj99nHU&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=5&ab_channel=jonmircha"
+						},
+						{
+							"title": "Introducción a js video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=s-C8OpALC6E&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=6&ab_channel=jonmircha"
+						},
+						{
+							"title": "Introducción a js video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=arOXcy7K4XQ&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=7&ab_channel=jonmircha"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Java ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/NmfKKZ-ZXTg/maxresdefault.jpg",
+			"price": 800,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a Java 1",
+					"description": "Aprende Java desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a java video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=U709qY6S9rA&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a java video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=coK4jM5wvko&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=2&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Java 2",
+					"description": "Aprende Java desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a java video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=F0ILFYl8YgI&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=3&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a java video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=PT8AziBfrdQ&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=4&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a java 3",
+					"description": "Aprende Java desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a java video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=cJEzUxkYurk&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=5&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a java video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a java video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de Python ",
+			"description": "Aprende Python desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://oregoom.com/wp-content/uploads/2020/06/Basico-de-Python.jpg",
+			"price": 100,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a Python 1",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Python video 1",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a Python video 2",
+							"description": "Aprende Phyton desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a Python 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Python video 3",
+							"description": "Aprende Python desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a Python video 4",
+							"description": "Aprende Python desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a python 3",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a Python video 5",
+							"description": "Aprende Python desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a Python video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a Python video 7",
+							"description": "Aprende Python desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de React ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://www.freecodecamp.org/espanol/news/content/images/2022/02/thumbnail-2.png",
+			"price": 1200,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a React 1",
+					"description": "Aprende react desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a React video 1",
+							"description": "Aprende react desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a React video 2",
+							"description": "Aprende react desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a React 2",
+					"description": "Aprende Phyton desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a React video 3",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a React video 4",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a React 3",
+					"description": "Aprende React desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a React video 5",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a React video 6",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a React video 7",
+							"description": "Aprende React desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de HTML5 ",
+			"description": "Aprende html desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/rbuYtrNUxg4/maxresdefault.jpg",
+			"price": 500,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a HTML5 1",
+					"description": "Aprende html desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a HTML5 video 1",
+							"description": "Aprende  html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a HTML5 video 2",
+							"description": "Aprende  html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a HTML5 2",
+					"description": "Aprende  html desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a HTML5 video 3",
+							"description": "Aprende html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a HTML5 video 4",
+							"description": "Aprende html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a HTML5 3",
+					"description": "Aprende  html desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a HTML5 video 5",
+							"description": "Aprende html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a HTML5 video 6",
+							"description": "Aprende html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a HTML5 video 7",
+							"description": "Aprende html desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de CSS3 ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/OWKXEJN67FE/maxresdefault.jpg",
+			"price": 400,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a CSS3 1",
+					"description": "Aprende  css desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a CSS3 video 1",
+							"description": "Aprende  css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a CSS3 video 2",
+							"description": "Aprende  css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a CSS3 2",
+					"description": "Aprende  css desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a CSS3 video 3",
+							"description": "Aprende css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a CSS3 video 4",
+							"description": "Aprende css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				},
+				{
+					"title": "Introducción a CSS3 3",
+					"description": "Aprende  css desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a CSS3 video 5",
+							"description": "Aprende css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a CSS3 video 6",
+							"description": "Aprende css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						},
+						{
+							"title": "Introducción a CSS3 video 7",
+							"description": "Aprende css desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=Lj97ujkeUXc&list=PLU8oAlHdN5BktAXdEVCLUYzvDyqRQJ2lk&index=6&ab_channel=pildorasinformaticas"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"course": {
+			"title": "Curso de C++ ",
+			"description": "Aprende Css desde cero a nivel profesional",
+			"language": "english",
+			"background_image": "https://i.ytimg.com/vi/2te-oJMz8_E/maxresdefault.jpg",
+			"price": 1200,
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
+			"lessons": [
+				{
+					"title": "Introducción a C++ 1",
+					"description": "Aprende  c++ desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C++ video 1",
+							"description": "Aprende  c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=dJzLmjSJc2c&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=2&ab_channel=Programaci%C3%B3nATS"
+						},
+						{
+							"title": "Introducción a C++ video 2",
+							"description": "Aprende  c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=ld4nzao5XAc&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=2&ab_channel=Programaci%C3%B3nATS"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C++ 2",
+					"description": "Aprende  c++ desde cero a nivel profesional",
+					"videos": [
+						{
+							"title": "Introducción a C++ video 3",
+							"description": "Aprende c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=ld4nzao5XAc&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=2&ab_channel=Programaci%C3%B3nATS"
+						},
+						{
+							"title": "Introducción a C++ video 4",
+							"description": "Aprende c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=1iQUZEklWio&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=4&ab_channel=Programaci%C3%B3nATS"
+						}
+					]
+				},
+				{
+					"title": "Introducción a C++ 3",
+					"description": "Aprende  c++ desde cero a nivel profesional",
+					"videos": [
+						{  
+							"title": "Introducción a C++ video 5",
+							"description": "Aprende c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=rpZVq8LRb0U&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=5&ab_channel=Programaci%C3%B3nATS"
+						},
+						{
+							"title": "Introducción a C++ video 6",
+							"description": "Aprende c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=E_43MWP6i-c&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=6&ab_channel=Programaci%C3%B3nATS"
+						},
+						{
+							"title": "Introducción a C++ video 7",
+							"description": "Aprende c++ desde cero a nivel profesional",
+							"video_url": "https://www.youtube.com/watch?v=zqmN2aO4c7o&list=PLWtYZ2ejMVJlUu1rEHLC0i_oibctkl0Vh&index=7&ab_channel=Programaci%C3%B3nATS"
+						}
+					]
+				}
+			]
+		}
+	}
+]

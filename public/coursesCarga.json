@@ -6,7 +6,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/RqQ1d1qEWlE/maxresdefault.jpg",
 			"price": 1000,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
 			"lessons": [
 				{
 					"title": "Introducción a JS 1",
@@ -71,7 +71,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/NmfKKZ-ZXTg/maxresdefault.jpg",
 			"price": 800,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
 			"lessons": [
 				{
 					"title": "Introducción a Java 1",
@@ -136,7 +136,7 @@
 			"language": "english",
 			"background_image": "https://oregoom.com/wp-content/uploads/2020/06/Basico-de-Python.jpg",
 			"price": 100,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
 			"lessons": [
 				{
 					"title": "Introducción a Python 1",
@@ -201,7 +201,7 @@
 			"language": "english",
 			"background_image": "https://d3puay5pkxu9s4.cloudfront.net/curso/4304/card_imagen.jpg",
 			"price": 900,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
 			"lessons": [
 				{
 					"title": "Introducción a sql 1",
@@ -266,7 +266,7 @@
 			"language": "english",
 			"background_image": "https://escuela.it/storage/course_images/imagen-curso-mysql-42.jpg",
 			"price": 700,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "20d6d8c8-afad-4cb7-86b9-0eaed2555870",
 			"lessons": [
 				{
 					"title": "Introducción a mysql 1",
@@ -331,7 +331,7 @@
 			"language": "english",
 			"background_image": "https://www.freecodecamp.org/espanol/news/content/images/2022/02/thumbnail-2.png",
 			"price": 1200,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
 			"lessons": [
 				{
 					"title": "Introducción a React 1",
@@ -396,7 +396,7 @@
 			"language": "english",
 			"background_image": "https://img-b.udemycdn.com/course/750x422/3883590_69e1_2.jpg",
 			"price": 600,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
 			"lessons": [
 				{
 					"title": "Introducción a Ract native 1",
@@ -461,7 +461,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/Tn6QYliFBcs/maxresdefault.jpg",
 			"price": 100,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
 			"lessons": [
 				{
 					"title": "Introducción a Next js 1",
@@ -526,7 +526,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/U4ejmeEals0/maxresdefault.jpg",
 			"price": 1400,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "41d07839-9e04-4a2c-ba29-5604181f90d7",
 			"lessons": [
 				{
 					"title": "Introducción a Angular 1",
@@ -591,7 +591,7 @@
 			"language": "english",
 			"background_image": "https://dc722jrlp2zu8.cloudfront.net/media/fbads-vue-js.jpg",
 			"price": 900,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
 			"lessons": [
 				{
 					"title": "Introducción a Vue js 1",
@@ -656,7 +656,7 @@
 			"language": "english",
 			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/9e541efb-1c68-4252-ba2c-f57691a743a1.png",
 			"price": 850,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
 			"lessons": [
 				{
 					"title": "Introducción a Dart 1",
@@ -721,7 +721,7 @@
 			"language": "english",
 			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/4c50ffbe-52c8-4ef9-98ae-4be787c663e0.png",
 			"price": 700,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
 			"lessons": [
 				{
 					"title": "Introducción a Postgresql 1",
@@ -786,7 +786,7 @@
 			"language": "english",
 			"background_image": "https://escuela.it/storage/course_images/imagen-curso-jquery-95.jpg",
 			"price": 500,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "d3605a3f-770c-46ff-81fc-8fdbd233d8a0",
 			"lessons": [
 				{
 					"title": "Introducción a Jquery 1",
@@ -851,7 +851,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/rbuYtrNUxg4/maxresdefault.jpg",
 			"price": 500,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
 			"lessons": [
 				{
 					"title": "Introducción a HTML5 1",
@@ -916,7 +916,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/OWKXEJN67FE/maxresdefault.jpg",
 			"price": 400,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
 			"lessons": [
 				{
 					"title": "Introducción a CSS3 1",
@@ -981,7 +981,7 @@
 			"language": "english",
 			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/13728245-c59d-4f37-966d-eca63fc08248.png",
 			"price": 600,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
 			"lessons": [
 				{
 					"title": "Introducción Ajax 1",
@@ -1046,7 +1046,7 @@
 			"language": "english",
 			"background_image": "https://www.agentur-kreativdenker.de/wp-content/uploads/2020/11/MariaDB.jpg",
 			"price": 800,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "f9ad437a-a64c-4537-a8ad-c88b3a210c46",
 			"lessons": [
 				{
 					"title": "Introducción a Maria DB 1",
@@ -1111,7 +1111,7 @@
 			"language": "english",
 			"background_image": "https://escuela.it/storage/course_images/curso-de-redux-47.jpg",
 			"price": 900,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a Redux 1",
@@ -1176,7 +1176,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/I7jaHPqef10/maxresdefault.jpg",
 			"price": 1000,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a Redux toolkit 1",
@@ -1241,7 +1241,7 @@
 			"language": "english",
 			"background_image": "https://edteam-media.s3.amazonaws.com/courses/original/3cc48fa0-8327-4561-aa04-dafc3b799909.png",
 			"price": 950,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a Node js 1",
@@ -1306,7 +1306,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/2te-oJMz8_E/maxresdefault.jpg",
 			"price": 1200,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a C++ 1",
@@ -1371,7 +1371,7 @@
 			"language": "english",
 			"background_image": "https://dc722jrlp2zu8.cloudfront.net/media/facebook-ads-c-sharp-principiantes.jpg",
 			"price": 700,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a C# 1",
@@ -1436,7 +1436,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/rEsSxd0L4GI/maxresdefault.jpg",
 			"price": 600,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a C 1",
@@ -1501,7 +1501,7 @@
 			"language": "english",
 			"background_image": "https://i.ytimg.com/vi/LQrQV63iW9E/maxresdefault.jpg",
 			"price": 300,
-			"categoryId": "ae0ffb6b-b074-4d81-8a4c-59ae732ffb55",
+			"categoryId": "3afdfe37-fa28-4b6a-aff8-050f16a9c12a",
 			"lessons": [
 				{
 					"title": "Introducción a Pascal 1",

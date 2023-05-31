@@ -19,6 +19,7 @@ const initialState = {
   access: true,
   reset: false,
   id: "",
+  totalPay:"",
   course: {},
   my_cart: [],
   loggedIn: false,
@@ -204,8 +205,11 @@ export const Slice = createSlice({
 
   addMyCart: (state,action) =>{
     state.my_cart = [...state.my_cart,action.payload];
-  }
+  },
 
+  addPay: (state,action) => {
+    state.totalPay = action.payload;
+  }
 
 }
 
@@ -235,5 +239,6 @@ export const {
   createLesson,
   createVideo,
   loginSuccess, logoutSuccess,
+  addPay,
 } = Slice.actions;
 export default Slice.reducer;
