@@ -2,10 +2,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useSelector, useDispatch } from "react-redux";
-import AddVideo from "../../components/Form/addVideo";
+import { useSelector } from "react-redux";
 import AddLesson from "@/components/Form/AddLesson";
-import UploadVideo from "@/components/Form/AddLesson";
 import CreateCourse from "@/components/Form/CreateCourse";
 import TeacherCard from "@/components/TeacherCard";
 
