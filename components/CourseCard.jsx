@@ -40,12 +40,20 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     // );
     const getCheckout = () =>{
         const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        console.log('estos son los cursos comprados')
         const coursesPurchased = JSON.parse(myCoursesPurchased)
         console.log(coursesPurchased);
-        const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
-        if(searchCoursePurchased){
-            return window.alert("Este curso ya esta comprado")
+        if(!coursesPurchased.error){
+            
+           console.log('entro al if')
+            const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
+           
+            if(searchCoursePurchased){
+                return window.alert("Este curso ya esta comprado")
+            }
+
         }
+        console.log('paso la validacion')
         dispatch(addMyCart(myCart))
         // localStorage.setItem("my_cart", JSON.stringify())
     }
