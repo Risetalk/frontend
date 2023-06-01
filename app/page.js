@@ -30,18 +30,18 @@ export default function Home() {
 
   useEffect(() => {
     const getAllCourses = async () => {
-      // try {
-      //   const res = await fetch("http://localhost:3000/course.json");
-      //   const data = await res.json();
-      //   dispatch(allCourses(data));
-      //   dispatch(allMyCourses())
-      //   dispatch(allBuyCourses())
-      //   dispatch(getMyCategories())
+      try {
+        const res = await fetch("http://localhost:3000/course.json");
+        const data = await res.json();
+        dispatch(allCourses(data));
+        dispatch(allMyCourses())
+        dispatch(allBuyCourses())
+        dispatch(getMyCategories())
 
 
-      // } catch (error) {
-      //   console.error("Error fetching recommends:", error);
-      // }
+      } catch (error) {
+        console.error("Error fetching recommends:", error);
+      }
       try {
 
       } catch (error) {

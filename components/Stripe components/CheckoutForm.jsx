@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";
 import { PaymentElement } from "@stripe/react-stripe-js";
+import { useSelector } from "react-redux";
 
 export default function CheckoutForm() {
   const stripe = useStripe()
@@ -10,9 +11,15 @@ export default function CheckoutForm() {
 
   const [message, setMessage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
+  const myCart = useSelector(state => state.courses.my_cart);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    localStorage.setItem("dataMyCart", JSON.stringify(myCart));
+
+    console.log(myCart);
 
     if(!stripe || !elements){
       return;
@@ -42,8 +49,8 @@ export default function CheckoutForm() {
   return (
     <form id="payment-form" onSubmit={handleSubmit}>
       <PaymentElement />
-      <button className='bg-slate-500' disabled={isProcessing} id="submit">
-        <span id="button-text">
+      <button className="py-[0.4rem]  px-[0.8rem] text-white bg-[#F8662B] mt-[1rem] rounded-[0.8rem]" disabled={isProcessing} id="submit">
+        <span className="" id="button-text">
           {isProcessing ? "Processing ... " : "Pay now"}
         </span>
       </button >

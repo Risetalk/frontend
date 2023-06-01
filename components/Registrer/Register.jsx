@@ -15,11 +15,14 @@ import validate from "./validate";
 
 export default function Register() {
   const [formularioSend, setFormularioSend] = useState(false);
+  const [isTutor, setIsTutor] = useState(false);
   const notify = (message) => {
     toast.success(message, {
       autoClose: 6000,
     });
   };
+
+
 
   const notifyError = (message) => toast.error(message);
   const dispatch = useDispatch();
@@ -51,6 +54,7 @@ export default function Register() {
           email: "",
           password: "",
           date_birth: "",
+          is_tutor: isTutor,
         }}
         validate={validate}
         onSubmit={async (values, { resetForm }) => {
@@ -58,21 +62,22 @@ export default function Register() {
           setFormularioSend(true);
           setTimeout(() => setFormularioSend(false), 5000);
 
-          try {
-            const response = await axios.post(
-              "http://localhost:3001/user/register",
-              values
-            );
-            console.log(response);
-            notify(
-              "User created successfully, check your email to activate your account"
-            );
-            dispatch(addUser(response.data));
-            setTimeout(() => router.push("/login"), 6000);
-          } catch (error) {
-            console.log(error);
-            notifyError("User already exists");
-          }
+            try {
+              const response = await axios.post(
+                "http://localhost:3001/user/register",
+                values
+              );
+              console.log(response);
+              notify(
+                "User created successfully, check your email to activate your account"
+              );
+              dispatch(addUser(response.data));
+              setTimeout(() => router.push("/login"), 6000);
+            } catch (error) {
+              console.log(error);
+              notifyError("User already exists");
+            }
+          
         }}>
         {({ errors }) => (
           <Form className=" w-[50%] h-[100%] ">
@@ -229,6 +234,8 @@ export default function Register() {
                   <input
                     type="checkbox"
                     name="is_tutor"
+                    checked={isTutor}
+                    onChange={() => setIsTutor(!isTutor)}
                     className="mr-[0.5rem]"
                   />
                   Count tutor

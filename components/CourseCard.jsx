@@ -39,7 +39,23 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     //     </div>
     // );
     const getCheckout = () =>{
+        const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        console.log('estos son los cursos comprados')
+        const coursesPurchased = JSON.parse(myCoursesPurchased)
+        console.log(coursesPurchased);
+        if(!coursesPurchased.error){
+            
+           console.log('entro al if')
+            const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
+           
+            if(searchCoursePurchased){
+                return window.alert("Este curso ya esta comprado")
+            }
+
+        }
+        console.log('paso la validacion')
         dispatch(addMyCart(myCart))
+        // localStorage.setItem("my_cart", JSON.stringify())
     }
 
     useEffect(() => {
@@ -62,7 +78,7 @@ export default function CourseCard({ id, title, background_image, categoryId, la
                         <h3 className="font-bold text-[1.6rem]">{title}</h3>
                         <span className="text-[0.8rem]">Update last: {updatedAt ? updatedAt.slice(0, 10) : ""}</span>
                         <p className="font-medium text-[1rem]">{description}</p>
-                        <button onClick={getCheckout} className="font-bold text-[1.2rem] bg-[#F9662A] py-[0.6rem] w-[90%] mx-[auto] rounded-[0.6rem]">Add to carr</button>
+                        <button onClick={getCheckout} className="font-bold text-[1.2rem] bg-[#F9662A] py-[0.6rem] w-[90%] mx-[auto] rounded-[0.6rem]">Add to cart</button>
                     </div>
                 }
 

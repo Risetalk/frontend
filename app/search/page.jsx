@@ -35,6 +35,7 @@ export default function SearchPage() {
 
   useEffect(()=>{
     addCategories()
+    localStorage.setItem('my_cart', JSON.stringify([]))
   },[])
 
   return (
