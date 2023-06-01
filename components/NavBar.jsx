@@ -115,7 +115,7 @@ export default function NavBar() {
     const google = async () => {
       try {
         await axios.post("/api/auth/loginGoogle", session);
-        const response = await axios.post("http://localhost:3001/user/googlelogin", session);
+        const response = await axios.post("http://46.101.105.17:3001//user/googlelogin", session);
         localStorage.setItem("userGoogle", JSON.stringify(response.data));
       } catch (error) {
         console.log(error.response.data);
