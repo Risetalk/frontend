@@ -16,7 +16,7 @@ export default function Confirmated() {
     const userConfirm = async () => {
       try {
         const { data } = await axios.get(
-          `http://46.101.105.17:3001/user/confirmar/${idPath}`
+          `https://backend-production-ea3f.up.railway.app/user/confirmar/${idPath}`
         );
       } catch (error) {
         console.log(error)

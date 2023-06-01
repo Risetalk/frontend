@@ -25,7 +25,7 @@ const CheckoutForm = ({ curso }) => {
 			console.log(paymentMethod);
 
 			const { id } = paymentMethod;
-			const { data } = await axios.post('http://46.101.105.17:3001/payment', {
+			const { data } = await axios.post('https://backend-production-ea3f.up.railway.app/payment', {
 				id,
 				//Los pagos en dolares es en centavos
 				//Por lo que al precio hay que multiplicar por 100

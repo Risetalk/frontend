@@ -46,8 +46,17 @@ export default function NavBar() {
 
   const getMyCourse = async (id) => {
     try {
-      const { data } = await axios.get(`http://46.101.105.17:3001/purchased?id=${id}`)
-      localStorage.setItem('myCoursesPurchased', JSON.stringify(data))
+      
+      const { data } = await axios.get(`https://backend-production-ea3f.up.railway.app/purchased?id=${id}`)
+      if(data.error){
+        console.log('entro el error')
+        localStorage.setItem('myCoursesPurchased', JSON.stringify([]))
+        return 
+      } else {
+        console.log('se cargo los cursos')
+        localStorage.setItem('myCoursesPurchased', JSON.stringify(data))
+
+      }
 
     } catch (error) {
       console.log(error);
@@ -94,7 +103,7 @@ export default function NavBar() {
         const parse = JSON.parse(userGoogle)
         userFinal = parse.id;
       }
-
+      
       getMyCourse(userFinal)
 
       localStorage.setItem("access", "true");
@@ -116,7 +125,7 @@ export default function NavBar() {
       try {
         await axios.post("/api/auth/loginGoogle", session);
 
-        const response = await axios.post("http://46.101.105.17:3001//user/googlelogin", session);
+        const response = await axios.post("https://backend-production-ea3f.up.railway.app/user/googlelogin", session);
         localStorage.setItem("userGoogle", JSON.stringify(response.data));
       } catch (error) {
         console.log(error.response.data);

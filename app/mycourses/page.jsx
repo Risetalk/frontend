@@ -24,17 +24,17 @@ export default function MyCoursesPage() {
 
     const [myCourses, setMyCourses] = useState([]);
 
-    // const getAllMyCourse = async (id) => {
-    //     try {
-    //         const { data } = await axios.get(`http://localhost:3001/purchased?id=${id}`)
-    //         if (data.error) {
-    //             return setMyCourses([])
-    //         }
-    //         setMyCourses(data);
-    //     } catch (error) {
-    //         console.log(error.message);
-    //     }
-    // }
+    const getAllMyCourse = async (id) => {
+        try {
+            const { data } = await axios.get(`https://backend-production-ea3f.up.railway.app/purchased?id=${id}`)
+            if (data.error) {
+                return setMyCourses([])
+            }
+            setMyCourses(data);
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
 
     useEffect(() => {
 

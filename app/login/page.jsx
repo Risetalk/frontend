@@ -70,7 +70,7 @@ const Login = () => {
 
                   try {
                     const { data } = await axios.post(
-                      "http://46.101.105.17:3001/user/login",
+                      "https://backend-production-ea3f.up.railway.app/user/login",
                       values
                     );
                     localStorage.setItem("user", JSON.stringify(data));

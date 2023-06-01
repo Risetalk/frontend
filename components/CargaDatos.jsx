@@ -24,7 +24,7 @@ export default function CargaDatos () {
 
         const addCourses = async(course) =>{
 
-            const response = await axios.post("http://46.101.105.17:3001/courses?id=50de339f-cda7-4ef5-9814-811beaf79a29", course)            
+            const response = await axios.post("https://backend-production-ea3f.up.railway.app/courses?id=50de339f-cda7-4ef5-9814-811beaf79a29", course)            
 
         }
         if(courses){

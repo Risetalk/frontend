@@ -13,6 +13,7 @@ export default function CheckoutForm() {
   const [isProcessing, setIsProcessing] = useState(false);
   const myCart = useSelector(state => state.courses.my_cart);
 
+  console.log(myCart);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +35,7 @@ export default function CheckoutForm() {
       },
       //redirect: 'if_required',
     })
-    //axios.post('http://localhost:3001/payment/create-payment', { amount: 3000 })
+    //axios.post('https://backend-production-ea3f.up.railway.app/payment/create-payment', { amount: 3000 })
 
   // if(error){
   //   setMessage(error.message)

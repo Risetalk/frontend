@@ -105,7 +105,7 @@ function AddLesson({ uploadedCourse, handleStep3 }) {
 
   // useEffect(() => {
   //   const getAllLessons = async () => {
-  //     const response = await axios("http://localhost:3001/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91")
+  //     const response = await axios("https://backend-production-ea3f.up.railway.app/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91")
   //     console.log(response);
   //     const data = await response.data;
   //     setAllLessons(data)

@@ -17,7 +17,7 @@ export default function SearchPage() {
   const dispatch = useDispatch();
 
   const addCategories = async() =>{
-    const {data} = await axios.get("http://46.101.105.17:3001/category")
+    const {data} = await axios.get(" https://backend-production-ea3f.up.railway.app/category")
     dispatch(getCategories(data.result))
 }
 

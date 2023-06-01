@@ -6,25 +6,26 @@ import CheckoutForm from "./CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { useSelector } from 'react-redux';
 
+
 function Payment() {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
   const amount = useSelector(state => state.courses.totalPay);
-
+  
   useEffect(() => {
-    axios.get('http://46.101.105.17:3001/payment/config')
-      .then(async (response) => {
-        const { publishableKey } = await response.data;
-        setStripePromise(loadStripe(publishableKey));
-      })
-      .catch((error) => {
-        // Handle error
-      });
-  }, []);
+    // axios.get('https://backend-production-ea3f.up.railway.app/payment/config')
+    //   .then(async (response) => {
+      //     const { publishableKey } = await response.data;
+      //   })
+      //   .catch((error) => {
+        //     // Handle error
+        //   });
+        setStripePromise(loadStripe('pk_test_51N8lsLDcUyKcM4LIF5dll7ccQipSzmHbMILHzNn4GgGqgm1WBk8PFI0Bznh171t339AHcKrYZtCubakr5pJMX2kT00lGEXvWQl'));
+  }, [stripePromise]);
 
   useEffect(() => {
     if (amount) {
-      axios.post('http://46.101.105.17:3001/payment/create-payment', { amount })
+      axios.post('https://backend-production-ea3f.up.railway.app/payment/create-payment', { amount })
         .then(async (response) => {
           const { clientSecret } = await response.data;
           setClientSecret(clientSecret);

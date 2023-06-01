@@ -78,7 +78,7 @@ export default function LessonVideo() {
                 const requestBody = {
                     course: courses.course
                 };
-                const response = await axios.post(`http://46.101.105.17:3001/courses?id=${userFinal}`, requestBody);
+                const response = await axios.post(`https://backend-production-ea3f.up.railway.app/courses?id=${userFinal}`, requestBody);
                 console.log(response.data);
                 // setMessageRegister(true)
             } catch (error) {
@@ -92,7 +92,7 @@ export default function LessonVideo() {
 
     const addVideo = async () => {
         try {
-            const response = await axios.post(`http://46.101.105.17:3001/video?id=${oneLesson.id}`, oneLesson)
+            const response = await axios.post(`https://backend-production-ea3f.up.railway.app/video?id=${oneLesson.id}`, oneLesson)
             console.log(response);
 
         } catch (error) {
@@ -102,7 +102,7 @@ export default function LessonVideo() {
 
     // const handleOnSubmit = () =>{
     //     const addVideoLesson = async() =>{
-    //         const response = (await axios("http://localhost:3001/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91")).data
+    //         const response = (await axios("https://backend-production-ea3f.up.railway.app/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91")).data
     //         console.log(response);
     //         setAllLessons(response)
     //     }  
@@ -111,7 +111,7 @@ export default function LessonVideo() {
     // console.log(oneLesson)
 
     // const getAllLesson = async () => {
-    //     const response = (await axios("http://localhost:3001/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91")).data
+    //     const response = (await axios("https://backend-production-ea3f.up.railway.app/lesson?id=30580de9-b4f1-4e5a-a5bc-ee54ac743b91")).data
     //     console.log(response);
     //     setAllLessons(response)
     // }

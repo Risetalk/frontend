@@ -92,7 +92,7 @@ export default function BuyCourseDetail() {
 
     useEffect(() => {
         const getDataCourseID = async () => {
-            const response = await axios(`http://46.101.105.17:3001/courses/${idPath}`)
+            const response = await axios(`https://backend-production-ea3f.up.railway.app/courses/${idPath}`)
             setCourseDetail(response.data.data);
             setMyCart({
                 id: response.data.data?.course?.id,

@@ -20,6 +20,7 @@ export default function CourseCard({ id, title, background_image, categoryId, la
     const notifyError = (message) => toast.error(message);
     const [myCart, setMyCart] = useState({})
     const dispatch = useDispatch()
+    console.log(myCart)
 
     const getCheckout = () => {
         const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')

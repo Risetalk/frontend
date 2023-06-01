@@ -159,7 +159,7 @@ const CourseDetail = () => {
     const getMyCourseById = async () => {
       const userId = userFinal
       const courseId = pathId
-      const response = await axios.post(`http://46.101.105.17:3001/courses/view-course`,{ userId, courseId})
+      const response = await axios.post(` https://backend-production-ea3f.up.railway.app/courses/view-course`,{ userId, courseId})
       setMyCourseData(response.data.data)
         setLoading(false);
     }
