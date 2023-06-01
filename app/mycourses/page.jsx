@@ -63,7 +63,7 @@ export default function MyCoursesPage() {
             <ContainerMyCourses myCourses={myCourses} />
 
 
-            <Categories />
+            {/* <Categories /> */}
 
             <section className="bg-[#22212921] pt-[6.063rem] pb-[13.313rem] ">
                 <div>

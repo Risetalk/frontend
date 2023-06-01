@@ -24,14 +24,10 @@ export default function SearchPage() {
   const handleChange = (event) => {
     const value = event.target.value
     const newValue = value.toLowerCase()
-    console.log(newValue);
     dispatch(searchCourses(newValue))
     dispatch(resetPage())
   }
 
-  const handleSubmit = e => {
-    console.log(e.target.value);
-  }
 
   useEffect(()=>{
     addCategories()
@@ -75,13 +71,6 @@ export default function SearchPage() {
       
       <ScrollInfinite/>
 
-      {/* <div className='pt-[3rem] pb-[5.5rem] bg-[#222129] tex-white'>
-        <ContainerCards
-          key={1}
-          title={'Recommended for you'}
-          link={'See all'}
-        />
-      </div> */}
 
     </div>
   )
