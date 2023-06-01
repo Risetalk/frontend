@@ -11,7 +11,6 @@ export default function Confirmated() {
   const path = usePathname();
 
   const idPath = path.split("/").pop();
-  console.log(idPath);
 
   useEffect(() => {
     const userConfirm = async () => {
@@ -19,9 +18,8 @@ export default function Confirmated() {
         const { data } = await axios.get(
           `http://46.101.105.17:3001/user/confirmar/${idPath}`
         );
-        console.log(data);
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     };
     userConfirm();
