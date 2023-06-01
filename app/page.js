@@ -23,7 +23,7 @@ export default function Home() {
   const dispatch = useDispatch();
 
   const addCategories = async() =>{
-      const {data} = await axios.get("http://localhost:3001/category")
+      const {data} = await axios.get("http://46.101.105.17:3001/category")
       dispatch(getCategories(data.result))
 
   }

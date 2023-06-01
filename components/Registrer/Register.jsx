@@ -64,7 +64,7 @@ export default function Register() {
 
             try {
               const response = await axios.post(
-                "http://localhost:3001/user/register",
+                "http://46.101.105.17:3001/user/register",
                 values
               );
               console.log(response);

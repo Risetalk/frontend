@@ -139,7 +139,7 @@ export default function BuyCourseDetail() {
 
     useEffect(() => {
         const getDataCourseID = async () => {
-            const response = await axios(`http://localhost:3001/courses/${idPath}`)
+            const response = await axios(`http://46.101.105.17:3001/courses/${idPath}`)
             setCourseDetail(response.data.data);
         }
         getDataCourseID()

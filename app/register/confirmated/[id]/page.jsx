@@ -17,7 +17,7 @@ export default function Confirmated() {
     const userConfirm = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:3001/user/confirmar/${idPath}`
+          `http://46.101.105.17:3001/user/confirmar/${idPath}`
         );
         console.log(data);
       } catch (error) {

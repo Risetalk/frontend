@@ -12,7 +12,7 @@ function Payment() {
   const amount = useSelector(state => state.courses.totalPay);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/payment/config')
+    axios.get('http://46.101.105.17:3001/payment/config')
       .then(async (response) => {
         const { publishableKey } = await response.data;
         setStripePromise(loadStripe(publishableKey));
@@ -24,7 +24,7 @@ function Payment() {
 
   useEffect(() => {
     if (amount) {
-      axios.post('http://localhost:3001/payment/create-payment', { amount })
+      axios.post('http://46.101.105.17:3001/payment/create-payment', { amount })
         .then(async (response) => {
           const { clientSecret } = await response.data;
           setClientSecret(clientSecret);
