@@ -1,5 +1,4 @@
 "use client";
-// import Register from "@/components/Registrer/Register";
 import check from "../../public/check.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,8 +31,7 @@ export default function Completion() {
 
     myCourses.map(async (course) => {
       try {
-        const { data } = await axios.post(`http://localhost:3001/purchased?idUser=${userFinal}&idCourse=${course.id}`)
-        console.log(data);
+        const { data } = await axios.post(`http://46.101.105.17:3001/purchased?idUser=${userFinal}&idCourse=${course.id}`)
 
       } catch (error) {
         console.log(error);
@@ -46,32 +44,9 @@ export default function Completion() {
   }
   
   useEffect(() => {
-    
-    
-    // const userRegister = localStorage.getItem("user");
-    // const userGoogle = localStorage.getItem("userGoogle");
-    // let userFinal 
-
-    //   if (userRegister) {
-
-    //     const parse = JSON.parse(userRegister);
-    //     console.log("entro al userRegister");
-    //     console.log(parse);
-    //     userFinal = parse.id
-
-    //   } else if (userGoogle) {
-    //     const parse = JSON.parse(userGoogle);
-    //     console.log("entro al userGoogle");
-    //     console.log(parse);
-    //     userFinal = parse.id
-    // }
-
-
     const getMyCourses = localStorage.getItem("dataMyCart");
     const myCourses = JSON.parse(getMyCourses)
 
-
-    console.log(myCourses);
     addCoursePurchased(myCourses)
 
     let currentText = "";

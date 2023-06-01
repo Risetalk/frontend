@@ -22,8 +22,6 @@ export default function ScrollInfinite() {
     },[])
     
     useEffect(() => {
-        console.log(page);
-        console.log(courses);
     }, [courses])
 
     const cargarCourses = async() => {
@@ -38,53 +36,17 @@ export default function ScrollInfinite() {
             console.log(error);
         }   
 
-        // axios
-        //     .get(`http://localhost:3001/courses?page=${page}&limit=${limit}`)
-        //     .then(response => {
-        //         const newCourses = response.data.result
-        //         setCourses(prevCourses => [...prevCourses, ...newCourses])
-        //         setPage((prevPage) => prevPage + 1)
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     });
     };
 
     useEffect(()=>{
         dispatch(allCoursesDB(courses))
     },[courses, loading])
 
-    // const handleScroll = () => {
-    //     const container = containerRef.current;
-    //     const scrollHeight = container.scrollHeight;
-    //     const scrollTop = container.scrollTop;
-    //     const clientHeight = container.clientHeight;
-
-    //     // if (scrollHeight - scrollTop === clientHeight) {
-    //     //     cargarCourses();
-    //     // }
-    //     if (scrollTop + clientHeight >= scrollHeight) {
-    //                 cargarCourses();
-    //             }
-    // };
-
-    // useEffect(() => {
-    //     const container = containerRef.current;
-    //     container.addEventListener("scroll", handleScroll);
-    //     return () => {
-    //         container.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, [page]);
-
     const handleScroll = () => {
 
         const scrollHeight = document.documentElement.scrollHeight;
         const scrollTop = document.documentElement.scrollTop;
         const clientHeight = document.documentElement.clientHeight;
-
-        console.log(`Este es el scroll Height ${scrollHeight}`);
-        console.log(`Este es el scroll scrollTop ${scrollTop}`);
-        console.log(`Este es el scroll clientHeight ${clientHeight}`);
 
         if (scrollTop + clientHeight >= scrollHeight) {
             cargarCourses();
@@ -111,7 +73,6 @@ export default function ScrollInfinite() {
         <div className="min-h-screen">
             <div 
             ref={containerRef}
-            //  style={{ overflowY: "scroll", height: "600px" }}
             className="justify-between my-[2rem] w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[3rem] p-4 mx-[auto] pb-[2rem]">
                 {
                 coursesDB.filterCoursesDB?.map((course, index) => (

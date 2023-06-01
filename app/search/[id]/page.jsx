@@ -20,13 +20,26 @@ import { useDispatch, useSelector } from "react-redux"
 import axios from "axios"
 import { addMyCart } from "@/store/slice"
 import SearchDetailSkeleton from "@/components/Skeletons/SearchDetail"
+import { useRouter } from "next/navigation"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function BuyCourseDetail() {
+
+    const router = useRouter()
     const path = usePathname();
     const dispatch = useDispatch()
     const [courseDetail, setCourseDetail] = useState({});
 
-    const [myCart, setMyCart] = useState({})
+    const [myCart, setMyCart] = useState({
+        id:"",
+        title:"",
+        price:"",
+        background_image:"",
+        description:"",
+
+    })
 
     const [vector, setVector] = useState(0)
 
@@ -34,99 +47,23 @@ export default function BuyCourseDetail() {
 
     const idPath = path.split("/").pop();
 
-    const reviews = [
-        {
-            id: "1",
-            author: "Lina",
-            imgAuthor: "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-            stars: "5",
-            time: "3",
-            comment: "Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively..."
-        },
-        {
-            id: "2",
-            author: "Lina",
-            imgAuthor: "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-            stars: "5",
-            time: "3",
-            comment: "Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively..."
-        }
-    ]
-
-    const recommended = [
-        {
-            id: "1",
-            title: "AWS Certified solutions Architect",
-            description: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-            tema: "Desing",
-            duration: "3",
-            author: "Lina",
-            price: "100",
-            offer: "80",
-            img: "https://s3-alpha-sig.figma.com/img/59e9/1cde/877aacb096082025aaa7528e15f2789e?Expires=1684713600&Signature=K--3edUWPwgZeMYX0xqupY~RBHdmyZ7DAypqD~YmBRyEFIwAYHSgmFqZndnZsH60Xz89cX-ToQW~Ym6d7d2pfWwRE4YatIC3NOBljLr7iIkclBmNiz3MGqcgjUcTf7-mzgiCsX1LoFD0P2v9fn9pQfYyMePfMrRFgBu3vq7aj49SXOwMWG8wDNBtJEMCZUBU5QkJz0A17ddAzFB4dOv-DxOj7wx0UxOXfeI8hYWXXnWON7QaKsgvvd3sxnFzpQDH4dCvBzq8Yj-ZkWDH31lSNK0A4DUds9Ek6DLtdBHom3itatOQyjLAGSsRPLOwfLa9cvAi8avmxO9OYXQlXMsWsw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-            imgAuthor: "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-        },
-        {
-            id: "2",
-            title: "AWS Certified solutions Architect",
-            description: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-            tema: "Desing",
-            duration: "3",
-            author: "Lina",
-            price: "100",
-            offer: "80",
-            img: "https://s3-alpha-sig.figma.com/img/59e9/1cde/877aacb096082025aaa7528e15f2789e?Expires=1684713600&Signature=K--3edUWPwgZeMYX0xqupY~RBHdmyZ7DAypqD~YmBRyEFIwAYHSgmFqZndnZsH60Xz89cX-ToQW~Ym6d7d2pfWwRE4YatIC3NOBljLr7iIkclBmNiz3MGqcgjUcTf7-mzgiCsX1LoFD0P2v9fn9pQfYyMePfMrRFgBu3vq7aj49SXOwMWG8wDNBtJEMCZUBU5QkJz0A17ddAzFB4dOv-DxOj7wx0UxOXfeI8hYWXXnWON7QaKsgvvd3sxnFzpQDH4dCvBzq8Yj-ZkWDH31lSNK0A4DUds9Ek6DLtdBHom3itatOQyjLAGSsRPLOwfLa9cvAi8avmxO9OYXQlXMsWsw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-            imgAuthor: "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-        },
-        {
-            id: "3",
-            title: "AWS Certified solutions Architect",
-            description: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-            tema: "Desing",
-            duration: "3",
-            author: "Lina",
-            price: "100",
-            offer: "80",
-            img: "https://s3-alpha-sig.figma.com/img/59e9/1cde/877aacb096082025aaa7528e15f2789e?Expires=1684713600&Signature=K--3edUWPwgZeMYX0xqupY~RBHdmyZ7DAypqD~YmBRyEFIwAYHSgmFqZndnZsH60Xz89cX-ToQW~Ym6d7d2pfWwRE4YatIC3NOBljLr7iIkclBmNiz3MGqcgjUcTf7-mzgiCsX1LoFD0P2v9fn9pQfYyMePfMrRFgBu3vq7aj49SXOwMWG8wDNBtJEMCZUBU5QkJz0A17ddAzFB4dOv-DxOj7wx0UxOXfeI8hYWXXnWON7QaKsgvvd3sxnFzpQDH4dCvBzq8Yj-ZkWDH31lSNK0A4DUds9Ek6DLtdBHom3itatOQyjLAGSsRPLOwfLa9cvAi8avmxO9OYXQlXMsWsw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-            imgAuthor: "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-        },
-        {
-            id: "4",
-            title: "AWS Certified solutions Architect",
-            description: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-            tema: "Desing",
-            duration: "3",
-            author: "Lina",
-            price: "100",
-            offer: "80",
-            img: "https://s3-alpha-sig.figma.com/img/59e9/1cde/877aacb096082025aaa7528e15f2789e?Expires=1684713600&Signature=K--3edUWPwgZeMYX0xqupY~RBHdmyZ7DAypqD~YmBRyEFIwAYHSgmFqZndnZsH60Xz89cX-ToQW~Ym6d7d2pfWwRE4YatIC3NOBljLr7iIkclBmNiz3MGqcgjUcTf7-mzgiCsX1LoFD0P2v9fn9pQfYyMePfMrRFgBu3vq7aj49SXOwMWG8wDNBtJEMCZUBU5QkJz0A17ddAzFB4dOv-DxOj7wx0UxOXfeI8hYWXXnWON7QaKsgvvd3sxnFzpQDH4dCvBzq8Yj-ZkWDH31lSNK0A4DUds9Ek6DLtdBHom3itatOQyjLAGSsRPLOwfLa9cvAi8avmxO9OYXQlXMsWsw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-            imgAuthor: "https://s3-alpha-sig.figma.com/img/2f32/d3a9/082c2e2832481561feec93a5e5c5e8d6?Expires=1684713600&Signature=fK1-OcQsSO2cR29Qpk0bQcd64E5p32t0HeF9FXpAp-FyMJjJSPWaB4GME-ie7fAy07wbOA5aKYLpB1rgRnzjpHwAp51I2pF2NHe1~N1jbW0Dcm78CqrJSNjptwF1rno1UJ3U479IQ91C7awFUyZSSaVTWJhAXoqlYn5ZixtWn6vw6GQ-JH2stipNoAw7mBb21ZzMHFFSxQfrCT2r1k9BawBuBMvfKZx-eH8RCPgDqav~MuJab58k-Nhea7jgTjtPmdgxev~rkkpprduV30bwfhkQdMDOFsOnEEzA88ExKRFwsmm~57IGezBjmdAdzwYpjpDEdWBmxpiFQK99b6rKYw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-        },
-    ]
-
-    const education = [
-        {
-            id: 1,
-            title: "FOR INSTRUCTORS",
-            p: "TOTC’s school management software helps traditional and online schools manage scheduling,",
-            offer: "50"
-        },
-        {
-            id: 1,
-            title: "FOR INSTRUCTORS",
-            p: "TOTC’s school management software helps traditional and online schools manage scheduling,",
-            offer: "50"
-        },
-        {
-            id: 1,
-            title: "FOR INSTRUCTORS",
-            p: "TOTC’s school management software helps traditional and online schools manage scheduling,",
-            offer: "50"
-        },
-    ]
 
     const getCheckout = () => {
+        const notifyError = (message) => toast.error(message);
+        const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        const coursesPurchased = JSON.parse(myCoursesPurchased)
+        if (!coursesPurchased.error) {
+            const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
+
+            if (searchCoursePurchased) {
+                notifyError("This course is already purchased")
+                return 
+            }
+        }
+        
         dispatch(addMyCart(myCart))
+
+        router.push('/checkout')
     }
 
     const handleVector = (index) => {
@@ -137,6 +74,20 @@ export default function BuyCourseDetail() {
     }
 
     const addToCart = () => {
+
+
+        const notifyError = (message) => toast.error(message);
+        const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
+        const coursesPurchased = JSON.parse(myCoursesPurchased)
+        if (!coursesPurchased.error) {
+            const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
+
+            if (searchCoursePurchased) {
+                notifyError("This course is already purchased")
+                return 
+            }
+        }
+
         dispatch(addMyCart(myCart))
     }
 
@@ -144,24 +95,22 @@ export default function BuyCourseDetail() {
         const getDataCourseID = async () => {
             const response = await axios(`http://localhost:3001/courses/${idPath}`)
             setCourseDetail(response.data.data);
+
             setLoading(false)
+
+            setMyCart({
+                id: response.data.data?.course?.id,
+                title: response.data.data?.course?.title,
+                price: response.data.data?.course?.price,
+                background_image: response.data.data?.course?.background_image,
+                description: response.data.data?.course?.description
+            })
+
         }
         getDataCourseID()
 
     }, [idPath])
 
-    useEffect(() => {
-        setMyCart({
-            id: courseDetail?.course?.id,
-            title: courseDetail?.course?.title,
-            price: courseDetail?.course?.price,
-            background_image: courseDetail?.course?.background_image,
-            description: courseDetail?.course?.description
-        })
-        console.log(courseDetail);
-
-
-    }, [courseDetail])
     return (
         <main className="bg-white">
             {
@@ -246,6 +195,7 @@ export default function BuyCourseDetail() {
                                         </p>
                                     </div>
 
+
                                     <div>
                                         <h2 className=" font-medium text-[1.6rem] text-[#F9662A] mb-[1rem]">Lessons</h2>
                                         <div className="flex gap-x-[3rem]  gap-y-[2rem]   ">
@@ -290,6 +240,50 @@ export default function BuyCourseDetail() {
                                             }
                                         </div>
                                     </div>
+
+                            <div>
+                                <h2 className=" font-medium text-[1.6rem] text-[#F9662A] mb-[1rem]">Lessons</h2>
+                                <div className="flex gap-x-[3rem]  gap-y-[2rem]   ">
+                                    {
+                                        courseDetail.course?.lessons?.map((lesson, index) => {
+                                            return (
+                                                <div
+                                                    key={index + 1}
+                                                    onMouseEnter={() => { handleVector(index + 1) }}
+                                                    onMouseLeave={() => { handleOutVector(index + 1) }}
+                                                    className="relative group w-[30%] cursor-pointer">
+                                                    <div className="absolute w-full top-[100%] bg-white opacity-0 transition-all duration-500 ease-in-out transform scale-y-0 origin-top group-hover:opacity-100 group-hover:scale-y-100">
+                                                        <div className="flex flex-col justify-around p-[1rem] gap-y-[0.6rem] shadow-lg">
+                                                            {
+                                                                lesson.videos?.map((video, index) => {
+                                                                    return (
+
+                                                                        <div key={index + 1} className="border-[2px] border-[#F9662A] p-[0.6rem]">
+                                                                            <h3 className="font-semibold text-[0.8rem] text-[#000000]">{`${index + 1}-${video.title}`}</h3>
+                                                                            <p className="font-normal text-[0.6rem] text-[#000000]">{video.description}</p>
+                                                                        </div>
+                                                                    )
+                                                                })
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                    <div key={index + 1} className="relative flex justify-center items-center py-[1.4rem] px-[1.8rem] border-[1px] border-[#222129] w-[100%] shadow-md hover:bg-[#F9662A] hover:text-white">
+                                                        {
+                                                            vector === (index + 1)
+                                                                ?
+                                                                <Image src={vectorUp} alt="vector-down-ico" width={20} height={20} />
+                                                                :
+                                                                <Image src={vectorDown} alt="vector-down-ico" width={20} height={20} />
+                                                        }
+                                                        <span className="font-normal text-[0.8rem] leading-[1.125rem] w-[fit-content] py-[0.4rem] px-[0.8rem] rounded-[1rem]">
+                                                            {lesson.title}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            )
+                                        })
+                                    }
+
                                 </div>
                             </div>
 
@@ -339,7 +333,20 @@ export default function BuyCourseDetail() {
                                     </article>
                                 </div>
 
+
                             </div>
+
+                                <div className="flex justify-between mt-[1.2rem]">
+
+                                    <span onClick={addToCart} className=" w-[45%] text-center text-[1rem] text-[#F9662A] hover:bg-[#F9662A] hover:text-[white] font-semibold bg-[white] py-[0.6rem] rounded-[0.3rem] border-[2px] border-[#F9662A] shadow-md cursor-pointer">Add to cart</span>
+
+                                    <span
+                                        onClick={getCheckout}
+                                        className="cursor-pointer w-[45%] text-center text-[1rem] text-[#F9662A] hover:bg-[#F9662A] hover:text-[white] font-semibold bg-[white] py-[0.6rem] rounded-[0.3rem] border-[2px] border-[#F9662A] shadow-md">Buy Now</span>
+
+                                </div>
+                            </article>
+                        </div>
 
                         </section>
                     </div>
@@ -347,7 +354,7 @@ export default function BuyCourseDetail() {
 
             <section className="bg-[#22212921] pt-[4rem] pb-[13.313rem]">
 
-                <ContainerCards key={5} title={"Marketing Articles"} link={"See all"} array={recommended} />
+                {/* <ContainerCards key={5} title={"Marketing Articles"} link={"See all"} array={recommended} /> */}
 
             </section>
 
@@ -375,6 +382,7 @@ export default function BuyCourseDetail() {
             <section>
 
             </section>
+            <ToastContainer/>
         </main>
     )
 }

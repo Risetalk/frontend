@@ -27,34 +27,6 @@ export default function Selectors() {
                             return <option value={cat.id} key={index}>{cat.title}</option>
                         })}
 
-                        {/* <option value={categories.map(cat => {
-                            if( cat.title === "Data Science"){
-                                return cat.id
-                            }
-                        })} >Data Science</option> */}
-
-
-                        {/* <option value={categories.map(cat => {
-                            if( cat.title === "design"){
-                                console.log(cat.id);
-                                return cat.id
-                            }
-                        })}>Design</option>
-                        <option value={categories.map(cat => {
-                            if( cat.title === "Development"){
-                                return cat.id
-                            }
-                        })}>Development</option>
-                        <option value={categories.map(cat => {
-                            if( cat.title === "Business"){
-                                return cat.id
-                            }
-                        })}>Business</option>
-                        <option value={categories.map(cat => {
-                            if( cat.title === "Marketing"){
-                                return cat.id
-                            }
-                        })}>Marketing</option> */}
                     </select>
 
                     <select className='px-4 py-2 mx-2 text-[#262F30] bg-white border border-gray-300  rounded-[10px] hover:bg-gray-100 focus:outline-none' defaultValue={"raiting"}

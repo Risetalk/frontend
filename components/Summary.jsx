@@ -74,7 +74,7 @@ export default function Summary() {
                         dataMyCart?.map((product, index) => {
                             return (
                                 <div className=" relative flex gap-x-[1.25rem] w-[ 100%] border-b-[0.5px] border-b-stone-400" key={index}>
-                                    <span onClick={() => { handleRemoveFromCart(product.id) }} className="cursor-pointer absolute right-0 bg-red-400 text-white rounded-full py-[0.6rem] px-[0.8rem]">x</span>
+                                    <span onClick={() => { handleRemoveFromCart(product.id) }} className="cursor-pointer absolute right-0 bg-red-400 font-bold text-white rounded-[0.4rem] px-[1rem] hover:bg-red-500">x</span>
                                     <div className="w-[30%] py-[0.6rem] ">
                                         <Image src={product.background_image} alt="img-product" width={400} height={200} />
                                     </div>
