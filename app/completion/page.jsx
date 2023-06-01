@@ -33,6 +33,7 @@ export default function Completion() {
       try {
         const { data } = await axios.post(`http://46.101.105.17:3001/purchased?idUser=${userFinal}&idCourse=${course.id}`)
 
+
       } catch (error) {
         console.log(error);
       }

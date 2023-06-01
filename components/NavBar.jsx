@@ -46,7 +46,7 @@ export default function NavBar() {
 
   const getMyCourse = async (id) => {
     try {
-      const { data } = await axios.get(`http://localhost:3001/purchased?id=${id}`)
+      const { data } = await axios.get(`http://46.101.105.17:3001/purchased?id=${id}`)
       localStorage.setItem('myCoursesPurchased', JSON.stringify(data))
 
     } catch (error) {
@@ -115,6 +115,7 @@ export default function NavBar() {
     const google = async () => {
       try {
         await axios.post("/api/auth/loginGoogle", session);
+
         const response = await axios.post("http://46.101.105.17:3001//user/googlelogin", session);
         localStorage.setItem("userGoogle", JSON.stringify(response.data));
       } catch (error) {

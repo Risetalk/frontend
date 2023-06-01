@@ -23,7 +23,9 @@ export default function CargaDatos () {
     useEffect(()=>{
 
         const addCourses = async(course) =>{
+
             const response = await axios.post("http://46.101.105.17:3001/courses?id=0533f46a-dd37-4405-854b-3b694bc88bb0", course)            
+
         }
         if(courses){
             for (let index = 0; index < courses.length; index++) {

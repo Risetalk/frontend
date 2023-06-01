@@ -245,7 +245,7 @@ function Form() {
         <div className="mb-4 flex flex-col justify-center">
           <Image
             src={userData?.profile_picture}
-            alt={userData?.first_name}
+            alt='Profile picture'
             width={100}
             height={100}
             className="rounded-full w-[80px] h-[80px] mx-[auto]"
