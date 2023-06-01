@@ -4,6 +4,7 @@ import axios from "axios"
 import CourseCard from "./CourseCard";
 import { useDispatch, useSelector } from "react-redux";
 import { allCoursesDB } from "@/store/slice";
+import CardsPrueba from "./Skeletons/CardsPrueba";
 
 
 export default function ScrollInfinite() {
@@ -12,6 +13,7 @@ export default function ScrollInfinite() {
     const [limit] = useState(8)
     const containerRef = useRef(null)
     const dispatch = useDispatch()
+    const [loading, setLoading] = useState(true)
 
     const coursesDB = useSelector(state=> state.courses)
 
@@ -29,6 +31,7 @@ export default function ScrollInfinite() {
             const newCourses = response.data.result
             setCourses(prevCourses => [...prevCourses, ...newCourses])
             setPage(page + 1)
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }   
@@ -37,7 +40,7 @@ export default function ScrollInfinite() {
 
     useEffect(()=>{
         dispatch(allCoursesDB(courses))
-    },[courses])
+    },[courses, loading])
 
     const handleScroll = () => {
 
@@ -58,9 +61,16 @@ export default function ScrollInfinite() {
     }, [page])
 
 
-
     return (
-        <div >
+        <>
+        {
+            loading
+            ?
+            <CardsPrueba/>
+            :
+
+            
+        <div className="min-h-screen">
             <div 
             ref={containerRef}
             className="justify-between my-[2rem] w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[3rem] p-4 mx-[auto] pb-[2rem]">
@@ -84,5 +94,7 @@ export default function ScrollInfinite() {
                 }
             </div>
         </div>
+        }
+        </>
     )
 }
