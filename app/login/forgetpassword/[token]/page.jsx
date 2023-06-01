@@ -27,10 +27,10 @@ export default function ResetPassword() {
   const handlerSubmit = async (values, { resetForm }) => {
     resetForm();
     try {
-      await axios.get(`http://localhost:3001/user/olvide-password/${idPath}`);
+      await axios.get(`http://46.101.105.17:3001/user/olvide-password/${idPath}`);
 
       const { data } = await axios.post(
-        `http://localhost:3001/user/olvide-password/${idPath}`,
+        `http://46.101.105.17:3001/user/olvide-password/${idPath}`,
         values
       );
       console.log(data);

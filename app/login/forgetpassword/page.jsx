@@ -61,7 +61,7 @@ export default function ForgetPassword() {
               resetForm();
               try {
                 const { data } = await axios.post(
-                  "http://localhost:3001/user/olvide-password",
+                  "http://46.101.105.17:3001/user/olvide-password",
                   values
                 );
 

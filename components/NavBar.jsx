@@ -10,11 +10,13 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import cart from '../public/cart.png'
 
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+
 
 const navLinks = [
   { title: "Home", path: "/" },
-  { title: "Courses", path: "/search" },
-  { title: "Careers", path: "/search" },
+  { title: "Buy Courses", path: "/search" },
   { title: "Blog", path: "/blog" },
   { title: "About Us", path: "/about" },
   // { title: "Login", path: "/login" },
@@ -30,6 +32,13 @@ export default function NavBar() {
   const dispatch = useDispatch();
   const [access, setAccess] = useState("false");
 
+  const myCart = useSelector(state => state.courses.my_cart)
+
+  const totalPrice = myCart.reduce(
+    (accumulator, product) => accumulator + parseFloat(product.price),
+    0
+  )
+
   const [active, setActive] = useState(false);
 
   const router = useRouter();
@@ -37,13 +46,13 @@ export default function NavBar() {
 
   const getMyCourse = async (id) => {
     try {
-      const { data } = await axios.get(`http://localhost:3001/purchased?id=${id}`)
+      const { data } = await axios.get(`http://46.101.105.17:3001/purchased?id=${id}`)
       localStorage.setItem('myCoursesPurchased', JSON.stringify(data))
 
     } catch (error) {
       console.log(error);
     }
-    
+
   }
 
   const handleActive = () => {
@@ -61,14 +70,6 @@ export default function NavBar() {
     try {
       await axios.post("/api/auth/logout");
       router.push("/login");
-      // if (session) {
-      //   signOut();
-      // }
-      // localStorage.removeItem("user");
-      // localStorage.removeItem("access");
-      // setAccess("false");
-      // signOut();
-      // dispatch(loginAccess(false));
       localStorage.clear("user")
       session && signOut();
     } catch (error) {
@@ -105,7 +106,6 @@ export default function NavBar() {
 
 
     const storeAccess = localStorage.getItem("access");
-    console.log(storeAccess);
     if (storeAccess === "true") {
       setAccess("true");
     }
@@ -115,8 +115,8 @@ export default function NavBar() {
     const google = async () => {
       try {
         await axios.post("/api/auth/loginGoogle", session);
-        const response = await axios.post("http://localhost:3001/user/googlelogin", session);
-        console.log(response.data);
+
+        const response = await axios.post("http://46.101.105.17:3001//user/googlelogin", session);
         localStorage.setItem("userGoogle", JSON.stringify(response.data));
       } catch (error) {
         console.log(error.response.data);
@@ -187,11 +187,51 @@ export default function NavBar() {
           <div>
             {access == "true" ? (
               <div className="flex gap-x-[1rem] items-center">
-                <Link href="/checkout">
-                  <Image
-                    className="h-[30px] w-[30px] cursor-pointer"
-                    src={cart} alt="ico-cart" width={50} height={50} />
-                </Link>
+                <Tippy
+                  interactive={true}
+                  placement="bottom"
+                  content={
+                    <div className="flex flex-col p-[1rem] gap-y-[1rem] ">
+                      <h3 className="font-bold text-[1.4rem]">My cart</h3>
+                      <div className="">
+                        <hr className="h-[1px] bg-white mb-[0.6rem]" />
+                        {
+
+                          myCart?.map((car, index) => {
+                            return (
+                              <div key={index} className="flex items-center gap-x-[0.8rem]">
+                                <div className="w-[30%] py-[0.6rem] ">
+                                  <Image src={car.background_image} alt="img-product" width={400} height={200} />
+                                </div>
+                                <div className="">
+                                  <h3 className="font-normal text-[1.2rem] text-white ">{car.title}</h3>
+                                  <h4 className="font-normal text-[1em] text-[#F8662B]">{car.price} $</h4>
+                                </div>
+                              </div>
+                            )
+                          })
+
+                        }
+                        <div>
+                          <hr className="h-[1px] bg-white mt-[0.6rem]" />
+                          <div className="mt-[1rem] flex justify-between px-[1rem]">
+                            <span className="font-bold text-[1rem] text-white ">Total</span>
+                            <span className="font-bold text-[1rem] text-[#F8662B] ">$ {totalPrice.toFixed(2)}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <Link href={'/checkout'} className="font-bold text-[1.2rem] bg-[#F9662A] py-[0.6rem] w-[90%] mx-[auto] rounded-[0.6rem] text-center hover:bg-[#ef855c]">Buy Now</Link>
+                    </div>
+                  }
+
+
+                >
+                  <Link href="/checkout">
+                    <Image
+                      className="h-[30px] w-[30px] cursor-pointer"
+                      src={cart} alt="ico-cart" width={50} height={50} />
+                  </Link>
+                </Tippy>
                 <button
                   className="flex items-center space-x-4 "
                   onClick={handleActive}>

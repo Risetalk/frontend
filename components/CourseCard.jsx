@@ -12,50 +12,29 @@ import axios from "axios";
 import { addMyCart } from "@/store/slice"
 import { useDispatch } from "react-redux"
 
-// id = { course.id }
-// key = { index }
-// title = { course?.title }
-// background_image = { course?.background_image }
-// description = { course?.description }
-// categoryId = { course?.categoryId }
-// laguage = { course?.language }
-// createdAt = { course?.createdAt }
-// updatedAt = { course?.updatedAt }
-// price = { course?.price }
-// like = { course?.like }
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 export default function CourseCard({ id, title, background_image, categoryId, language, description, createdAt, price, updatedAt, like }) {
+    const notifyError = (message) => toast.error(message);
     const [myCart, setMyCart] = useState({})
     const dispatch = useDispatch()
 
-    // const ref = useRef(null)
-
-    // const tooltipContent = (
-    //     <div className="text-white" ref={tooltipContentRef}>
-    //         <h2 className="font-bold text-[1.6rem]">{title}</h2>
-    //         <h3 className="text-[#F9662A]">$ {price}</h3>
-    //         <p className="font-normal ">{description}</p>
-    //     </div>
-    // );
-    const getCheckout = () =>{
+    const getCheckout = () => {
         const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
-        console.log('estos son los cursos comprados')
         const coursesPurchased = JSON.parse(myCoursesPurchased)
-        console.log(coursesPurchased);
-        if(!coursesPurchased.error){
-            
-           console.log('entro al if')
+        if (!coursesPurchased.error) {
+
             const searchCoursePurchased = coursesPurchased.find((course) => course.id === myCart.id)
-           
-            if(searchCoursePurchased){
-                return window.alert("Este curso ya esta comprado")
+
+            if (searchCoursePurchased) {
+                notifyError("This course is already purchased")
+                return
             }
 
         }
-        console.log('paso la validacion')
         dispatch(addMyCart(myCart))
-        // localStorage.setItem("my_cart", JSON.stringify())
     }
 
     useEffect(() => {
@@ -63,15 +42,15 @@ export default function CourseCard({ id, title, background_image, categoryId, la
             id: id,
             title: title,
             price: price,
-            background_image:background_image,
-            description:description
+            background_image: background_image,
+            description: description
         })
     }, [])
 
     return (
         <div className="card" >
             <Tippy
-            interactive={true}
+                interactive={true}
                 placement="right"
                 content={
                     <div className="flex flex-col p-[1rem] gap-y-[1rem]">
@@ -81,12 +60,8 @@ export default function CourseCard({ id, title, background_image, categoryId, la
                         <button onClick={getCheckout} className="font-bold text-[1.2rem] bg-[#F9662A] py-[0.6rem] w-[90%] mx-[auto] rounded-[0.6rem]">Add to cart</button>
                     </div>
                 }
-
-
             >
-                {/* {tooltipContent && createPortal(tooltipContent, document.body)} */}
                 <motion.article
-                    // ref={cardRef}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -120,35 +95,7 @@ export default function CourseCard({ id, title, background_image, categoryId, la
                             <span className="font-bold text-[#909090] text-[1rem]">{like}</span>
                         </div>
 
-
-
-                        {/* <span className="font-medium text-[0.875rem] leading-[1.563rem] text-[#696984]">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    className="inline-block w-4 h-4 mr-1">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <path d="M12 6v6l4 2" />
-                                </svg>
-                                {duration} Month
-                        
-                            </span> */}
-
-                        {/* <p className="font-normal text-[1rem] leading-[1.6rem] text-[#696984] mb-[1.063rem] h-[80px] overflow-y-scroll">
-                            {description}
-                        </p> */}
                         <div className="flex items-end justify-between">
-                            {/* <div className="flex items-center">
-                                <Image className="rounded-full" src={"https://source.unsplash.com/64x64/?person"} alt="logo" width={36} height={36} />
-                                <span className="font-medium text-[1rem] leading-[1rem] ml-[0.938rem] text-[black]">
-                                    {author}
-                                </span>
-                            </div> */}
                             <div>
                                 <span className="font-bold text-[1.2rem] leading-[2.25rem] text-[#222129] ">
                                     $ {price}
@@ -158,6 +105,8 @@ export default function CourseCard({ id, title, background_image, categoryId, la
                     </div>
                 </motion.article>
             </Tippy>
+            <ToastContainer />
         </div>
+
     )
 }

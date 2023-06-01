@@ -120,14 +120,10 @@ const CourseDetail = () => {
         setUrlVideo(v.url_video)
       }
     })
-    // setSelectedVideo(video);
-    // setVideoIndex(index)
-    // setTitleVideo(video.title)
-    // setDescVideo(video.description)
+
   };
 
   const handlePreviousLesson = () => {
-    console.log(videoIndex);
     const previousIndex = videoIndex - 1;
     if (previousIndex >= 0) {
       const previousVideo = allVideos[previousIndex];
@@ -163,7 +159,7 @@ const CourseDetail = () => {
     const getMyCourseById = async () => {
       const userId = userFinal
       const courseId = pathId
-      const response = await axios.post(`http://localhost:3001/courses/view-course`,{ userId, courseId})
+      const response = await axios.post(`http://46.101.105.17:3001/courses/view-course`,{ userId, courseId})
       setMyCourseData(response.data.data)
         setLoading(false);
     }
@@ -180,12 +176,6 @@ const CourseDetail = () => {
     }
 
   }, [myCourseData])
-
-  console.log(myCourseData);
-  console.log(videoIndex);
-  console.log(selectedVideo);
-  console.log(allVideos);
-
   const loader = () => {
     return (
       <div className="pt-[5rem]">        
@@ -319,37 +309,12 @@ const CourseDetail = () => {
                 }
               </div>
             </div>
-            {/* {selectedVideo ? (
-            <iframe
-              className="w-[79rem] h-[650px] py-[3rem] px-[3rem]"
-              src={selectedVideo.url}
-              width="100%"
-              height="650"
-              frameBorder="0"
-              allowFullScreen></iframe>
-          ) : (
-            <p className="text-[black] p-4">Plase Select a video</p>
-          )} */}
-            {/* {selectedVideo && (
-            <div className="bg-[white] ">
-              <h1 className="font-poppins text-black text-2xl font-semibold leading-[5rem] tracking-normal px-[2rem] text-left">
-                {additionalTittle}
-              </h1>
-              <p className="font-poppins text-black text-xl font-normal leading-[27px] tracking-[0.02em] text-left py-2 px-[2rem]">
-                {additionalText}
-              </p>
-            </div>
-          )} */}
+            
             <section className="bg-[white] pt-[4rem] pb-[3rem]">
               <div className="w-[90%] mx-[auto]">
                 <ReactPlayer
                   url={urlVideo}
                 />
-                {/* <video controls
-                  className="w-[100%]">
-                  <source src="https://www.youtube.com/watch?v=qCHOtrDF0nY" type="tipo_del_video" />
-                  tu navegador no soporta esto
-                </video> */}
                 <div className="w-[90%] mx-[auto] flex justify-around mt-[1rem]">
                   <div
                     onClick={() => { handlePreviousLesson() }}
@@ -385,11 +350,3 @@ const CourseDetail = () => {
 };
 
 export default CourseDetail;
-
-
- // console.log(myCourseData);
-  // console.log(arrayLessons);
-  // console.log(arrayLessons.length);
-  // console.log(allVideos);
-  // console.log(lessonsActive);
-  // console.log(videoData);

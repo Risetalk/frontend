@@ -78,7 +78,7 @@ export default function LessonVideo() {
                 const requestBody = {
                     course: courses.course
                 };
-                const response = await axios.post(`http://localhost:3001/courses?id=${userFinal}`, requestBody);
+                const response = await axios.post(`http://46.101.105.17:3001/courses?id=${userFinal}`, requestBody);
                 console.log(response.data);
                 // setMessageRegister(true)
             } catch (error) {
@@ -92,7 +92,7 @@ export default function LessonVideo() {
 
     const addVideo = async () => {
         try {
-            const response = await axios.post(`http://localhost:3001/video?id=${oneLesson.id}`, oneLesson)
+            const response = await axios.post(`http://46.101.105.17:3001/video?id=${oneLesson.id}`, oneLesson)
             console.log(response);
 
         } catch (error) {

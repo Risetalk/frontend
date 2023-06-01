@@ -50,7 +50,7 @@ function CreateCourse({ handleUploadVideoClick,professors, steps, handleStep2 })
 
   useEffect(()=>{
     const getCategory = async() =>{
-      const response = await axios('http://localhost:3001/category')
+      const response = await axios('http://46.101.105.17:3001/category')
       setCategory(response.data.result)
     }
     
