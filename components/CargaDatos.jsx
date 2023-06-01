@@ -13,7 +13,6 @@ export default function CargaDatos () {
     useEffect(()=>{
         const getCourses= async() =>{
             const response = (await axios('http://localhost:3000/coursesCarga.json')).data
-            console.log(response);
             setCourses(response)
         }
         getCourses()
@@ -24,8 +23,7 @@ export default function CargaDatos () {
     useEffect(()=>{
 
         const addCourses = async(course) =>{
-            const response = await axios.post("http://localhost:3001/courses?id=0533f46a-dd37-4405-854b-3b694bc88bb0", course)
-            console.log(response.data);
+            const response = await axios.post("http://localhost:3001/courses?id=0533f46a-dd37-4405-854b-3b694bc88bb0", course)            
         }
         if(courses){
             for (let index = 0; index < courses.length; index++) {
@@ -36,7 +34,6 @@ export default function CargaDatos () {
     },[courses])
 
 
-    console.log(courses);
     return (
         <div>
 

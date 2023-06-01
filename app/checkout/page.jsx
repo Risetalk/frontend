@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
 	return (
-		<main className=' pt-[6rem] h-[100vh]'>
+		<main className=' pt-[6rem] min-h-screen pb-[3rem]'>
 			<div className='flex justify-center items-center'>
 				<div className="w-[30%]">
 					<Payment />
