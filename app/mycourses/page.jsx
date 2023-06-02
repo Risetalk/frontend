@@ -40,7 +40,12 @@ export default function MyCoursesPage() {
 
         const myCoursesPurchased = localStorage.getItem('myCoursesPurchased')
         const coursesPurchased = JSON.parse(myCoursesPurchased)
-        setMyCourses(coursesPurchased)
+        console.log(coursesPurchased)
+        if (coursesPurchased.error){
+            setMyCourses([]);
+        }else {
+            setMyCourses(coursesPurchased)
+        }
         // const userRegister = localStorage.getItem("user");
         // const userGoogle = localStorage.getItem("userGoogle");
         // let userFinal

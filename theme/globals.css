@@ -60,6 +60,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   color: black;
+  overflow-x: hidden;
 }
 
 .colored-top-bar {

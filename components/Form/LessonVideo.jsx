@@ -78,6 +78,7 @@ export default function LessonVideo() {
                 const requestBody = {
                     course: courses.course
                 };
+                console.log(requestBody);
                 const response = await axios.post(`http://localhost:3001/courses?id=${userFinal}`, requestBody);
                 console.log(response.data);
                 // setMessageRegister(true)

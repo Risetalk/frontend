@@ -209,8 +209,8 @@ export const Slice = createSlice({
     },
 
     addMyCart: (state, action) => {
-      const notifyError = (message) => toast.error(message);
-      const notify = (message) => toast.success(message);
+      const notifyError = (message) => toast.error(message,{position: toast.POSITION.BOTTOM_LEFT});
+      const notify = (message) => toast.success(message,{position: toast.POSITION.BOTTOM_LEFT});
       const courseSearch = state.my_cart.find((course) => course.id === action.payload.id)
       if (courseSearch) {
         notifyError('This course is already added to your cart.')

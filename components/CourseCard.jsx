@@ -17,7 +17,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 
 export default function CourseCard({ id, title, background_image, categoryId, language, description, createdAt, price, updatedAt, like }) {
-    const notifyError = (message) => toast.error(message);
+    const notifyError = (message) =>  toast.error(message,{position: toast.POSITION.BOTTOM_LEFT})
+        
     const [myCart, setMyCart] = useState({})
     const dispatch = useDispatch()
 

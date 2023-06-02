@@ -4,6 +4,7 @@ import axios from "axios"
 import CourseCard from "./CourseCard";
 import { useDispatch, useSelector } from "react-redux";
 import { allCoursesDB } from "@/store/slice";
+import CardsPrueba from "./Skeletons/CardsPrueba";
 
 
 export default function ScrollInfinite() {
@@ -12,32 +13,35 @@ export default function ScrollInfinite() {
     const [limit] = useState(8)
     const containerRef = useRef(null)
     const dispatch = useDispatch()
+    const [loading, setLoading] = useState(true)
 
-    const coursesDB = useSelector(state=> state.courses)
+    const coursesDB = useSelector(state => state.courses)
 
-    useEffect(()=>{
+    useEffect(() => {
         cargarCourses();
-    },[])
-    
+    }, [])
+
     useEffect(() => {
     }, [courses])
 
-    const cargarCourses = async() => {
+    const cargarCourses = async () => {
 
         try {
-            const  response = await axios(`http://localhost:3001/courses?page=${page}&limit=${limit}`)
+            const response = await axios(`http://localhost:3001/courses?page=${page}&limit=${limit}`)
             const newCourses = response.data.result
             setCourses(prevCourses => [...prevCourses, ...newCourses])
             setPage(page + 1)
+            setLoading(false)
+
         } catch (error) {
             console.log(error);
-        }   
+        }
 
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(allCoursesDB(courses))
-    },[courses])
+    }, [courses])
 
     const handleScroll = () => {
 
@@ -61,28 +65,36 @@ export default function ScrollInfinite() {
 
     return (
         <div >
-            <div 
-            ref={containerRef}
-            className="justify-between my-[2rem] w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[3rem] p-4 mx-[auto] pb-[2rem]">
-                {
-                coursesDB.filterCoursesDB?.map((course, index) => (
-                    <CourseCard
-                        id={course.id}
-                        key={index}
-                        title={course?.title}
-                        background_image={course?.background_image}
-                        description={course?.description}
-                        categoryId={course?.categoryId}
-                        language={course?.language}
-                        createdAt={course?.createdAt}
-                        updatedAt={course?.updatedAt}
-                        price={course?.price}
-                        like={course?.like}
-                        
-                    />
-                ))
-                }
-            </div>
+            {
+                loading
+                    ?
+                    <CardsPrueba />
+                    :
+                    <>
+                        <div
+                            ref={containerRef}
+                            className="justify-between my-[2rem] w-[90%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[3rem] p-4 mx-[auto] pb-[2rem]">
+                            {
+                                coursesDB.filterCoursesDB?.map((course, index) => (
+                                    <CourseCard
+                                        id={course.id}
+                                        key={index}
+                                        title={course?.title}
+                                        background_image={course?.background_image}
+                                        description={course?.description}
+                                        categoryId={course?.categoryId}
+                                        language={course?.language}
+                                        createdAt={course?.createdAt}
+                                        updatedAt={course?.updatedAt}
+                                        price={course?.price}
+                                        like={course?.like}
+
+                                    />
+                                ))
+                            }
+                        </div>
+                    </>
+            }
         </div>
     )
 }
