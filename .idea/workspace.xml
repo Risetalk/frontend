@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="485f9131-5e7c-40ad-ad5c-bfabad9ab0f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/home/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/home/banner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/logos/cap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/logos/dark-cap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LogoImg.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LogoImg.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/navbar/Desktop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Desktop/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/navbar/Mobile/AuthLinkNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Mobile/AuthLinkNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/navbar/Mobile/GuestLinkNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Mobile/GuestLinkNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/sidebar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/@/[...slug].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/@/[...slug].jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/activate/[...slug].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/activate/[...slug].jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/careers/components/JoinOurTeam.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/careers/components/JoinOurTeam.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/community/components/GetStarted.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/community/components/GetStarted.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/community/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/community/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/components/Badges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/Badges.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/components/Teach.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/Teach.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/course/w/[...courseUUID].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/course/w/[...courseUUID].jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/games/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/investors/components/CompanyStatement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/investors/components/CompanyStatement.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/investors/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/investors/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/logout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/logout/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/press/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/press/components/Header.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;joelvegas20&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/boomslag/frontend.git&quot;,
+    &quot;accountId&quot;: &quot;8a48b08b-e185-4448-9934-2a4c98571e80&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2nUY8o9VdUAf5QAQIWvLJynwr9N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joelvegas/IdeaProjects/Risetalk/frontend/public/assets/img/home&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/joelvegas/IdeaProjects/Risetalk/frontend/node_modules/prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/img/home" />
+      <recent name="$PROJECT_DIR$/public/assets/img/logos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/img/home" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="485f9131-5e7c-40ad-ad5c-bfabad9ab0f1" name="Changes" comment="" />
+      <created>1729028965036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729028965036</updated>
+      <workItem from="1729028966155" duration="6289000" />
+      <workItem from="1729086845513" duration="3906000" />
+      <workItem from="1729095395390" duration="239000" />
+      <workItem from="1729095680793" duration="301000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
