@@ -119,7 +119,7 @@ export default function MenuDropdown() {
     <AnimatedTippy
       offsetY={20}
       content={
-        <div className="w-96  cursor-default ">
+        <div className="w-96   cursor-default ">
           <div className="-mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap">
             <div className="-mb-4 p-4">
               <p className="text-xl font-extrabold leading-6 dark:text-dark-txt text-gray-900">

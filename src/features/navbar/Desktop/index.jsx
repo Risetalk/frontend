@@ -42,16 +42,6 @@ export default function DesktopNavbar() {
             </Link>
           </Logo>
         </LogoContainer>
-        <NavbarLink>
-          <Link
-            className={`${
-              router.pathname === '/marketplace' ? 'text-iris-500 dark:text-dark-primary' : ''
-            }`}
-            href="/marketplace"
-          >
-            Market
-          </Link>
-        </NavbarLink>
         <SearchContainer>
           <NavSearchbar />
         </SearchContainer>
@@ -59,17 +49,17 @@ export default function DesktopNavbar() {
           <NavbarLink>
             <Link
               className={`${
-                router.pathname === '/games' ? 'text-iris-500 dark:text-dark-primary' : ''
+                router.pathname === '/games' ? 'text-hoverOrange dark:text-dark-primary' : ''
               }`}
               href="/games"
             >
-              Games
+              Careers
             </Link>
           </NavbarLink>
           <NavbarLink>
             <Link
               className={`${
-                router.pathname === '/products' ? 'text-iris-500 dark:text-dark-primary' : ''
+                router.pathname === '/products' ? 'text-hoverOrange dark:text-dark-primary' : ''
               }`}
               href="/products"
             >
@@ -79,7 +69,7 @@ export default function DesktopNavbar() {
           <AnimatedTippy
             offsetY={15}
             content={
-              <div className="w-72   space-y-2 justify-center  py-2 text-center text-lg font-medium leading-6 ">
+              <div className="w-72    space-y-2 justify-center  py-2 text-center text-lg font-medium leading-6 ">
                 <div className="flex flex-wrap justify-center gap-2 px-4">
                   <div className="my-2 cursor-default select-none">Categories:</div>
                   {categories.map((category) => (
@@ -95,10 +85,10 @@ export default function DesktopNavbar() {
               </div>
             }
           >
-            <div className="hidden lg:inline-flex items-center mr-1 px-1  text-base font-medium text-gray-900 dark:text-dark-txt  hover:text-iris-500">
+            <div className="hidden lg:inline-flex items-center mr-1 px-1 transition-colors text-base font-medium text-gray-900 dark:text-dark-txt  hover:text-customOrange">
               <Link
                 className={`${
-                  router.pathname === '/courses' ? 'text-iris-500 dark:text-dark-primary' : ''
+                  router.pathname === '/courses' ? 'text-hoverOrange dark:text-dark-primary' : ''
                 }`}
                 href="/courses"
               >

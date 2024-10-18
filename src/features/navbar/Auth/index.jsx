@@ -80,7 +80,7 @@ export default function AuthLinks() {
   }, []);
 
   return (
-    <ul className="ml-1 flex space-x-4">
+    <ul className="ml-1  flex space-x-4">
       <MenuDropdown />
       <AnimatedTippy
         offsetY={15}

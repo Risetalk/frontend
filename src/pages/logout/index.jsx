@@ -27,7 +27,7 @@ export default function Logout() {
   }, []);
 
   return (
-    <div className="dark:bg-dark-bg">
+    <div className="dark:bg-dark-bg bg-red-600">
       <Head>
         <title>{SeoList.title}</title>
         <meta name="description" content={SeoList.description} />

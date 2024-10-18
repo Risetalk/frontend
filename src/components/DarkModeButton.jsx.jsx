@@ -67,7 +67,7 @@ export default function DarkModeButton() {
             } inline-flex items-center justify-center 
           border
         border-dark-bg
-        bg-white 
+        bg-hoverOrange 
           p-2.5
           text-sm 
           font-bold 
@@ -75,7 +75,7 @@ export default function DarkModeButton() {
           transition 
           duration-300 
           ease-in-out
-          hover:-translate-x-0.5  hover:-translate-y-0.5 hover:bg-gray-50 hover:text-iris-600  
+          hover:-translate-x-0.5  hover:-translate-y-0.5  text-white  hover:text-black
           hover:shadow-neubrutalism-md
         dark:border-dark-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-white `}
           >

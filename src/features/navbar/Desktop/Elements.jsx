@@ -16,7 +16,7 @@ export const LogoContainer = ({ children }) => (
 export const Logo = ({ children }) => <div className="flex items-center">{children}</div>;
 // eslint-disable-next-line
 export const Categories = ({ children }) => (
-  <div className="inline-flex items-center border-b-2 ml-6 -mr-2 dark:border-dark-main border-white hover:text-iris-600  px-1 pt-1 text-sm text-gray-900">
+  <div className="inline-flex items-center border-b-2 ml-6 -mr-2 dark:border-dark-main transition-colors border-white hover:hover:text-customOrange  px-1 pt-1 text-sm text-gray-900">
     {children}
   </div>
 );
@@ -28,11 +28,11 @@ export const SearchContainer = ({ children }) => (
 );
 // eslint-disable-next-line
 export const RightMenuContainer = ({ children }) => (
-  <div className="flex items-center justify-end space-x-4">{children}</div>
+  <div className="flex  items-center justify-end  space-x-4 ">{children}</div>
 );
 // eslint-disable-next-line
 export const NavbarLink = ({ children }) => (
-  <div className="hidden lg:inline-flex items-center mr-1 px-1  text-base font-medium text-gray-900 dark:text-dark-txt  hover:text-iris-500">
+  <div className="hidden lg:inline-flex items-center  mr-1 px-1  text-base font-medium text-gray-900 transition-colors dark:text-dark-txt  hover:text-customOrange">
     {children}
   </div>
 );

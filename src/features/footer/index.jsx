@@ -5,30 +5,30 @@ import LogoImg from '@/components/LogoImg';
 
 const navigation = {
   solutions: [
-    { name: 'Online Courses', href: '/courses' },
-    { name: 'Products Market', href: '/products' },
-    { name: 'Sell on Boomslag', href: '/teach' },
-    { name: 'About us', href: '/about' },
-    { name: 'Contact us', href: '/contact' },
+    { name: 'Courses', href: '/courses' },
+    { name: 'About Us', href: '/products' },
+    { name: 'Investors', href: '/teach' },
+    { name: 'Contact Us', href: '/about' },
+    // { name: 'Contact us', href: '/contact' },
     // { name: 'Banking', href: '#' },
   ],
   support: [
     { name: 'Careers', href: '/careers' },
-    { name: 'Help and Support', href: '/help' },
-    { name: 'Affiliates', href: '/affiliates' },
-    { name: 'Investors', href: '/investors' },
+    { name: 'Contact Us', href: '/help' },
+    { name: 'Roadmap', href: '/affiliates' },
+    // { name: 'Investors', href: '/investors' },
   ],
   company: [
-    { name: 'Community', href: '/community' },
-    { name: 'Whitepaper', href: '/whitepaper' },
-    { name: 'Press', href: '/press' },
-    { name: 'Partners', href: '/partners' },
+    { name: 'Sell on RiseTalk', href: '/community' },
+    { name: 'Help and Support', href: '/whitepaper' },
+    { name: 'Affiliates', href: '/press' },
+    // { name: 'Partners', href: '/partners' },
   ],
   legal: [
-    { name: 'Terms', href: '/terms' },
-    { name: 'Privacy policy', href: '/privacy' },
-    { name: 'Roadmap', href: '/roadmap' },
-    { name: 'Sitemap', href: '/sitemap.xml' },
+    { name: 'Privacy policy', href: '/terms' },
+    { name: 'Terms', href: '/privacy' },
+    { name: 'Sitemap', href: '/roadmap' },
+    // { name: 'Sitemap', href: '/sitemap.xml' },
   ],
   social: [
     {
@@ -106,13 +106,26 @@ export default function Footer() {
       <div className="mx-auto max-w-full px-6 py-12 ">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <div className="flex items-center p-4">
+            <div className="flex space-x-5 items-center p-4">
               <Link href="/">
-                <LogoImg className="mr-2 h-6 w-auto" />
+                <img src="/assets/Footer.png" className="mr-2 h-6 w-auto" alt="" />
               </Link>
-              <Link href="/" className="ml-4 text-white font-semibold text-lg tracking-wide">
+              <div
+                className=" w-px h-full bg-white z-0"
+                style={{ left: '11px', top: '18PX', width: '1px', height: '50px' }}
+              >
+                ''
+              </div>
+              <div>
+                <p className="text-white font-medium">Virtual Class</p>
+                <div className="flex space-x-2">
+                  <span className="text-white font-medium">for</span>
+                  <img className="h-8" src="/assets/FooterIcon.png" alt="" />
+                </div>
+              </div>
+              {/* <Link href="/" className="ml-4 text-white font-semibold text-lg tracking-wide">
                 Boomslag
-              </Link>
+              </Link> */}
             </div>
             <p className="text-sm leading-6 dark:text-dark-txt-secondary text-gray-600">
               Where creativity meets commerce - discover a new world of shopping in our
@@ -226,7 +239,7 @@ export default function Footer() {
         </div>
         <div className="border-t mt-6 border-gray-900/10 pb-5 sm:flex sm:items-center sm:justify-between">
           <p className="mt-6 text-xs leading-5 dark:text-dark-txt-secondary text-gray-500">
-            &copy; 2023 Boomslag DAO, Open Source Labs.
+            &copy; © 2021 RiseTalk Technologies Inc.
           </p>
         </div>
       </div>

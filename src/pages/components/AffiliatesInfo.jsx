@@ -1,6 +1,6 @@
 import React from 'react';
 import { WalletIcon, StarIcon, ChartBarIcon } from '@heroicons/react/24/outline';
-
+// import icono1 from '../../../public/Icono1.png';
 const features = [
   {
     name: 'Innovative Reward System',
@@ -29,16 +29,6 @@ export default function AffiliatesInfo() {
   return (
     <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight dark:text-dark-txt text-gray-900 sm:text-4xl">
-            The best affiliate program in Crypto
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-dark-txt-secondary">
-            Participate in our gamified affiliate program to generate passive income while you
-            explore the exhilarating universe of NFTs. Don't miss out – join us now and
-            revolutionize your online marketplace experience!
-          </p>
-        </div>
         <div className="mx-auto mt-8 max-w-2xl sm:mt-10 lg:mt-12 lg:max-w-none">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (

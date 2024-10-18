@@ -24,9 +24,150 @@ const features = [
 
 export default function Teach() {
   return (
-    <div>
-      <div className="overflow-hidden  pb-12">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <>
+      <div className="grid sm:grid-cols-1 sm:space-y-5 md:grid-cols-2 bg-background py-28">
+        {/* Columna de imagen */}
+        <div className="flex justify-center">
+          <img className="rounded" src="/assets/Seccion.png" alt="Imagen de cursos" />
+        </div>
+
+        {/* Columna de contenido */}
+        <div className="flex flex-col pt-12 gap-7 px-8 md:px-16 space-x-2">
+          <div>
+            <h1 className="text-3xl font-bold text-white text-center">
+              Unlock Your Potential and Expand Your Horizons with our Online Courses
+            </h1>
+            <h3 className="text-lg text-gray-300 mt-4 text-center">
+              Learn at your own pace and on your own terms, with a flexible and adaptable learning
+              experience.
+            </h3>
+          </div>
+
+          {/* Lista de pasos */}
+          <div className="space-y-4 relative">
+            {/* Paso con línea */}
+            <div className="flex items-start relative">
+              <div className="flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center relative z-10">
+                  <span className="w-3 h-3  rounded-full">
+                    <svg
+                      className="font-bold"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  className="absolute w-px h-full bg-white z-0"
+                  style={{ left: '11px', top: '18PX', width: '3px' }}
+                ></div>
+                {/* Línea */}
+              </div>
+              <div className="ml-4">
+                <h4 className="text-xl font-bold text-white">
+                  Deploy Smart Contracts (Apr 20 ~ 27, 2023)
+                </h4>
+                <p className="text-gray-400">
+                  Initially, we must ensure our e-learning platform functions seamlessly. During
+                  this stage, our focus will be on deploying smart contracts and conducting
+                  penetration testing.
+                </p>
+              </div>
+            </div>
+
+            {/* Paso con línea */}
+            <div className="flex items-start relative">
+              <div className="flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-gray-500 flex items-center justify-center relative z-10">
+                  <span className="w-3 h-3 bg-black rounded-full"></span>
+                </div>
+                <div
+                  className="absolute w-px h-full bg-white z-0"
+                  style={{ left: '11px', top: '18PX', width: '3px' }}
+                ></div>
+                {/* Línea */}
+              </div>
+              <div className="ml-4">
+                <h4 className="text-xl font-bold text-white">
+                  Deploy Smart Contracts (Apr 20 ~ 27, 2023)
+                </h4>
+                <p className="text-gray-400">
+                  Initially, we must ensure our e-learning platform functions seamlessly. During
+                  this stage, our focus will be on deploying smart contracts and conducting
+                  penetration testing.
+                </p>
+              </div>
+            </div>
+
+            {/* Paso con línea */}
+            <div className="flex items-start relative">
+              <div className="flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-gray-500 flex items-center justify-center relative z-10">
+                  <span className="w-3 h-3 bg-black rounded-full"></span>
+                </div>
+                <div
+                  className="absolute w-px h-full bg-white z-0"
+                  style={{ left: '11px', top: '18PX', width: '3px' }}
+                ></div>
+                {/* Línea */}
+              </div>
+              <div className="ml-4">
+                <h4 className="text-xl font-bold text-white">
+                  Deploy Smart Contracts (Apr 20 ~ 27, 2023)
+                </h4>
+                <p className="text-gray-400">
+                  Initially, we must ensure our e-learning platform functions seamlessly. During
+                  this stage, our focus will be on deploying smart contracts and conducting
+                  penetration testing.
+                </p>
+              </div>
+            </div>
+
+            {/* Paso final */}
+            <div className="flex items-start relative">
+              <div className="flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-gray-500 flex items-center justify-center relative z-10">
+                  <span className="w-3 h-3 bg-black rounded-full"></span>
+                </div>
+                <div
+                  className="absolute w-px h-full bg-white z-0"
+                  style={{ left: '11px', top: '18PX', width: '3px' }}
+                ></div>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-xl font-bold text-white">
+                  Deploy Smart Contracts (Apr 20 ~ 27, 2023)
+                </h4>
+                <p className="text-gray-400">
+                  Initially, we must ensure our e-learning platform functions seamlessly. During
+                  this stage, our focus will be on deploying smart contracts and conducting
+                  penetration testing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+{
+  /**
+  
+  
+  <div>
+      <div className=" bg-background py-28">
+        <div className="mx-auto max-w-7xl ">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:ml-auto lg:pt-4 lg:pl-4">
               <div className="lg:max-w-lg">
@@ -55,18 +196,18 @@ export default function Teach() {
                 </dl>
               </div>
             </div>
-            <div className="flex items-start justify-end lg:order-first">
+            <div className="relative flex lg:order-first h-screen w-full">
               <Image
-                src="/assets/img/joink.png"
+                src="/assets/Seccion.png"
                 alt="Product screenshot"
-                className="w-[48rem] max-w-none rounded-xl "
-                width={2432}
-                height={1442}
+                className="w-full h-full object-cover object-center"
+                width={1500} // Ajusta las dimensiones según lo necesites
+                height={1200}
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  */
 }
