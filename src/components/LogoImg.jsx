@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 
-const logoList = ['Logo.png'];
+const logoList = [
+    'dark-cap.png'
+];
 
 export default function LogoImg() {
   const [logo, setLogo] = useState(logoList[0]);
@@ -29,8 +31,8 @@ export default function LogoImg() {
       <Image
         className=" w-full h-full"
         src={`/assets/img/logos/${logo}`}
-        alt="Boomslag"
-        width={80}
+        alt="RiseTalk"
+        width={110}
         height={110}
         priority
       />

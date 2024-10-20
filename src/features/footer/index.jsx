@@ -99,7 +99,7 @@ export default function Footer() {
   const router = useRouter();
 
   return (
-    <footer className=" bg-gray-900 dark:bg-dark-main" aria-labelledby="footer-heading">
+    <footer className=" bg-[#222129] dark:bg-dark-main" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -108,24 +108,8 @@ export default function Footer() {
           <div className="space-y-8">
             <div className="flex space-x-5 items-center p-4">
               <Link href="/">
-                <img src="/assets/Footer.png" className="mr-2 h-6 w-auto" alt="" />
+                <img src="/assets/img/logos/cap.png" className="mr-2 h-8 w-auto" alt="" />
               </Link>
-              <div
-                className=" w-px h-full bg-white z-0"
-                style={{ left: '11px', top: '18PX', width: '1px', height: '50px' }}
-              >
-                ''
-              </div>
-              <div>
-                <p className="text-white font-medium">Virtual Class</p>
-                <div className="flex space-x-2">
-                  <span className="text-white font-medium">for</span>
-                  <img className="h-8" src="/assets/FooterIcon.png" alt="" />
-                </div>
-              </div>
-              {/* <Link href="/" className="ml-4 text-white font-semibold text-lg tracking-wide">
-                Boomslag
-              </Link> */}
             </div>
             <p className="text-sm leading-6 dark:text-dark-txt-secondary text-gray-600">
               Where creativity meets commerce - discover a new world of shopping in our
@@ -145,11 +129,11 @@ export default function Footer() {
             </div> */}
             <div className="w-full sm:w-96 flex flex-col sm:flex-row items-center">
               <input
-                className="w-full sm:w-auto sm:flex-grow rounded-md dark:bg-dark-bg px-4 py-2 text-md text-gray-900 dark:text-dark-txt placeholder-gray-400 dark:placeholder-dark-txt focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-purple-500 border border-gray-300 dark:border-dark-border mb-2 sm:mb-0 bg-gray-900"
+                className="w-full sm:w-auto sm:flex-grow rounded-md bg-[#222129] px-4 py-2 text-md text-gray-300 dark:text-gray-300 placeholder-gray-600 dark:placeholder-dark-txt focus:outline-none focus:ring-2 focus:ring-orange-400 dark:focus:ring-orange-500 border border-gray-300 dark:border-dark-border mb-2 sm:mb-0 bg-[#222129]"
                 type="text"
                 placeholder="Subscribe to our newsletter"
               />
-              <button className="w-full sm:w-auto sm:ml-4 rounded-md px-4 py-2 font-bold text-white border-2 border-purple-200 dark:border-purple-400 hover:border-pink-300 dark:hover:border-purple-500 focus:outline-none focus:border-pink-300 dark:focus:border-purple-500 bg-opacity-20 hover:bg-opacity-30 dark:bg-dark-main dark:hover:bg-opacity-40">
+              <button className="w-full sm:w-auto sm:ml-4 rounded-md px-4 py-2 font-bold text-white border-2 border-orange-400 dark:border-orange-400 hover:border-orange-600 dark:hover:border-purple-500 focus:outline-none focus:border-pink-300 dark:focus:border-purple-500 bg-opacity-20 hover:bg-opacity-30 dark:bg-dark-main dark:hover:bg-opacity-40">
                 Subscribe
               </button>
             </div>
@@ -239,7 +223,7 @@ export default function Footer() {
         </div>
         <div className="border-t mt-6 border-gray-900/10 pb-5 sm:flex sm:items-center sm:justify-between">
           <p className="mt-6 text-xs leading-5 dark:text-dark-txt-secondary text-gray-500">
-            &copy; © 2021 RiseTalk Technologies Inc.
+            &copy; 2024 RiseTalk Technologies Inc.
           </p>
         </div>
       </div>

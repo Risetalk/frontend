@@ -18,7 +18,6 @@ export default function GlobeButton() {
         } inline-flex items-center justify-center 
           border
         border-dark-bg
-        bg-hoverOrange
           p-2.5
           text-sm 
           font-bold 
@@ -26,9 +25,9 @@ export default function GlobeButton() {
           transition 
           duration-300 
           ease-in-out
-          hover:-translate-x-0.5  hover:-translate-y-0.5  text-white  hover:text-black
-          hover:shadow-neubrutalism-md
-        dark:border-dark-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-white `}
+          hover:-translate-x-0.5  hover:-translate-y-0.5  text-black  hover:text-customOrange
+          hover:shadow-neubrutalism-md hover:bg-zinc-100
+        dark:border-dark-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-customOrange `}
       >
         <GlobeAltIcon className="h-5  w-5 md:h-5 md:w-5" aria-hidden="true" />
       </button>

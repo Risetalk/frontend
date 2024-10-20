@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://staging.boomslag.com
+
+# Sitemaps
+Sitemap: https://staging.boomslag.com/sitemap.xml

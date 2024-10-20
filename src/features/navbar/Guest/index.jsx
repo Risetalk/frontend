@@ -11,7 +11,6 @@ export default function GuestLinks() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   return (
     <ul className="flex space-x-2">
-      {/* Cart */}
       <div className="mr-4 mt-2">
         <CartComponent isAuthenticated={isAuthenticated} />
       </div>
@@ -28,7 +27,6 @@ export default function GuestLinks() {
           } inline-flex items-center justify-center 
             border
           border-dark-bg
-          bg-hoverOrange 
             px-4 
             py-2 
             text-sm 
@@ -37,9 +35,9 @@ export default function GuestLinks() {
             transition 
             duration-300 
             ease-in-out
-            hover:-translate-x-0.5  hover:-translate-y-0.5 text-white  hover:text-black
-            hover:shadow-neubrutalism-md
-          dark:border-dark-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-white `}
+            hover:-translate-x-0.5  hover:-translate-y-0.5 text-black  hover:text-customOrange
+            hover:shadow-neubrutalism-md hover:bg-zinc-100
+          dark:border-red-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-customOrange `}
         >
           Log in
         </button>
@@ -56,8 +54,7 @@ export default function GuestLinks() {
             'duration-400 animate-click hover:translate-x-0.5  hover:translate-y-0.5 hover:shadow-neubrutalism-sm'
           } inline-flex items-center justify-center 
           border
-        border-dark-bg
-        bg-hoverOrange 
+        border-dark-bg 
         px-4 
         py-2 
         text-sm 
@@ -66,15 +63,15 @@ export default function GuestLinks() {
         transition 
         duration-300 
         ease-in-out
-            hover:-translate-x-0.5  hover:-translate-y-0.5  text-white  hover:text-black
-            hover:shadow-neubrutalism-md
-             dark:border-dark-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-white `}
+            hover:-translate-x-0.5  hover:-translate-y-0.5  text-black  hover:text-customOrange
+            hover:shadow-neubrutalism-md hover:bg-zinc-100
+             dark:border-dark-third dark:bg-dark-second dark:text-dark-txt dark:hover:text-customOrange `}
         >
           Sign up
         </button>
       </Link>
       <GlobeButton />
-      <DarkModeButton />
+      {/*<DarkModeButton />*/}
     </ul>
   );
 }

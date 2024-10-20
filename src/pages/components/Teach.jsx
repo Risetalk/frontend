@@ -1,5 +1,6 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
+import React from "react";
 
 const features = [
   {
@@ -25,26 +26,27 @@ const features = [
 export default function Teach() {
   return (
     <>
-      <div className="grid sm:grid-cols-1 sm:space-y-5 md:grid-cols-2 bg-background py-28">
-        {/* Columna de imagen */}
+      <div className="grid sm:grid-cols-1 sm:space-y-5 md:grid-cols-2 bg-background py-12 ">
         <div className="flex justify-center">
-          <img className="rounded" src="/assets/Seccion.png" alt="Imagen de cursos" />
+          <Image
+              className="w-full h-screen "
+              src={`/assets/Seccion.png`}
+              alt="RiseTalk"
+              width={1550}
+              height={1550}
+          />
         </div>
-
-        {/* Columna de contenido */}
-        <div className="flex flex-col pt-12 gap-7 px-8 md:px-16 space-x-2">
+        <div className="flex flex-col pt-12 gap-7 mx-[5rem]  space-x-2 ">
           <div>
             <h1 className="text-3xl font-bold text-white text-center">
               Unlock Your Potential and Expand Your Horizons with our Online Courses
             </h1>
-            <h3 className="text-lg text-gray-300 mt-4 text-center">
+            <h3 className="text-lg text-gray-300 mt-4 text-center px-10">
               Learn at your own pace and on your own terms, with a flexible and adaptable learning
               experience.
             </h3>
           </div>
-
-          {/* Lista de pasos */}
-          <div className="space-y-4 relative">
+          <div className="space-y-4 relative px-[5rem]">
             {/* Paso con línea */}
             <div className="flex items-start relative">
               <div className="flex-shrink-0">
@@ -154,6 +156,30 @@ export default function Teach() {
                 </p>
               </div>
             </div>
+
+            {/* Paso final */}
+            <div className="flex items-start relative">
+              <div className="flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-gray-500 flex items-center justify-center relative z-10">
+                  <span className="w-3 h-3 bg-black rounded-full"></span>
+                </div>
+                <div
+                  className="absolute w-px h-full bg-white z-0"
+                  style={{ left: '11px', top: '18PX', width: '3px' }}
+                ></div>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-xl font-bold text-white">
+                  Deploy Smart Contracts (Apr 20 ~ 27, 2023)
+                </h4>
+                <p className="text-gray-400">
+                  Initially, we must ensure our e-learning platform functions seamlessly. During
+                  this stage, our focus will be on deploying smart contracts and conducting
+                  penetration testing.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

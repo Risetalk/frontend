@@ -3,12 +3,12 @@ import Link from 'next/link';
 export default function TeachCTA() {
   return (
     <>
-      <div className="flex flex-row ">
-        <div className="basis-2/4 p-4">
+      <div className="flex flex-row">
+        <div className="basis-2/4 p-4 p-16">
           <h1 className="text-5xl text-center">Our Online Courses</h1>
-          <div className="grid grid-cols-2 space-x-4 ">
+          <div className="grid grid-cols-2 space-x-4 bg-green-500 ">
             <article className="bg-white shadow-lg shadow-indigo-500/40 rounded-xl mt-24 ">
-              <div className="">
+              <div className="m-2">
                 <img
                   className="h-48 rounded-xl w-full object-cover object-center"
                   src="/assets/Targeta1.png"
@@ -58,7 +58,7 @@ export default function TeachCTA() {
             </article>
 
             <article className="bg-white shadow-lg shadow-indigo-500/40 rounded-xl mt-24 ">
-              <div className="">
+              <div className="m-2">
                 <img
                   className="h-48 rounded-xl w-full object-cover object-center"
                   src="/assets/Targeta2.png"
@@ -109,7 +109,7 @@ export default function TeachCTA() {
           </div>
         </div>
 
-        <div className="bg-background -mt-6 basis-2/4">
+        <div className="bg-background basis-2/4 p-16">
           <div className=" flex items-center justify-center flex-col">
             <h1 className="text-5xl text-center text-white">Live Meetings with Online Teachers</h1>
             <div className="py-4 px-12">

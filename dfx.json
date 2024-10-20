@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dfx": "0.20.1",
+  "canisters": {
+    "frontend": {
+      "frontend": {
+        "entrypoint": "build/index.html"
+      },
+      "source": ["build"],
+      "type": "assets"
+    }
+  }
+}

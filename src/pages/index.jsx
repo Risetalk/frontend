@@ -16,20 +16,20 @@ import FeaturedProducts from './components/products/list/FeaturedProducts';
 import PopularTopics from './categories/c/components/PopularTopics';
 
 const SeoList = {
-  title: 'Boomslag - The Ultimate NFT Marketplace for Courses & Products',
+  title: 'RiseTalk - The Ultimate NFT Marketplace for Courses & Products',
   description:
     'Explore a new world of possibilities with Boomslag, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'nft marketplace, matic nfts, boomslag nfts, sell nfts online',
+  url: 'https://risetalk.tech.com',
+  keywords: 'nft marketplace, matic nfts, risetalk nfts, sell nfts online',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
-  image:
-    'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  video: 'https://boomslagcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
+  author: 'RiseTalk',
+  publisher: 'RiseTalk',
+  // image:
+  //   'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
+  // video: 'https://boomslagcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
 
-  twitterHandle: '@boomslag_',
+  twitterHandle: '@risetalk_',
 };
 
 export default function Home() {
@@ -204,7 +204,7 @@ export default function Home() {
         <meta name="twitter:player:stream" content={SeoList.video} />
       </Head>
       <main className="dark:bg-dark-main">
-        <div className="text-gray-700 dark:text-dark-txt space-y-6">
+        <div className="text-gray-700 dark:text-dark-txt ">
           <Header />
           <Badges />
           {/* <CategoryTabs categories={categories} /> */}

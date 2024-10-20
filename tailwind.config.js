@@ -44,7 +44,7 @@ module.exports = {
       colors: {
         background: '#262431',
         hoverOrange: '#F0713D',
-        customOrange: '#F9662A',
+        customOrange: '#F0713D',
         'dark-main': '#0D1117', // Dark background color for the main areas
         'dark-bg': '#161B22', // Slightly lighter background color for cards and sections
         'dark-second': '#21262D', // Alternate dark background color for variety

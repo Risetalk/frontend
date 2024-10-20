@@ -5,43 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="485f9131-5e7c-40ad-ad5c-bfabad9ab0f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/home/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/home/banner2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logos/cap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/logos/dark-cap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GlobeButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GlobeButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LogoImg.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LogoImg.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ParticlesBackground.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ParticlesBackground.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/navbar/Desktop/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Desktop/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/navbar/Mobile/AuthLinkNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Mobile/AuthLinkNavigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/navbar/Mobile/GuestLinkNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Mobile/GuestLinkNavigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/sidebar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/@/[...slug].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/@/[...slug].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/auth/activate/[...slug].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/activate/[...slug].jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/careers/components/JoinOurTeam.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/careers/components/JoinOurTeam.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/community/components/GetStarted.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/community/components/GetStarted.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/community/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/community/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/navbar/Cart/CartComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Cart/CartComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/navbar/Guest/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/Guest/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/navbar/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/components/Badges.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/Badges.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/components/Teach.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/Teach.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/course/w/[...courseUUID].jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/course/w/[...courseUUID].jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/components/TeachCTA.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/components/TeachCTA.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/games/index.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/investors/components/CompanyStatement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/investors/components/CompanyStatement.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/investors/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/investors/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/logout/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/logout/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/press/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/press/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,25 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joelvegas/IdeaProjects/Risetalk/frontend/public/assets/img/home&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/joelvegas/IdeaProjects/Risetalk/frontend/node_modules/prettier&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/joelvegas/IdeaProjects/Risetalk/frontend/public/assets/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/joelvegas/IdeaProjects/Risetalk/frontend/node_modules/prettier",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/img/home" />
+      <recent name="$PROJECT_DIR$/public/assets/img" />
       <recent name="$PROJECT_DIR$/public/assets/img/logos" />
+      <recent name="$PROJECT_DIR$/public/assets/img/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/assets/img/home" />
@@ -116,6 +98,7 @@
       <workItem from="1729086845513" duration="3906000" />
       <workItem from="1729095395390" duration="239000" />
       <workItem from="1729095680793" duration="301000" />
+      <workItem from="1729430572604" duration="6384000" />
     </task>
     <servers />
   </component>

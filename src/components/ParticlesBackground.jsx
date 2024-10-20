@@ -8,7 +8,7 @@ const ParticlesBackground = () => {
     <>
       {typeof window !== 'undefined' && (
         <ParticlesBg
-          color="#c5e3f4"
+          color="#F6BFB4"
           num={100}
           line_linked={{
             enable: true,
