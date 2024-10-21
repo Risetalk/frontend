@@ -9,18 +9,18 @@ import { login, resetRegisterSuccess } from '@/redux/actions/auth/auth';
 import Layout from '@/hocs/Layout';
 
 const SeoList = {
-  title: 'Boomslag - Login to Your Account',
+  title: 'Risetalk - Login to Your Account',
   description:
-    'Log in to access your Web3 wallet and all your tokens and NFTs on Boomslag, the premier NFT marketplace for buying and selling digital assets.',
+    'Log in to access your Web3 wallet and all your tokens and NFTs on Risetalk, the premier NFT marketplace for buying and selling digital assets.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'NFT marketplace, Matic NFTs, Boomslag NFTs, sell NFTs online',
+  url: 'https://risetalk.com',
+  keywords: 'NFT marketplace, Stx NFTs, Risetalk NFTs, sell NFTs online',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Login() {
@@ -88,7 +88,7 @@ export default function Login() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -220,7 +220,7 @@ duration-300
                   <span className="text-md font-medium text-gray-900 dark:text-dark-txt">or </span>
                   <Link
                     href="/auth/forgot_password"
-                    className="text-lg font-medium text-blue-500 dark:text-dark-accent hover:text-blue-600"
+                    className="text-lg font-medium text-orange-500 dark:text-dark-accent hover:text-orange-600"
                   >
                     Forgot your password?
                   </Link>
@@ -233,7 +233,7 @@ duration-300
                   </span>
                   <Link
                     href="/auth/signup"
-                    className="nderline text-lg font-medium text-blue-500 dark:text-dark-accent hover:text-blue-600"
+                    className="nderline text-lg font-medium text-orange-500 dark:text-dark-accent hover:text-orange-600"
                   >
                     Register
                   </Link>

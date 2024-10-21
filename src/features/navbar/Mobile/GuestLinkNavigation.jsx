@@ -88,7 +88,7 @@ export default function GuestLinkNavigation() {
           className="px-3 text-sm font-medium dark:text-dark-txt text-gray-500"
           id="projects-headline"
         >
-          Boomslag Ecosystem
+          Risetalk Ecosystem
         </h3>
         <div className="mt-1 space-y-1" aria-labelledby="projects-headline">
           {secondaryNavigation.map((item) => (

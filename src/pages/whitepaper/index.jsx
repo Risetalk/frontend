@@ -3,18 +3,18 @@ import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 
 const SeoList = {
-  title: 'Whitepapers - Boomslag NFT Marketplace',
+  title: 'Whitepapers - Risetalk NFT Marketplace',
   description:
-    'Access Boomslag whitepapers and learn more about our NFT marketplace, including our vision, roadmap, and technical specifications. Download our whitepapers to get a deeper understanding of our protocol and how we are transforming the world of online commerce.',
+    'Access Risetalk whitepapers and learn more about our NFT marketplace, including our vision, roadmap, and technical specifications. Download our whitepapers to get a deeper understanding of our protocol and how we are transforming the world of online commerce.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag whitepapers, nft whitepapers',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk whitepapers, nft whitepapers',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function WhitePaper() {
@@ -37,7 +37,7 @@ export default function WhitePaper() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

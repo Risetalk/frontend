@@ -2,18 +2,18 @@ import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 
 const SeoList = {
-  title: 'Page Not Found - Boomslag',
+  title: 'Page Not Found - Risetalk',
   description:
     'Oops! Looks like the page you are trying to visit does not exist. Please check the URL or go back to the homepage.',
   href: '/',
-  url: 'https://boomslag.com/404',
-  keywords: '404 error, page not found, boomslag',
+  url: 'https://risetalk.com/404',
+  keywords: '404 error, page not found, risetalk',
   robots: 'noindex, nofollow',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function NotFound() {
@@ -36,7 +36,7 @@ export default function NotFound() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

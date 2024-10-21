@@ -85,25 +85,25 @@ export default function CourseWatch({
   const SeoList = {
     title: course.details.title
       ? `Watch - ${course.details.title}`
-      : 'Boomslag - Online Courses Marketplace',
+      : 'Risetalk - Online Courses Marketplace',
     description:
       course.description ||
-      'Discover and learn from the best online courses in various categories on Boomslag - the ultimate NFT marketplace for courses and products. Buy and sell using ERC1155 tokens to ensure seamless and secure transactions.',
+      'Discover and learn from the best online courses in various categories on Risetalk - the ultimate NFT marketplace for courses and products. Buy and sell using ERC1155 tokens to ensure seamless and secure transactions.',
     href: course.details.slug ? `/courses/${course.details.slug}` : '/',
     url: course.details.slug
-      ? `https://boomslag.com/courses/${course.details.slug}`
-      : 'https://boomslag.com',
+      ? `https://risetalk.com/courses/${course.details.slug}`
+      : 'https://risetalk.com',
     keywords: course.details.keywords
-      ? `${course.details.keywords}, online courses, blockchain courses, boomslag courses, nft online courses`
-      : 'online courses, blockchain courses, boomslag courses, nft online courses',
+      ? `${course.details.keywords}, online courses, blockchain courses, risetalk courses, nft online courses`
+      : 'online courses, blockchain courses, risetalk courses, nft online courses',
     robots: 'all',
-    author: author.username || 'BoomSlag',
-    publisher: 'BoomSlag',
+    author: author.username || 'Risetalk',
+    publisher: 'Risetalk',
     image:
       course.images && course.images.length > 0
         ? course.images[0].file
         : 'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-    twitterHandle: '@BoomSlag',
+    twitterHandle: '@Risetalk',
   };
 
   const router = useRouter();
@@ -709,7 +709,7 @@ export default function CourseWatch({
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -1692,7 +1692,7 @@ export default function CourseWatch({
                             {certificate && certificate.instructor_first_name}{' '}
                             {certificate && certificate.instructor_last_name}{' '}
                           </span>
-                          on Boomslag. The certificate indicates the entire course was completed as
+                          on Risetalk. The certificate indicates the entire course was completed as
                           validated by the student. The course duration represents the total video
                           hours at time of most recent completion.
                         </p>

@@ -4,18 +4,18 @@ import Link from 'next/link';
 import Header from './components/Header';
 
 const SeoList = {
-  title: 'Our Partners - Boomslag NFT Marketplace',
+  title: 'Our Partners - Risetalk NFT Marketplace',
   description:
-    'Discover our partners at Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. Learn about our collaborations with leading brands and creators in the NFT space.',
+    'Discover our partners at Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. Learn about our collaborations with leading brands and creators in the NFT space.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag partners',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk partners',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Partners() {
@@ -38,7 +38,7 @@ export default function Partners() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

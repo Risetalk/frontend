@@ -28,13 +28,10 @@ export default function LogoImg() {
 
   return (
     <motion.div onMouseEnter={handleMouseEnter} animate={animationControls}>
-      <Image
-        className=" w-full h-full"
+      <img
+        className="w-[10rem] h-full"
         src={`/assets/img/logos/${logo}`}
         alt="RiseTalk"
-        width={110}
-        height={110}
-        priority
       />
     </motion.div>
   );

@@ -89,7 +89,7 @@ export default function JoinOurTeam() {
           </dl>
         </div>
         <p className="italic text-md dark:text-dark-txt text-gray-900 mt-12 mx-auto max-w-4xl">
-          We embrace diversity and inclusion at Boomslag and evaluate eligible applications
+          We embrace diversity and inclusion at Risetalk and evaluate eligible applications
           regardless of race, color, religion, gender, national origin, ancestry, age, genetic
           information, sexual orientation, gender identity, marital or family status, veteran
           status, medical condition, or disability.

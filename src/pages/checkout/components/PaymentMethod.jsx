@@ -13,14 +13,14 @@ export default function PaymentMethod({
   ethPayment,
   setEthPayment,
   handleEthPayment,
-  maticBalance,
+  stxBalance,
   ethereumWallet,
-  maticCost,
+  stxCost,
 }) {
   const [effectETH, setEffectETH] = useState(false);
   return (
     <>
-      {/* Ethereum Payment */}
+      {/* Stacks Payment */}
       <RadioGroup
         onClick={() => {
           handleEthPayment();
@@ -55,7 +55,7 @@ export default function PaymentMethod({
                       as="span"
                       className="text-base font-bold dark:text-dark-txt text-gray-900"
                     >
-                      Polygon
+                      Stacks
                     </RadioGroup.Label>
                     <RadioGroup.Description as="span" className="text-gray-500">
                       <span className="block sm:inline" />
@@ -99,9 +99,9 @@ export default function PaymentMethod({
               </div>
               <div className="ml-4 mt-2 flex-shrink-0">
                 <span className="font-regular mr-2 inline-flex text-sm dark:text-dark-txt-secondary text-gray-500">
-                  {maticBalance > maticCost + 0.05 ? 'Sufficient funds' : 'Insufficient funds'}
+                  {stxBalance > stxCost + 0.05 ? 'Sufficient funds' : 'Insufficient funds'}
                 </span>
-                {maticBalance > maticCost + 0.05 ? (
+                {stxBalance > stxCost + 0.05 ? (
                   <CheckCircleIcon className="relative inline-flex h-5 w-5 text-forest-green-300" />
                 ) : (
                   <XCircleIcon className="relative inline-flex h-5 w-5 text-rose-500" />
@@ -137,12 +137,12 @@ export default function PaymentMethod({
             <div className="-ml-4 -mt-2 flex flex-wrap items-center justify-between sm:flex-nowrap">
               <div className="ml-4 mt-2">
                 <p className="font-regular text-base leading-6 dark:text-dark-txt text-gray-900">
-                  Available MATIC
+                  Available STX
                 </p>
               </div>
               <div className="ml-4 mt-2 flex-shrink-0">
                 <div className="relative inline-flex cursor-pointer items-center dark:text-dark-txt-secondary py-2 text-sm font-medium text-gray-600">
-                  {maticBalance}
+                  {stxBalance}
                 </div>
               </div>
             </div>

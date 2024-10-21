@@ -8,18 +8,18 @@ import JobOpenings from './components/JobOpenings';
 import Steps from './components/steps';
 
 const SeoList = {
-  title: 'Boomslag Roadmap - Our Vision for the Future',
+  title: 'Risetalk Roadmap - Our Vision for the Future',
   description:
-    'Discover our vision for the future of the NFT marketplace industry with the Boomslag roadmap. Explore our plans for product development, community building, and platform expansion.',
+    'Discover our vision for the future of the NFT marketplace industry with the Risetalk roadmap. Explore our plans for product development, community building, and platform expansion.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag roadmap, boomslag future plans',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk roadmap, risetalk future plans',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Roadmap() {
@@ -42,7 +42,7 @@ export default function Roadmap() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

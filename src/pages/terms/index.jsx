@@ -17,18 +17,18 @@ import Copyright from './components/Copyright';
 import GeneralTerms from './components/GeneralTerms';
 
 const SeoList = {
-  title: 'Terms of Service - Boomslag NFT Marketplace',
+  title: 'Terms of Service - Risetalk NFT Marketplace',
   description:
-    'Read our terms of service to learn about the legal agreements between you and Boomslag. Discover your rights and responsibilities as a user of our NFT marketplace platform.',
+    'Read our terms of service to learn about the legal agreements between you and Risetalk. Discover your rights and responsibilities as a user of our NFT marketplace platform.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag terms of service',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk terms of service',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Terms() {
@@ -51,7 +51,7 @@ export default function Terms() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

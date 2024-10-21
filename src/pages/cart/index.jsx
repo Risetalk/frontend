@@ -10,20 +10,20 @@ import Layout from '@/hocs/Layout';
 import Button from '@/components/Button';
 
 const SeoList = {
-  title: 'Your Cart - Boomslag NFT Marketplace',
+  title: 'Your Cart - Risetalk NFT Marketplace',
   description:
-    'Find exciting career opportunities at Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. We are looking for talented individuals to help us shape the future of e-commerce with the power of blockchain technology.',
+    'Find exciting career opportunities at Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. We are looking for talented individuals to help us shape the future of e-commerce with the power of blockchain technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag, boomslag affiliates, affiliate marketing NFT, nft affiliate marketing',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk, risetalk affiliates, affiliate marketing NFT, nft affiliate marketing',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  video: 'https://boomslagcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
+  video: 'https://risetalkcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
 
-  twitterHandle: '@boomslag_',
+  twitterHandle: '@risetalk_',
 };
 
 export default function Cart() {
@@ -38,7 +38,7 @@ export default function Cart() {
   const amountBeforeDiscounts = useSelector((state) => state.cart.amount);
   const totalAmount = useSelector((state) => state.cart.compare_amount);
   // const totalAmountEth = useSelector((state) => state.cart.total_cost_ethereum);
-  const maticCost = useSelector((state) => state.cart.maticCost);
+  const stxCost = useSelector((state) => state.cart.stxCost);
   const taxEstimate = useSelector((state) => state.cart.tax_estimate);
   const shippingEstimate = useSelector((state) => state.cart.shipping_estimate);
 
@@ -61,7 +61,7 @@ export default function Cart() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -154,7 +154,7 @@ export default function Cart() {
               <div className="flex items-center justify-between border-t border-gray-200 dark:border-dark-border pt-4">
                 <dt className="text-base font-medium dark:text-dark-txt text-gray-900" />
                 <dd className="text-base font-medium dark:text-dark-txt text-gray-900">
-                  MATIC {maticCost}
+                  STX {stxCost}
                 </dd>
               </div>
             </dl>

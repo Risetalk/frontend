@@ -10,18 +10,18 @@ import { resetPassword } from '../../../redux/actions/auth/auth';
 import Button from '@/components/Button';
 
 const SeoList = {
-  title: 'Boomslag - Forgot Password',
+  title: 'Risetalk - Forgot Password',
   description:
-    'Explore a new world of possibilities with Boomslag, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
+    'Explore a new world of possibilities with Risetalk, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'nft marketplace, matic nfts, boomslag nfts, sell nfts online',
+  url: 'https://risetalk.com',
+  keywords: 'nft marketplace, stx nfts, risetalk nfts, sell nfts online',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function ForgotPassword() {
@@ -74,7 +74,7 @@ export default function ForgotPassword() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

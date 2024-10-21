@@ -4,9 +4,9 @@
   "canisters": {
     "frontend": {
       "frontend": {
-        "entrypoint": "build/index.html"
+        "entrypoint": "out/index.html"
       },
-      "source": ["build"],
+      "source": ["out"],
       "type": "assets"
     }
   }

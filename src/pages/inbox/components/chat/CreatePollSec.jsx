@@ -21,7 +21,7 @@ export default function CreatePollSec({
   const buttonRef = useRef(null);
   const handleClosePopover = () => {
     if (buttonRef.current) {
-      buttonRef.current.click(); // programmatically clicks the button to close the Popover
+      buttonRef.current.click(); // programstxally clicks the button to close the Popover
     }
   };
 

@@ -243,11 +243,11 @@ export default function Structure() {
                       to="/courses/how-to-create-an-online-course"
                       className="text-base font-bold text-purple-600 underline underline-offset-4 hover:text-purple-700 md:col-span-5"
                     >
-                      Official Boomslag Course: How to Create an Online Course
+                      Official Risetalk Course: How to Create an Online Course
                     </Link>
                     <dd className="mt-2 md:col-span-7 ">
                       <p className="text-base text-gray-700">
-                        Learn about course creation from the Boomslag Instructor Team and
+                        Learn about course creation from the Risetalk Instructor Team and
                         experienced instructors
                       </p>
                     </dd>

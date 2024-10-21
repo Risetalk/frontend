@@ -125,7 +125,7 @@ export default function Messages() {
       >
         <div className="">
           <p className="text-md mt-2 max-w-4xl font-medium text-gray-700 dark:text-dark-txt-secondary">
-            Write messages to your students (optional) that will be sent automatically when they
+            Write messages to your students (optional) that will be sent autostxally when they
             join or complete your course to encourage students to engage with course content. If you
             do not wish to send a welcome or congratulations message, leave the text box blank.
           </p>

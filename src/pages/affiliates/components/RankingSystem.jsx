@@ -25,13 +25,13 @@ const ranks = [
   {
     name: 'Bronze',
     level: 1,
-    criteria: '0 Direct Referrals, 0 MATIC Sales Volume',
+    criteria: '0 Direct Referrals, 0 STX Sales Volume',
     reward: '1%, 2%, 4%, 6%, 8%',
   },
   {
     name: 'Silver',
     level: 2,
-    criteria: '5 Direct Referrals, 100 MATIC Sales Volume',
+    criteria: '5 Direct Referrals, 100 STX Sales Volume',
     reward: '2%, 4%, 6%, 8%, 10%',
   },
   {
@@ -43,13 +43,13 @@ const ranks = [
   {
     name: 'Platinum',
     level: 4,
-    criteria: '15 Direct Referrals, 500 MATIC Sales Volume',
+    criteria: '15 Direct Referrals, 500 STX Sales Volume',
     reward: '6%, 8%, 10%, 12%, 14%',
   },
   {
     name: 'Diamond',
     level: 5,
-    criteria: '20 Direct Referrals, 1000 MATIC Sales Volume',
+    criteria: '20 Direct Referrals, 1000 STX Sales Volume',
     reward: '8%, 10%, 12%, 14%, 16%',
   },
 ];

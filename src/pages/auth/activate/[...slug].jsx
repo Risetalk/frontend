@@ -9,9 +9,9 @@ import { activate, resetRegisterSuccess } from '../../../redux/actions/auth/auth
 
 const faqs = [
   {
-    question: 'Your Ethereum Wallet',
+    question: 'Your Stacks Wallet',
     answer:
-      'With boomslag you get an integrated ERC20 Ethereum wallet, this allows for you to interact with any token compliant with this standard within our available blockchains.',
+      'With risetalk you get an integrated ERC20 Stacks wallet, this allows for you to interact with any token compliant with this standard within our available blockchains.',
   },
   {
     question: 'How we handle transactions',
@@ -29,7 +29,7 @@ const faqs = [
       'Your wallet has the capabilities to send ethereum and receive it. For other currencies, you can recive them as long as they comply with the ERC 20 token standard and it is available within the same blockchain. To interact with it we might have to add the cryptocurrency to our system.',
   },
   {
-    question: 'Can i have my currency listed in boomslag',
+    question: 'Can i have my currency listed in risetalk',
     answer:
       'Contact support and we will have a meeting to see the possibilities of adding your project.',
   },
@@ -50,18 +50,18 @@ const faqsSellers = [
 ];
 
 const SeoList = {
-  title: 'Boomslag - Activate Account',
+  title: 'Risetalk - Activate Account',
   description:
-    'Explore a new world of possibilities with Boomslag, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
+    'Explore a new world of possibilities with Risetalk, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'nft marketplace, matic nfts, boomslag nfts, sell nfts online',
+  url: 'https://risetalk.com',
+  keywords: 'nft marketplace, stx nfts, risetalk nfts, sell nfts online',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Activation() {
@@ -109,7 +109,7 @@ export default function Activation() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -129,7 +129,7 @@ export default function Activation() {
             <div className="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
               <div className="ml-4 mt-4">
                 <h3 className="font-recife-bold text-3xl leading-6 text-gray-900 dark:text-dark-txt">
-                  Welcome to Boomslag
+                  Welcome to Risetalk
                 </h3>
                 <p className="font-regular mt-2 max-w-4xl text-lg text-gray-900 dark:text-dark-txt-secondary">
                   Before you get started please follow this guide.
@@ -215,7 +215,7 @@ export default function Activation() {
                     Marketplace
                   </h2>
                   <p className="font-regular mt-4 text-lg text-gray-900 dark:text-dark-txt">
-                    Want to know more about how to make money with boomslag? Read our
+                    Want to know more about how to make money with risetalk? Read our
                     <Link
                       href="/"
                       className="text-indigo-600 ml-2 hover:text-indigo-500 font-medium"

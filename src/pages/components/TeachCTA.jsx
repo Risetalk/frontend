@@ -4,13 +4,13 @@ export default function TeachCTA() {
   return (
     <>
       <div className="flex flex-row">
-        <div className="basis-2/4 p-4 p-16">
+        <div className="basis-2/4 p-4 p-[2rem]">
           <h1 className="text-5xl text-center">Our Online Courses</h1>
-          <div className="grid grid-cols-2 space-x-4 bg-green-500 ">
-            <article className="bg-white shadow-lg shadow-indigo-500/40 rounded-xl mt-24 ">
+          <div className="flex space-x-4  mx-8 mt-10">
+            <article className="bg-white shadow-lg shadow-orange-500/40 rounded-xl h-full w-full ">
               <div className="m-2">
                 <img
-                  className="h-48 rounded-xl w-full object-cover object-center"
+                  className="rounded-xl w-full object-cover object-center"
                   src="/assets/Targeta1.png"
                   alt=""
                 />
@@ -57,10 +57,10 @@ export default function TeachCTA() {
               </div>
             </article>
 
-            <article className="bg-white shadow-lg shadow-indigo-500/40 rounded-xl mt-24 ">
+            <article className="bg-white shadow-lg shadow-orange-500/40 rounded-xl h-full w-full ">
               <div className="m-2">
                 <img
-                  className="h-48 rounded-xl w-full object-cover object-center"
+                  className="rounded-xl w-full object-cover object-center"
                   src="/assets/Targeta2.png"
                   alt=""
                 />
@@ -123,12 +123,10 @@ export default function TeachCTA() {
         <div className="py-24 px-6 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight dark:text-dark-txt text-gray-900 sm:text-4xl">
-              Become a seller today and monetize your skills and products as NFTs!
+              The Ultimate NFT Courses Marketplace!
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 dark:text-dark-txt-secondary text-gray-600">
-              With our platform, you can easily create and sell online courses and physical products
-              as ERC1155 NFTs. Take advantage of the booming NFT market and start earning money
-              today.
+              Immerse yourself in the thrilling realm of digital and physical products, powered by our cutting-edge Stacks network and NFT technology. Our user-friendly platform streamlines buying and selling unique, rare items like never before.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

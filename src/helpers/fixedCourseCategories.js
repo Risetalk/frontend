@@ -1394,10 +1394,10 @@ export const categories = {
             },
             {
               id: 143,
-              name: 'Programmatic Advertising',
+              name: 'Programstx Advertising',
               title: null,
               description: '',
-              slug: 'programmatic-advertising',
+              slug: 'programstx-advertising',
               views: 0,
               students: 0,
               type: 'course',

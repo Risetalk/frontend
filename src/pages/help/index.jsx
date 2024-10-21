@@ -3,18 +3,18 @@ import Layout from '@/hocs/Layout';
 import Faqs from './components/Faqs';
 
 const SeoList = {
-  title: 'Join the Team - Boomslag NFT Marketplace',
+  title: 'Join the Team - Risetalk NFT Marketplace',
   description:
-    'Find exciting career opportunities at Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. We are looking for talented individuals to help us shape the future of e-commerce with the power of blockchain technology.',
+    'Find exciting career opportunities at Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. We are looking for talented individuals to help us shape the future of e-commerce with the power of blockchain technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag, boomslag affiliates, affiliate marketing NFT, nft affiliate marketing',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk, risetalk affiliates, affiliate marketing NFT, nft affiliate marketing',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Help() {
@@ -37,7 +37,7 @@ export default function Help() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

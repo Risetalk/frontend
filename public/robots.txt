@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://staging.boomslag.com
+Host: https://staging.risetalk.com
 
 # Sitemaps
-Sitemap: https://staging.boomslag.com/sitemap.xml
+Sitemap: https://staging.risetalk.com/sitemap.xml

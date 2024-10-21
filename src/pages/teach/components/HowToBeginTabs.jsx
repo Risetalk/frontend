@@ -154,7 +154,7 @@ export default function HowToBeginTabs() {
                         We provide tools like custom coupons to help you offer attractive enrollment
                         incentives, while our global promotions drive traffic to your course. Plus,
                         there's even more potential for success when your course is chosen for
-                        Boomslag Business.
+                        Risetalk Business.
                       </p>
                     </div>
                   </div>

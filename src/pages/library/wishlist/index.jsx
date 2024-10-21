@@ -11,19 +11,19 @@ import LoadCoursesWishlist from '../../../api/wishlist/LoadCoursesWishlist';
 import CourseList from '../courses/components/CourseList';
 
 const SeoList = {
-  title: 'Wishlist - My Courses, Products, Wishlist & Orders | Boomslag NFT Marketplace',
+  title: 'Wishlist - My Courses, Products, Wishlist & Orders | Risetalk NFT Marketplace',
   description:
-    'Discover all your courses, products, wishlist and orders in one place on Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. Explore our revolutionary platform that uses ERC1155 to provide a seamless and secure buying and selling experience.',
+    'Discover all your courses, products, wishlist and orders in one place on Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. Explore our revolutionary platform that uses ERC1155 to provide a seamless and secure buying and selling experience.',
   href: '/',
-  url: 'https://boomslag.com/library',
+  url: 'https://risetalk.com/library',
   keywords:
-    'boomslag library, boomslag courses, boomslag products, boomslag wishlist, boomslag orders',
+    'risetalk library, risetalk courses, risetalk products, risetalk wishlist, risetalk orders',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 function classNames(...classes) {
@@ -113,7 +113,7 @@ export default function Wishlist() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

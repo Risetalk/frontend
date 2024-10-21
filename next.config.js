@@ -13,9 +13,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,  // Desactiva la optimización de imágenes para permitir la exportación
+    unoptimized: true,  // TODO: Replace with CDN
   },
-  exportTrailingSlash: true,
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

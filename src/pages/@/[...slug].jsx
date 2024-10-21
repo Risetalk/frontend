@@ -49,18 +49,18 @@ export default function Profile({ userProfile }) {
   const [user, setUser] = useState(userProfile);
 
   const SeoList = {
-    title: 'Boomslag - User Profile | Manage Your NFTs and Account Details',
+    title: 'Risetalk - User Profile | Manage Your NFTs and Account Details',
     description:
-      'Access your Boomslag user profile to manage your NFTs, account details, and preferences on our innovative marketplace for buying and selling products using ERC1155 tokens.',
+      'Access your Risetalk user profile to manage your NFTs, account details, and preferences on our innovative marketplace for buying and selling products using ERC1155 tokens.',
     href: '/user-profile',
-    url: 'https://boomslag.com/user-profile',
-    keywords: 'user profile, manage nfts, account details, boomslag, nft marketplace',
+    url: 'https://risetalk.com/user-profile',
+    keywords: 'user profile, manage nfts, account details, risetalk, nft marketplace',
     robots: 'all',
-    author: 'BoomSlag',
-    publisher: 'BoomSlag',
+    author: 'Risetalk',
+    publisher: 'Risetalk',
     image:
       'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-    twitterHandle: '@BoomSlag',
+    twitterHandle: '@Risetalk',
   };
 
   const router = useRouter();
@@ -375,7 +375,7 @@ export default function Profile({ userProfile }) {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

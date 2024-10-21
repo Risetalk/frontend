@@ -63,7 +63,7 @@ export default function Film() {
                   You’re in good company
                 </p>
                 <p className=" text-mg justify-center text-center font-medium dark:text-dark-txt-secondary text-gray-700">
-                  Chat and get production help with other Boomslag instructors
+                  Chat and get production help with other Risetalk instructors
                 </p>
                 <button
                   type="button"

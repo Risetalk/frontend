@@ -6,18 +6,18 @@ import Header from './components/Header';
 import HowToBeginTabs from './components/HowToBeginTabs';
 
 const SeoList = {
-  title: 'Teach on Boomslag - The Ultimate NFT Marketplace for Instructors',
+  title: 'Teach on Risetalk - The Ultimate NFT Marketplace for Instructors',
   description:
-    'Join the Boomslag community of instructors and share your knowledge with the world. Sell your online courses and physical products using ERC1155 on Boomslag, the revolutionary NFT marketplace that combines the best of Opensea, Udemy, Amazon, and Facebook.',
+    'Join the Risetalk community of instructors and share your knowledge with the world. Sell your online courses and physical products using ERC1155 on Risetalk, the revolutionary NFT marketplace that combines the best of Opensea, Udemy, Amazon, and Facebook.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'teach on boomslag, boomslag become instructor',
+  url: 'https://risetalk.com',
+  keywords: 'teach on risetalk, risetalk become instructor',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Teach() {
@@ -43,7 +43,7 @@ export default function Teach() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

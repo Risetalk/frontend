@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://boomslag.onrender.com',
+  siteUrl: process.env.SITE_URL || 'https://risetalk.onrender.com',
   generateRobotsTxt: true,
   changefreq: 'daily',
   priority: 0.7,

@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { ToastSuccess } from '../../../components/ToastSuccess';
-import { loadMaticPolygonBalance } from '../auth/auth';
+import { loadStxPolygonBalance } from '../auth/auth';
 // import { ToastSuccess } from '../../../components/ToastSuccess';
-// import { loadEthereumBalance, loadMaticPolygonBalance } from '../auth/auth';
+// import { loadEthereumBalance, loadStxPolygonBalance } from '../auth/auth';
 // import { createOrder } from '../orders/orders';
 // import { ToastError } from '../../../components/ToastError';
 import {
@@ -49,7 +49,7 @@ export const cryptoPay = (userID, address, cartItems) => async (dispatch) => {
         type: PAYMENT_SUCCESS,
         payload: res.data.results,
       });
-      dispatch(loadMaticPolygonBalance(address));
+      dispatch(loadStxPolygonBalance(address));
       ToastSuccess('Successfull Transaction');
     } else {
       dispatch({

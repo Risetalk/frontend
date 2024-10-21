@@ -6,18 +6,18 @@ import jwtDecode from 'jwt-decode';
 import OrderContentSec from './components/OrderContentSec';
 
 const SeoList = {
-  title: 'Your Order - Boomslag NFT Marketplace',
+  title: 'Your Order - Risetalk NFT Marketplace',
   description:
-    'Access the Boomslag press kit for information about the company, the team, our mission, and our revolutionary NFT marketplace platform. Download our logos, brand guidelines, and other assets for use in articles, features, and other media.',
+    'Access the Risetalk press kit for information about the company, the team, our mission, and our revolutionary NFT marketplace platform. Download our logos, brand guidelines, and other assets for use in articles, features, and other media.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag press kit',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk press kit',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function OrderDetails({ txId, order, orderItems }) {
@@ -40,7 +40,7 @@ export default function OrderDetails({ txId, order, orderItems }) {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

@@ -6,14 +6,14 @@ export const Container = ({ children }) => (
 );
 // eslint-disable-next-line
 export const Header = ({ children }) => (
-  <div className="relative w-full flex justify-between md:gap-8">{children}</div>
+  <div className="relative w-full flex justify-between md:gap-8 ">{children}</div>
 );
 // eslint-disable-next-line
 export const LogoContainer = ({ children }) => (
   <div className="flex sm:absolute md:inset-y-0 md:left-0 md:static">{children}</div>
 );
 // eslint-disable-next-line
-export const Logo = ({ children }) => <div className="flex items-center">{children}</div>;
+export const Logo = ({ children }) => <div className="flex items-center ">{children}</div>;
 // eslint-disable-next-line
 export const Categories = ({ children }) => (
   <div className="inline-flex items-center border-b-2 ml-6 -mr-2 dark:border-dark-main transition-colors border-white hover:hover:text-customOrange  px-1 pt-1 text-sm text-gray-900">

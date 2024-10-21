@@ -113,7 +113,7 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-6 dark:text-dark-txt-secondary text-gray-600">
               Where creativity meets commerce - discover a new world of shopping in our
-              Polygon-based metaverse marketplace.
+              Stacks-based metaverse marketplace.
             </p>
             {/* <div className="mt-4 flex space-x-6">
               {navigation.social.map((item) => (

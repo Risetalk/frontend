@@ -7,18 +7,18 @@ import Layout from '@/hocs/Layout';
 import Button from '@/components/Button';
 
 const SeoList = {
-  title: 'Boomslag - Come Back Soon!',
+  title: 'Risetalk - Come Back Soon!',
   description:
-    'Explore a new world of possibilities with Boomslag, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
+    'Explore a new world of possibilities with Risetalk, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'nft marketplace, matic nfts, boomslag nfts, sell nfts online',
+  url: 'https://risetalk.com',
+  keywords: 'nft marketplace, stx nfts, risetalk nfts, sell nfts online',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Logout() {
@@ -45,7 +45,7 @@ export default function Logout() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -68,7 +68,7 @@ export default function Logout() {
                 </div>
                 <div className="ml-3">
                   <p className="dark:text-dark text-sm font-bold">
-                    You’ve successfully logged out of Boomslag. Come back soon!
+                    You’ve successfully logged out of Risetalk. Come back soon!
                   </p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Logout() {
               <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:text-left">
                 <div className="px-6 sm:px-8 lg:w-1/2 xl:pr-16">
                   <h1 className="flex text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                    <span className="mr-2 inline-flex xl:inline dark:text-dark-txt">Boomslag</span>
+                    <span className="mr-2 inline-flex xl:inline dark:text-dark-txt">Risetalk</span>
                     <span className="inline-flex font-light dark:text-dark-accent text-iris-600 xl:inline">
                       business
                     </span>

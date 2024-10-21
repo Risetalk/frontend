@@ -48,7 +48,7 @@ export default function Sidebar() {
             src="/assets/img/logos/triangle.png"
             width={60}
             height={60}
-            alt="Boomslag"
+            alt="Risetalk"
           />
           <motion.span
             initial={{ opacity: 0 }}
@@ -63,7 +63,7 @@ export default function Sidebar() {
             className="ml-4 mt-2 inline-flex text-2xl font-bold"
             style={{ pointerEvents: sidebarHidden ? 'none' : 'auto' }}
           >
-            Boomslag
+            Risetalk
           </motion.span>
         </Link>
         <ul className="relative">

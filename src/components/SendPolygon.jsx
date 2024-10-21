@@ -28,7 +28,7 @@ export default function SendPolygon({ wallet, txInfo }) {
   const [selected, setSelected] = useState(tokens[0]);
 
   useEffect(() => {
-    const polygonTokensRes = tokens.filter((token) => token.network === 'Polygon');
+    const polygonTokensRes = tokens.filter((token) => token.network === 'Stacks');
     setPolygonTokens(polygonTokensRes);
     setSelected(polygonTokensRes[0]);
   }, [tokens]);
@@ -107,7 +107,7 @@ export default function SendPolygon({ wallet, txInfo }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (selected && selected.symbol === 'MATIC') {
+      if (selected && selected.symbol === 'STX') {
         setBalance(await web3.eth.getBalance(wallet.polygon_address));
         setGasLimit(21000);
       } else if (contractABI !== '') {
@@ -138,15 +138,15 @@ export default function SendPolygon({ wallet, txInfo }) {
     setAmount(web3.utils.fromWei(balance.toString(), 'ether'));
   };
 
-  const [maticBalance, setMaticBalance] = useState(0);
+  const [stxBalance, setStxBalance] = useState(0);
   const [sendDisabled, setSendDisabled] = useState(true);
 
   useEffect(() => {
-    const fetchMaticBalance = async () => {
+    const fetchStxBalance = async () => {
       const res = await web3.eth.getBalance(wallet.polygon_address);
-      setMaticBalance(res);
+      setStxBalance(res);
     };
-    fetchMaticBalance();
+    fetchStxBalance();
     // eslint-disable-next-line
   }, [wallet]);
 
@@ -155,10 +155,10 @@ export default function SendPolygon({ wallet, txInfo }) {
     const estimatedTotalCost =
       Number(amount) + Number(web3.utils.fromWei(estimatedGasFeeWei.toString(), 'ether'));
 
-    setSendDisabled(maticBalance < estimatedTotalCost);
+    setSendDisabled(stxBalance < estimatedTotalCost);
 
     // eslint-disable-next-line
-  }, [maticBalance, gasPrice, gasLimit, amount]);
+  }, [stxBalance, gasPrice, gasLimit, amount]);
 
   const [speed, setSpeed] = useState('average');
   const dispatch = useDispatch();
@@ -166,7 +166,7 @@ export default function SendPolygon({ wallet, txInfo }) {
     dispatch(resetSendTokens());
   }, []);
   const onSend = async () => {
-    if (toAccount !== '' && amount !== '' && amount > 0 && balance > 0 && maticBalance > 0) {
+    if (toAccount !== '' && amount !== '' && amount > 0 && balance > 0 && stxBalance > 0) {
       dispatch(
         sendTokensPolygon(wallet.polygon_address, toAccount, amount, selected, speed, gasLimit),
       );
@@ -184,8 +184,8 @@ export default function SendPolygon({ wallet, txInfo }) {
       if (balance <= 0) {
         errorMessage += `enough ${selected.symbol} balance, `;
       }
-      if (maticBalance <= 0) {
-        errorMessage += 'enough MATIC balance to cover gas fees, ';
+      if (stxBalance <= 0) {
+        errorMessage += 'enough STX balance to cover gas fees, ';
       }
       ToastError(`${errorMessage.slice(0, -2)}.`);
     }
@@ -196,7 +196,7 @@ export default function SendPolygon({ wallet, txInfo }) {
       <div className=" flex flex-wrap items-center justify-between sm:flex-nowrap">
         <div className="">
           <p className="text-xl font-bold leading-6 dark:text-dark-txt text-gray-900">
-            Polygon Network
+            Stacks Network
           </p>
           <p className="text-md mt-2 dark:text-dark-txt-secondary text-gray-500">
             Send ERC20 tokens to any ERC20 compatible wallet.
@@ -387,10 +387,10 @@ export default function SendPolygon({ wallet, txInfo }) {
                   <span className="font-regular text-sm"> {estimatedGasFeeEther}</span>
                 </div>
                 <div className=" text-left font-bold">
-                  MATIC Balance:
+                  STX Balance:
                   <span className="font-regular text-sm">
                     {' '}
-                    {web3.utils.fromWei(maticBalance.toString(), 'ether')}
+                    {web3.utils.fromWei(stxBalance.toString(), 'ether')}
                   </span>
                 </div>
                 <div className="pb-2 text-left text-forest-green-300">
@@ -405,10 +405,10 @@ export default function SendPolygon({ wallet, txInfo }) {
                   <span className="font-regular text-sm"> {estimatedGasFeeEtherFast}</span>
                 </div>
                 <div className=" text-left font-bold">
-                  MATIC Balance:
+                  STX Balance:
                   <span className="font-regular text-sm">
                     {' '}
-                    {web3.utils.fromWei(maticBalance.toString(), 'ether')}
+                    {web3.utils.fromWei(stxBalance.toString(), 'ether')}
                   </span>
                 </div>
                 <div className="pb-2 text-left text-forest-green-300">
@@ -423,10 +423,10 @@ export default function SendPolygon({ wallet, txInfo }) {
                   <span className="font-regular text-sm"> {estimatedGasFeeEtherFastest}</span>
                 </div>
                 <div className=" text-left font-bold">
-                  MATIC Balance:
+                  STX Balance:
                   <span className="font-regular text-sm">
                     {' '}
-                    {web3.utils.fromWei(maticBalance.toString(), 'ether')}
+                    {web3.utils.fromWei(stxBalance.toString(), 'ether')}
                   </span>
                 </div>
                 <div className="pb-2 text-left text-forest-green-300">

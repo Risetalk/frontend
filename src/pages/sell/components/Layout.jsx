@@ -46,32 +46,32 @@ export default function Layout({ children }) {
   const ethereumBalance = useSelector((state) => state.auth.eth_balance);
   const galrBalance = useSelector((state) => state.auth.galr_balance);
   const pdmBalance = useSelector((state) => state.auth.pdm_balance);
-  const maticBalance = useSelector((state) => state.auth.matic_balance);
+  const stxBalance = useSelector((state) => state.auth.stx_balance);
 
   const tokens = [
     {
-      name: 'Ethereum',
+      name: 'Stacks',
       symbol: 'ETH',
       balance: ethereumBalance,
-      network: 'Ethereum',
+      network: 'Stacks',
     },
     {
-      name: 'Matic',
-      symbol: 'MATIC',
-      balance: maticBalance,
-      network: 'Polygon',
+      name: 'Stx',
+      symbol: 'STX',
+      balance: stxBalance,
+      network: 'Stacks',
     },
     {
       name: 'Uridium',
       symbol: 'URI',
       balance: galrBalance,
-      network: 'Polygon',
+      network: 'Stacks',
     },
     {
       name: 'Praedium',
       symbol: 'PDM',
       balance: pdmBalance,
-      network: 'Polygon',
+      network: 'Stacks',
     },
   ];
 
@@ -212,7 +212,7 @@ export default function Layout({ children }) {
                   <div className="w-full z-50 dark:bg-dark-main bg-white rounded-lg p-4 leading-6">
                     <div className="mb-2 flex items-center">
                       <span className="mr-2 text-lg font-bold dark:text-dark-txt text-gray-900">
-                        Ethereum Address:
+                        Stacks Address:
                       </span>
                       <span className="text-md font-medium text-gray-500 dark:text-dark-txt-secondary">
                         {wallet && wallet.address}
@@ -244,7 +244,7 @@ export default function Layout({ children }) {
                     </div>
                     <div className="mb-4 flex items-center">
                       <span className="mr-2 text-lg font-bold dark:text-dark-txt text-gray-900">
-                        Polygon Address:
+                        Stacks Address:
                       </span>
                       <span className="text-md font-medium dark:text-dark-txt-secondary text-gray-500">
                         {wallet && wallet.polygon_address}

@@ -32,8 +32,8 @@ import {
   GET_PRAEDIUM_BALANCE_FAIL,
   GET_GALR_BALANCE_SUCCESS,
   GET_GALR_BALANCE_FAIL,
-  GET_MATIC_BALANCE_SUCCESS,
-  GET_MATIC_BALANCE_FAIL,
+  GET_STX_BALANCE_SUCCESS,
+  GET_STX_BALANCE_FAIL,
   GET_DELIVERY_SUCCESS,
   GET_DELIVERY_FAIL,
   GET_USER_SUCCESS,
@@ -45,8 +45,6 @@ import {
   RESET_REGISTER_SUCCESS,
 } from './types';
 
-import PraediumToken from '@/contracts/PraediumToken.sol/PraediumToken.json';
-import GalacticReserveToken from '@/contracts/GalacticReserveToken.sol/GalacticReserveToken.json';
 import { synchCartAuthenticated } from '../cart/cart';
 
 const web3 = new Web3(
@@ -308,7 +306,7 @@ export const loadEthereumBalance = (address) => async (dispatch) => {
   }
 };
 
-export const loadMaticPolygonBalance = (address) => async (dispatch) => {
+export const loadStxPolygonBalance = (address) => async (dispatch) => {
   try {
     polygonWeb3.eth.getBalance(address, (err, balance) => {
       if (err) {
@@ -316,14 +314,14 @@ export const loadMaticPolygonBalance = (address) => async (dispatch) => {
         console.error(err);
       } else {
         dispatch({
-          type: GET_MATIC_BALANCE_SUCCESS,
+          type: GET_STX_BALANCE_SUCCESS,
           payload: polygonWeb3.utils.fromWei(balance, 'ether'),
         });
       }
     });
   } catch (err) {
     dispatch({
-      type: GET_MATIC_BALANCE_FAIL,
+      type: GET_STX_BALANCE_FAIL,
     });
   }
 };
@@ -335,7 +333,7 @@ export const loadWalletAndBalances = () => async (dispatch) => {
     dispatch(loadEthereumBalance(address));
     dispatch(loadPraediumBalance(polygon_address));
     dispatch(loadGalrBalance(polygon_address));
-    dispatch(loadMaticPolygonBalance(polygon_address));
+    dispatch(loadStxPolygonBalance(polygon_address));
   }
 };
 

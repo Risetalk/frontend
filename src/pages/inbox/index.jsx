@@ -15,16 +15,16 @@ import InboxesSec from './components/InboxesSec';
 const SeoList = {
   title: 'Your Inbox - Buy and Sell NFTs on Our Revolutionary Platform',
   description:
-    'Discover the ultimate NFT marketplace on Boomslag, where you can buy, sell, and trade your favorite digital assets. Our revolutionary platform combines the best of Opensea, Rarible, and SuperRare, using ERC1155 to provide a seamless and secure experience for buyers and sellers alike.',
+    'Discover the ultimate NFT marketplace on Risetalk, where you can buy, sell, and trade your favorite digital assets. Our revolutionary platform combines the best of Opensea, Rarible, and SuperRare, using ERC1155 to provide a seamless and secure experience for buyers and sellers alike.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'trade nfts, boomslag trade nft, boomslag marketplace',
+  url: 'https://risetalk.com',
+  keywords: 'trade nfts, risetalk trade nft, risetalk marketplace',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@boomslag_',
+  twitterHandle: '@risetalk_',
 };
 
 export default function Inbox() {
@@ -88,7 +88,7 @@ export default function Inbox() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

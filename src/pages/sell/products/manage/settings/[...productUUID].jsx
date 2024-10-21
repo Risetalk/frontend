@@ -106,9 +106,9 @@ export default function Settings() {
           <h2 className="mt-6 text-lg font-bold dark:text-dark-txt">Course Status</h2>
           <p className="text-md mt-2 max-w-4xl font-medium dark:text-dark-txt-secondary text-gray-700">
             {details && details.status === 'published' ? (
-              <>This course is published on the boomslag marketplace.</>
+              <>This course is published on the risetalk marketplace.</>
             ) : (
-              <>This course is not published on the boomslag marketplace.</>
+              <>This course is not published on the risetalk marketplace.</>
             )}
           </p>
           <div className="mt-6 grid grid-cols-4">

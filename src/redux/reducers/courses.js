@@ -49,7 +49,7 @@ const initialState = {
     },
     { id: uuidv4(), position_id: 1, title: '', example: 'Automate irrigation systems' },
     { id: uuidv4(), position_id: 2, title: '', example: 'Protect Home security systems' },
-    { id: uuidv4(), position_id: 3, title: '', example: 'Create Robotics Schematics' },
+    { id: uuidv4(), position_id: 3, title: '', example: 'Create Robotics Schestxs' },
   ],
   requisites: [
     {
@@ -101,7 +101,7 @@ export default function courses(state = initialState, action) {
           },
           { id: uuidv4(), position_id: 1, title: '', example: 'Automate irrigation systems' },
           { id: uuidv4(), position_id: 2, title: '', example: 'Protect Home security systems' },
-          { id: uuidv4(), position_id: 3, title: '', example: 'Create Robotics Schematics' },
+          { id: uuidv4(), position_id: 3, title: '', example: 'Create Robotics Schestxs' },
         ],
         requisites: [
           {

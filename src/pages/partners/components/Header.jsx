@@ -36,7 +36,7 @@ export default function Header() {
             Our Partners
           </h1>
           <p className="mt-8 text-lg leading-8 text-gray-600 dark:text-dark-txt-secondary">
-            Companies and protocols that help boomslag grow and function.
+            Companies and protocols that help risetalk grow and function.
           </p>
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">

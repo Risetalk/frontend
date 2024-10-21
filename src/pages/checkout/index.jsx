@@ -32,19 +32,19 @@ function classNames(...classes) {
 }
 
 const SeoList = {
-  title: 'Checkout - Boomslag NFT Marketplace',
+  title: 'Checkout - Risetalk NFT Marketplace',
   description:
-    'Complete your purchase on Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. Experience the future of e-commerce with the power of blockchain technology.',
+    'Complete your purchase on Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. Experience the future of e-commerce with the power of blockchain technology.',
   href: '/checkout',
-  url: 'https://boomslag.com/checkout',
+  url: 'https://risetalk.com/checkout',
   keywords:
-    'boomslag, nft marketplace, online courses, physical products, blockchain, e-commerce, checkout',
+    'risetalk, nft marketplace, online courses, physical products, blockchain, e-commerce, checkout',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@boomslag_',
+  twitterHandle: '@risetalk_',
 };
 
 export default function Checkout() {
@@ -68,7 +68,7 @@ export default function Checkout() {
   const totalAmount = useSelector((state) => state.cart.compare_amount);
   const finalPrice = useSelector((state) => state.cart.finalPrice);
   const totalAmountEth = useSelector((state) => state.cart.total_cost_ethereum);
-  const maticCost = useSelector((state) => state.cart.maticCost);
+  const stxCost = useSelector((state) => state.cart.stxCost);
   const taxEstimate = useSelector((state) => state.cart.tax_estimate);
   const shippingEstimate = useSelector((state) => state.cart.shipping_estimate);
   // const checkoutLoading = useSelector((state) => state.cart.checkout_loading);
@@ -77,7 +77,7 @@ export default function Checkout() {
   const products = useSelector((state) => state.cart.products);
 
   const ethBalance = useSelector((state) => state.auth.eth_balance);
-  const maticBalance = useSelector((state) => state.auth.matic_balance);
+  const stxBalance = useSelector((state) => state.auth.stx_balance);
   const ethereumWallet = useSelector((state) => state.auth.wallet);
 
   const [agreed, setAgreed] = useState(false);
@@ -407,7 +407,7 @@ export default function Checkout() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -616,10 +616,10 @@ export default function Checkout() {
                   setAdaPayment={setAdaPayment}
                   handleAdaPayment={handleAdaPayment}
                   ethBalance={ethBalance}
-                  maticBalance={maticBalance}
+                  stxBalance={stxBalance}
                   ethereumWallet={ethereumWallet}
                   totalAmountEth={totalAmountEth}
-                  maticCost={maticCost}
+                  stxCost={stxCost}
                 />
 
                 <div className=" pt-14 pb-6 sm:flex ">
@@ -740,7 +740,7 @@ export default function Checkout() {
                     <div className="flex items-center justify-between dark:border-dark-border border-t border-gray-200 pt-4">
                       <dt className="" />
                       <dd className="text-base font-medium dark:text-dark-txt text-gray-900">
-                        MATIC {maticCost}
+                        STX {stxCost}
                       </dd>
                     </div>
                   </dl>
@@ -769,7 +769,7 @@ export default function Checkout() {
                         Select Payment Method
                       </div>
                     ) : ethPayment ? (
-                      maticBalance > maticCost + 0.05 ? (
+                      stxBalance > stxCost + 0.05 ? (
                         <>
                           {cartItems && cartItems.some((u) => u.product) ? (
                             <>

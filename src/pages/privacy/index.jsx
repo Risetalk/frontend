@@ -17,18 +17,18 @@ import Changes from './components/Changes';
 import Head from 'next/head';
 
 const SeoList = {
-  title: 'Privacy Policy - Boomslag NFT Marketplace',
+  title: 'Privacy Policy - Risetalk NFT Marketplace',
   description:
-    'At Boomslag, we are committed to protecting your privacy. Learn about our privacy policy, including how we collect, use, and disclose your personal information, and how we keep it secure.',
+    'At Risetalk, we are committed to protecting your privacy. Learn about our privacy policy, including how we collect, use, and disclose your personal information, and how we keep it secure.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag press kit',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk press kit',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Privacy() {
@@ -51,7 +51,7 @@ export default function Privacy() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

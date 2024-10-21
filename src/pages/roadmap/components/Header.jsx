@@ -33,7 +33,7 @@ export default function Header() {
       <div className="mx-auto max-w-2xl py-28 sm:pt-36 ">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight dark:text-dark-txt text-gray-900 sm:text-6xl">
-            Boomslag Roadmap
+            Risetalk Roadmap
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-dark-txt-secondary">
             Find out what we will implement next.

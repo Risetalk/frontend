@@ -18,16 +18,16 @@ import PopularTopics from './categories/c/components/PopularTopics';
 const SeoList = {
   title: 'RiseTalk - The Ultimate NFT Marketplace for Courses & Products',
   description:
-    'Explore a new world of possibilities with Boomslag, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
+    'Explore a new world of possibilities with Risetalk, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
   href: '/',
   url: 'https://risetalk.tech.com',
-  keywords: 'nft marketplace, matic nfts, risetalk nfts, sell nfts online',
+  keywords: 'nft marketplace, stx nfts, risetalk nfts, sell nfts online',
   robots: 'all',
   author: 'RiseTalk',
   publisher: 'RiseTalk',
   // image:
-  //   'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  // video: 'https://boomslagcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
+  //   '',
+  // video: '',
 
   twitterHandle: '@risetalk_',
 };
@@ -209,12 +209,12 @@ export default function Home() {
           <Badges />
           {/* <CategoryTabs categories={categories} /> */}
           {/* <MostViewed courses={courses} /> */}
-          <FeaturedCourses data={courses} />
-          <FeaturedProducts data={products} />
-          <div className="space-y-24">
+          {/* <FeaturedCourses data={courses} />
+          <FeaturedProducts data={products} /> */}
+          {/* <div className="space-y-24">
             <PopularTopics categories={categories} />
             <PopularProductCategories categories={productCategories} />
-          </div>
+          </div> */}
           <AffiliatesInfo />
           <Teach />
           <TeachCTA />

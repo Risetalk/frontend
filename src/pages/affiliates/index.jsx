@@ -6,18 +6,18 @@ import Header from './components/Header';
 import RankingSystem from './components/RankingSystem';
 
 const SeoList = {
-  title: 'Affiliates Program - Join the Boomslag NFT Marketplace',
+  title: 'Affiliates Program - Join the Risetalk NFT Marketplace',
   description:
-    'Join the Boomslag Affiliates Program and earn rewards for promoting the ultimate NFT marketplace for online courses, physical products, and more. Discover how our revolutionary platform uses ERC1155 to provide a seamless and secure buying and selling experience.',
+    'Join the Risetalk Affiliates Program and earn rewards for promoting the ultimate NFT marketplace for online courses, physical products, and more. Discover how our revolutionary platform uses ERC1155 to provide a seamless and secure buying and selling experience.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag, boomslag affilaites, affiliate marketing NFT, nft affiliate marketing',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk, risetalk affilaites, affiliate marketing NFT, nft affiliate marketing',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Affiliates() {
@@ -40,7 +40,7 @@ export default function Affiliates() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

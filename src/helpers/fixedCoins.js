@@ -1,7 +1,7 @@
 export const coins = [
   {
     id: 1,
-    value: 'Ethereum',
+    value: 'Stacks',
     symbol: 'ETH',
   },
   {
@@ -11,8 +11,8 @@ export const coins = [
   },
   {
     id: 3,
-    value: 'Polygon',
-    symbol: 'MATIC',
+    value: 'Stacks',
+    symbol: 'STX',
   },
   {
     id: 4,

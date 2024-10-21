@@ -12,21 +12,21 @@ const steps = [
   {
     name: 'Physical Products (May 20, 2023)',
     description:
-      "We will integrate the ERC1155 token standard to facilitate buying and selling physical goods, fostering an ecosystem that doesn't require leaving MATIC. Physical products are crucial in achieving this goal.",
+      "We will integrate the ERC1155 token standard to facilitate buying and selling physical goods, fostering an ecosystem that doesn't require leaving STX. Physical products are crucial in achieving this goal.",
     href: '#',
     status: 'upcoming',
   },
   {
     name: 'Improved Messages (Jul 19, 2023)',
     description:
-      'With a functioning e-learning and e-commerce platform powered by NFTs and MATIC, we will refine messaging, notifications, and other applications to enhance user experience. We will dedicate a few weeks to these improvements and brainstorm additional ideas.',
+      'With a functioning e-learning and e-commerce platform powered by NFTs and STX, we will refine messaging, notifications, and other applications to enhance user experience. We will dedicate a few weeks to these improvements and brainstorm additional ideas.',
     href: '#',
     status: 'upcoming',
   },
   {
     name: 'Enhanced Social Interactions (Aug 19, 2023)',
     description:
-      'Envisioning a digital campus akin to a university, we aim to create a space for knowledge, friendships, extracurricular activities, and groups. This marks the beginning of our metaverse, the Boomslag Metaverse, or Praedium.',
+      'Envisioning a digital campus akin to a university, we aim to create a space for knowledge, friendships, extracurricular activities, and groups. This marks the beginning of our metaverse, the Risetalk Metaverse, or Praedium.',
     href: '#',
     status: 'upcoming',
   },
@@ -47,14 +47,14 @@ const steps = [
   {
     name: 'Tiered Subscriptions (Dec 19, 2023)',
     description:
-      'Imagine an OnlyFans-style subscription model for any product or service sold on Boomslag. Users will have the ability to create their unique brand and offer recurring subscriptions, all paid in MATIC.',
+      'Imagine an OnlyFans-style subscription model for any product or service sold on Risetalk. Users will have the ability to create their unique brand and offer recurring subscriptions, all paid in STX.',
     href: '#',
     status: 'upcoming',
   },
   {
     name: 'Poker Casino (Jan ~ Mar 19, 2024)',
     description:
-      'We plan to implement a casino for users aged 18 and older to gamble with MATIC in the Boomslag Casino. This feature is extensive, so it may take some time, but rest assured, a casino is on the horizon by late 2023 or early 2024.',
+      'We plan to implement a casino for users aged 18 and older to gamble with STX in the Risetalk Casino. This feature is extensive, so it may take some time, but rest assured, a casino is on the horizon by late 2023 or early 2024.',
     href: '#',
     status: 'upcoming',
   },

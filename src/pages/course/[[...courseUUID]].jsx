@@ -100,25 +100,25 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
   const SeoList = {
     title: course.details.title
       ? `${course.details.title} - ${course.details.short_description}`
-      : 'Boomslag - Online Courses Marketplace',
+      : 'Risetalk - Online Courses Marketplace',
     description:
       course.description ||
-      'Discover and learn from the best online courses in various categories on Boomslag - the ultimate NFT marketplace for courses and products. Buy and sell using ERC1155 tokens to ensure seamless and secure transactions.',
+      'Discover and learn from the best online courses in various categories on Risetalk - the ultimate NFT marketplace for courses and products. Buy and sell using ERC1155 tokens to ensure seamless and secure transactions.',
     href: course.details.slug ? `/courses/${course.details.slug}` : '/',
     url: course.details.slug
-      ? `https://boomslag.com/courses/${course.details.slug}`
-      : 'https://boomslag.com',
+      ? `https://risetalk.com/courses/${course.details.slug}`
+      : 'https://risetalk.com',
     keywords: course.details.keywords
-      ? `${course.details.keywords}, online courses, blockchain courses, boomslag courses, nft online courses`
-      : 'online courses, blockchain courses, boomslag courses, nft online courses',
+      ? `${course.details.keywords}, online courses, blockchain courses, risetalk courses, nft online courses`
+      : 'online courses, blockchain courses, risetalk courses, nft online courses',
     robots: 'all',
-    author: author.username || 'BoomSlag',
-    publisher: 'BoomSlag',
+    author: author.username || 'Risetalk',
+    publisher: 'Risetalk',
     image:
       course.images && course.images.length > 0
         ? course.images[0].file
         : 'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-    twitterHandle: '@BoomSlag',
+    twitterHandle: '@Risetalk',
   };
 
   const dispatch = useDispatch();
@@ -383,22 +383,22 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
       ? details.compare_price
       : details.price;
 
-  const [maticUsdPrice, setMaticUsdPrice] = useState(0);
-  const [priceInMatic, setPriceInMatic] = useState(0);
+  const [stxUsdPrice, setStxUsdPrice] = useState(0);
+  const [priceInStx, setPriceInStx] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
-        'https://api.coingecko.com/api/v3/simple/price?ids=matic-network%2Cethereum&vs_currencies=usd',
+        'https://api.coingecko.com/api/v3/simple/price?ids=stx-network%2Cethereum&vs_currencies=usd',
       );
-      setMaticUsdPrice(res.data['matic-network'].usd);
+      setStxUsdPrice(res.data['stx-network'].usd);
     };
     fetchData();
   }, []);
   useEffect(() => {
-    // Convert coursePrice from dollars to matic using matiUsdPrice
-    // Set the priceInMatic
-    setPriceInMatic(coursePrice / maticUsdPrice);
-  }, [coursePrice, maticUsdPrice]);
+    // Convert coursePrice from dollars to stx using matiUsdPrice
+    // Set the priceInStx
+    setPriceInStx(coursePrice / stxUsdPrice);
+  }, [coursePrice, stxUsdPrice]);
 
   const whatLearntSlice = [];
 
@@ -646,24 +646,24 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
               {coupon && couponType && couponDiscount ? (
                 couponType === 'fixed' ? (
                   <p className="inline-flex text-xl font-bold dark:text-dark-txt-secondary">
-                    {((parseFloat(coursePrice) - couponDiscount) / maticUsdPrice).toFixed(2)}{' '}
-                    <span className="ml-1 font-semibold">MATIC</span>
+                    {((parseFloat(coursePrice) - couponDiscount) / stxUsdPrice).toFixed(2)}{' '}
+                    <span className="ml-1 font-semibold">STX</span>
                   </p>
                 ) : (
                   couponType === 'percentage' && (
                     <p className="inline-flex text-xl font-bold dark:text-dark-txt-secondary">
                       {(
                         (parseFloat(coursePrice) * (1 - couponDiscount / 100)) /
-                        maticUsdPrice
+                        stxUsdPrice
                       ).toFixed(2)}{' '}
-                      <span className="ml-1 font-semibold">MATIC</span>
+                      <span className="ml-1 font-semibold">STX</span>
                     </p>
                   )
                 )
               ) : (
                 <p className="inline-flex text-xl font-bold dark:text-dark-txt-secondary">
-                  {parseFloat(priceInMatic).toFixed(2)}{' '}
-                  <span className="ml-1 font-semibold">MATIC</span>
+                  {parseFloat(priceInStx).toFixed(2)}{' '}
+                  <span className="ml-1 font-semibold">STX</span>
                 </p>
               )}
 
@@ -1149,7 +1149,7 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
                 {/* Price */}
                 <div className="flex px-4 text-white">
                   <div className="mr-4 text-base flex-shrink-0 self-end">
-                    {parseFloat(priceInMatic.toFixed(2))} MATIC
+                    {parseFloat(priceInStx.toFixed(2))} STX
                   </div>
                   <div className="mr-4 text-base flex-shrink-0 self-end">Stock {stock}</div>
                 </div>
@@ -1210,7 +1210,7 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -1389,7 +1389,7 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
                         </div>
                         <img
                           className="h-full w-full object-cover"
-                          src="/assets/img/headers/boomslag_h.jpg"
+                          src="/assets/img/headers/risetalk_h.jpg"
                           alt=""
                         />
                         <PlayIcon className="absolute top-1/2 left-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 transform  rounded-full dark:bg-dark-bg bg-white p-2.5" />
@@ -2011,7 +2011,7 @@ export default function Courses({ course, author, courseUUID, referrer, authorPr
                             </p>
                             <p className="block">
                               Our system is powered by blockchain technology and our contract
-                              automatically handles the payments for you. You don't have to worry
+                              autostxally handles the payments for you. You don't have to worry
                               about any complicated payment processes or dealing with third-party
                               payment processors.{' '}
                             </p>

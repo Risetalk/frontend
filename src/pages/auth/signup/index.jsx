@@ -14,18 +14,18 @@ import Head from 'next/head';
 import Layout from '@/hocs/Layout';
 
 const SeoList = {
-  title: 'Boomslag - Signup',
+  title: 'Risetalk - Signup',
   description:
-    'Explore a new world of possibilities with Boomslag, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
+    'Explore a new world of possibilities with Risetalk, the innovative NFT marketplace that enables you to discover, purchase, and sell a variety of items, ranging from online courses to physical products and beyond, all using the cutting-edge ERC1155 technology.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'nft marketplace, matic nfts, boomslag nfts, sell nfts online',
+  url: 'https://risetalk.com',
+  keywords: 'nft marketplace, stx nfts, risetalk nfts, sell nfts online',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Signup() {
@@ -95,7 +95,7 @@ export default function Signup() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -315,7 +315,7 @@ export default function Signup() {
                 <span className="text-md font-medium text-gray-900 dark:text-dark-txt">or </span>
                 <Link
                   href="/auth/resend_activation"
-                  className="text-md font-medium text-blue-500 dark:text-dark-accent hover:text-blue-600"
+                  className="text-md font-medium text-orange-500 dark:text-dark-accent hover:text-orange-600"
                 >
                   Resend activation email
                 </Link>
@@ -328,7 +328,7 @@ export default function Signup() {
                 </span>
                 <Link
                   href="/auth/login"
-                  className="text-lg font-medium text-blue-500 dark:text-dark-accent underline hover:text-blue-600"
+                  className="text-lg font-medium text-orange-500 dark:text-dark-accent underline hover:text-orange-600"
                 >
                   Login
                 </Link>

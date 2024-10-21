@@ -2,66 +2,72 @@ import Layout from '@/hocs/Layout';
 import Head from 'next/head';
 
 const stats = [
-  { label: 'Transactions every 24 hours', value: '44 million' },
-  { label: 'Assets under holding', value: '$119 trillion' },
-  { label: 'New users annually', value: '46,000' },
+  { label: 'Ready for rapid growth.', value: 'Scalable platform' },
+  { label: 'Safe and verifiable assets.', value: 'Blockchain-secured' },
+  { label: 'Thousands of users expected.', value: 'Launching soon' },
 ];
 const values = [
   {
     name: 'Be world-class',
     description:
-      'Aut illo quae. Ut et harum ea animi natus. Culpa maiores et sed sint et magnam exercitationem quia. Ullam voluptas nihil vitae dicta molestiae et. Aliquid velit porro vero.',
+      'Strive for excellence in every aspect. We believe in pushing boundaries, setting high standards, and continuously improving to deliver the best learning experience.',
   },
   {
     name: 'Share everything you know',
     description:
-      'Mollitia delectus a omnis. Quae velit aliquid. Qui nulla maxime adipisci illo id molestiae. Cumque cum ut minus rerum architecto magnam consequatur. Quia quaerat minima.',
+      'Knowledge is most powerful when shared. We encourage open communication and collaboration to empower others and create a community of continuous learning.',
   },
   {
     name: 'Always learning',
     description:
-      'Aut repellendus et officiis dolor possimus. Deserunt velit quasi sunt fuga error labore quia ipsum. Commodi autem voluptatem nam. Quos voluptatem totam.',
+      'Stay curious and never stop growing. We embrace change and innovation, always seeking new ways to improve and expand our knowledge.',
   },
   {
     name: 'Be supportive',
     description:
-      'Magnam provident veritatis odit. Vitae eligendi repellat non. Eum fugit impedit veritatis ducimus. Non qui aspernatur laudantium modi. Praesentium rerum error deserunt harum.',
+      'Success is a team effort. We foster a culture of support and encouragement, helping each other grow and succeed in our personal and professional journeys.',
   },
   {
     name: 'Take responsibility',
     description:
-      'Sit minus expedita quam in ullam molestiae dignissimos in harum. Tenetur dolorem iure. Non nesciunt dolorem veniam necessitatibus laboriosam voluptas perspiciatis error.',
+      'Own your actions and decisions. We value integrity and accountability, always striving to make responsible choices for the betterment of our community.',
   },
   {
     name: 'Enjoy downtime',
     description:
-      'Ipsa in earum deserunt aut. Quos minus aut animi et soluta. Ipsum dicta ut quia eius. Possimus reprehenderit iste aspernatur ut est velit consequatur distinctio.',
+      'Balance is key to long-term success. We believe in the importance of rest, reflection, and taking time to recharge to stay energized and motivated.',
   },
 ];
 const team = [
   {
-    name: 'Michael Foster',
+    name: 'Joel Vegas',
+    role: 'Founder/ CEO',
+    imageUrl:
+      '/assets/img/joel.png',
+  },
+  {
+    name: 'Renzo Tincopa',
     role: 'Co-Founder / CTO',
     imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      '/assets/img/renzo.png',
   },
   // More people...
 ];
 const blogPosts = [
   {
     id: 1,
-    title: 'Vel expedita assumenda placeat aut nisi optio voluptates quas',
+    title: 'Unlocking the Future of Learning: How Blockchain is Revolutionizing Education',
     href: '#',
     description:
       'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
     imageUrl:
       'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
+    date: 'Oct 16, 2024',
+    datetime: '2024-10-17',
     author: {
-      name: 'Michael Foster',
+      name: 'Renzo Tincopa',
       imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        '/assets/img/renzo.png',
     },
   },
   // More posts...
@@ -98,18 +104,18 @@ const timeline = [
 ];
 
 const SeoList = {
-  title: 'About Us - Boomslag NFT Marketplace',
+  title: 'About Us - Risetalk NFT Marketplace',
   description:
-    'Learn about Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. Discover how our revolutionary platform uses ERC1155 to provide a seamless and secure buying and selling experience.',
+    'Learn about Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. Discover how our revolutionary platform uses ERC1155 to provide a seamless and secure buying and selling experience.',
   href: '/',
-  url: 'https://boomslag.com',
+  url: 'https://risetalk.com',
   keywords: 'NFT, marketplace, online courses, physical products, ERC1155, buying, selling',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function About() {
@@ -132,7 +138,7 @@ export default function About() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -205,12 +211,7 @@ export default function About() {
                     NFTs for Learning & Commerce
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 dark:text-dark-txt-secondary text-gray-600 sm:max-w-md lg:max-w-none">
-                    Welcome to Boomslag, a revolutionary platform that combines the best of Udemy,
-                    Amazon, Onlyfans, and OpenSea. Powered by NFTs, our marketplace offers online
-                    courses, physical products, and a seamless decentralized ecosystem. Experience
-                    lightning-fast transactions, real-time communication, and the freedom of a world
-                    without intermediaries. Join us as we reimagine education and commerce for the
-                    future.
+                  Welcome to RiseTalk, a revolutionary platform that redefines the way you learn and engage in commerce. Powered by NFTs, our marketplace not only offers online courses and physical products but also gives students the ability to resell their purchased courses, creating a dynamic knowledge economy. Enjoy the benefits of a decentralized ecosystem with fast transactions, real-time communication, and the freedom to trade educational assets without intermediaries. Join us as we reshape the future of education, giving you control over your learning experience and its value.
                   </p>
                 </div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -304,25 +305,9 @@ export default function About() {
             <div className="mt-6 flex flex-col gap-y-20 gap-x-8 lg:flex-row">
               <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
                 <p className="text-xl leading-8 dark:text-dark-txt-secondary text-gray-600">
-                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui
-                  mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam
-                  nulla orci at in viverra scelerisque eget. Eleifend egestas fringilla sapien.
+                At RiseTalk, our mission is to empower learners and creators by harnessing the potential of decentralized technologies. We aim to build a secure and accessible platform where education and commerce intersect, allowing users to take control of their learning journey and assets in a way never seen before.
                 </p>
-                <div className="mt-10 max-w-xl text-base leading-7 dark:text-dark-txt-secondary text-gray-700">
-                  <p>
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis
-                    mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio
-                    penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo
-                    massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed
-                    amet vitae sed turpis id.
-                  </p>
-                  <p className="mt-10 ">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id
-                    blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in
-                    vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis
-                    convallis ac tempor et ut. Ac lorem vel integer orci.
-                  </p>
-                </div>
+               
               </div>
               <div className="lg:flex lg:flex-auto lg:justify-center">
                 <dl className="w-64 space-y-8 xl:w-80">
@@ -331,7 +316,7 @@ export default function About() {
                       <dt className="text-base leading-7 text-gray-600 dark:text-dark-txt-secondary">
                         {stat.label}
                       </dt>
-                      <dd className="text-5xl font-semibold tracking-tight dark:text-dark-txt text-gray-900">
+                      <dd className="text-3xl font-semibold tracking-tight dark:text-dark-txt text-gray-900">
                         {stat.value}
                       </dd>
                     </div>
@@ -358,8 +343,7 @@ export default function About() {
               Our values
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-dark-txt-secondary">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum
-              cupiditate veritatis in accusamus quisquam.
+            At RiseTalk, our values are the foundation of everything we do. We believe in creating an environment where innovation, learning, and support drive the success of our community.
             </p>
           </div>
           <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -456,8 +440,7 @@ export default function About() {
               Our team
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-dark-txt-secondary">
-              Sit facilis neque ab nulla vel. Cum eos in laudantium. Temporibus eos totam in
-              dolorum. Nemo vel facere repellendus ut eos dolores similique.
+            We are a passionate group of innovators dedicated to transforming education through blockchain technology. Our mission is to create a decentralized platform where learning is empowered, secure, and accessible to all.
             </p>
           </div>
           <ul
@@ -485,7 +468,7 @@ export default function About() {
               From the blog
             </h2>
             <p className="mt-2 text-lg leading-8 dark:text-dark-txt-secondary text-gray-600">
-              Vel dolorem qui facilis soluta sint aspernatur totam cumque.
+            Discover articles that will inspire and guide you on your journey to a more decentralized and empowering education.
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

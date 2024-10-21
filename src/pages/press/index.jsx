@@ -1,6 +1,6 @@
 import Layout from '@/hocs/Layout';
 import Head from 'next/head';
-import BoomslagLogoKit from './components/BoomslagLogoKit';
+import RisetalkLogoKit from './components/RisetalkLogoKit';
 import Colors from './components/Colors';
 import Header from './components/Header';
 import PraediumLogoKit from './components/PraediumLogoKit';
@@ -8,18 +8,18 @@ import Products from './components/Products';
 import UridiumLogoKit from './components/UridiumLogoKit';
 
 const SeoList = {
-  title: 'Boomslag Press Kit - NFT Marketplace',
+  title: 'Risetalk Press Kit - NFT Marketplace',
   description:
-    'Access the Boomslag press kit for information about the company, the team, our mission, and our revolutionary NFT marketplace platform. Download our logos, brand guidelines, and other assets for use in articles, features, and other media.',
+    'Access the Risetalk press kit for information about the company, the team, our mission, and our revolutionary NFT marketplace platform. Download our logos, brand guidelines, and other assets for use in articles, features, and other media.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag press kit',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk press kit',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Press() {
@@ -42,7 +42,7 @@ export default function Press() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -56,7 +56,7 @@ export default function Press() {
       <Header />
       <PraediumLogoKit />
       <UridiumLogoKit />
-      <BoomslagLogoKit />
+      <RisetalkLogoKit />
       <Colors />
       <Products />
     </div>

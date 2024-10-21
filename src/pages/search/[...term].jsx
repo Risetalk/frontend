@@ -87,16 +87,16 @@ function classNames(...classes) {
 const SeoList = {
   title: 'Search - Buy & Sell Products with NFTs on our Marketplace',
   description:
-    'Discover a new way to buy and sell products using NFTs on Boomslag. Our revolutionary platform lets you purchase and sell physical and digital products securely and seamlessly using ERC1155 tokens.',
+    'Discover a new way to buy and sell products using NFTs on Risetalk. Our revolutionary platform lets you purchase and sell physical and digital products securely and seamlessly using ERC1155 tokens.',
   href: '/',
-  url: 'https://boomslag.com',
+  url: 'https://risetalk.com',
   keywords: 'buy and sell products, nft product marketplace, nft marketplace, sell nfts',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/friends.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Search({ term, courseCategories, productCategories }) {
@@ -294,7 +294,7 @@ export default function Search({ term, courseCategories, productCategories }) {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

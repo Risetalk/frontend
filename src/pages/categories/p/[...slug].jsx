@@ -18,19 +18,19 @@ export default function Categories({
   const SeoList = {
     title: `Category - ${slug[0]} - Explore Premium Online Courses`,
     description:
-      'Find and buy high-quality online courses at Boomslag, a cutting-edge marketplace where you can acquire knowledge through secure and seamless transactions using NFTs and ERC1155 tokens.',
+      'Find and buy high-quality online courses at Risetalk, a cutting-edge marketplace where you can acquire knowledge through secure and seamless transactions using NFTs and ERC1155 tokens.',
     href: '/',
-    url: 'https://boomslag.com',
+    url: 'https://risetalk.com',
     keywords:
       'online courses, online education, e-learning, nft courses marketplace, nft education, erc1155 tokens, blockchain education',
     robots: 'all',
-    author: 'BoomSlag',
-    publisher: 'BoomSlag',
+    author: 'Risetalk',
+    publisher: 'Risetalk',
     image:
       'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-    video: 'https://boomslagcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
+    video: 'https://risetalkcourses.s3.us-east-2.amazonaws.com/Quack+Sound+Effect.mp4',
 
-    twitterHandle: '@boomslag_',
+    twitterHandle: '@risetalk_',
   };
 
   const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
@@ -56,7 +56,7 @@ export default function Categories({
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

@@ -8,7 +8,7 @@ import DarkModeButton from '@/components/DarkModeButton.jsx';
 import GlobeButton from '@/components/GlobeButton';
 import {
   loadEthereumBalance,
-  loadMaticPolygonBalance,
+  loadStxPolygonBalance,
   loadPraediumBalance,
   loadUriBalance,
   logout,
@@ -33,7 +33,7 @@ export default function AuthLinks() {
   const ethereumBalance = useSelector((state) => state.auth.eth_balance);
   const galrBalance = useSelector((state) => state.auth.galr_balance);
   const pdmBalance = useSelector((state) => state.auth.pdm_balance);
-  const maticBalance = useSelector((state) => state.auth.matic_balance);
+  const stxBalance = useSelector((state) => state.auth.stx_balance);
 
   const logoutHandler = () => {
     if (dispatch && dispatch !== null && dispatch !== undefined) {
@@ -44,28 +44,28 @@ export default function AuthLinks() {
 
   const tokens = [
     {
-      name: 'Ethereum',
+      name: 'Stacks',
       symbol: 'ETH',
       balance: ethereumBalance,
-      network: 'Ethereum',
+      network: 'Stacks',
     },
     {
-      name: 'Matic',
-      symbol: 'MATIC',
-      balance: maticBalance,
-      network: 'Polygon',
+      name: 'Stx',
+      symbol: 'STX',
+      balance: stxBalance,
+      network: 'Stacks',
     },
     {
       name: 'Uridium',
       symbol: 'URI',
       balance: galrBalance,
-      network: 'Polygon',
+      network: 'Stacks',
     },
     {
       name: 'Praedium',
       symbol: 'PDM',
       balance: pdmBalance,
-      network: 'Polygon',
+      network: 'Stacks',
     },
   ];
 
@@ -73,7 +73,7 @@ export default function AuthLinks() {
   useEffect(() => {
     if (isAuthenticated && wallet && wallet.address) {
       dispatch(loadEthereumBalance(wallet.address));
-      dispatch(loadMaticPolygonBalance(wallet.polygon_address));
+      dispatch(loadStxPolygonBalance(wallet.polygon_address));
       dispatch(loadPraediumBalance(wallet.polygon_address));
       dispatch(loadUriBalance(wallet.polygon_address));
     }
@@ -88,7 +88,7 @@ export default function AuthLinks() {
           <div className="w-full  p-4 leading-6">
             <div className="mb-2 flex items-center">
               <span className="mr-2 text-lg font-bold dark:text-dark-txt text-gray-900">
-                Ethereum Address:
+                Stacks Address:
               </span>
               <span className="text-md font-medium text-gray-500 dark:text-dark-txt-secondary">
                 {wallet && wallet.address}
@@ -120,7 +120,7 @@ export default function AuthLinks() {
             </div>
             <div className="mb-4 flex items-center">
               <span className="mr-2 text-lg font-bold dark:text-dark-txt text-gray-900">
-                Polygon Address:
+                Stacks Address:
               </span>
               <span className="text-md font-medium dark:text-dark-txt-secondary text-gray-500">
                 {wallet && wallet.polygon_address}

@@ -78,25 +78,25 @@ export default function Product({
   const SeoList = {
     title: product.details.title
       ? `${product.details.title} - ${product.details.short_description}`
-      : 'Boomslag - Physical Products Marketplace',
+      : 'Risetalk - Physical Products Marketplace',
     description:
       product.description ||
-      'Discover and learn from the best online products in various categories on Boomslag - the ultimate NFT marketplace for products and products. Buy and sell using ERC1155 tokens to ensure seamless and secure transactions.',
+      'Discover and learn from the best online products in various categories on Risetalk - the ultimate NFT marketplace for products and products. Buy and sell using ERC1155 tokens to ensure seamless and secure transactions.',
     href: product.details.slug ? `/products/${product.details.slug}` : '/',
     url: product.details.slug
-      ? `https://boomslag.com/products/${product.details.slug}`
-      : 'https://boomslag.com',
+      ? `https://risetalk.com/products/${product.details.slug}`
+      : 'https://risetalk.com',
     keywords: product.details.keywords
-      ? `${product.details.keywords}, online products, blockchain products, boomslag products, nft online products`
-      : 'online products, blockchain products, boomslag products, nft online products',
+      ? `${product.details.keywords}, online products, blockchain products, risetalk products, nft online products`
+      : 'online products, blockchain products, risetalk products, nft online products',
     robots: 'all',
-    author: author.username || 'BoomSlag',
-    publisher: 'BoomSlag',
+    author: author.username || 'Risetalk',
+    publisher: 'Risetalk',
     image:
       product.images && product.images.length > 0
         ? product.images[0].file
         : 'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-    twitterHandle: '@BoomSlag',
+    twitterHandle: '@Risetalk',
   };
 
   const dispatch = useDispatch();
@@ -1410,7 +1410,7 @@ export default function Product({
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />
@@ -2008,7 +2008,7 @@ export default function Product({
                             </p>
                             <p className="block">
                               Our system is powered by blockchain technology and our contract
-                              automatically handles the payments for you. You don't have to worry
+                              autostxally handles the payments for you. You don't have to worry
                               about any complicated payment processes or dealing with third-party
                               payment processors.{' '}
                             </p>

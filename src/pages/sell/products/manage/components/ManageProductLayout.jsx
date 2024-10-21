@@ -51,7 +51,7 @@ export default function ManageProductLayout({
   const details = product && product.details;
 
   const [deploymentCost, setDeploymentCost] = useState(0);
-  const [maticBalance, setMaticBalance] = useState(0);
+  const [stxBalance, setStxBalance] = useState(0);
 
   const wallet = useSelector((state) => state.auth.wallet);
   const userPolygonAddress = wallet && wallet.polygon_address;
@@ -79,7 +79,7 @@ export default function ManageProductLayout({
           // eslint-disable-next-line
           console.error(err);
         } else {
-          setMaticBalance(web3.utils.fromWei(balance, 'ether'));
+          setStxBalance(web3.utils.fromWei(balance, 'ether'));
         }
       });
     }
@@ -122,10 +122,10 @@ export default function ManageProductLayout({
   const [canDeploy, setCanDeploy] = useState(false);
 
   useEffect(() => {
-    if (productsKeywords && maticBalance > deploymentCost) {
+    if (productsKeywords && stxBalance > deploymentCost) {
       setCanDeploy(true);
     }
-  }, [productsKeywords, productSlug, details, maticBalance, deploymentCost]);
+  }, [productsKeywords, productSlug, details, stxBalance, deploymentCost]);
 
   const { keywords, slug, stock } = formData;
 
@@ -316,7 +316,7 @@ export default function ManageProductLayout({
     );
 
     if (isDuplicate) {
-      alert('This Polygon address already exists in the list. Please use a different address.');
+      alert('This Stacks address already exists in the list. Please use a different address.');
       return;
     }
 
@@ -750,7 +750,7 @@ export default function ManageProductLayout({
                                 onChange={(e) => setNewPolygonAddress(e.target.value)}
                                 required
                                 className="dark:bg-dark-bg dark:text-dark-txt dark:placeholder-dark-txt-secondary dark:focus:ring-dark-primary dark:focus:border-dark-primary dark:border-dark-border dark:ring-dark-border col-span-10 pl-2.5 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-iris-600 sm:text-sm sm:leading-6"
-                                placeholder="Team Member Polygon Address"
+                                placeholder="Team Member Stacks Address"
                               />
                               <input
                                 type="number"
@@ -815,14 +815,14 @@ export default function ManageProductLayout({
                       Cost:{' '}
                       <span className="font-regular ml-1 text-gray-700 dark:text-dark-txt">
                         {' '}
-                        {deploymentCost} MATIC
+                        {deploymentCost} STX
                       </span>
                     </div>
                     <div className="flex text-sm font-bold">
                       Balance:{' '}
                       <span className="font-regular ml-1 text-gray-700 dark:text-dark-txt">
                         {' '}
-                        {maticBalance} MATIC
+                        {stxBalance} STX
                       </span>
                     </div>
                     <div className="flex text-sm font-bold">

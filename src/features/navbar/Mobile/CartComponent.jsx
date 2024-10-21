@@ -23,7 +23,7 @@ export default function CartComponentButton() {
   const amountBeforeDiscounts = useSelector((state) => state.cart.amount);
   const totalAmount = useSelector((state) => state.cart.compare_amount);
   // const totalAmountEth = useSelector((state) => state.cart.total_cost_ethereum);
-  const maticCost = useSelector((state) => state.cart.maticCost);
+  const stxCost = useSelector((state) => state.cart.stxCost);
   const taxEstimate = useSelector((state) => state.cart.tax_estimate);
   const shippingEstimate = useSelector((state) => state.cart.shipping_estimate);
 
@@ -198,7 +198,7 @@ export default function CartComponentButton() {
                               <div className="flex items-center justify-between border-t border-gray-200 dark:border-dark-border pt-4">
                                 <dt className="text-base font-medium dark:text-dark-txt text-gray-900" />
                                 <dd className="text-base font-medium dark:text-dark-txt text-gray-900">
-                                  MATIC {maticCost}
+                                  STX {stxCost}
                                 </dd>
                               </div>
                             </dl>

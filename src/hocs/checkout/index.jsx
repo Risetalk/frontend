@@ -6,7 +6,7 @@ import DesktopNavbar from './components/Navbar';
 import ScrollToTop from '../components/ScrollToTop';
 import {
   loadEthereumBalance,
-  loadMaticPolygonBalance,
+  loadStxPolygonBalance,
   loadPraediumBalance,
 } from '@/redux/actions/auth/auth';
 
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
       dispatch(loadEthereumBalance(wallet && wallet.address));
       dispatch(loadPraediumBalance(wallet && wallet.polygon_address));
       // dispatch(loadGalrBalance(wallet && wallet.polygon_address));
-      dispatch(loadMaticPolygonBalance(wallet && wallet.polygon_address));
+      dispatch(loadStxPolygonBalance(wallet && wallet.polygon_address));
     }
     dispatch(getCartTotal(cartItems));
   }, [dispatch, cartItems]);

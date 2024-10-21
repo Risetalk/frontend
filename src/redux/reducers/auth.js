@@ -37,8 +37,8 @@ import {
   GET_PRAEDIUM_BALANCE_FAIL,
   GET_GALR_BALANCE_SUCCESS,
   GET_GALR_BALANCE_FAIL,
-  GET_MATIC_BALANCE_SUCCESS,
-  GET_MATIC_BALANCE_FAIL,
+  GET_STX_BALANCE_SUCCESS,
+  GET_STX_BALANCE_FAIL,
   GET_USER_CONTACTS_SUCCESS,
   GET_USER_CONTACTS_FAIL,
 } from '../actions/auth/types';
@@ -55,7 +55,7 @@ const initialState = {
   profile: null,
   wallet: null,
   eth_balance: null,
-  matic_balance: null,
+  stx_balance: null,
   pdm_balance: null,
   galr_balance: null,
   eth_balance_loading: false,
@@ -176,16 +176,16 @@ const authReducer = (state = initialState, action) => {
         pdm_balance: null,
         // pdm_balance_loading: false,
       };
-    case GET_MATIC_BALANCE_SUCCESS:
+    case GET_STX_BALANCE_SUCCESS:
       return {
         ...state,
-        matic_balance: payload,
+        stx_balance: payload,
         // pdm_balance_loading: false,
       };
-    case GET_MATIC_BALANCE_FAIL:
+    case GET_STX_BALANCE_FAIL:
       return {
         ...state,
-        matic_balance: null,
+        stx_balance: null,
         // pdm_balance_loading: false,
       };
     case GET_GALR_BALANCE_SUCCESS:

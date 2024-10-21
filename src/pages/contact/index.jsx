@@ -6,18 +6,18 @@ import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/2
 import { useState, useEffect } from 'react';
 
 const SeoList = {
-  title: 'Contact Us - Boomslag NFT Marketplace',
+  title: 'Contact Us - Risetalk NFT Marketplace',
   description:
-    'Get in touch with Boomslag, the ultimate NFT marketplace for online courses, physical products, and more. Use our contact form or email to ask questions, report bugs, or suggest new features.',
+    'Get in touch with Risetalk, the ultimate NFT marketplace for online courses, physical products, and more. Use our contact form or email to ask questions, report bugs, or suggest new features.',
   href: '/',
-  url: 'https://boomslag.com',
-  keywords: 'boomslag contact information, contact boomslag, contact us, boomslag contact',
+  url: 'https://risetalk.com',
+  keywords: 'risetalk contact information, contact risetalk, contact us, risetalk contact',
   robots: 'all',
-  author: 'BoomSlag',
-  publisher: 'BoomSlag',
+  author: 'Risetalk',
+  publisher: 'Risetalk',
   image:
     'https://bafybeiaor24mrcurzyzccxl7xw46zdqpor4sfuhddl6tzblujoiukchxnq.ipfs.w3s.link/teach.png',
-  twitterHandle: '@BoomSlag',
+  twitterHandle: '@Risetalk',
 };
 
 export default function Contact() {
@@ -424,7 +424,7 @@ export default function Contact() {
         <meta property="og:image" content={SeoList.image} />
         <meta property="og:image:width" content="1370" />
         <meta property="og:image:height" content="849" />
-        <meta property="og:image:alt" content="Boomslag Thumbnail Image" />
+        <meta property="og:image:alt" content="Risetalk Thumbnail Image" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:title" content={SeoList.title} />

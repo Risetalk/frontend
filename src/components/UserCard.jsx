@@ -10,7 +10,7 @@ export default function UserCard({ data }) {
     id = 'a9d1ee5e-8310-4925-825d-840d6ab5f924',
     is_online = false,
     last_name = 'Last name',
-    picture = 'https://boomslagauth.s3.us-east-2.amazonaws.com/users/user_default_profile.png',
+    picture = 'https://risetalkauth.s3.us-east-2.amazonaws.com/users/user_default_profile.png',
     polygon_address = '0xD63794Cdad6AbDB077661F93241Dc217f0f9D865',
     rating = null,
     slug = 'username',
@@ -99,10 +99,10 @@ export default function UserCard({ data }) {
             Total Earnings: ${total_earnings}
           </p> */}
           {/* <p className=" text-xs dark:text-dark-txt-secondary text-gray-800">
-            Ethereum Address: {address}
+            Stacks Address: {address}
           </p> */}
           {/* <p className=" text-xs dark:text-dark-txt-secondary text-gray-800">
-            Polygon Address: {polygon_address}
+            Stacks Address: {polygon_address}
           </p> */}
         </div>
       </div>
