@@ -44,17 +44,7 @@ Or if you're using yarn:
 yarn install
 ```
 
-### 3. Configure environment variables
-
-Create a `.env` file in the root directory of the project and add the necessary environment variables. An example of the variables you might need:
-
-```
-ICP_NETWORK_URL=https://icp.network
-STACKS_API_URL=https://stacks.co/api
-NEXT_PUBLIC_API_KEY=your-api-key
-```
-
-### 4. Run the development server
+### 3. Run the development server
 
 For a standard Node.js project:
 
@@ -68,6 +58,12 @@ Or with yarn:
 yarn dev
 ```
 
+Build For ICP environment:
+```
+yarn build
+next export
+```
+
 For an ICP environment:
 
 ```bash
@@ -75,7 +71,7 @@ dfx start
 dfx deploy
 ```
 
-### 5. Open your browser
+### 4. Open your browser
 
 Once the server is running, you can open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
